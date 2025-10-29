@@ -1,0 +1,81 @@
+import { Box, Typography } from "@mui/material";
+import React from "react";
+import bgImage from "@/homepage/best-service2.png";
+import Image from "next/image";
+import star from "@/icons/star-banner.svg";
+import { monument } from "@/utils/fonts";
+import { COLORS } from "@/utils/enum";
+import { BEST_SERVICE_CARD_PROPS } from "@/utils/types";
+const StarCard = ({
+  heading,
+  boldHeading,
+  iconPosition,
+  backgroundImage,
+  height,
+}: BEST_SERVICE_CARD_PROPS) => {
+  return (
+    <Box sx={{ position: "relative" }}>
+      <Box
+        sx={{
+          backgroundImage: `url(${backgroundImage})`,
+          height: height || "60vh",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          borderRadius: "20px",
+        }}
+      >
+        {heading && boldHeading && (
+          <Box
+            sx={{
+              background: "rgba(0,0,0,0.3)",
+              height: "100%",
+              width: "100%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: "20px",
+            }}
+          >
+            <Box sx={{ textAlign: "center" }}>
+              <Typography
+                sx={{
+                  fontSize: 35,
+                  fontWeight: 400,
+                  fontFamily: monument.style.fontFamily,
+                  color: COLORS.WHITE,
+                }}
+              >
+                {heading}
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: 35,
+                  fontWeight: 800,
+                  fontFamily: monument.style.fontFamily,
+                  color: COLORS.WHITE,
+                }}
+              >
+                {boldHeading}
+              </Typography>
+            </Box>
+          </Box>
+        )}
+      </Box>
+      <Box
+        sx={{
+          position: "absolute",
+          top: iconPosition === "bottom" ? "" : -20,
+          left: iconPosition === "bottom" ? "" : -20,
+          transform: "rotate(-37deg)",
+          right: iconPosition === "bottom" ? -20 : "",
+          bottom: iconPosition === "bottom" ? -20 : "",
+        }}
+      >
+        <Image src={star} alt="" />
+      </Box>
+    </Box>
+  );
+};
+
+export default StarCard;
