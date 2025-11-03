@@ -6,3 +6,7 @@ export const monument = localFont({
 export const kessel = localFont({
   src: "../assets/fonts/Kessel_105_W00_Book.ttf",
 });
+
+export const archivo = localFont({
+  src: "../assets/fonts/Archivo.ttf",
+});

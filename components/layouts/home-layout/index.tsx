@@ -7,6 +7,9 @@ import GridSection from "./grid-section";
 import { monument } from "@/utils/fonts";
 import BestService from "./best-services";
 import ServiceSection from "./service-section";
+import HowitWorks from "./how-it-works";
+import BestWorks from "./best-works";
+import Testimonials from "@/components/widgets/testimonial";
 const HomeLayouts = () => {
   return (
     <Box>
@@ -20,11 +23,11 @@ const HomeLayouts = () => {
       <Container>
         <Typography
           sx={{
-            fontSize: 180,
+            fontSize: 160,
             fontFamily: monument.style.fontFamily,
             textAlign: "center",
             color: COLORS.LIGHT_GRAY,
-            letterSpacing: "43.56px",
+            letterSpacing: "45px",
             lineHeight: "220px",
           }}
         >
@@ -33,6 +36,9 @@ const HomeLayouts = () => {
       </Container>
       <BestService />
       <ServiceSection />
+      <HowitWorks />
+      <BestWorks />
+      <Testimonials />
     </Box>
   );
 };

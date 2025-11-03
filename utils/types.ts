@@ -1,3 +1,6 @@
+import { StaticImageData } from "next/image";
+import { VARIANTS } from "./enum";
+
 export interface BEST_SERVICE_CARD_PROPS {
   heading?: string;
   boldHeading?: string;
@@ -12,5 +15,25 @@ export interface ARROW_CARD_PROPS {
   textColor: string;
   iconBgColor: string;
   iconColor: string;
-  secondTitle:string
+  secondTitle: string;
+}
+
+export interface SECTION_CARD_PROPS {
+  title: string;
+
+  variant: VARIANTS;
+}
+
+export interface WORK_CARD_PROPS {
+  number?: string;
+  title: string;
+  description: string;
+  img: string;
+}
+
+export interface TESTIMONIAL_CARD_PROPS {
+  img?: StaticImageData;
+  name: string;
+  designation: string;
+  description: string;
 }

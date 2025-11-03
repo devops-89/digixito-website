@@ -21,6 +21,10 @@ import React, { useState } from "react";
 import bgImage from "@/homepage/best-service3.png";
 import TabPanel from "@/components/widgets/tab-panel";
 import ArrowCard from "./components/arrow-card";
+import SectionCard from "@/components/widgets/section-card";
+import headingBanner from "@/homepage/heading-banner.png";
+import Image from "next/image";
+import ImageHeading from "@/components/widgets/image-heading";
 const ServiceSection = () => {
   const [value, setValue] = useState(0);
 
@@ -30,6 +34,11 @@ const ServiceSection = () => {
 
   return (
     <Box sx={{ my: 10 }}>
+      <SectionCard
+        title="What we do"
+        backgroundColor={COLORS.PRIMARY}
+        textColor="#222"
+      />
       <Container maxWidth="lg">
         <Grid container spacing={5}>
           <Grid size={5}>
@@ -39,26 +48,7 @@ const ServiceSection = () => {
               >
                 Our
               </Typography>
-              <Box sx={{ position: "relative" }}>
-                {/* <Image src={headingBanner} alt="" /> */}
-                <Typography
-                  sx={{
-                    fontSize: 35,
-                    fontFamily: monument.style.fontFamily,
-                    fontWeight: 400,
-                    // position: "absolute",
-                    // top: "40%",
-                    // left: "50%",
-                    backgroundColor: COLORS.PRIMARY,
-                    width: 285,
-                    textAlign: "center",
-                    borderRadius: 4,
-                    transform: "skew(-10deg)",
-                  }}
-                >
-                  Services
-                </Typography>
-              </Box>
+              <ImageHeading title="Services" />
             </Stack>
             <Typography
               sx={{

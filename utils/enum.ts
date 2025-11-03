@@ -5,4 +5,10 @@ export enum COLORS {
   LIGHT_GRAY = "rgba(0, 0, 0, 0.13)",
   PRIMARY = "#FFEF46",
   TRANSPARENT = "transparent",
+  GRAY_90 = "#e6e6e6",
+}
+
+export enum VARIANTS {
+  DARK = "dark",
+  PRIMARY = "primary",
 }
