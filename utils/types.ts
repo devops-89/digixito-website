@@ -37,3 +37,8 @@ export interface TESTIMONIAL_CARD_PROPS {
   designation: string;
   description: string;
 }
+
+export interface FAQ_CARD_DATA {
+  question: string;
+  answer: string;
+}

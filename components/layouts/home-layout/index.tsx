@@ -10,6 +10,8 @@ import ServiceSection from "./service-section";
 import HowitWorks from "./how-it-works";
 import BestWorks from "./best-works";
 import Testimonials from "@/components/widgets/testimonial";
+import FaqSection from "@/components/widgets/faq-section";
+import SecureConnect from "@/components/widgets/secure-connect";
 const HomeLayouts = () => {
   return (
     <Box>
@@ -39,6 +41,8 @@ const HomeLayouts = () => {
       <HowitWorks />
       <BestWorks />
       <Testimonials />
+      <FaqSection />
+      <SecureConnect />
     </Box>
   );
 };

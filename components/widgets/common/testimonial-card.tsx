@@ -5,6 +5,7 @@ import Image from "next/image";
 import React from "react";
 import invertedComma from "@/icons/quoteup.svg";
 import { TESTIMONIAL_CARD_PROPS } from "@/utils/types";
+import team from "@/homepage/avatar1.jpg";
 const TestimonialCard = ({
   name,
   img,
@@ -21,6 +22,7 @@ const TestimonialCard = ({
         flexDirection: "column",
         gap: "40px",
         alignItems: "flex-start",
+        width: 450,
       }}
     >
       <Stack
@@ -31,7 +33,7 @@ const TestimonialCard = ({
       >
         <Stack direction={"row"} alignItems={"center"} spacing={2}>
           <Avatar>
-            <Image src={img ? img : ""} alt="" />
+            <Image src={img ? img : team} alt="" width={40} />
           </Avatar>
           <Box>
             <Typography

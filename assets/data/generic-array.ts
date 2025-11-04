@@ -1,6 +1,7 @@
 import { COLORS } from "@/utils/enum";
 import {
   ARROW_CARD_PROPS,
+  FAQ_CARD_DATA,
   TESTIMONIAL_CARD_PROPS,
   WORK_CARD_PROPS,
 } from "@/utils/types";
@@ -133,5 +134,28 @@ export const TESTIMONIAL_CARD_DATA: TESTIMONIAL_CARD_PROPS[] = [
     designation: "CEO of Redbird Company",
     description:
       "Working with Katalyst Studio has been an incredible experience. They truly listened to our needs and delivered a stunning design that exceeded our expectations. We couldn't be happier with the final product!",
+  },
+];
+
+export const FAQ_DATA: FAQ_CARD_DATA[] = [
+  {
+    question: "What's your minimum project budget?",
+    answer:
+      "We work from ₹50,000 monthly retainers for startups to multi-crore enterprise contracts. Every budget gets equal commitment.",
+  },
+  {
+    question: "What's your minimum project budget?",
+    answer:
+      "We work from ₹50,000 monthly retainers for startups to multi-crore enterprise contracts. Every budget gets equal commitment.",
+  },
+  {
+    question: "What's your minimum project budget?",
+    answer:
+      "We work from ₹50,000 monthly retainers for startups to multi-crore enterprise contracts. Every budget gets equal commitment.",
+  },
+  {
+    question: "What's your minimum project budget?",
+    answer:
+      "We work from ₹50,000 monthly retainers for startups to multi-crore enterprise contracts. Every budget gets equal commitment.",
   },
 ];

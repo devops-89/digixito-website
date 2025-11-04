@@ -19,7 +19,7 @@ const SectionCard = ({ variant, title }: SECTION_CARD_PROPS) => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          height: 10,
+          // height: 10,
         }}
       >
         <Typography

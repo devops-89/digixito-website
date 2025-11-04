@@ -1,5 +1,12 @@
 "use client";
-import { Box, Container, Grid, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  Grid,
+  IconButton,
+  Stack,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import testimonialBanner from "@/banners/testimonial-banner.png";
 import topPrimary from "@/homepage/primary-rotatable-border.png";
@@ -13,18 +20,21 @@ import { kessel, monument } from "@/utils/fonts";
 import { Swiper, SwiperSlide } from "swiper/react";
 import TestimonialCard from "./common/testimonial-card";
 import { TESTIMONIAL_CARD_DATA } from "@/assets/data/generic-array";
+import { Autoplay } from "swiper/modules";
+import { ArrowBack, ArrowForward } from "@mui/icons-material";
 const Testimonials = () => {
   return (
     <Box sx={{ position: "relative" }}>
       <Box
         sx={{
           backgroundImage: `url(${testimonialBanner.src})`,
-          height: "100vh",
+          height: "100%",
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           position: "relative",
           zIndex: 2,
+          py: 10,
         }}
       >
         <SectionCard title="Testimonials" variant={VARIANTS.DARK} />
@@ -82,17 +92,41 @@ const Testimonials = () => {
             </Grid>
           </Grid>
         </Container>
-        <Swiper slidesPerView={3} >
-          {TESTIMONIAL_CARD_DATA.map((val, i) => (
-            <SwiperSlide>
-              <TestimonialCard
-                name={val.name}
-                designation={val.designation}
-                description={val.description}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <Box sx={{ mt: 4 }}>
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={300}
+            loop
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 2000,
+            }}
+          >
+            {TESTIMONIAL_CARD_DATA.map((val, i) => (
+              <SwiperSlide>
+                <TestimonialCard
+                  name={val.name}
+                  designation={val.designation}
+                  description={val.description}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <Stack
+            direction={"row"}
+            alignItems={"center"}
+            justifyContent={"center"}
+            spacing={4}
+            sx={{ mt: 4 }}
+          >
+            <IconButton sx={{ border: "1px solid #fff", color: COLORS.WHITE }}>
+              <ArrowBack />
+            </IconButton>
+            <IconButton sx={{ border: "1px solid #fff", color: COLORS.WHITE }}>
+              <ArrowForward />
+            </IconButton>
+          </Stack>
+        </Box>
       </Box>
       {/* <Box sx={{ position: "absolute", bottom: -20, width: "100%" }}>
         <Image src={bottomPrimary} alt="" style={{ width: "100%" }} />
