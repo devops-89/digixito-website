@@ -2,6 +2,8 @@ import { COLORS } from "@/utils/enum";
 import {
   ARROW_CARD_PROPS,
   FAQ_CARD_DATA,
+  LINK_LIST,
+  SECURE_CONNECTED_CARD,
   TESTIMONIAL_CARD_PROPS,
   WORK_CARD_PROPS,
 } from "@/utils/types";
@@ -9,6 +11,10 @@ import work1 from "@/homepage/work/work-1.png";
 import work2 from "@/homepage/work/work-2.png";
 import work3 from "@/homepage/work/work-3.png";
 import work4 from "@/homepage/work/work-4.png";
+import lock from "@/icons/lock.svg";
+import connect from "@/icons/seven-star.svg";
+import secure_bg from "@/homepage/secure.png";
+import connect_bg from "@/homepage/connect.png";
 export const SERVICES_TAB = [
   {
     label: "AI/ML Engineering",
@@ -157,5 +163,98 @@ export const FAQ_DATA: FAQ_CARD_DATA[] = [
     question: "What's your minimum project budget?",
     answer:
       "We work from ₹50,000 monthly retainers for startups to multi-crore enterprise contracts. Every budget gets equal commitment.",
+  },
+];
+
+export const SECURE_CARD_DATA: SECURE_CONNECTED_CARD[] = [
+  {
+    img: lock,
+    backgroundImage: secure_bg.src,
+    heading: "Always Secure and private",
+    description:
+      "Thenty is designed with security in mind. Have confidence that your members data is protected. ",
+    isButton: true,
+  },
+  {
+    img: connect,
+    backgroundImage: connect_bg.src,
+    heading: "Connect Thenty to other tools",
+    description:
+      "Our zapier intergration makes it easy to connect thenty with your other tools. ",
+    isButton: false,
+  },
+];
+
+export const TERMS_PAGE_LINKS = [
+  {
+    label: "Privacy Policy",
+    url: "/privacy-policy",
+  },
+  {
+    label: "Terms",
+    url: "/terms",
+  },
+  {
+    label: "Cookies",
+    url: "/cookies",
+  },
+  {
+    label: "Sitemap",
+    url: "/sitemap",
+  },
+  {
+    label: "Brand kit",
+    url: "/brand-kit",
+  },
+];
+
+export const LINK_LIST_DATA: LINK_LIST[] = [
+  {
+    heading: "Product",
+    data: [
+      {
+        label: "Overview",
+      },
+      {
+        label: "Essential features",
+      },
+      {
+        label: "Security",
+      },
+      {
+        label: "Trading",
+      },
+      {
+        label: "Staking",
+      },
+    ],
+  },
+  {
+    heading: "Education",
+    data: [
+      {
+        label: "Resources",
+      },
+      {
+        label: "Explore",
+      },
+    ],
+  },
+  {
+    heading: "Company",
+    data: [
+      {
+        label: "About",
+      },
+      {
+        label: "Careers",
+      },
+      {
+        label: "Contact",
+      },
+      {
+        label: "Newsletter",
+      },
+    ],
   },
 ];

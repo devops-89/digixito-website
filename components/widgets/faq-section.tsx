@@ -9,7 +9,7 @@ const FaqSection = () => {
   return (
     <Box
       sx={{
-        py: 5,
+        py: 10,
         height: "70vh",
         display: "flex",
         alignItems: "center",

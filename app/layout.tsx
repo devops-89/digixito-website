@@ -2,6 +2,7 @@ import Navbar from "@/components/widgets/navbar";
 import type { Metadata } from "next";
 import "swiper/css";
 import "./globals.css";
+import Footer from "@/components/widgets/footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

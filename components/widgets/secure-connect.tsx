@@ -1,16 +1,25 @@
-import { Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import React from "react";
 import SecureConnectCard from "./common/secure-connect-card";
+import { SECURE_CARD_DATA } from "@/assets/data/generic-array";
 
 const SecureConnect = () => {
   return (
-    <div>
+    <Box sx={{ mt: 5 }}>
       <Grid container>
-        <Grid size={6}>
-          <SecureConnectCard />
-        </Grid>
+        {SECURE_CARD_DATA.map((val, i) => (
+          <Grid size={6} key={i}>
+            <SecureConnectCard
+              backgroundImage={val.backgroundImage}
+              img={val.img}
+              heading={val.heading}
+              description={val.description}
+              isButton={val.isButton}
+            />
+          </Grid>
+        ))}
       </Grid>
-    </div>
+    </Box>
   );
 };
 

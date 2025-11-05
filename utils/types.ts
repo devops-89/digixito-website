@@ -42,3 +42,20 @@ export interface FAQ_CARD_DATA {
   question: string;
   answer: string;
 }
+
+export interface SECURE_CONNECTED_CARD {
+  backgroundImage: string;
+  img: StaticImageData;
+  heading: string;
+  description: string;
+  isButton: boolean;
+}
+
+export interface URLPROPS {
+  label: string;
+  url?: string;
+}
+export interface LINK_LIST {
+  heading: string;
+  data: URLPROPS[];
+}

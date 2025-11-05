@@ -12,6 +12,7 @@ import BestWorks from "./best-works";
 import Testimonials from "@/components/widgets/testimonial";
 import FaqSection from "@/components/widgets/faq-section";
 import SecureConnect from "@/components/widgets/secure-connect";
+import SubFooter from "@/components/widgets/subfooter";
 const HomeLayouts = () => {
   return (
     <Box>
@@ -43,6 +44,7 @@ const HomeLayouts = () => {
       <Testimonials />
       <FaqSection />
       <SecureConnect />
+      <SubFooter />
     </Box>
   );
 };
