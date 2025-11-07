@@ -113,15 +113,24 @@ export const HEADER_LINKS = {
       ],
     },
     {
-      heading: "How we serve",
+      heading: "Life at Digixito",
       data: [
         {
-          label: "Strategy and Consulting",
-          url: "/how-we-serve/strategy-consulting",
+          label: "Life at Digixito",
+          url: "/life-at-digixito",
+        },
+      ],
+    },
+    {
+      heading: "How are Hire",
+      data: [
+        {
+          label: "Hiring Journey",
+          url: "/hiring-journey",
         },
         {
-          label: "Technology we use",
-          url: "/how-we-serve/technology-we-use",
+          label: "Pro Tips",
+          url: "/pro-tips",
         },
       ],
     },

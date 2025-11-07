@@ -9,9 +9,20 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
+import { useRouter } from "next/navigation";
 import React from "react";
 
-const Headerlist = ({ heading, data }: HEADER_LIST_PROPS) => {
+interface HeaderlistProps extends HEADER_LIST_PROPS {
+  setAnchorEl: (value: HTMLButtonElement | null) => void;
+}
+
+const Headerlist = ({ heading, data, setAnchorEl }: HeaderlistProps) => {
+  const router = useRouter();
+
+  const handleChangePage = (url: string) => {
+    router.push(url);
+    setAnchorEl(null); 
+  };
   return (
     <Box>
       <Typography
@@ -37,6 +48,7 @@ const Headerlist = ({ heading, data }: HEADER_LIST_PROPS) => {
               //   },
               p: 1,
             }}
+            onClick={() => handleChangePage(val.url || "#")}
           >
             <ListItemText
               primary={val.label}

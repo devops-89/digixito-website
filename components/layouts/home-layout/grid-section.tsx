@@ -111,7 +111,15 @@ const GridSection = () => {
           direction={"row"}
           alignItems={"center"}
           justifyContent={"space-between"}
-          sx={{ position: "absolute", bottom: 100, width: "85%" }}
+          sx={{ 
+            position: "absolute", 
+            bottom: 100, 
+            width: "100%", 
+            left: "50%",
+            transform: "translateX(-50%)",
+            maxWidth: "1200px",
+            px: 2
+          }}
         >
           <Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>

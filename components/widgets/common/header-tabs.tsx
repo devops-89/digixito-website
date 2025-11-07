@@ -2,34 +2,41 @@
 import { HEADER_LINKS, HEADER_TABS } from "@/assets/data/header-data";
 import { COLORS, HEADER_TABS_DATA } from "@/utils/enum";
 import { monument } from "@/utils/fonts";
-import { Box, Grid, Tab, Tabs, Typography } from "@mui/material";
+import { Box, Button, Grid, Tab, Tabs, Typography } from "@mui/material";
 import { SyntheticEvent, useState } from "react";
 import TabPanel from "../tab-panel";
 import Headerlist from "./header-list";
+import { ArrowBackIos } from "@mui/icons-material";
 
-const HeaderTabs = () => {
+interface HeaderTabsProps {
+  setAnchorEl: (value: HTMLButtonElement | null) => void;
+}
+
+const HeaderTabs = ({ setAnchorEl }: HeaderTabsProps) => {
   const [value, setValue] = useState(0);
   const [data, setData] = useState(HEADER_LINKS.what_we_offer);
 
   const handleChange = (e: SyntheticEvent, newValue: number) => {
     setValue(newValue);
-    setData([]);
-    const target = e.target as HTMLElement;
-    const filterText = target.innerHTML;
 
-    if (filterText === HEADER_TABS_DATA.WHAT_WE_OFFER) {
-      setData(HEADER_LINKS.what_we_offer);
-    }
-    if (filterText === HEADER_TABS_DATA.WHAT_WE_ARE) {
-      setData(HEADER_LINKS.what_we_are);
-    }
-    if (filterText === HEADER_TABS_DATA.CAREERS) {
-      setData(HEADER_LINKS.what_we_are);
+    switch (HEADER_TABS[newValue].label) {
+      case HEADER_TABS_DATA.WHAT_WE_OFFER:
+        setData(HEADER_LINKS.what_we_offer);
+        break;
+      case HEADER_TABS_DATA.WHAT_WE_ARE:
+        setData(HEADER_LINKS.what_we_are);
+        break;
+      case HEADER_TABS_DATA.CAREERS:
+        setData(HEADER_LINKS.CAREERS);
+        break;
+      default:
+        setData([]);
+        break;
     }
   };
 
   return (
-    <Box>
+    <Box sx={{ position: "relative" }}>
       <Tabs
         sx={{
           width: "100%",
@@ -39,6 +46,7 @@ const HeaderTabs = () => {
           },
           "& .MuiTabs-indicator": {
             backgroundColor: `${COLORS.PRIMARY} !important`,
+            borderWidth: 2,
           },
         }}
         value={value}
@@ -65,10 +73,10 @@ const HeaderTabs = () => {
 
       {HEADER_TABS.map((val, i) => (
         <TabPanel value={value} key={i} index={i}>
-          <Grid container spacing={4}>
-            {data.map((val, i) => (
-              <Grid size={4} key={i}>
-                <Headerlist heading={val.heading} data={val.data} />
+          <Grid container spacing={4} justifyContent={"space-between"}>
+            {data.map((item, j) => (
+              <Grid size={4} key={j}>
+                <Headerlist heading={item.heading} data={item.data} setAnchorEl={setAnchorEl} />
               </Grid>
             ))}
           </Grid>

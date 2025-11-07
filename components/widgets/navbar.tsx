@@ -1,10 +1,20 @@
 "use client";
 import logo from "@/logo/Digixito_Logo.svg";
-import { Box, Container, IconButton, Popover, Stack } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  IconButton,
+  Popover,
+  Stack,
+} from "@mui/material";
 import Grow from "@mui/material/Grow";
 import Image from "next/image";
 import React, { useState } from "react";
 import HeaderTabs from "./common/header-tabs";
+import { COLORS } from "@/utils/enum";
+import { monument } from "@/utils/fonts";
+import { ArrowBackIos } from "@mui/icons-material";
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
@@ -65,11 +75,46 @@ const Navbar = () => {
               maxHeight: "100vh",
               boxShadow: "none",
             },
+            position: "relative",
           },
         }}
       >
         <Container maxWidth="lg">
-          <HeaderTabs />
+          <HeaderTabs setAnchorEl={setAnchorEl} />
+          <Button
+            sx={{
+              width: 244,
+              height: 55,
+              backgroundColor: COLORS.BLACK,
+              borderRadius: "27px",
+              color: COLORS.WHITE,
+              fontFamily: monument.style.fontFamily,
+              fontSize: 22,
+              fontWeight: 400,
+              position: "absolute",
+              bottom: 150,
+              left: "50%",
+              transform: "translateX(-50%)",
+            }}
+            endIcon={
+              <Box
+                sx={{
+                  backgroundColor: COLORS.WHITE,
+                  width: 21,
+                  height: 21,
+                  borderRadius: "50px",
+                  color: COLORS.BLACK,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <ArrowBackIos sx={{ fontSize: 12, ml: 1 }} />
+              </Box>
+            }
+          >
+            Go to home
+          </Button>
         </Container>
       </Popover>
     </Box>
