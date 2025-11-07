@@ -12,7 +12,7 @@ const ImageHeading = ({ title }: { title: string }) => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           width: "100%",
-          px: 1,
+          px: 3,
         }}
       >
         <Typography

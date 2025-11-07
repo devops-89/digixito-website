@@ -5,7 +5,7 @@ import {
   SERVICES_TAB,
 } from "@/assets/data/generic-array";
 import StarCard from "@/components/widgets/star-card";
-import { COLORS } from "@/utils/enum";
+import { COLORS, VARIANTS } from "@/utils/enum";
 import { kessel, monument } from "@/utils/fonts";
 import { ArrowForward } from "@mui/icons-material";
 import {
@@ -34,11 +34,7 @@ const ServiceSection = () => {
 
   return (
     <Box sx={{ my: 10 }}>
-      <SectionCard
-        title="What we do"
-        backgroundColor={COLORS.PRIMARY}
-        textColor="#222"
-      />
+      <SectionCard title="What we do" variant={VARIANTS.PRIMARY} />
       <Container maxWidth="lg">
         <Grid container spacing={5}>
           <Grid size={5}>

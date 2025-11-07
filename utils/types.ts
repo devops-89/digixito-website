@@ -59,3 +59,15 @@ export interface LINK_LIST {
   heading: string;
   data: URLPROPS[];
 }
+
+export interface VALUE_CARD_PROPS {
+  number?: string | number;
+  title: string;
+  description: string;
+}
+
+export interface COUNT_UP_CARD_PROPS {
+  number: number;
+  suffix: string;
+  title: string;
+}

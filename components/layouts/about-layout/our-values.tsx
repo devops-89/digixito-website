@@ -1,4 +1,5 @@
-import { Box, Container, Grid, Stack, Typography } from "@mui/material";
+"use client";
+import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import borderTop from "@/homepage/primary-rotatable-border.png";
@@ -7,6 +8,14 @@ import star from "@/icons/gold-star.svg";
 import { COLORS } from "@/utils/enum";
 import { kessel, monument } from "@/utils/fonts";
 import ImageHeading from "@/components/widgets/image-heading";
+import { Swiper, SwiperSlide } from "swiper/react";
+import ValueCard from "./components/value-card";
+import {
+  COUNTER_CARD_DATA,
+  VALUE_CARD_DATA,
+} from "@/assets/data/generic-array";
+import { Autoplay } from "swiper/modules";
+import NumberCard from "./components/number-card";
 const Ourvalues = () => {
   return (
     <div>
@@ -36,39 +45,121 @@ const Ourvalues = () => {
             py: 10,
           }}
         >
-          <Container maxWidth="lg">
-            <Grid container>
-              <Grid size={12}>
-                <Stack direction={"row"} alignItems={"flex-start"} spacing={2}>
-                  <Typography
-                    sx={{
-                      color: COLORS.WHITE,
-                      fontSize: 48,
-                      fontFamily: kessel.style.fontFamily,
-                    }}
+          <Container maxWidth="xl">
+            <Container maxWidth="lg">
+              <Grid container>
+                <Grid size={12}>
+                  <Stack
+                    direction={"row"}
+                    alignItems={"flex-start"}
+                    spacing={2}
                   >
-                    The values that drive everything we do{" "}
-                  </Typography>
-                  <Image src={star} alt="" width={50} />
-                </Stack>
-                <Stack
-                  direction={"row"}
-                  alignItems={"center"}
-                  justifyContent={"space-between"}
-                >
-                  <Stack direction={"row"} alignItems={"center"} spacing={2}>
                     <Typography
                       sx={{
-                        fontSize: 40,
-                        fontFamily: monument.style.fontFamily,
                         color: COLORS.WHITE,
+                        fontSize: 48,
+                        fontFamily: kessel.style.fontFamily,
                       }}
                     >
-                      our
+                      The values that drive everything we do{" "}
                     </Typography>
-                    <ImageHeading title="values" />
+                    <Image src={star} alt="" width={50} />
                   </Stack>
-                </Stack>
+                  <Stack
+                    direction={"row"}
+                    alignItems={"center"}
+                    justifyContent={"space-between"}
+                    sx={{ mt: 5 }}
+                  >
+                    <Stack direction={"row"} alignItems={"center"} spacing={2}>
+                      <Typography
+                        sx={{
+                          fontSize: 40,
+                          fontFamily: monument.style.fontFamily,
+                          color: COLORS.WHITE,
+                        }}
+                      >
+                        our
+                      </Typography>
+                      <ImageHeading title="values" />
+                    </Stack>
+                    <Button
+                      sx={{
+                        backgroundColor: COLORS.PRIMARY,
+                        color: COLORS.BLACK,
+                        fontSize: 19,
+                        fontFamily: monument.style.fontFamily,
+                        fontWeight: 400,
+                        lineHeight: "20.25px",
+                        padding: "18px 39px",
+                      }}
+                    >
+                      Join our team
+                    </Button>
+                  </Stack>
+                </Grid>
+              </Grid>
+            </Container>
+            <Box sx={{ mt: 4 }}>
+              <Swiper
+                slidesPerView={4}
+                spaceBetween={400}
+                modules={[Autoplay]}
+                autoplay={{
+                  delay: 2000,
+                }}
+                loop
+                centeredSlides
+              >
+                {VALUE_CARD_DATA.map((val, i) => (
+                  <SwiperSlide key={i}>
+                    <ValueCard
+                      title={val.title}
+                      description={val.description}
+                      number={val.number}
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </Box>
+            <Grid container sx={{ mt: 5 }}>
+              <Grid size={8} margin={"auto"}>
+                <Typography
+                  sx={{
+                    fontSize: 38,
+                    fontFamily: kessel.style.fontFamily,
+                    color: "#FFC228",
+                    fontWeight: 500,
+                    lineHeight: "19px",
+                    textAlign: "center",
+                  }}
+                >
+                  Our numbers
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: 37,
+                    fontFamily: monument.style.fontFamily,
+                    fontWeight: 400,
+                    lineHeight: "55px",
+                    textAlign: "center",
+                    color: COLORS.WHITE,
+                    mt: 3,
+                  }}
+                >
+                  We have impactful results
+                </Typography>
+                <Grid container sx={{ mt: 3 }}>
+                  {COUNTER_CARD_DATA.map((val, i) => (
+                    <Grid size={3} key={i}>
+                      <NumberCard
+                        number={val.number}
+                        suffix={val.suffix}
+                        title={val.title}
+                      />
+                    </Grid>
+                  ))}
+                </Grid>
               </Grid>
             </Grid>
           </Container>

@@ -1,10 +1,12 @@
 import { COLORS } from "@/utils/enum";
 import {
   ARROW_CARD_PROPS,
+  COUNT_UP_CARD_PROPS,
   FAQ_CARD_DATA,
   LINK_LIST,
   SECURE_CONNECTED_CARD,
   TESTIMONIAL_CARD_PROPS,
+  VALUE_CARD_PROPS,
   WORK_CARD_PROPS,
 } from "@/utils/types";
 import work1 from "@/homepage/work/work-1.png";
@@ -256,5 +258,79 @@ export const LINK_LIST_DATA: LINK_LIST[] = [
         label: "Newsletter",
       },
     ],
+  },
+];
+
+export const VALUE_CARD_DATA: VALUE_CARD_PROPS[] = [
+  {
+    number: "01",
+    title: "Innovation",
+    description:
+      "We don't follow trends, we create them. Every solution pushes boundaries, challenges conventions, and redefines what's possible.",
+  },
+  {
+    title: "Passion",
+    description:
+      "This isn't just work, it's craft. We obsess over pixels, perfect code, and celebrate breakthroughs.",
+    number: "02",
+  },
+  {
+    title: "Ownership",
+    description:
+      "Your project becomes our mission. We take responsibility for outcomes, not just outputs. Success or learnings, we own it.",
+    number: "03",
+  },
+  {
+    title: "Growth",
+    description:
+      "Stagnation is death. We evolve daily, new skills, new tech, new perspectives. Your growth fuels our growth ",
+    number: "04",
+  },
+  {
+    number: "01",
+    title: "Innovation",
+    description:
+      "We don't follow trends, we create them. Every solution pushes boundaries, challenges conventions, and redefines what's possible.",
+  },
+  {
+    title: "Passion",
+    description:
+      "This isn't just work, it's craft. We obsess over pixels, perfect code, and celebrate breakthroughs.",
+    number: "02",
+  },
+  {
+    title: "Ownership",
+    description:
+      "Your project becomes our mission. We take responsibility for outcomes, not just outputs. Success or learnings, we own it.",
+    number: "03",
+  },
+  {
+    title: "Growth",
+    description:
+      "Stagnation is death. We evolve daily, new skills, new tech, new perspectives. Your growth fuels our growth ",
+    number: "04",
+  },
+];
+
+export const COUNTER_CARD_DATA: COUNT_UP_CARD_PROPS[] = [
+  {
+    number: 99,
+    suffix: "%",
+    title: "Customer Satisfaction",
+  },
+  {
+    number: 32,
+    suffix: "+",
+    title: "Active Clients",
+  },
+  {
+    number: 125,
+    suffix: "+",
+    title: "Team Members",
+  },
+  {
+    number: 240,
+    suffix: "%",
+    title: "Company Growth",
   },
 ];

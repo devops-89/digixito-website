@@ -93,6 +93,7 @@ const Footer = () => {
                       letterSpacing: "1.4",
                       textTransform: "uppercase",
                     }}
+                    key={i}
                   >
                     {val.label}
                   </Typography>
