@@ -71,3 +71,8 @@ export interface COUNT_UP_CARD_PROPS {
   suffix: string;
   title: string;
 }
+
+export interface HEADER_LIST_PROPS {
+  heading: string;
+  data: URLPROPS[];
+}
