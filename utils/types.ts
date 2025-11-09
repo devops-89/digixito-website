@@ -4,9 +4,10 @@ import { VARIANTS } from "./enum";
 export interface BEST_SERVICE_CARD_PROPS {
   heading?: string;
   boldHeading?: string;
-  iconPosition: "top" | "bottom";
+  iconPosition?: "top" | "bottom";
   backgroundImage: string;
   height?: string;
+  isStar?: boolean;
 }
 
 export interface ARROW_CARD_PROPS {
@@ -72,7 +73,51 @@ export interface COUNT_UP_CARD_PROPS {
   title: string;
 }
 
+export interface HEADER_DATA_PROPS {
+  label?: string;
+  url?: string;
+  subData?: URLPROPS[];
+}
+
 export interface HEADER_LIST_PROPS {
   heading: string;
-  data: URLPROPS[];
+  data: HEADER_DATA_PROPS[];
+}
+
+export interface LIST {
+  label?: string;
+  value?: string;
+}
+
+export interface OUR_SERVICES_CARD {
+  service_name: string;
+  service_description: string;
+  // list: LIST[];
+}
+
+export interface PROJECT_CARD_PROPS {
+  project_name: string;
+  project_description: string;
+}
+
+export interface DEVELOPMENT_PROCESS_CARD_PROPS {
+  process_number: string | number;
+  process_title: string;
+  process_description: string;
+}
+
+export interface DETAILS_PAGE_PROPS {
+  slug: string;
+  title: string;
+  heroSection: {
+    heading: string;
+    description: string;
+  };
+  ourServices: {
+    heading: string;
+    description: string;
+    services_data: OUR_SERVICES_CARD[];
+  };
+  project_data: PROJECT_CARD_PROPS[];
+  development_process: DEVELOPMENT_PROCESS_CARD_PROPS[];
 }

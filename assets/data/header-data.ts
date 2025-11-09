@@ -18,20 +18,70 @@ export const HEADER_LINKS = {
       heading: "Digital Transformation",
       data: [
         {
-          label: "AI/ML Development",
+          label: "AI Transformation",
           url: "/digital-transformation/ai-ml-development",
+          subData: [
+            {
+              label: "Machine Learning & Predictive Models",
+              url: "/digital-transformation/ai-transformation/machine-learning-and-predictive-models",
+            },
+            {
+              label: "Generative AI (Chatbots, LLMs, Automation)",
+              url: "/digital-transformation/ai-transformation/generative-ai",
+            },
+            {
+              label: "Computer Vision & OCR Systems",
+              url: "/digital-transformation/ai-transformation/computer-vision-and-ocr-systems",
+            },
+            {
+              label: "Data Engineering & MLOps",
+              url: "/digital-transformation/ai-transformation/data-engineering-mlops",
+            },
+          ],
         },
         {
-          label: "Application Development",
+          label: "Product Engineering",
           url: "/digital-transformation/application-development",
+          subData: [
+            {
+              label: "Application & SaaS Development",
+              url: "/digital-transformation/product-engineering/application-and-saas-developement",
+            },
+            {
+              label: "Web and Mobile Platforms",
+              url: "/digital-transformation/web-and-mobile-platforms",
+            },
+            {
+              label: "System Integration & Api Developement",
+              url: "/digital-transformation/system-integration-and-api-development",
+            },
+            {
+              label: "Cloud Infrastructure",
+              url: "/digital-transformation/cloud-infrastructure",
+            },
+          ],
         },
         {
-          label: "Web Development",
+          label: "Design Intelligence",
           url: "/digital-transformation/web-development",
-        },
-        {
-          label: "UI/UX Design",
-          url: "/digital-transformation/ui-ux-design",
+          subData: [
+            {
+              label: "AI-Powered UI/UX Design",
+              url: "/digital-transformation/design-intelligence/ai-powered-and-ui-ux-design",
+            },
+            {
+              label: "Conversational Interface Design",
+              url: "/digital-transformation/design-intelligence/conversational-interface-design",
+            },
+            {
+              label: "Prototyping & User Research",
+              url: "/digital-transformation/design-intelligence/prototyping-and-user-research",
+            },
+            {
+              label: "Experience Optimization",
+              url: "/digital-transformation/design-intelligence/experience-optimization",
+            },
+          ],
         },
       ],
     },

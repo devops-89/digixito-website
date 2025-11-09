@@ -1,16 +1,17 @@
 import { COLORS } from "@/utils/enum";
 import { kessel } from "@/utils/fonts";
 import { HEADER_LIST_PROPS } from "@/utils/types";
+import { ExpandMore } from "@mui/icons-material";
 import {
   Box,
+  Collapse,
   List,
-  ListItem,
   ListItemButton,
   ListItemText,
   Typography,
 } from "@mui/material";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 
 interface HeaderlistProps extends HEADER_LIST_PROPS {
   setAnchorEl: (value: HTMLButtonElement | null) => void;
@@ -21,8 +22,15 @@ const Headerlist = ({ heading, data, setAnchorEl }: HeaderlistProps) => {
 
   const handleChangePage = (url: string) => {
     router.push(url);
-    setAnchorEl(null); 
+    setAnchorEl(null);
   };
+
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const handleToggle = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <Box>
       <Typography
@@ -38,27 +46,58 @@ const Headerlist = ({ heading, data, setAnchorEl }: HeaderlistProps) => {
 
       <List>
         {data.map((val, i) => (
-          <ListItemButton
-            key={i}
-            sx={{
-              width: "fit-content",
-              //   ":hover": {
-              //     color: COLORS.PRIMARY,
-              //     backgroundColor: COLORS.TRANSPARENT,
-              //   },
-              p: 1,
-            }}
-            onClick={() => handleChangePage(val.url || "#")}
-          >
-            <ListItemText
-              primary={val.label}
-              primaryTypographyProps={{
-                fontSize: 20,
-                fontFamily: kessel.style.fontFamily,
-                fontWeight: 500,
+          <React.Fragment key={i}>
+            <ListItemButton
+              sx={{
+                width: "fit-content",
+                //   ":hover": {
+                //     color: COLORS.PRIMARY,
+                //     backgroundColor: COLORS.TRANSPARENT,
+                //   },
+                p: 1,
               }}
-            />
-          </ListItemButton>
+              onClick={() => handleToggle(i)}
+            >
+              <ListItemText
+                primary={val.label}
+                primaryTypographyProps={{
+                  fontSize: 20,
+                  fontFamily: kessel.style.fontFamily,
+                  fontWeight: 500,
+                }}
+              />
+              {val.subData && val.subData.length > 0 && (
+                <ExpandMore
+                  sx={{
+                    transform: openIndex === i ? "rotate(180deg)" : "rotate(0deg)",
+                    transition: "transform 0.3s",
+                  }}
+                />
+              )}
+            </ListItemButton>
+            {val.subData && val.subData.length > 0 && (
+              <Collapse in={openIndex === i} timeout="auto" unmountOnExit>
+                <List component="div" disablePadding>
+                  {val.subData.map((item, index) => (
+                    <ListItemButton
+                      key={index}
+                      sx={{ pl: 4 }}
+                      onClick={() => item.url && handleChangePage(item.url)}
+                    >
+                      <ListItemText
+                        primary={item.label}
+                        primaryTypographyProps={{
+                          fontSize: 20,
+                          fontFamily: kessel.style.fontFamily,
+                          fontWeight: 500,
+                        }}
+                      />
+                    </ListItemButton>
+                  ))}
+                </List>
+              </Collapse>
+            )}
+          </React.Fragment>
         ))}
       </List>
     </Box>

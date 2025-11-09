@@ -12,6 +12,7 @@ const StarCard = ({
   iconPosition,
   backgroundImage,
   height,
+  isStar,
 }: BEST_SERVICE_CARD_PROPS) => {
   return (
     <Box sx={{ position: "relative" }}>
@@ -62,18 +63,20 @@ const StarCard = ({
           </Box>
         )}
       </Box>
-      <Box
-        sx={{
-          position: "absolute",
-          top: iconPosition === "bottom" ? "" : -20,
-          left: iconPosition === "bottom" ? "" : -20,
-          transform: "rotate(-37deg)",
-          right: iconPosition === "bottom" ? -20 : "",
-          bottom: iconPosition === "bottom" ? -20 : "",
-        }}
-      >
-        <Image src={star} alt="" />
-      </Box>
+      {isStar && (
+        <Box
+          sx={{
+            position: "absolute",
+            top: iconPosition === "bottom" ? "" : -20,
+            left: iconPosition === "bottom" ? "" : -20,
+            transform: "rotate(-37deg)",
+            right: iconPosition === "bottom" ? -20 : "",
+            bottom: iconPosition === "bottom" ? -20 : "",
+          }}
+        >
+          <Image src={star} alt="" />
+        </Box>
+      )}
     </Box>
   );
 };

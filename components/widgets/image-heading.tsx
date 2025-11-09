@@ -1,8 +1,8 @@
-import { Box, Typography } from "@mui/material";
+import { Box, SxProps, Typography } from "@mui/material";
 import React from "react";
 import headingBanner from "@/homepage/heading-banner.png";
 import { monument } from "@/utils/fonts";
-const ImageHeading = ({ title }: { title: string }) => {
+const ImageHeading = ({ title, sx }: { title: string; sx?: SxProps }) => {
   return (
     <Box>
       <Box
@@ -13,6 +13,7 @@ const ImageHeading = ({ title }: { title: string }) => {
           backgroundRepeat: "no-repeat",
           width: "100%",
           px: 3,
+          ...sx,
         }}
       >
         <Typography

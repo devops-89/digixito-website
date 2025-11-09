@@ -12,7 +12,23 @@ import {
 import React from "react";
 import star from "@/icons/black-star.svg";
 import Image from "next/image";
+import heroImage1 from "@/banners/details_hero_Section1.png";
+import StarCard from "@/components/widgets/star-card";
+import heroImage2 from "@/homepage/best-service2.png";
+import { useDetailsStore } from "@/store/useDetailsStore";
+import { DETAILS_PAGE_PROPS } from "@/utils/types";
+
 const HeroSection = () => {
+  const { data } = useDetailsStore();
+  const heroData = data as DETAILS_PAGE_PROPS | null;
+
+  if (!heroData) {
+    return null;
+  }
+
+  // Split heading by "&" to maintain the visual style with bold emphasis
+  const headingParts = heroData.heroSection.heading.split(" & ");
+  const hasAmpersand = headingParts.length > 1;
   return (
     <Box>
       <Container maxWidth="lg">
@@ -38,48 +54,50 @@ const HeroSection = () => {
               fontWeight: 400,
             }}
           >
-            Digital transformation
+            {heroData.title}
           </Typography>
         </Stack>
         <Divider sx={{ borderColor: "#000" }}>
           <Image src={star} alt="" />
         </Divider>
 
-        <Grid container>
+        <Grid container spacing={5}>
           <Grid size={6}>
             <Typography
               sx={{
-                fontSize: 30,
+                fontSize: hasAmpersand ? 30 : 50,
                 fontFamily: monument.style.fontFamily,
-                fontWeight: 400,
+                fontWeight: hasAmpersand ? 400 : 800,
               }}
             >
-              AI/ML{" "}
-              <Typography
-                sx={{
-                  fontFamily: monument.style.fontFamily,
-                  fontSize: 50,
-                  fontWeight: 800,
-                }}
-              >
-                Development
-              </Typography>{" "}
+              {hasAmpersand ? (
+                <>
+                  {headingParts[0]}{" "}
+                  <Typography
+                    sx={{
+                      fontFamily: monument.style.fontFamily,
+                      fontSize: 50,
+                      fontWeight: 800,
+                    }}
+                    component={"span"}
+                  >
+                    & {headingParts[1]}
+                  </Typography>
+                </>
+              ) : (
+                heroData.heroSection.heading
+              )}
             </Typography>
             <Typography
               sx={{
                 fontSize: 19,
                 fontWeight: 500,
                 fontFamily: kessel.style.fontFamily,
+                lineHeight: "35px",
+                whiteSpace: "pre-line",
               }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              sed ex lacus. Morbi ac sem sit amet leo maximus sollicitudin a nec
-              mauris. Donec posuere tincidunt eros vel volutpat. Curabitur
-              porttitor purus vel pellentesque dignissim. Fusce ac ultrices
-              urna. Quisque sit amet congue velit. Duis ultrices diam sed nisi
-              convallis Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Aenean sed ex lacus. Morbi ac sem sit amet leo maximus
-              sollicitudin a nec mauris. Donec posuere tincidunt eros vel v{" "}
+              {heroData.heroSection.description}
             </Typography>
             <Stack
               direction={"row"}
@@ -116,7 +134,25 @@ const HeroSection = () => {
               </Button>
             </Stack>
           </Grid>
-          <Grid size={6}></Grid>
+          <Grid size={6}>
+            <Stack spacing={4}>
+              <StarCard
+                backgroundImage={heroImage1.src}
+                height="250px"
+                heading="Enhance customer"
+                boldHeading="Experiences"
+              />
+
+              <StarCard
+                backgroundImage={heroImage2.src}
+                isStar={true}
+                iconPosition="bottom"
+                height="250px"
+                heading="Reduce human "
+                boldHeading="error"
+              />
+            </Stack>
+          </Grid>
         </Grid>
       </Container>
     </Box>

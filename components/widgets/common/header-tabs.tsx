@@ -76,7 +76,11 @@ const HeaderTabs = ({ setAnchorEl }: HeaderTabsProps) => {
           <Grid container spacing={4} justifyContent={"space-between"}>
             {data.map((item, j) => (
               <Grid size={4} key={j}>
-                <Headerlist heading={item.heading} data={item.data} setAnchorEl={setAnchorEl} />
+                <Headerlist
+                  heading={item.heading}
+                  data={item.data}
+                  setAnchorEl={setAnchorEl}
+                />
               </Grid>
             ))}
           </Grid>
