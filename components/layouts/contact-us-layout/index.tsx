@@ -1,6 +1,7 @@
 import PageHeading from "@/components/widgets/page-heading";
 import { Box, Container } from "@mui/material";
 import React from "react";
+import ContactHeroSection from "./contact-hero-section";
 
 const ContactUsLayout = () => {
   return (
@@ -8,6 +9,7 @@ const ContactUsLayout = () => {
       <Container maxWidth="lg">
         <PageHeading page_name="Contact Us" />
       </Container>
+      <ContactHeroSection />
     </Box>
   );
 };
