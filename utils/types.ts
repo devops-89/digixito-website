@@ -140,3 +140,9 @@ export interface WORK_AT_DIGIXITO_CARD_PROPS {
   heading: string;
   description: string;
 }
+
+export interface CONTACT_CARD_PROPS {
+  img: StaticImageData;
+  heading: string;
+  description: string;
+}

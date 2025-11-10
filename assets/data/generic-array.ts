@@ -1,6 +1,7 @@
 import { COLORS } from "@/utils/enum";
 import {
   ARROW_CARD_PROPS,
+  CONTACT_CARD_PROPS,
   COUNT_UP_CARD_PROPS,
   FAQ_CARD_DATA,
   LINK_LIST,
@@ -21,6 +22,9 @@ import secure_bg from "@/homepage/secure.png";
 import connect_bg from "@/homepage/connect.png";
 import globe from "@/banners/Globe.png";
 import fish from "@/banners/fish.png";
+import location from "@/contact-us/carbon_location.svg";
+import phone from "@/contact-us/sharp-phone.svg";
+import email from "@/contact-us/email.svg";
 export const SERVICES_TAB = [
   {
     label: "AI/ML Engineering",
@@ -415,5 +419,23 @@ export const WORK_AT_DIGIXITO_CARD_DATA: WORK_AT_DIGIXITO_CARD_PROPS[] = [
     heading: "Collaborate without boundaries.",
     description:
       "We work as one team  across disciplines, ideas, and time zones. Engineers think like designers. Designers talk like strategists. Strategists build like makers. Collaboration isn’t a process here; it’s our superpower.",
+  },
+];
+
+export const CONTACT_CARD_DATA: CONTACT_CARD_PROPS[] = [
+  {
+    img: location,
+    heading: "Address",
+    description: "123 Tech Park, Innovation Avenue, India",
+  },
+  {
+    img: phone,
+    heading: "Phone Number",
+    description: "+91 9354678205",
+  },
+  {
+    img: email,
+    heading: "E - mail",
+    description: "accounts@digixito.com",
   },
 ];

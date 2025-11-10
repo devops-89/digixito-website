@@ -7,7 +7,7 @@ const ContactHeroSection = () => {
   return (
     <Box>
       <Container maxWidth="lg">
-        <Grid container alignItems={"center"}>
+        <Grid container alignItems={"center"} spacing={20}>
           <Grid size={6}>
             <Image src={hero_image} alt="" />
           </Grid>
@@ -28,6 +28,7 @@ const ContactHeroSection = () => {
                 fontWeight: 500,
                 letterSpacing: "-0.48px",
                 lineHeight: "30px",
+                mt: 2,
               }}
             >
               Digital Transformation is the strategic adoption of digital

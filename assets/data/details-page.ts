@@ -5,7 +5,7 @@ import fraud_detection from "@/services/machine-learning/fraud_detection.jpg";
 export const DETAILS_PAGE_DETAILS: DETAILS_PAGE_PROPS[] = [
   {
     slug: "ai-transformation/machine-learning-and-predictive-models",
-    title: "Digital Transformation",
+    title: "AI Transformation",
     heroSection: {
       heading: "Machine Learning & Predictive Models",
       description: `At Digixito, we combine the power of machine learning with predictive analytics to build solutions that scale.

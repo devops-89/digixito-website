@@ -44,7 +44,7 @@ const AboutHeroSection = () => {
               >
                 Our
               </Typography>
-              <ImageHeading title="Story" sx={{ width: "100%" }} />
+              <ImageHeading title="Story" sx={{ width: "100%" }} /> 
             </Stack>
             <Typography
               sx={{
