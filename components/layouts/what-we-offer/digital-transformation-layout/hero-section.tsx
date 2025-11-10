@@ -17,6 +17,7 @@ import StarCard from "@/components/widgets/star-card";
 import heroImage2 from "@/homepage/best-service2.png";
 import { useDetailsStore } from "@/store/useDetailsStore";
 import { DETAILS_PAGE_PROPS } from "@/utils/types";
+import PageHeading from "@/components/widgets/page-heading";
 
 const HeroSection = () => {
   const { data } = useDetailsStore();
@@ -32,34 +33,7 @@ const HeroSection = () => {
   return (
     <Box>
       <Container maxWidth="lg">
-        <Stack
-          direction={"row"}
-          alignItems={"center"}
-          justifyContent={"space-between"}
-        >
-          <Typography
-            sx={{
-              color: COLORS.BLACK,
-              fontSize: 50,
-              fontFamily: monument.style.fontFamily,
-              fontWeight: 800,
-            }}
-          >
-            What We Offer
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: 26,
-              fontFamily: monument.style.fontFamily,
-              fontWeight: 400,
-            }}
-          >
-            {heroData.title}
-          </Typography>
-        </Stack>
-        <Divider sx={{ borderColor: "#000" }}>
-          <Image src={star} alt="" />
-        </Divider>
+        <PageHeading page_name="What we offer" page_title={heroData.title} />
 
         <Grid container spacing={5}>
           <Grid size={6}>

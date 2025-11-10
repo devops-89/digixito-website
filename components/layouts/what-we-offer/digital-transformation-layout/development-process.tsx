@@ -6,7 +6,13 @@ import ImageHeading from "@/components/widgets/image-heading";
 import Image from "next/image";
 import star from "@/icons/gold-star.svg";
 import slideBanner from "@/homepage/best-work-banner.png";
+import DevelopmentCard from "./components/development-card";
+import { useDetailsStore } from "@/store/useDetailsStore";
+import { DETAILS_PAGE_PROPS } from "@/utils/types";
 const DevelopmentProcess = () => {
+  const { data } = useDetailsStore();
+
+  const developmentData = data as DETAILS_PAGE_PROPS;
   return (
     <Box sx={{ mt: 20 }}>
       <Box
@@ -67,24 +73,35 @@ const DevelopmentProcess = () => {
               textAlign: "center",
               width: "772px",
               margin: "auto",
-              mt: 2,
+              my: 5,
             }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean{" "}
+            Our proven ML workflow ensures transparency, collaboration, and
+            measurable results:
           </Typography>
           <Box
             sx={{
               backgroundImage: `url(${slideBanner.src})`,
-              height: "100%",
+              height: "50vh",
               display: "flex",
               alignItems: "center",
               py: 10,
               position: "relative",
             }}
           >
-
-            
+            <Container maxWidth="lg" sx={{ position: "absolute", top: -20 }}>
+              <Grid container spacing={4}>
+                {developmentData?.development_process.map((val, i) => (
+                  <Grid size={4} key={i}>
+                    <DevelopmentCard
+                      process_number={val.process_number}
+                      process_title={val.process_title}
+                      process_description={val.process_description}
+                    />
+                  </Grid>
+                ))}
+              </Grid>
+            </Container>
           </Box>
         </Container>
       </Box>

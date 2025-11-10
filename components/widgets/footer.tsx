@@ -19,7 +19,7 @@ import LinkList from "./common/link-list";
 const Footer = () => {
   const socialIcons: React.ElementType[] = [X, YouTube, LinkedIn];
   return (
-    <Box sx={{ py: 5 }}>
+    <Box sx={{ py: 10 }}>
       <Container maxWidth="lg">
         <Grid container alignItems={"center"} spacing={5}>
           <Grid size={6} sx={{ position: "relative" }}>
@@ -33,45 +33,50 @@ const Footer = () => {
             >
               oops! we’re out of box 😜❤️
             </Typography>
-            {/* <Box sx={{ textAlign: "end" }}>
-              <Image src={footer_icon} alt="" />
-            </Box> */}
-            <Box
-              sx={{
-                backgroundColor: COLORS.BLACK,
-                width: 570,
-                height: 570,
-                borderRadius: "50%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <Box>
-                <Image src={logo_initial} alt="" />
-                <Stack direction={"row"} alignItems={"center"} spacing={2}>
-                  {socialIcons.map((Icon, i) => (
-                    <IconButton
-                      key={i}
-                      sx={{
-                        backgroundColor: "#24262B",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        width: 60,
-                        height: 60,
-                        color: COLORS.WHITE,
-                        ":hover": {
-                          backgroundColor: "#24262B",
-                        },
-                      }}
-                    >
-                      <Icon />
-                    </IconButton>
-                  ))}
-                </Stack>
-              </Box>
+            <Box sx={{ textAlign: "end" }}>
+              <Image src={footer_icon} alt="" width={150} />
             </Box>
+            <Stack direction={"row"} alignItems={"flex-start"} spacing={3}>
+              <Box
+                sx={{
+                  backgroundColor: COLORS.BLACK,
+                  width: 500,
+                  height: 500,
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Box>
+                  <Image src={logo_initial} alt="" />
+                  <Stack direction={"row"} alignItems={"center"} spacing={2}>
+                    {socialIcons.map((Icon, i) => (
+                      <IconButton
+                        key={i}
+                        sx={{
+                          backgroundColor: "#24262B",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          width: 60,
+                          height: 60,
+                          color: COLORS.WHITE,
+                          ":hover": {
+                            backgroundColor: "#24262B",
+                          },
+                        }}
+                      >
+                        <Icon />
+                      </IconButton>
+                    ))}
+                  </Stack>
+                </Box>
+              </Box>
+              {/* <Box sx={{ textAlign: "end", position: "absolute", right: 0  }}>
+                <Image src={footer_icon} alt="" width={100} />
+              </Box> */}
+            </Stack>
           </Grid>
           <Grid size={6}>
             <Box

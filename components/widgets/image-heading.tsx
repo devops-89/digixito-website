@@ -12,8 +12,10 @@ const ImageHeading = ({ title, sx }: { title: string; sx?: SxProps }) => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           width: "100%",
-          px: 3,
+          px: 2,
           ...sx,
+          transform: "skew(-10deg)",
+          borderRadius: 4,
         }}
       >
         <Typography

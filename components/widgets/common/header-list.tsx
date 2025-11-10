@@ -1,11 +1,12 @@
 import { COLORS } from "@/utils/enum";
 import { kessel } from "@/utils/fonts";
 import { HEADER_LIST_PROPS } from "@/utils/types";
-import { ExpandMore } from "@mui/icons-material";
+import { Circle, Done, ExpandMore } from "@mui/icons-material";
 import {
   Box,
   Collapse,
   List,
+  ListItemAvatar,
   ListItemButton,
   ListItemText,
   Typography,
@@ -50,26 +51,29 @@ const Headerlist = ({ heading, data, setAnchorEl }: HeaderlistProps) => {
             <ListItemButton
               sx={{
                 width: "fit-content",
-                //   ":hover": {
-                //     color: COLORS.PRIMARY,
-                //     backgroundColor: COLORS.TRANSPARENT,
-                //   },
                 p: 1,
               }}
-              onClick={() => handleToggle(i)}
+              onClick={
+                val.url
+                  ? () => handleChangePage(val.url || "#")
+                  : () => handleToggle(i)
+              }
             >
               <ListItemText
                 primary={val.label}
-                primaryTypographyProps={{
-                  fontSize: 20,
-                  fontFamily: kessel.style.fontFamily,
-                  fontWeight: 500,
+                slotProps={{
+                  primary: {
+                    fontSize: 20,
+                    fontFamily: kessel.style.fontFamily,
+                    fontWeight: 500,
+                  },
                 }}
               />
               {val.subData && val.subData.length > 0 && (
                 <ExpandMore
                   sx={{
-                    transform: openIndex === i ? "rotate(180deg)" : "rotate(0deg)",
+                    transform:
+                      openIndex === i ? "rotate(180deg)" : "rotate(0deg)",
                     transition: "transform 0.3s",
                   }}
                 />
@@ -81,15 +85,20 @@ const Headerlist = ({ heading, data, setAnchorEl }: HeaderlistProps) => {
                   {val.subData.map((item, index) => (
                     <ListItemButton
                       key={index}
-                      sx={{ pl: 4 }}
+                      sx={{ pl: 2 }}
                       onClick={() => item.url && handleChangePage(item.url)}
                     >
+                      <ListItemAvatar sx={{ minWidth: 30 }}>
+                        <Circle sx={{ color: COLORS.PRIMARY, fontSize: 10 }} />
+                      </ListItemAvatar>
                       <ListItemText
                         primary={item.label}
-                        primaryTypographyProps={{
-                          fontSize: 20,
-                          fontFamily: kessel.style.fontFamily,
-                          fontWeight: 500,
+                        slotProps={{
+                          primary: {
+                            fontSize: 15,
+                            fontFamily: kessel.style.fontFamily,
+                            fontWeight: 500,
+                          },
                         }}
                       />
                     </ListItemButton>

@@ -7,6 +7,8 @@ import {
   SECURE_CONNECTED_CARD,
   TESTIMONIAL_CARD_PROPS,
   VALUE_CARD_PROPS,
+  VALUE_LIST_PROPS,
+  WORK_AT_DIGIXITO_CARD_PROPS,
   WORK_CARD_PROPS,
 } from "@/utils/types";
 import work1 from "@/homepage/work/work-1.png";
@@ -17,6 +19,8 @@ import lock from "@/icons/lock.svg";
 import connect from "@/icons/seven-star.svg";
 import secure_bg from "@/homepage/secure.png";
 import connect_bg from "@/homepage/connect.png";
+import globe from "@/banners/Globe.png";
+import fish from "@/banners/fish.png";
 export const SERVICES_TAB = [
   {
     label: "AI/ML Engineering",
@@ -247,12 +251,14 @@ export const LINK_LIST_DATA: LINK_LIST[] = [
     data: [
       {
         label: "About",
+        url: "/about-us",
       },
       {
         label: "Careers",
       },
       {
         label: "Contact",
+        url: "/contact-us",
       },
       {
         label: "Newsletter",
@@ -332,5 +338,82 @@ export const COUNTER_CARD_DATA: COUNT_UP_CARD_PROPS[] = [
     number: 240,
     suffix: "%",
     title: "Company Growth",
+  },
+];
+
+export const WHAT_WE_VALUE_CARD_PROPS: VALUE_LIST_PROPS[] = [
+  {
+    img: globe,
+    data: [
+      {
+        serial_number: "01",
+        heading: "Act for the Greater Good",
+        description:
+          "We build technology that benefits businesses and communities alike. Every decision we make  from code to customer delivery  reflects our belief that innovation should improve lives and empower progress.",
+      },
+      {
+        serial_number: "02",
+        heading: "Balance Vision and Reality",
+        description:
+          "We acknowledge both the challenges and the potential of the digital era. By staying grounded in data and empathy, we design solutions that are bold yet practical  balancing creativity with technical precision.",
+      },
+      {
+        serial_number: "03",
+        heading: "Be Human-Centric",
+        description:
+          "Whether we’re designing user interfaces or optimizing machine learning models, we start with people. Our goal is to craft experiences that are intuitive, inclusive, and truly impactful.",
+      },
+    ],
+  },
+  {
+    img: fish,
+    data: [
+      {
+        serial_number: "04",
+        heading: "Build Responsibly with AI",
+        description:
+          "We champion an ethical approach to AI/ML  prioritizing transparency, security, and fairness. At Digixito, innovation isn’t a race to the fastest product, but to the most responsible one.",
+      },
+      {
+        serial_number: "05",
+        heading: "Keep It Simple",
+        description:
+          "Complex systems deserve simple solutions. We believe clarity is strength — in our design, our communication, and our code. The simplest path that works well is the one we take.",
+      },
+      {
+        serial_number: "06",
+        heading: "Be Honest, Be Kind",
+        description:
+          "We work in a culture of trust, humility, and openness. Every idea is valued, and feedback is shared with empathy. We learn fast, stay grounded, and always uplift each other.",
+      },
+    ],
+    isReverse: true,
+  },
+];
+
+export const WORK_AT_DIGIXITO_CARD_DATA: WORK_AT_DIGIXITO_CARD_PROPS[] = [
+  {
+    serial_number: "01",
+    heading: "Create with purpose.",
+    description:
+      "Every line of code and every pixel we design must create impact. We don’t just build for clients  we build for real problems that matter. Our focus is on outcomes that drive progress, improve experiences, and make technology genuinely useful.",
+  },
+  {
+    serial_number: "02",
+    heading: "Embrace curiosity and learning.",
+    description:
+      "We believe innovation thrives where curiosity lives. From exploring the latest in AI/ML to experimenting with new design tools, we constantly learn, adapt, and evolve. Every project is a classroom, and every challenge is an opportunity to grow.",
+  },
+  {
+    serial_number: "03",
+    heading: "Design for humans.",
+    description:
+      "At Digixito, user experience isn’t an afterthought it’s the foundation. We design interfaces and systems that are intuitive, inclusive, and deeply human. Technology should feel effortless, not complex, and we take pride in making that happen.",
+  },
+  {
+    serial_number: "04",
+    heading: "Collaborate without boundaries.",
+    description:
+      "We work as one team  across disciplines, ideas, and time zones. Engineers think like designers. Designers talk like strategists. Strategists build like makers. Collaboration isn’t a process here; it’s our superpower.",
   },
 ];

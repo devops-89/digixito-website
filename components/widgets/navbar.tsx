@@ -15,6 +15,7 @@ import HeaderTabs from "./common/header-tabs";
 import { COLORS } from "@/utils/enum";
 import { monument } from "@/utils/fonts";
 import { ArrowBackIos } from "@mui/icons-material";
+import Link from "next/link";
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
@@ -35,7 +36,9 @@ const Navbar = () => {
           alignItems="center"
           justifyContent={"space-between"}
         >
-          <Image src={logo} alt="" width={200} />
+          <Link href={"/"}>
+            <Image src={logo} alt="" width={200} />
+          </Link>
           <IconButton onClick={handleClick}>
             <Box
               sx={{
@@ -43,6 +46,7 @@ const Navbar = () => {
                 borderRadius: "50%",
                 width: 10,
                 height: 10,
+                backgroundColor: open ? COLORS.BLACK : COLORS.TRANSPARENT,
               }}
             ></Box>
           </IconButton>
@@ -81,40 +85,42 @@ const Navbar = () => {
       >
         <Container maxWidth="lg">
           <HeaderTabs setAnchorEl={setAnchorEl} />
-          <Button
-            sx={{
-              width: 244,
-              height: 55,
-              backgroundColor: COLORS.BLACK,
-              borderRadius: "27px",
-              color: COLORS.WHITE,
-              fontFamily: monument.style.fontFamily,
-              fontSize: 22,
-              fontWeight: 400,
-              position: "absolute",
-              bottom: 150,
-              left: "50%",
-              transform: "translateX(-50%)",
-            }}
-            endIcon={
-              <Box
-                sx={{
-                  backgroundColor: COLORS.WHITE,
-                  width: 21,
-                  height: 21,
-                  borderRadius: "50px",
-                  color: COLORS.BLACK,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <ArrowBackIos sx={{ fontSize: 12, ml: 1 }} />
-              </Box>
-            }
-          >
-            Go to home
-          </Button>
+          <Link href="/" onClick={handleClose}>
+            <Button
+              sx={{
+                width: 244,
+                height: 55,
+                backgroundColor: COLORS.BLACK,
+                borderRadius: "27px",
+                color: COLORS.WHITE,
+                fontFamily: monument.style.fontFamily,
+                fontSize: 22,
+                fontWeight: 400,
+                position: "absolute",
+                bottom: 150,
+                left: "50%",
+                transform: "translateX(-50%)",
+              }}
+              endIcon={
+                <Box
+                  sx={{
+                    backgroundColor: COLORS.WHITE,
+                    width: 21,
+                    height: 21,
+                    borderRadius: "50px",
+                    color: COLORS.BLACK,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <ArrowBackIos sx={{ fontSize: 12, ml: 1 }} />
+                </Box>
+              }
+            >
+              Go to home
+            </Button>
+          </Link>
         </Container>
       </Popover>
     </Box>

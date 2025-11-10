@@ -8,7 +8,7 @@ import bgImage1 from "@/homepage/best-service1.png";
 import bgImage2 from "@/homepage/best-service2.png";
 const BestService = () => {
   return (
-    <Container sx={{ pt: 10 }}>
+    <Container sx={{ pt: 50 }}>
       <Grid container spacing={3}>
         <Grid size={6}>
           <Typography

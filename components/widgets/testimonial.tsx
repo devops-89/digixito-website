@@ -51,7 +51,7 @@ const Testimonials = () => {
                   spacing={2}
                   justifyContent={"center"}
                 >
-                  <ImageHeading title="Testimonials" />
+                  <ImageHeading title="Testimonials" sx={{ px: 1 }} />
                   <Typography
                     sx={{
                       fontSize: 40,

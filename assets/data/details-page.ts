@@ -1,5 +1,7 @@
 import { DETAILS_PAGE_PROPS } from "@/utils/types";
-
+import ecommerce from "@/services/machine-learning/ecommerce-recommended-engine.png";
+import forecasting from "@/services/machine-learning/demand-forecasting.jpg";
+import fraud_detection from "@/services/machine-learning/fraud_detection.jpg";
 export const DETAILS_PAGE_DETAILS: DETAILS_PAGE_PROPS[] = [
   {
     slug: "ai-transformation/machine-learning-and-predictive-models",
@@ -48,16 +50,19 @@ We help businesses use AI responsibly — transforming complex datasets into act
         project_name: "E-Commerce Recommendation Engine",
         project_description:
           "We built a dynamic recommendation system that increased conversion rates by 27% through personalized product predictions and user clustering.",
+        img: ecommerce,
       },
       {
         project_name: "Demand Forecasting for Retail",
         project_description:
           "Our predictive model helped a retail client anticipate product demand with 92% accuracy, reducing stock-outs and improving sales.",
+        img: forecasting,
       },
       {
         project_name: "Fraud Detection System",
         project_description:
           "A financial analytics solution using anomaly detection to identify suspicious transactions in real time.",
+        img: fraud_detection,
       },
     ],
     development_process: [

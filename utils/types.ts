@@ -98,6 +98,7 @@ export interface OUR_SERVICES_CARD {
 export interface PROJECT_CARD_PROPS {
   project_name: string;
   project_description: string;
+  img: StaticImageData;
 }
 
 export interface DEVELOPMENT_PROCESS_CARD_PROPS {
@@ -120,4 +121,22 @@ export interface DETAILS_PAGE_PROPS {
   };
   project_data: PROJECT_CARD_PROPS[];
   development_process: DEVELOPMENT_PROCESS_CARD_PROPS[];
+}
+
+export interface WHAT_LIST {
+  serial_number: string;
+  heading: string;
+  description: string;
+}
+
+export interface VALUE_LIST_PROPS {
+  data: WHAT_LIST[];
+  img: StaticImageData;
+  isReverse?: boolean;
+}
+
+export interface WORK_AT_DIGIXITO_CARD_PROPS {
+  serial_number: string;
+  heading: string;
+  description: string;
 }

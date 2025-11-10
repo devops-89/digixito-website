@@ -19,7 +19,7 @@ export const HEADER_LINKS = {
       data: [
         {
           label: "AI Transformation",
-          url: "/digital-transformation/ai-ml-development",
+          // url: "/digital-transformation/ai-ml-development",
           subData: [
             {
               label: "Machine Learning & Predictive Models",
@@ -41,7 +41,7 @@ export const HEADER_LINKS = {
         },
         {
           label: "Product Engineering",
-          url: "/digital-transformation/application-development",
+          // url: "/digital-transformation/application-development",
           subData: [
             {
               label: "Application & SaaS Development",
@@ -63,7 +63,7 @@ export const HEADER_LINKS = {
         },
         {
           label: "Design Intelligence",
-          url: "/digital-transformation/web-development",
+          // url: "/digital-transformation/web-development",
           subData: [
             {
               label: "AI-Powered UI/UX Design",
@@ -167,7 +167,7 @@ export const HEADER_LINKS = {
       data: [
         {
           label: "Life at Digixito",
-          url: "/life-at-digixito",
+          url: "/careers/life-at-digixito",
         },
       ],
     },

@@ -20,6 +20,7 @@ const DevelopmentCard = ({
         alignItems: "flex-start",
         justifyContent: "center",
         flexDirection: "column",
+        height: 200,
       }}
     >
       <Typography

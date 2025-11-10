@@ -81,7 +81,7 @@ const Ourvalues = () => {
                       >
                         our
                       </Typography>
-                      <ImageHeading title="values" />
+                      <ImageHeading title="values" sx={{ px: 1 }} />
                     </Stack>
                     <Button
                       sx={{

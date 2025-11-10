@@ -13,6 +13,7 @@ import Testimonials from "@/components/widgets/testimonial";
 import FaqSection from "@/components/widgets/faq-section";
 import SecureConnect from "@/components/widgets/secure-connect";
 import SubFooter from "@/components/widgets/subfooter";
+import signDigixito from "@/banners/digixito-sign.png";
 const HomeLayouts = () => {
   return (
     <Box>
@@ -23,8 +24,13 @@ const HomeLayouts = () => {
         </Divider>
       </Container>
       <GridSection />
-      <Container>
-        <Typography
+      <Container sx={{ position: "relative" }}>
+        <Image
+          src={signDigixito}
+          alt=""
+          style={{ width: "100%", position: "absolute" }}
+        />
+        {/* <Typography
           sx={{
             fontSize: 160,
             fontFamily: monument.style.fontFamily,
@@ -35,7 +41,7 @@ const HomeLayouts = () => {
           }}
         >
           Digixito
-        </Typography>
+        </Typography> */}
       </Container>
       <BestService />
       <ServiceSection />

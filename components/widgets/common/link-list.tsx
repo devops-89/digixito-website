@@ -1,6 +1,8 @@
+import { COLORS } from "@/utils/enum";
 import { archivo } from "@/utils/fonts";
 import { LINK_LIST } from "@/utils/types";
 import { Box, Stack, Typography } from "@mui/material";
+import Link from "next/link";
 import React from "react";
 
 interface LINK_LIST_PROPS {
@@ -17,9 +19,9 @@ const LinkList = ({ data }: LINK_LIST_PROPS) => {
               direction={"row"}
               alignItems="center"
               justifyContent={"space-between"}
-              sx={{ borderTop: "1px solid #F5F8FF30", width: "100%", py: 2 }}
+              sx={{ borderTop: "1px solid #F5F8FF30", width: "100%", py: 1 }}
               key={`${i}-${index}`}
-           >
+            >
               <Typography
                 sx={{
                   color: "#F5F8FF80",
@@ -34,19 +36,21 @@ const LinkList = ({ data }: LINK_LIST_PROPS) => {
               >
                 {val.heading}
               </Typography>
-              <Typography
-                sx={{
-                  color: "#F5F8FF",
-                  fontSize: 25,
-                  fontFamily: archivo.style.fontFamily,
-                  fontWeight: 700,
-                  lineHeight: "28px",
-                  textTransform: "uppercase",
-                  textAlign: "end",
-                }}
-              >
-                {item.label}
-              </Typography>
+              <Link href={item.url || "#"} style={{ textDecoration: "none" }}>
+                <Typography
+                  sx={{
+                    color: "#F5F8FF",
+                    fontSize: 25,
+                    fontFamily: archivo.style.fontFamily,
+                    fontWeight: 700,
+                    lineHeight: "28px",
+                    textTransform: "uppercase",
+                    textAlign: "end",
+                  }}
+                >
+                  {item.label}
+                </Typography>
+              </Link>
             </Stack>
           ))}
         </React.Fragment>

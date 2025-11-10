@@ -6,38 +6,15 @@ import Image from "next/image";
 import { COLORS } from "@/utils/enum";
 import ImageHeading from "@/components/widgets/image-heading";
 import hero_img from "@/about-us/hero.png";
+import PageHeading from "@/components/widgets/page-heading";
 const AboutHeroSection = () => {
   return (
     <div>
       <Container maxWidth="lg">
-        <Stack
-          direction={"row"}
-          alignItems={"center"}
-          justifyContent={"space-between"}
-        >
-          <Typography
-            sx={{
-              fontSize: 65,
-              fontFamily: monument.style.fontFamily,
-              fontWeight: 800,
-            }}
-          >
-            About us
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: 20,
-              fontFamily: monument.style.fontFamily,
-              fontWeight: 400,
-            }}
-          >
-            {" "}
-            Evolved by Challenge,Defined by innovation.
-          </Typography>
-        </Stack>
-        <Divider sx={{ borderColor: COLORS.BLACK }}>
-          <Image src={star} alt="" />
-        </Divider>
+        <PageHeading
+          page_name={"About us"}
+          page_title={"Evolved by Challenge,Defined by innovation."}
+        />
 
         <Grid container alignItems={"center"} spacing={5} sx={{ mt: 5 }}>
           <Grid size={6}>
@@ -51,7 +28,13 @@ const AboutHeroSection = () => {
             >
               Rooted in Excellence, Growing with Innovation
             </Typography>
-            <Stack direction={"row"} alignItems={"center"} spacing={2} mt={3}>
+            <Stack
+              direction={"row"}
+              alignItems={"center"}
+              spacing={2}
+              mt={3}
+              sx={{ width: "100%" }}
+            >
               <Typography
                 sx={{
                   fontSize: 40,
@@ -61,7 +44,7 @@ const AboutHeroSection = () => {
               >
                 Our
               </Typography>
-              <ImageHeading title="Story" />
+              <ImageHeading title="Story" sx={{ width: "100%" }} />
             </Stack>
             <Typography
               sx={{

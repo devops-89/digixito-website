@@ -18,7 +18,12 @@ const Bannertext = () => {
   return (
     <Box>
       <Container maxWidth="lg">
-        <Stack direction={"row"} alignItems={"center"} spacing={2}>
+        <Stack
+          direction={"row"}
+          alignItems={"center"}
+          justifyContent={"center"}
+          spacing={2}
+        >
           {text.map((val, i) => (
             <React.Fragment key={i}>
               <Typography
