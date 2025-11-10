@@ -82,7 +82,7 @@ const ServiceSection = () => {
                     // "&:hover": {
                     //   backgroundColor: "#f5f5f5",
                     // },
-                    mb: "32px",
+                    mb: "20px",
                   },
                   "& .Mui-selected": {
                     color: "#fff !important",
@@ -147,7 +147,7 @@ const ServiceSection = () => {
                       iconPosition="top"
                       heading="We study the game before we"
                       boldHeading="change it. "
-                      height="85vh"
+                      height="60vh"
                     />
                   </Grid>
                   <Grid size={6}>

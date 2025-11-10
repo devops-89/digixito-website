@@ -10,8 +10,11 @@ const SubFooter = () => {
       sx={{
         backgroundColor: COLORS.PRIMARY,
         position: "relative",
-        height: "80vh",
+        height: "40vh",
         py: 10,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
       <Container maxWidth="lg">
@@ -40,7 +43,7 @@ const SubFooter = () => {
           digital ideas to life. Here are the different ways you can get in
           touch with us.
         </Typography>
-        <Box
+        {/* <Box
           sx={{
             position: "absolute",
             bottom: 0,
@@ -49,7 +52,7 @@ const SubFooter = () => {
           }}
         >
           <Image src={logo} alt="" />
-        </Box>
+        </Box> */}
       </Container>
     </Box>
   );

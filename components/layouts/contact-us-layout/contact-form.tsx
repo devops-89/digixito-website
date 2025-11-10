@@ -16,21 +16,48 @@ import { COLORS } from "@/utils/enum";
 import linkedin from "@/icons/linkedin.svg";
 import fb from "@/icons/fb.svg";
 import x from "@/icons/twitter.svg";
-import instagram from "@/icons/twitter.svg";
+import instagram from "@/icons/instagram.svg";
 import Image from "next/image";
+import combit from "@/banners/Bitmap.png";
+import star from "@/icons/gold-star.svg";
+import giffty from "@/icons/heading-star.png";
+import ContactMessageForm from "./components/form";
 const ContactForm = () => {
   const socialIcons = [
     {
-        img:linkedin,
-  },
-];
+      img: linkedin,
+    },
+    {
+      img: fb,
+    },
+    {
+      img: x,
+    },
+    {
+      img: instagram,
+    },
+  ];
   return (
     <div>
-      <Box>
+      <Box
+        sx={{
+          py: 10,
+          backgroundImage: `url(${combit.src})`,
+          height: "100%",
+          backgroundPosition: "top right",
+          backgroundColor: "#eee",
+        }}
+      >
         <Container maxWidth="lg">
+          <Box sx={{ textAlign: "end" }}>
+            <Image src={star} width={30} alt="" />
+          </Box>
           <Grid container spacing={10}>
             <Grid size={6}>
-              <ImageHeading title="Contact us" />
+              <Stack direction={"row"} alignItems={"center"} spacing={2}>
+                <ImageHeading title="Contact us" sx={{ width: 400, px: 1 }} />
+                {/* <Image src={giffty} alt="" style={{ marginTop: -10,transform:"rotate(180deg)" }} /> */}
+              </Stack>
               <Typography
                 sx={{
                   fontSize: 23,
@@ -60,6 +87,7 @@ const ContactForm = () => {
                   fontWeight: 400,
                   lineHeight: "50px",
                   letterSpacing: "-1.516px",
+                  my: 3,
                 }}
               >
                 Follow Us
@@ -69,12 +97,28 @@ const ContactForm = () => {
                 alignItems={"center"}
                 justifyContent={"space-between"}
               >
-                {/* {socialIcons.map((val, i) => (
-                  <IconButton>
-                    <Image src={val.} />
+                {socialIcons.map((val, i) => (
+                  <IconButton
+                    key={i}
+                    sx={{
+                      backgroundColor: COLORS.BLACK,
+                      width: 100,
+                      height: 100,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      ":hover": {
+                        backgroundColor: COLORS.BLACK,
+                      },
+                    }}
+                  >
+                    <Image src={val.img} alt="" width={60} />
                   </IconButton>
-                ))} */}
+                ))}
               </Stack>
+            </Grid>
+            <Grid size={6}>
+              <ContactMessageForm />
             </Grid>
           </Grid>
         </Container>

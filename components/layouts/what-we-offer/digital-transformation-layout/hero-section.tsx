@@ -35,32 +35,17 @@ const HeroSection = () => {
       <Container maxWidth="lg">
         <PageHeading page_name="What we offer" page_title={heroData.title} />
 
-        <Grid container spacing={5}>
+        <Grid container spacing={5} sx={{ mt: 3 }}>
           <Grid size={6}>
             <Typography
               sx={{
                 fontSize: hasAmpersand ? 30 : 50,
                 fontFamily: monument.style.fontFamily,
                 fontWeight: hasAmpersand ? 400 : 800,
+                mb: 3,
               }}
             >
-              {hasAmpersand ? (
-                <>
-                  {headingParts[0]}{" "}
-                  <Typography
-                    sx={{
-                      fontFamily: monument.style.fontFamily,
-                      fontSize: 50,
-                      fontWeight: 800,
-                    }}
-                    component={"span"}
-                  >
-                    & {headingParts[1]}
-                  </Typography>
-                </>
-              ) : (
-                heroData.heroSection.heading
-              )}
+              {heroData?.heroSection?.heading}
             </Typography>
             <Typography
               sx={{
@@ -73,7 +58,7 @@ const HeroSection = () => {
             >
               {heroData.heroSection.description}
             </Typography>
-            <Stack
+            {/* <Stack
               direction={"row"}
               alignItems={"center"}
               spacing={2}
@@ -86,7 +71,6 @@ const HeroSection = () => {
                   padding: "10px 34px",
                   borderRadius: "60px",
                   fontFamily: monument.style.fontFamily,
-                  //   width: 203,
                   height: 48,
                 }}
               >
@@ -106,7 +90,7 @@ const HeroSection = () => {
               >
                 Call to Action
               </Button>
-            </Stack>
+            </Stack> */}
           </Grid>
           <Grid size={6}>
             <Stack spacing={4}>

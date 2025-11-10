@@ -16,7 +16,7 @@ const ArrowCard = ({
     <Box
       sx={{
         backgroundColor: backgroundColor,
-        height: "31vh",
+        height: "100%",
         borderRadius: 4,
         padding: "32px",
       }}

@@ -73,9 +73,6 @@ const Footer = () => {
                   </Stack>
                 </Box>
               </Box>
-              {/* <Box sx={{ textAlign: "end", position: "absolute", right: 0  }}>
-                <Image src={footer_icon} alt="" width={100} />
-              </Box> */}
             </Stack>
           </Grid>
           <Grid size={6}>
