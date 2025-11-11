@@ -3,13 +3,13 @@ import { HEADER_LINKS, HEADER_TABS } from "@/assets/data/header-data";
 import { COLORS, HEADER_TABS_DATA } from "@/utils/enum";
 import { monument } from "@/utils/fonts";
 import { Box, Button, Grid, Tab, Tabs, Typography } from "@mui/material";
-import { SyntheticEvent, useState } from "react";
+import { Dispatch, SetStateAction, SyntheticEvent, useState } from "react";
 import TabPanel from "../tab-panel";
 import Headerlist from "./header-list";
 import { ArrowBackIos } from "@mui/icons-material";
 
 interface HeaderTabsProps {
-  setAnchorEl: (value: HTMLButtonElement | null) => void;
+  setAnchorEl: Dispatch<SetStateAction<HTMLButtonElement | null>>;
 }
 
 const HeaderTabs = ({ setAnchorEl }: HeaderTabsProps) => {
@@ -72,10 +72,18 @@ const HeaderTabs = ({ setAnchorEl }: HeaderTabsProps) => {
       </Tabs>
 
       {HEADER_TABS.map((val, i) => (
-        <TabPanel value={value} key={i} index={i}>
-          <Grid container spacing={4} justifyContent={"space-between"}>
+        <TabPanel
+          value={value}
+          key={i}
+          index={i}
+          sx={{
+            maxHeight: "calc(100vh - 200px)",
+            overflowY: "auto",
+          }}
+        >
+          <Grid container spacing={4}>
             {data.map((item, j) => (
-              <Grid size={4} key={j}>
+              <Grid size={2.4} key={j}>
                 <Headerlist
                   heading={item.heading}
                   data={item.data}

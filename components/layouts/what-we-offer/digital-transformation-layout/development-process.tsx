@@ -82,15 +82,19 @@ const DevelopmentProcess = () => {
           <Box
             sx={{
               backgroundImage: `url(${slideBanner.src})`,
-              height: "50vh",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              height: "auto",
               display: "flex",
               alignItems: "center",
               py: 10,
               position: "relative",
+              mt:20
             }}
           >
-            <Container maxWidth="lg" sx={{ position: "absolute", top: -20 }}>
-              <Grid container spacing={4}>
+            <Container maxWidth="lg">
+              <Grid container spacing={4} sx={{ mt: -20 }}>
                 {developmentData?.development_process.map((val, i) => (
                   <Grid size={4} key={i}>
                     <DevelopmentCard

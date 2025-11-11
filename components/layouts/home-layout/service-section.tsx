@@ -17,7 +17,7 @@ import {
   Tabs,
   Typography,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import bgImage from "@/homepage/best-service3.png";
 import TabPanel from "@/components/widgets/tab-panel";
 import ArrowCard from "./components/arrow-card";
@@ -27,6 +27,35 @@ import Image from "next/image";
 import ImageHeading from "@/components/widgets/image-heading";
 const ServiceSection = () => {
   const [value, setValue] = useState(0);
+  const arrowCardsRef = useRef<HTMLDivElement | null>(null);
+  const [arrowCardsHeight, setArrowCardsHeight] = useState<number>();
+
+  useEffect(() => {
+    const node = arrowCardsRef.current;
+    if (!node) {
+      return;
+    }
+
+    const updateHeight = () => {
+      setArrowCardsHeight(Math.ceil(node.offsetHeight));
+    };
+
+    updateHeight();
+
+    if (typeof ResizeObserver !== "undefined") {
+      const observer = new ResizeObserver(() => updateHeight());
+      observer.observe(node);
+      return () => {
+        observer.disconnect();
+      };
+    }
+
+    const handleResize = () => updateHeight();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [value]);
 
   const tabChangeHandler = (e: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -145,11 +174,17 @@ const ServiceSection = () => {
                       iconPosition="top"
                       heading="We study the game before we"
                       boldHeading="change it. "
-                      height="60vh"
+                      height={
+                        arrowCardsHeight ? `${arrowCardsHeight}px` : undefined
+                      }
                     />
                   </Grid>
                   <Grid size={6}>
-                    <Stack alignItems="center" spacing={1}>
+                    <Stack
+                      alignItems="center"
+                      spacing={1}
+                      ref={value === i ? arrowCardsRef : null}
+                    >
                       {SERVCIES_ARROW_CARD_DATA.map((val, i) => (
                         <ArrowCard
                           title={val.title}

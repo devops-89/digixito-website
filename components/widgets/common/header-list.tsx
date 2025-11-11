@@ -12,10 +12,10 @@ import {
   Typography,
 } from "@mui/material";
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 
 interface HeaderlistProps extends HEADER_LIST_PROPS {
-  setAnchorEl: (value: HTMLButtonElement | null) => void;
+  setAnchorEl: Dispatch<SetStateAction<HTMLButtonElement | null>>;
 }
 
 const Headerlist = ({ heading, data, setAnchorEl }: HeaderlistProps) => {
@@ -37,7 +37,7 @@ const Headerlist = ({ heading, data, setAnchorEl }: HeaderlistProps) => {
       <Typography
         sx={{
           color: "#595959",
-          fontSize: 25,
+          fontSize: 15,
           fontWeight: 800,
           fontFamily: kessel.style.fontFamily,
         }}
@@ -52,7 +52,7 @@ const Headerlist = ({ heading, data, setAnchorEl }: HeaderlistProps) => {
               sx={{
                 width: "fit-content",
                 p: 0,
-                mb: 1,
+                mb: 0.5,
               }}
               onClick={
                 val.url
@@ -64,9 +64,9 @@ const Headerlist = ({ heading, data, setAnchorEl }: HeaderlistProps) => {
                 primary={val.label}
                 slotProps={{
                   primary: {
-                    fontSize: 17,
+                    fontSize: 13,
                     fontFamily: kessel.style.fontFamily,
-                    fontWeight: 500,
+                    fontWeight: 550,
                   },
                 }}
               />

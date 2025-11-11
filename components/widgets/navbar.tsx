@@ -80,12 +80,14 @@ const Navbar = () => {
               boxShadow: "none",
             },
             position: "relative",
+            // pb: 100,
+            overflow: "hidden",
           },
         }}
       >
         <Container maxWidth="lg">
           <HeaderTabs setAnchorEl={setAnchorEl} />
-          <Link href="/" onClick={handleClose}>
+          {/* <Link href="/" onClick={handleClose}>
             <Button
               sx={{
                 width: 244,
@@ -96,10 +98,10 @@ const Navbar = () => {
                 fontFamily: monument.style.fontFamily,
                 fontSize: 22,
                 fontWeight: 400,
-                position: "absolute",
-                bottom: 150,
-                left: "50%",
-                transform: "translateX(-50%)",
+                // position: "absolute",
+                // bottom: 150,
+                // left: "50%",
+                // transform: "translateX(-50%)",
               }}
               endIcon={
                 <Box
@@ -120,7 +122,7 @@ const Navbar = () => {
             >
               Go to home
             </Button>
-          </Link>
+          </Link> */}
         </Container>
       </Popover>
     </Box>

@@ -115,7 +115,7 @@ export const HEADER_LINKS = {
         },
         {
           label: "Press Ads & TV Commercials",
-          url: "/business-tranformation/press-ads-and-tv-commercials",
+          url: "/business-transformation/press-ads-and-tv-commercials",
         },
         {
           label: "Digital Transformation",
@@ -141,18 +141,89 @@ export const HEADER_LINKS = {
           label: "Sales Boost Program",
           url: "/business-transformation/sales-boost-program",
         },
+        {
+          label: "Marketplace Management",
+          url: "/business-transformation/marketplace-management",
+        },
+
+        {
+          label: "Catalog Management",
+          url: "/business-transformation/catalog-management",
+        },
+        {
+          label: "Inventory Management",
+          url: "/business-transformation/inventory-management",
+        },
+        {
+          label: "Partner Value Added Services",
+          url: "/business-transformation/partner-value-added-services",
+        },
       ],
     },
     {
-      heading: "Digital Media",
+      heading: "Product Engineering",
       data: [
         {
-          label: "Search Engine Optimization",
-          url: "/digital-media/search-engine-optimization",
+          label: "Application & SaaS Development",
+          url: "/product-engineering/application-and-saas-development",
         },
         {
-          label: "Social Media Optimization",
-          url: "/digital-media/social-media-optimization",
+          label: "Web and Mobile Platforms",
+          url: "/product-engineering/web-and-mobile-platforms",
+        },
+        {
+          label: "System Integration & API Development",
+          url: "/product-engineering/system-integration-and-api-development",
+        },
+        {
+          label: "Cloud Infrastructure",
+          url: "/product-engineering/cloud-infrastructure",
+        },
+      ],
+    },
+    {
+      heading: "AI in Marketing & Growth",
+      data: [
+        {
+          label: "AI-Driven Digital Marketing",
+          url: "/ai-marketing-growth/ai-driven-digital-marketing",
+        },
+        {
+          label: "Marketplace Management & Sales Boost",
+          url: "/ai-marketing-growth/market-management-and-sales-boost",
+        },
+        {
+          label: "Brand Strategy & Positioning",
+          url: "/ai-marketing-growth/brand-strategy-and-positioning",
+        },
+        {
+          label: "Performance Marketing & Conversion Optimization",
+          url: "/ai-marketing-growth/performance-marketing-and-conversion-optimization",
+        },
+        {
+          label: "Social & Search Intelligence (AI-Enhanced SEO/SEM)",
+          url: "/ai-marketing-growth/social-and-search-intelligence",
+        },
+      ],
+    },
+    {
+      heading: "Design Intelligence",
+      data: [
+        {
+          label: "AI-Powered UI/UX Design",
+          url: "/design-intelligence/ai-powered-ui-ux-design",
+        },
+        {
+          label: "Conversational Interface Design",
+          url: "/design-intelligence/conversational-interface-design",
+        },
+        {
+          label: "Prototyping & User Research",
+          url: "/design-intelligence/prototyping-and-user-research",
+        },
+        {
+          label: "Experience Optimization",
+          url: "/design-intelligence/experience-optimization",
         },
       ],
     },
@@ -170,62 +241,23 @@ export const HEADER_LINKS = {
           url: "/our-team",
         },
         {
-          label: "360° Value Report",
-          url: "/360-value-report",
-        },
-      ],
-    },
-    {
-      heading: "How we serve",
-      data: [
-        {
-          label: "Strategy and Consulting",
-          url: "/how-we-serve/strategy-consulting",
-        },
-        {
-          label: "Technology we use",
-          url: "/how-we-serve/technology-we-use",
+          label: "AI Ethics & Innovation",
+          url: "/ai-ethics-innovation",
         },
       ],
     },
   ],
   CAREERS: [
     {
-      heading: "lets Find a match for you",
+      heading: "Join the Future with Digixito",
       data: [
-        {
-          label: "Search for jobs",
-          url: "/careers/search-jobs",
-        },
         {
           label: "Career areas",
           url: "/our-team",
         },
         {
-          label: "360° Value Report",
-          url: "/360-value-report",
-        },
-      ],
-    },
-    {
-      heading: "Life at Digixito",
-      data: [
-        {
           label: "Life at Digixito",
           url: "/careers/life-at-digixito",
-        },
-      ],
-    },
-    {
-      heading: "How are Hire",
-      data: [
-        {
-          label: "Hiring Journey",
-          url: "/hiring-journey",
-        },
-        {
-          label: "Pro Tips",
-          url: "/pro-tips",
         },
       ],
     },
