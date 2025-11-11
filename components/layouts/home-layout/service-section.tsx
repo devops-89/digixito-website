@@ -79,9 +79,7 @@ const ServiceSection = () => {
                     transition: "all 0.3s ease",
                     border: "1px solid #D7D7D7",
                     width: "100%",
-                    // "&:hover": {
-                    //   backgroundColor: "#f5f5f5",
-                    // },
+
                     mb: "20px",
                   },
                   "& .Mui-selected": {
