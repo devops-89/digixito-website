@@ -30,18 +30,6 @@ const HomeLayouts = () => {
           alt=""
           style={{ width: "100%", position: "absolute" }}
         />
-        {/* <Typography
-          sx={{
-            fontSize: 160,
-            fontFamily: monument.style.fontFamily,
-            textAlign: "center",
-            color: COLORS.LIGHT_GRAY,
-            letterSpacing: "45px",
-            lineHeight: "220px",
-          }}
-        >
-          Digixito
-        </Typography> */}
       </Container>
       <BestService />
       <ServiceSection />
