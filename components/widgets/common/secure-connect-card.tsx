@@ -20,7 +20,7 @@ const SecureConnectCard = ({
       <Box
         sx={{
           backgroundImage: `url(${backgroundImage})`,
-          height: "80vh",
+          height: {lg:"80vh",xs:"50vh"},
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -32,7 +32,11 @@ const SecureConnectCard = ({
       >
         <Container maxWidth="lg">
           <Grid container>
-            <Grid size={8} margin={"auto"} sx={{ textAlign: "center" }}>
+            <Grid
+              size={{ lg: 8, xs: 12 }}
+              margin={"auto"}
+              sx={{ textAlign: "center" }}
+            >
               <Image src={img} alt="" width={50} />
               <Typography
                 sx={{
@@ -71,7 +75,7 @@ const SecureConnectCard = ({
                     letterSpacing: "-0.14px",
                   }}
                 >
-                 {button}
+                  {button}
                 </Button>
               )}
             </Grid>

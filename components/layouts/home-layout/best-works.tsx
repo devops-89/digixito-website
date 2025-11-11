@@ -34,7 +34,7 @@ const BestWorks = () => {
     <Box
       sx={{
         backgroundImage: `url(${gridBanner.src})`,
-        height: "100vh",
+        height: {lg:"100vh",xs:"100%"},
         py: { lg: 20, xs: 6 },
         backgroundPosition: "center",
         backgroundRepeat: "repeat",
@@ -96,7 +96,7 @@ const BestWorks = () => {
           <Box
             sx={{
               backgroundImage: `url(${best_work_banner.src})`,
-              height: { lg: "100vh", xs: "60vh" },
+              height: { lg: "100vh", xs: "70vh" },
 
               //   py: 4,
               width: "100%",

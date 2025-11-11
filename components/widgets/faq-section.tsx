@@ -10,18 +10,18 @@ const FaqSection = () => {
     <Box
       sx={{
         py: 10,
-        height: "70vh",
+        height: { lg: "100vh", xs: "100%" },
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
       }}
     >
       <Container maxWidth="lg">
-        <Grid container>
-          <Grid size={6}>
+        <Grid container spacing={2}>
+          <Grid size={{ lg: 6, xs: 12 }}>
             <Typography
               sx={{
-                fontSize: 38,
+                fontSize: { lg: 38, xs: 30 },
                 fontFamily: monument.style.fontFamily,
                 textTransform: "capitalize",
               }}
@@ -61,15 +61,13 @@ const FaqSection = () => {
                   color: COLORS.BLACK,
                 }}
               >
-                More Questions
+                Contact Us
               </Button>
-              <Button
+              {/* <Button
                 sx={{
                   fontFamily: archivo.style.fontFamily,
                   borderRadius: "50px",
 
-                  //   padding: "17px",
-                  //   width: "176px",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -81,10 +79,10 @@ const FaqSection = () => {
                 }}
               >
                 Contact Us
-              </Button>
+              </Button> */}
             </Stack>
           </Grid>
-          <Grid size={6}>
+          <Grid size={{ lg: 6, xs: 12 }}>
             <FaqQuestionCard data={FAQ_DATA} />
           </Grid>
         </Grid>

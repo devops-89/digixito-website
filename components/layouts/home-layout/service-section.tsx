@@ -104,7 +104,7 @@ const ServiceSection = () => {
                     color: "#000",
                     textTransform: "none",
                     fontFamily: kessel.style.fontFamily,
-                    fontSize: "20px",
+                    fontSize: "18px",
                     fontWeight: 400,
                     justifyContent: "space-between",
                     alignItems: "center",

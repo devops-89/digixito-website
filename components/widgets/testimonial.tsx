@@ -31,7 +31,7 @@ const Testimonials = () => {
           backgroundRepeat: "no-repeat",
           position: "relative",
           zIndex: 2,
-          py: { lg: 10, xs: 3 },
+          py: { lg: 10, xs: 8 },
         }}
       >
         <SectionCard title="Testimonials" variant={VARIANTS.DARK} />
@@ -99,7 +99,7 @@ const Testimonials = () => {
             breakpoints={{
               650: {
                 slidesPerView: 1,
-                spaceBetween: 30,
+                spaceBetween: 40,
               },
               1300: {
                 slidesPerView: 3,

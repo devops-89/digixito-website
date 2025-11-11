@@ -66,7 +66,7 @@ const FaqQuestionCard = ({ data }: FAQ_PROPS) => {
               sx={{
                 fontFamily: kessel.style.fontFamily,
                 color: "#222",
-                fontSize: 22,
+                fontSize: { lg: 22, xs: 18 },
                 fontWeight: 500,
               }}
             >
@@ -78,7 +78,7 @@ const FaqQuestionCard = ({ data }: FAQ_PROPS) => {
               sx={{
                 fontFamily: kessel.style.fontFamily,
                 color: "#222",
-                fontSize: 17,
+                fontSize: { lg: 17, xs: 15 },
                 fontWeight: 500,
                 lineHeight: "28.5px",
               }}

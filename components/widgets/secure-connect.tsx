@@ -8,7 +8,7 @@ const SecureConnect = () => {
     <Box sx={{ mt: 5 }}>
       <Grid container>
         {SECURE_CARD_DATA.map((val, i) => (
-          <Grid size={6} key={i}>
+          <Grid size={{ lg: 6, xs: 12 }} key={i}>
             <SecureConnectCard
               backgroundImage={val.backgroundImage}
               img={val.img}

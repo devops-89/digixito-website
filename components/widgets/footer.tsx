@@ -22,7 +22,7 @@ const Footer = () => {
     <Box sx={{ py: 10 }}>
       <Container maxWidth="lg">
         <Grid container alignItems={"center"} spacing={5}>
-          <Grid size={6} sx={{ position: "relative" }}>
+          <Grid size={{ lg: 6, xs: 12 }} sx={{ position: "relative" }}>
             <Typography
               sx={{
                 fontFamily: monument.style.fontFamily,
@@ -75,7 +75,7 @@ const Footer = () => {
               </Box>
             </Stack>
           </Grid>
-          <Grid size={6}>
+          <Grid size={{ lg: 6, xs: 12 }}>
             <Box
               sx={{
                 backgroundColor: COLORS.BLACK,

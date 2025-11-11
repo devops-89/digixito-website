@@ -27,16 +27,16 @@ import phone from "@/contact-us/sharp-phone.svg";
 import email from "@/contact-us/email.svg";
 export const SERVICES_TAB = [
   {
-    label: "AI/ML Engineering",
+    label: "AI Transformation",
   },
   {
-    label: "Design & Development",
+    label: "Business Transformation",
   },
   {
-    label: "Performance Marketing",
+    label: "Product Engineering",
   },
   {
-    label: "Motion & Graphics",
+    label: "Design Intelligence",
   },
 ];
 

@@ -21,7 +21,7 @@ const SubFooter = () => {
         <Typography
           sx={{
             fontFamily: monument.style.fontFamily,
-            fontSize: 38,
+            fontSize: { lg: 38, xs: 30 },
             fontWeight: 400,
             textAlign: "center",
           }}
@@ -31,7 +31,7 @@ const SubFooter = () => {
         <Typography
           sx={{
             textAlign: "center",
-            fontSize: 26,
+            fontSize: { lg: 26, xs: 20 },
             fontFamily: kessel.style.fontFamily,
             fontWeight: 500,
             lineHeight: "39px",

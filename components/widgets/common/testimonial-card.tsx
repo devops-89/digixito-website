@@ -22,7 +22,7 @@ const TestimonialCard = ({
         flexDirection: "column",
         gap: "40px",
         alignItems: "flex-start",
-        width: 450,
+        width: { lg: 360, xs: 350 },
       }}
     >
       <Stack
