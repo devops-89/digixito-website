@@ -95,15 +95,16 @@ const ContactForm = () => {
               <Stack
                 direction={"row"}
                 alignItems={"center"}
-                justifyContent={"space-between"}
+                justifyContent={"felx-start"}
+                spacing={2}
               >
                 {socialIcons.map((val, i) => (
                   <IconButton
                     key={i}
                     sx={{
                       backgroundColor: COLORS.BLACK,
-                      width: 100,
-                      height: 100,
+                      width: 40,
+                      height: 40,
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -112,7 +113,7 @@ const ContactForm = () => {
                       },
                     }}
                   >
-                    <Image src={val.img} alt="" width={60} />
+                    <Image src={val.img} alt="" width={20} />
                   </IconButton>
                 ))}
               </Stack>

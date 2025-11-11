@@ -1,5 +1,12 @@
+"use client";
 import { monument } from "@/utils/fonts";
-import { Box, Container, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  Stack,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import React from "react";
 import star from "@/icons/star-banner.svg";
 import Image from "next/image";
@@ -15,6 +22,9 @@ const Bannertext = () => {
       label: "Create",
     },
   ];
+
+  const phone = useMediaQuery("(max-width:600px)");
+
   return (
     <Box>
       <Container maxWidth="lg">
@@ -28,14 +38,16 @@ const Bannertext = () => {
             <React.Fragment key={i}>
               <Typography
                 sx={{
-                  fontSize: 62,
+                  fontSize: { lg: 62, xs: 18 },
                   fontWeight: 800,
                   fontFamily: monument.style.fontFamily,
                 }}
               >
                 {val.label}
               </Typography>
-              {text.length - 1 != i && <Image src={star} alt="" />}
+              {text.length - 1 != i && (
+                <Image src={star} alt="" style={{ height: phone ? 30 : "" }} />
+              )}
             </React.Fragment>
           ))}
         </Stack>

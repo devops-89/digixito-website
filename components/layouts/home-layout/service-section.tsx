@@ -66,10 +66,13 @@ const ServiceSection = () => {
       <SectionCard title="What we do" variant={VARIANTS.PRIMARY} />
       <Container maxWidth="lg">
         <Grid container spacing={5}>
-          <Grid size={5}>
+          <Grid size={{ lg: 5, xs: 12 }}>
             <Stack direction={"row"} alignItems={"center"} spacing={2}>
               <Typography
-                sx={{ fontSize: 35, fontFamily: monument.style.fontFamily }}
+                sx={{
+                  fontSize: { lg: 35, xs: 30 },
+                  fontFamily: monument.style.fontFamily,
+                }}
               >
                 Our
               </Typography>
@@ -164,11 +167,11 @@ const ServiceSection = () => {
               </Tabs>
             </Box>
           </Grid>
-          <Grid size={7}>
+          <Grid size={{ lg: 7, xs: 12 }}>
             {SERVICES_TAB.map((val, i) => (
               <TabPanel value={value} index={i} key={i}>
                 <Grid container spacing={2}>
-                  <Grid size={6}>
+                  <Grid size={{ lg: 6, xs: 12 }}>
                     <StarCard
                       backgroundImage={bgImage.src}
                       iconPosition="top"
@@ -179,7 +182,7 @@ const ServiceSection = () => {
                       }
                     />
                   </Grid>
-                  <Grid size={6}>
+                  <Grid size={{ lg: 6, xs: 12 }}>
                     <Stack
                       alignItems="center"
                       spacing={1}

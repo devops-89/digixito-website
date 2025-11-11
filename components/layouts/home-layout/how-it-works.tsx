@@ -41,16 +41,16 @@ const HowitWorks = () => {
         <Container maxWidth="lg">
           <Image src={star} alt="" />
           <Stack
-            direction={"row"}
-            alignItems={"center"}
+            direction={{ lg: "row", xs: "column" }}
+            alignItems={{ lg: "center", xs: "flex-start" }}
             spacing={2}
-            justifyContent={"center"}
+            justifyContent={{ lg: "center", xs: "flex-start" }}
           >
             <Typography
               sx={{
                 textAlign: "center",
                 color: COLORS.WHITE,
-                fontSize: 40,
+                fontSize: { lg: 40, xs: 30 },
                 fontFamily: monument.style.fontFamily,
               }}
             >
@@ -73,7 +73,7 @@ const HowitWorks = () => {
           </Typography>
           <Grid container sx={{ mt: 3 }} spacing={3}>
             {WORK_CARD_DATA.map((val, i) => (
-              <Grid size={6} key={i}>
+              <Grid size={{ lg: 6, xs: 12 }} key={i}>
                 <WorkCard
                   title={val.title}
                   description={val.description}

@@ -1,5 +1,12 @@
+"use client";
 import star from "@/icons/black-star.svg";
-import { Box, Container, Divider, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  Divider,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import Image from "next/image";
 import Bannertext from "./banner-text";
 import { COLORS } from "@/utils/enum";
@@ -15,6 +22,7 @@ import SecureConnect from "@/components/widgets/secure-connect";
 import SubFooter from "@/components/widgets/subfooter";
 import signDigixito from "@/banners/digixito-sign.png";
 const HomeLayouts = () => {
+  const phone = useMediaQuery("(maxWidth:600px)");
   return (
     <Box>
       <Bannertext />
@@ -28,7 +36,10 @@ const HomeLayouts = () => {
         <Image
           src={signDigixito}
           alt=""
-          style={{ width: "100%", position: "absolute" }}
+          style={{
+            width: phone ? 380 : "100%",
+            position: "absolute",
+          }}
         />
       </Container>
       <BestService />

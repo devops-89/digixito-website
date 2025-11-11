@@ -27,6 +27,7 @@ const OurTeams = () => {
                     fontFamily: monument.style.fontFamily,
                     fontWeight: 800,
                     lineHeight: "56px",
+                    mt: 3,
                   }}
                 >
                   Join Our Team of Creators, Builders, and Thinkers
@@ -37,7 +38,7 @@ const OurTeams = () => {
                     fontFamily: monument.style.fontFamily,
                     fontWeight: 300,
                     lineHeight: "24px",
-                    my: 2,
+                    my: 4,
                   }}
                 >
                   We’re always looking for curious minds and passionate hearts

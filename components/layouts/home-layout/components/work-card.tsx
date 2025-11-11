@@ -15,8 +15,8 @@ const WorkCard = ({ number, title, description, img }: WORK_CARD_PROPS) => {
         alignItems: "flex-start",
         justifyContent: "center",
         gap: "30px",
-        padding: "40px",
-        height:450
+        padding: { lg: "40px", xs: "20px" },
+        height: 450,
       }}
     >
       <Box
@@ -47,7 +47,7 @@ const WorkCard = ({ number, title, description, img }: WORK_CARD_PROPS) => {
               fontFamily: monument.style.fontFamily,
               lineHeight: "36px",
               letterSpacing: "-0.144px",
-              fontSize: 24,
+              fontSize: { lg: 24, xs: 18},
             }}
           >
             {title}
@@ -74,6 +74,7 @@ const WorkCard = ({ number, title, description, img }: WORK_CARD_PROPS) => {
           fontSize: 15,
           lineHeight: "30px",
           letterSpacing: "-0.12px",
+          textAlign: "justify",
         }}
       >
         {description}

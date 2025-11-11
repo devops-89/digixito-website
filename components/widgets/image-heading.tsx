@@ -20,7 +20,7 @@ const ImageHeading = ({ title, sx }: { title: string; sx?: SxProps }) => {
       >
         <Typography
           sx={{
-            fontSize: 40,
+            fontSize: { lg: 40, xs: 30},
             fontFamily: monument.style.fontFamily,
             fontWeight: 400,
             textAlign: "center",

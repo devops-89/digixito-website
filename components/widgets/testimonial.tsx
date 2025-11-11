@@ -1,4 +1,10 @@
 "use client";
+import { TESTIMONIAL_CARD_DATA } from "@/assets/data/generic-array";
+import testimonialBanner from "@/banners/testimonial-banner.png";
+import star from "@/icons/white-star.png";
+import { COLORS, VARIANTS } from "@/utils/enum";
+import { kessel, monument } from "@/utils/fonts";
+import { ArrowBack, ArrowForward } from "@mui/icons-material";
 import {
   Box,
   Container,
@@ -7,21 +13,12 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import React from "react";
-import testimonialBanner from "@/banners/testimonial-banner.png";
-import topPrimary from "@/homepage/primary-rotatable-border.png";
-import bottomPrimary from "@/homepage/primary-rotatable-border-down.png";
 import Image from "next/image";
-import SectionCard from "./section-card";
-import { COLORS, VARIANTS } from "@/utils/enum";
-import star from "@/icons/white-star.png";
-import ImageHeading from "./image-heading";
-import { kessel, monument } from "@/utils/fonts";
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import TestimonialCard from "./common/testimonial-card";
-import { TESTIMONIAL_CARD_DATA } from "@/assets/data/generic-array";
-import { Autoplay } from "swiper/modules";
-import { ArrowBack, ArrowForward } from "@mui/icons-material";
+import ImageHeading from "./image-heading";
+import SectionCard from "./section-card";
 const Testimonials = () => {
   return (
     <Box sx={{ position: "relative" }}>
@@ -34,7 +31,7 @@ const Testimonials = () => {
           backgroundRepeat: "no-repeat",
           position: "relative",
           zIndex: 2,
-          py: 10,
+          py: { lg: 10, xs: 3 },
         }}
       >
         <SectionCard title="Testimonials" variant={VARIANTS.DARK} />
@@ -46,7 +43,7 @@ const Testimonials = () => {
             <Grid size={10} margin={"auto"}>
               <Box>
                 <Stack
-                  direction={"row"}
+                  direction={{ lg: "row", xs: "column" }}
                   alignItems={"center"}
                   spacing={2}
                   justifyContent={"center"}
@@ -54,7 +51,7 @@ const Testimonials = () => {
                   <ImageHeading title="Testimonials" sx={{ px: 1 }} />
                   <Typography
                     sx={{
-                      fontSize: 40,
+                      fontSize: { lg: 40, xs: 30 },
                       fontFamily: monument.style.fontFamily,
                       color: COLORS.WHITE,
                     }}
@@ -64,7 +61,7 @@ const Testimonials = () => {
                 </Stack>
                 <Typography
                   sx={{
-                    fontSize: 40,
+                    fontSize: { lg: 40, xs: 30 },
                     fontFamily: monument.style.fontFamily,
                     color: COLORS.WHITE,
                     textAlign: "center",
@@ -76,10 +73,10 @@ const Testimonials = () => {
                 <Typography
                   sx={{
                     color: "#AAA",
-                    fontSize: 20,
+                    fontSize: { lg: 20, xs: 16 },
                     fontFamily: kessel.style.fontFamily,
                     fontWeight: 500,
-                    lineHeight: "34px",
+                    lineHeight: { lg: "34px", xs: "20px" },
                     mt: 3,
                     textAlign: "center",
                   }}
@@ -94,12 +91,20 @@ const Testimonials = () => {
         </Container>
         <Box sx={{ mt: 4 }}>
           <Swiper
-            slidesPerView={3}
-            spaceBetween={300}
             loop
             modules={[Autoplay]}
             autoplay={{
               delay: 2000,
+            }}
+            breakpoints={{
+              650: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              1300: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+              },
             }}
           >
             {TESTIMONIAL_CARD_DATA.map((val, i) => (

@@ -1,21 +1,18 @@
 "use client";
 import logo from "@/logo/Digixito_Logo.svg";
+import { COLORS } from "@/utils/enum";
 import {
   Box,
-  Button,
   Container,
   IconButton,
   Popover,
-  Stack,
+  Stack
 } from "@mui/material";
 import Grow from "@mui/material/Grow";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import HeaderTabs from "./common/header-tabs";
-import { COLORS } from "@/utils/enum";
-import { monument } from "@/utils/fonts";
-import { ArrowBackIos } from "@mui/icons-material";
-import Link from "next/link";
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 

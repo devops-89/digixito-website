@@ -155,24 +155,24 @@ export const TESTIMONIAL_CARD_DATA: TESTIMONIAL_CARD_PROPS[] = [
 
 export const FAQ_DATA: FAQ_CARD_DATA[] = [
   {
-    question: "What's your minimum project budget?",
+    question: "What makes Digixito different from other agencies?",
     answer:
-      "We work from ₹50,000 monthly retainers for startups to multi-crore enterprise contracts. Every budget gets equal commitment.",
+      "We’re not just a digital agency — we’re a digital ecosystem. Our multidisciplinary team of strategists, designers, developers, and AI engineers work together to deliver end-to-end solutions that drive measurable growth and long-term impact.",
   },
   {
-    question: "What's your minimum project budget?",
+    question: "Does Digixito work with startups or only established companies?",
     answer:
-      "We work from ₹50,000 monthly retainers for startups to multi-crore enterprise contracts. Every budget gets equal commitment.",
+      "We work with both! Whether you’re a startup building your first online presence or an enterprise optimizing digital performance, we customize our approach to match your stage, industry, and goals.",
   },
   {
-    question: "What's your minimum project budget?",
+    question: "Can Digixito handle complete 360° brand solutions?",
     answer:
-      "We work from ₹50,000 monthly retainers for startups to multi-crore enterprise contracts. Every budget gets equal commitment.",
+      "Yes — from naming and identity design to digital marketing, software development, and AI integration — we deliver holistic brand transformation under one roof.",
   },
   {
-    question: "What's your minimum project budget?",
+    question: "How can I get started with Digixito?",
     answer:
-      "We work from ₹50,000 monthly retainers for startups to multi-crore enterprise contracts. Every budget gets equal commitment.",
+      "Simply reach out through our Contact page or email us with your project details. Our team will schedule a free consultation to discuss your goals, understand your needs, and create a customized action plan.",
   },
 ];
 

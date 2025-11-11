@@ -35,7 +35,7 @@ const BestWorks = () => {
       sx={{
         backgroundImage: `url(${gridBanner.src})`,
         height: "100vh",
-        py: 20,
+        py: { lg: 20, xs: 6 },
         backgroundPosition: "center",
         backgroundRepeat: "repeat",
         backgroundSize: "cover",
@@ -52,7 +52,7 @@ const BestWorks = () => {
       >
         <Container maxWidth="lg">
           <Stack
-            direction={"row"}
+            direction={{ lg: "row", xs: "column" }}
             alignItems={"center"}
             justifyContent={"space-between"}
           >
@@ -61,7 +61,7 @@ const BestWorks = () => {
                 <Typography
                   sx={{
                     fontFamily: monument.style.fontFamily,
-                    fontSize: 40,
+                    fontSize: { lg: 40, xs: 30 },
                     color: "#222",
                   }}
                 >
@@ -71,7 +71,7 @@ const BestWorks = () => {
               </Stack>
               <Typography
                 sx={{
-                  fontSize: 40,
+                  fontSize: { lg: 40, xs: 30 },
                   fontFamily: monument.style.fontFamily,
                   color: "#222",
                 }}
@@ -96,7 +96,8 @@ const BestWorks = () => {
           <Box
             sx={{
               backgroundImage: `url(${best_work_banner.src})`,
-              height: "100vh",
+              height: { lg: "100vh", xs: "60vh" },
+
               //   py: 4,
               width: "100%",
               display: "flex",
@@ -128,13 +129,22 @@ const BestWorks = () => {
                 >
                   <ArrowBack />
                 </IconButton>
-                <Swiper slidesPerView={2} spaceBetween={4}>
-                  <SwiperSlide>
-                    <BestWorkCard />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <BestWorkCard />
-                  </SwiperSlide>
+                <Swiper
+                  breakpoints={{
+                    600: {
+                      slidesPerView: 1,
+                    },
+                    1300: {
+                      slidesPerView: 2,
+                      spaceBetween: 50,
+                    },
+                  }}
+                >
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <SwiperSlide key={i}>
+                      <BestWorkCard />
+                    </SwiperSlide>
+                  ))}
                 </Swiper>
 
                 <IconButton
@@ -154,7 +164,7 @@ const BestWorks = () => {
               </Stack>
 
               <Stack
-                direction={"row"}
+                direction={{ lg: "row", xs: "column" }}
                 alignItems={"center"}
                 justifyContent={"center"}
                 spacing={2}
@@ -187,7 +197,7 @@ const BestWorks = () => {
                 <Typography
                   sx={{
                     fontFamily: monument.style.fontFamily,
-                    fontSize: 32,
+                    fontSize: { lg: 32, xs: 20 },
                     fontWeight: 400,
                     letterSpacing: "-0.32px",
                     textAlign: "center",
@@ -212,14 +222,14 @@ const BestWorks = () => {
 
               <Typography
                 sx={{
-                  fontSize: 25,
+                  fontSize: { lg: 25, xs: 16 },
                   textAlign: "center",
                   fontFamily: kessel.style.fontFamily,
-                  lineHeight: "45px",
+                  lineHeight: { lg: "45px", xs: "30px" },
                   letterSpacing: "-0.28px",
                   fontWeight: 400,
                   color: COLORS.WHITE,
-                  px: 3,
+                  px: { lg: 3, xs: 1 },
                   my: 2,
                 }}
               >

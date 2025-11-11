@@ -1,3 +1,4 @@
+"use client";
 import avatar1 from "@/homepage/avatar1.jpg";
 import avatar2 from "@/homepage/avatar2.jpg";
 import avatar3 from "@/homepage/avatar3.jpg";
@@ -17,6 +18,7 @@ import {
   ListItemText,
   Stack,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import Image from "next/image";
 const GridSection = () => {
@@ -46,19 +48,21 @@ const GridSection = () => {
       img: avatar4.src,
     },
   ];
+
+  const phone = useMediaQuery("(max-width:600px)");
   return (
     <Box
       sx={{
         position: "relative",
-        height: "130vh",
+        height: { lg: "130vh", xs: "110vh" },
         backgroundImage: `url(${gridBanner.src})`,
       }}
     >
       <Container>
-        <Box sx={{ width: 468 }}>
+        <Box sx={{ width: { lg: 468, xs: "100%" } }}>
           <Typography
             sx={{
-              fontSize: 28,
+              fontSize: { lg: 28, xs: 20 },
               fontFamily: monument.style.fontFamily,
               fontWeight: 400,
             }}
@@ -74,7 +78,7 @@ const GridSection = () => {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <Image src={cartoon} alt="" width={850} />
+          <Image src={cartoon} alt="" width={phone ? 380 : 850} />
         </Box>
         <Box
           sx={{
@@ -108,17 +112,17 @@ const GridSection = () => {
         </Box>
 
         <Stack
-          direction={"row"}
+          direction={{ lg: "row", xs: "column" }}
           alignItems={"center"}
           justifyContent={"space-between"}
-          sx={{ 
-            position: "absolute", 
-            bottom: 100, 
-            width: "100%", 
+          sx={{
+            position: "absolute",
+            bottom: { lg: 100, xs: 0 },
+            width: "100%",
             left: "50%",
             transform: "translateX(-50%)",
             maxWidth: "1200px",
-            px: 2
+            px: 2,
           }}
         >
           <Box>
