@@ -4,7 +4,7 @@ import forecasting from "@/services/machine-learning/demand-forecasting.jpg";
 import fraud_detection from "@/services/machine-learning/fraud_detection.jpg";
 export const DETAILS_PAGE_DETAILS: DETAILS_PAGE_PROPS[] = [
   {
-    slug: "ai-transformation/machine-learning-and-predictive-models",
+    slug: "machine-learning-and-predictive-models",
     title: "AI Transformation",
     heroSection: {
       heading: "Machine Learning & Predictive Models",
@@ -99,10 +99,10 @@ We help businesses use AI responsibly — transforming complex datasets into act
     ],
   },
   {
-    slug: "ai-transformation/generative-ai",
+    slug: "generative-ai",
     title: "AI Transformation",
     heroSection: {
-      heading: "Generative AI (Chatbots, LLMs, Automation)",
+      heading: "Generative AI",
       description: `At Digixito, we harness the potential of Generative AI to bring automation, personalization, and creativity together.
 Our solutions use advanced LLMs and transformer-based architectures to deliver natural conversations, intelligent workflows, and human-like content generation — all tailored to your brand voice.
 From customer engagement to document processing, we design AI systems that not only respond but also learn, adapt, and evolve with your users.
@@ -194,7 +194,7 @@ From customer engagement to document processing, we design AI systems that not o
     ],
   },
   {
-    slug: "ai-transformation/computer-vision-and-ocr-systems",
+    slug: "computer-vision-and-ocr-systems",
     title: "AI Transformation",
     heroSection: {
       heading: "Computer Vision & OCR Systems",
@@ -287,7 +287,7 @@ Our vision models bring structure to unstructured data — reading, identifying,
     ],
   },
   {
-    slug: "ai-transformation/data-engineering-mlops",
+    slug: "data-engineering-mlops",
     title: "AI Transformation",
     heroSection: {
       heading: "Data Engineering & MLOps",

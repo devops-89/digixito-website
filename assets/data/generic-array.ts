@@ -180,18 +180,21 @@ export const SECURE_CARD_DATA: SECURE_CONNECTED_CARD[] = [
   {
     img: lock,
     backgroundImage: secure_bg.src,
-    heading: "Always Secure and private",
+    heading: "Secure. Smart. Scalable.",
     description:
-      "Thenty is designed with security in mind. Have confidence that your members data is protected. ",
+      "Digixito is engineered to protect your data while scaling your vision. Security isn’t an add-on — it’s our foundation. ",
     isButton: true,
+    button: "Learn About Compliance",
   },
   {
     img: connect,
     backgroundImage: connect_bg.src,
-    heading: "Connect Thenty to other tools",
+    heading: "Connected by Intelligence",
     description:
-      "Our zapier intergration makes it easy to connect thenty with your other tools. ",
+      "From marketing tools to AI workflows — Digixito connects everything that drives your growth. One hub. Infinite possibilities.",
     isButton: false,
+    button: "Discover Integrations",
+    // isBut÷
   },
 ];
 

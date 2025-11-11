@@ -51,7 +51,8 @@ const Headerlist = ({ heading, data, setAnchorEl }: HeaderlistProps) => {
             <ListItemButton
               sx={{
                 width: "fit-content",
-                p: 1,
+                p: 0,
+                mb: 1,
               }}
               onClick={
                 val.url
@@ -63,7 +64,7 @@ const Headerlist = ({ heading, data, setAnchorEl }: HeaderlistProps) => {
                 primary={val.label}
                 slotProps={{
                   primary: {
-                    fontSize: 20,
+                    fontSize: 17,
                     fontFamily: kessel.style.fontFamily,
                     fontWeight: 500,
                   },

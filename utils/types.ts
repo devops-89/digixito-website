@@ -50,6 +50,7 @@ export interface SECURE_CONNECTED_CARD {
   heading: string;
   description: string;
   isButton: boolean;
+  button: string;
 }
 
 export interface URLPROPS {

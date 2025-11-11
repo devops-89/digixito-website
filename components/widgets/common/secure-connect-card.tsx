@@ -13,6 +13,7 @@ const SecureConnectCard = ({
   heading,
   description,
   isButton,
+  button,
 }: SECURE_CONNECTED_CARD) => {
   return (
     <Box>
@@ -70,7 +71,7 @@ const SecureConnectCard = ({
                     letterSpacing: "-0.14px",
                   }}
                 >
-                  Fully PCI Compliant Vendors
+                 {button}
                 </Button>
               )}
             </Grid>

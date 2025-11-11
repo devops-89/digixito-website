@@ -7,7 +7,7 @@ import React, { useEffect, use } from "react";
 
 interface DigitalTransformationDetailsProps {
   params: Promise<{
-    slug?: string[];
+    slug?: string;
   }>;
 }
 
@@ -16,12 +16,13 @@ const DigitalTransformationDetails = ({
 }: DigitalTransformationDetailsProps) => {
   const { slug } = use(params);
   const { setData, data, clearData } = useDetailsStore();
-  const actual_slug = slug?.join("/");
+  // const actual_slug = slug?.join("/");
+  console.log("dta", slug);
 
   useEffect(() => {
-    if (actual_slug) {
+    if (slug) {
       const filterData = DETAILS_PAGE_DETAILS.find(
-        (page) => actual_slug === page.slug
+        (page) => slug === page.slug
       );
 
       if (filterData) {
@@ -31,8 +32,8 @@ const DigitalTransformationDetails = ({
     return () => {
       clearData();
     };
-  }, [actual_slug, setData, clearData]);
 
+  }, [slug, setData, clearData]);
   // console.log("data", data);
 
   return (

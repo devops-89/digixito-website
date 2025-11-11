@@ -194,7 +194,7 @@ const BestWorks = () => {
                     color: COLORS.WHITE,
                   }}
                 >
-                  Coca - Tech Startup Landing Page
+                  Intelligent Experience
                 </Typography>
                 <IconButton
                   sx={{
@@ -223,10 +223,11 @@ const BestWorks = () => {
                   my: 2,
                 }}
               >
-                We start by getting to know our clients, their business goals,
-                and their target audience. This involves conducting research,
-                analyzing data, and discussing ideas with our clients to gain a
-                deep understanding of their needs.
+                We start every project by decoding our client’s goals,
+                challenges, and users. For Coca, our process combined research
+                and strategy to design a landing experience that’s both
+                functional and visually engaging — built to convert insight into
+                impact.
               </Typography>
             </Box>
           </Box>

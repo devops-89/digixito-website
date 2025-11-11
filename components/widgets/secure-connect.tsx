@@ -15,6 +15,7 @@ const SecureConnect = () => {
               heading={val.heading}
               description={val.description}
               isButton={val.isButton}
+              button={val.button}
             />
           </Grid>
         ))}
