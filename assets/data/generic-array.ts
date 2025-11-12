@@ -207,18 +207,18 @@ export const TERMS_PAGE_LINKS = [
     label: "Terms",
     url: "/terms",
   },
-  {
-    label: "Cookies",
-    url: "/cookies",
-  },
-  {
-    label: "Sitemap",
-    url: "/sitemap",
-  },
-  {
-    label: "Brand kit",
-    url: "/brand-kit",
-  },
+  // {
+  //   label: "Cookies",
+  //   url: "/cookies",
+  // },
+  // {
+  //   label: "Sitemap",
+  //   url: "/sitemap",
+  // },
+  // {
+  //   label: "Brand kit",
+  //   url: "/brand-kit",
+  // },
 ];
 
 export const LINK_LIST_DATA: LINK_LIST[] = [

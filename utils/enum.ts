@@ -16,5 +16,5 @@ export enum VARIANTS {
 export enum HEADER_TABS_DATA {
   WHAT_WE_OFFER = "What we offer",
   WHAT_WE_ARE = "What we are",
-  CAREERS = "careers",
+  CAREERS = "Careers",
 }

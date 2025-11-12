@@ -1,14 +1,15 @@
+import { HEADER_TABS_DATA } from "@/utils/enum";
 import { HEADER_LIST_PROPS } from "@/utils/types";
 
 export const HEADER_TABS = [
   {
-    label: "What we offer",
+    label: HEADER_TABS_DATA.WHAT_WE_OFFER,
   },
   {
-    label: "What we are",
+    label: HEADER_TABS_DATA.WHAT_WE_ARE,
   },
   {
-    label: "careers",
+    label: HEADER_TABS_DATA.CAREERS,
   },
 ];
 
