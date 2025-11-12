@@ -14,14 +14,14 @@ const PageHeading = ({
   return (
     <div>
       <Stack
-        direction={"row"}
+        direction={{ lg: "row", xs: "column" }}
         alignItems={"center"}
         justifyContent={"space-between"}
       >
         <Typography
           sx={{
             color: COLORS.BLACK,
-            fontSize: 50,
+            fontSize: { lg: 50, xs: 35 },
             fontFamily: monument.style.fontFamily,
             fontWeight: 800,
           }}
@@ -30,7 +30,7 @@ const PageHeading = ({
         </Typography>
         <Typography
           sx={{
-            fontSize: 26,
+            fontSize: { lg: 25, xs: 18 },
             fontFamily: monument.style.fontFamily,
             fontWeight: 400,
           }}

@@ -1,4 +1,12 @@
-import { Box, Container, Grid, Stack, Typography } from "@mui/material";
+"use client";
+import {
+  Box,
+  Container,
+  Grid,
+  Stack,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import globe from "@/banners/Globe.png";
@@ -6,6 +14,7 @@ import { kessel } from "@/utils/fonts";
 import { COLORS } from "@/utils/enum";
 import { VALUE_LIST_PROPS } from "@/utils/types";
 const WhatWeValueCard = ({ data, img, isReverse }: VALUE_LIST_PROPS) => {
+  const phone = useMediaQuery("(max-width:600px)");
   return (
     <Box sx={{ mt: 10 }}>
       <Container maxWidth="lg">
@@ -14,10 +23,18 @@ const WhatWeValueCard = ({ data, img, isReverse }: VALUE_LIST_PROPS) => {
           spacing={10}
           flexDirection={isReverse ? "row-reverse" : "row"}
         >
-          <Grid size={6}>
-            <Image src={img} alt="" style={{ width: "100%", height: 500 }} />
+          <Grid size={{ lg: 6, xs: 12 }} sx={{ textAlign: "center" }}>
+            <Image
+              src={img}
+              alt=""
+              style={{
+                width: phone ? 350 : "100%",
+                height: phone ? 350 : 500,
+                margin: "auto",
+              }}
+            />
           </Grid>
-          <Grid size={6}>
+          <Grid size={{ lg: 6, xs: 12 }}>
             {data.map((val, i) => (
               <React.Fragment key={i}>
                 <Stack
@@ -29,7 +46,7 @@ const WhatWeValueCard = ({ data, img, isReverse }: VALUE_LIST_PROPS) => {
                   <Typography
                     sx={{
                       fontFamily: kessel.style.fontFamily,
-                      fontSize: 27,
+                      fontSize: { lg: 27, xs: 20 },
                       fontWeight: 700,
                       lineHeight: "25px",
                       letterSpacing: "-0.48px",
@@ -41,7 +58,7 @@ const WhatWeValueCard = ({ data, img, isReverse }: VALUE_LIST_PROPS) => {
                   <Typography
                     sx={{
                       fontFamily: kessel.style.fontFamily,
-                      fontSize: 27,
+                      fontSize: { lg: 27, xs: 20 },
                       fontWeight: 700,
                       lineHeight: "25px",
                       letterSpacing: "-0.48px",

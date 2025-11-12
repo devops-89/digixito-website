@@ -8,14 +8,22 @@ const OurMission = () => {
   return (
     <Box sx={{ py: 10 }}>
       <Container maxWidth="lg">
-        <Grid container spacing={10}>
-          <Grid size={5}>
-            <StarCard iconPosition="top" backgroundImage={mission.src} height={"80vh"} />
+        <Grid
+          container
+          spacing={10}
+          flexDirection={{ lg: "row", xs: "row-reverse" }}
+        >
+          <Grid size={{ lg: 5, xs: 12 }}>
+            <StarCard
+              iconPosition="top"
+              backgroundImage={mission.src}
+              height={"80vh"}
+            />
           </Grid>
-          <Grid size={7}>
+          <Grid size={{ lg: 7, xs: 12 }}>
             <Typography
               sx={{
-                fontSize: 40,
+                fontSize: {lg:40,xs:30},
                 fontFamily: monument.style.fontFamily,
                 fontWeight: 400,
                 lineHeight: "55px",
@@ -34,7 +42,7 @@ const OurMission = () => {
               <Typography
                 sx={{
                   fontFamily: monument.style.fontFamily,
-                  fontSize: 40,
+                  fontSize: {lg:40,xs:30},
                   fontWeight: 400,
                 }}
               >
@@ -48,7 +56,7 @@ const OurMission = () => {
                 textAlign: "justify",
                 fontFamily: kessel.style.fontFamily,
                 fontWeight: 500,
-                lineHeight: "40px",
+                lineHeight: {lg:"40px",xs:"30px"},
               }}
             >
               To orchestrate the perfect symphony of strategy, creativity, and

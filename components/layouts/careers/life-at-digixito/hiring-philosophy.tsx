@@ -20,9 +20,16 @@ const HiringPhilosophy = () => {
   return (
     <Box>
       <Container maxWidth="lg">
-        <Stack direction={"row"} alignItems={"center"} spacing={3}>
+        <Stack
+          direction={{ lg: "row", xs: "column" }}
+          alignItems={"center"}
+          spacing={3}
+        >
           <Typography
-            sx={{ fontSize: 40, fontFamily: monument.style.fontFamily }}
+            sx={{
+              fontSize: { lg: 40, xs: 30 },
+              fontFamily: monument.style.fontFamily,
+            }}
           >
             our Hiring
           </Typography>
@@ -33,18 +40,18 @@ const HiringPhilosophy = () => {
               sx={{
                 border: "2px solid #000",
                 height: 1,
-                width: 450,
+                width: { lg: 450, xs: 350 },
                 backgroundColor: COLORS.BLACK,
               }}
             ></Box>
           </Stack>
         </Stack>
         <Grid container sx={{ pt: 10 }} spacing={5}>
-          <Grid size={5}>
+          <Grid size={{ lg: 5, xs: 12 }}>
             {philosophy.map((val, i) => (
               <Typography
                 sx={{
-                  fontSize: 38,
+                  fontSize: { lg: 38, xs: 30 },
                   fontWeight: 500,
                   textTransform: "55px",
                   letterSpacing: "3.37px",
@@ -56,7 +63,7 @@ const HiringPhilosophy = () => {
             ))}
             <Typography
               sx={{
-                fontSize: 38,
+                fontSize: { lg: 38, xs: 30 },
                 fontWeight: 500,
                 textTransform: "55px",
                 letterSpacing: "3.37px",
@@ -68,7 +75,7 @@ const HiringPhilosophy = () => {
               <Typography
                 component={"span"}
                 sx={{
-                  fontSize: 38,
+                  fontSize: {lg:38,xs:30},
                   fontWeight: 800,
                   textTransform: "55px",
                   letterSpacing: "3.37px",
@@ -79,7 +86,7 @@ const HiringPhilosophy = () => {
               </Typography>{" "}
             </Typography>
           </Grid>
-          <Grid size={7}>
+          <Grid size={{ lg: 7, xs: 12 }}>
             <Typography
               sx={{
                 textAlign: "justify",

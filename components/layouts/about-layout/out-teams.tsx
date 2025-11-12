@@ -1,10 +1,19 @@
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+"use client";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import React from "react";
 import teams from "@/about-us/teams.png";
 import Image from "next/image";
 import { monument } from "@/utils/fonts";
 import { COLORS } from "@/utils/enum";
 const OurTeams = () => {
+  const phone = useMediaQuery("(max-width:600px)");
   return (
     <Box>
       <Box
@@ -18,15 +27,15 @@ const OurTeams = () => {
       >
         <Container maxWidth="lg">
           <Grid container>
-            <Grid size={11} margin="auto">
+            <Grid size={{ lg: 11, xs: 12 }} margin="auto">
               <Box sx={{ textAlign: "center" }}>
-                <Image src={teams} alt="" width={450} />
+                <Image src={teams} alt="" width={phone ? 350 : 450} />
                 <Typography
                   sx={{
-                    fontSize: 48,
+                    fontSize: { lg: 48, xs: 30 },
                     fontFamily: monument.style.fontFamily,
                     fontWeight: 800,
-                    lineHeight: "56px",
+                    lineHeight: { lg: "56px", xs: "35px" },
                     mt: 3,
                   }}
                 >

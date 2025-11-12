@@ -24,13 +24,13 @@ const AboutHeroSection = () => {
         />
 
         <Grid container alignItems={"center"} spacing={5} sx={{ mt: 5 }}>
-          <Grid size={6}>
+          <Grid size={{ lg: 6, xs: 12 }}>
             <Typography
               sx={{
-                fontSize: 45,
+                fontSize: { lg: 45, xs: 30 },
                 fontFamily: kessel.style.fontFamily,
                 fontWeight: 500,
-                lineHeight: "55px",
+                lineHeight: { lg: "55px", xs: "40px" },
               }}
             >
               Rooted in Excellence, Growing with Innovation
@@ -44,7 +44,7 @@ const AboutHeroSection = () => {
             >
               <Typography
                 sx={{
-                  fontSize: 40,
+                  fontSize: { lg: 40, xs: 30 },
                   fontFamily: monument.style.fontFamily,
                   fontWeight: 400,
                 }}
@@ -74,7 +74,7 @@ const AboutHeroSection = () => {
               just adapt to change — we help brands lead it.
             </Typography>
           </Grid>
-          <Grid size={6}>
+          <Grid size={{ lg: 6, xs: 12 }}>
             <Image
               src={hero_img}
               alt=""

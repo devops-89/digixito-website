@@ -53,9 +53,12 @@ const ContactForm = () => {
             <Image src={star} width={30} alt="" />
           </Box>
           <Grid container spacing={10}>
-            <Grid size={6}>
+            <Grid size={{ lg: 6, xs: 12 }}>
               <Stack direction={"row"} alignItems={"center"} spacing={2}>
-                <ImageHeading title="Contact us" sx={{ width: 400, px: 1 }} />
+                <ImageHeading
+                  title="Contact us"
+                  sx={{ width: { lg: 400, xs: 380 }, px: 1 }}
+                />
                 {/* <Image src={giffty} alt="" style={{ marginTop: -10,transform:"rotate(180deg)" }} /> */}
               </Stack>
               <Typography
@@ -88,6 +91,7 @@ const ContactForm = () => {
                   lineHeight: "50px",
                   letterSpacing: "-1.516px",
                   my: 3,
+                  textAlign: { lg: "flex-start", xs: "center" },
                 }}
               >
                 Follow Us
@@ -95,7 +99,7 @@ const ContactForm = () => {
               <Stack
                 direction={"row"}
                 alignItems={"center"}
-                justifyContent={"felx-start"}
+                justifyContent={{ lg: "flex-start", xs: "center" }}
                 spacing={2}
               >
                 {socialIcons.map((val, i) => (
@@ -118,7 +122,7 @@ const ContactForm = () => {
                 ))}
               </Stack>
             </Grid>
-            <Grid size={6}>
+            <Grid size={{ lg: 6, xs: 12 }}>
               <ContactMessageForm />
             </Grid>
           </Grid>

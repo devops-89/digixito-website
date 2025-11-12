@@ -41,10 +41,11 @@ const DevelopmentProcess = () => {
               alignItems={"center"}
               spacing={2}
               justifyContent={"center"}
+              flexWrap={"wrap"}
             >
               <Typography
                 sx={{
-                  fontSize: 40,
+                  fontSize: { lg: 40, xs: 30 },
                   fontFamily: monument.style.fontFamily,
                   fontWeight: 400,
                 }}
@@ -54,7 +55,7 @@ const DevelopmentProcess = () => {
               <ImageHeading title="Development" sx={{ width: "100%", px: 1 }} />
               <Typography
                 sx={{
-                  fontSize: 40,
+                  fontSize: { lg: 40, xs: 30 },
                   fontFamily: monument.style.fontFamily,
                   fontWeight: 400,
                   pl: 2,
@@ -71,7 +72,7 @@ const DevelopmentProcess = () => {
               fontFamily: kessel.style.fontFamily,
               lineHeight: "24px",
               textAlign: "center",
-              width: "772px",
+              width: { lg: "772px", xs: "100%" },
               margin: "auto",
               my: 5,
             }}
@@ -90,13 +91,13 @@ const DevelopmentProcess = () => {
               alignItems: "center",
               py: 10,
               position: "relative",
-              mt:20
+              mt: 20,
             }}
           >
             <Container maxWidth="lg">
-              <Grid container spacing={4} sx={{ mt: -20 }}>
+              <Grid container spacing={{ lg: 4, xs: 12 }} sx={{ mt: -20 }}>
                 {developmentData?.development_process.map((val, i) => (
-                  <Grid size={4} key={i}>
+                  <Grid size={{ lg: 4, xs: 12 }} key={i}>
                     <DevelopmentCard
                       process_number={val.process_number}
                       process_title={val.process_title}

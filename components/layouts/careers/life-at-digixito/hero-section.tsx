@@ -9,7 +9,7 @@ const HerosectionLife = () => {
       <Box
         sx={{
           backgroundImage: `url(${digixitoSign.src})`,
-          height: "80vh",
+          height: { lg: "80vh", xs: "60vh" },
           backgroundPosition: "center",
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
@@ -20,11 +20,11 @@ const HerosectionLife = () => {
       >
         <Container maxWidth="lg">
           <Grid container>
-            <Grid size={10} margin="auto">
+            <Grid size={{ lg: 10, xs: 12 }} margin="auto">
               <Typography
                 sx={{
                   fontFamily: kessel.style.fontFamily,
-                  fontSize: 56,
+                  fontSize: { lg: 56, xs: 35 },
                   fontWeight: 700,
                   lineHeight: "75px",
                   letterSpacing: "-1.51px",
@@ -37,9 +37,9 @@ const HerosectionLife = () => {
                 sx={{
                   fontFamily: monument.style.fontFamily,
                   textAlign: "center",
-                  fontSize: 56,
+                  fontSize: { lg: 56, xs: 30 },
                   fontWeight: 700,
-                  lineHeight: "75px",
+                  lineHeight: { lG: "75px", xs: "30px" },
                   letterSpacing: "-1.51px",
                 }}
               >
@@ -50,7 +50,7 @@ const HerosectionLife = () => {
                   fontSize: 19,
                   fontWeight: 500,
                   fontFamily: kessel.style.fontFamily,
-                  lineHeight: "48px",
+                  lineHeight: { lg: "48px", xs: "30px" },
                   textAlign: "center",
                   mt: 2,
                 }}

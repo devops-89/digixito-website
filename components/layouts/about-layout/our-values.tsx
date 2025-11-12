@@ -50,14 +50,14 @@ const Ourvalues = () => {
               <Grid container>
                 <Grid size={12}>
                   <Stack
-                    direction={"row"}
+                    direction={{ lg: "row", xs: "column" }}
                     alignItems={"flex-start"}
                     spacing={2}
                   >
                     <Typography
                       sx={{
                         color: COLORS.WHITE,
-                        fontSize: 48,
+                        fontSize: { lg: 48, xs: 30 },
                         fontFamily: kessel.style.fontFamily,
                       }}
                     >
@@ -66,15 +66,16 @@ const Ourvalues = () => {
                     <Image src={star} alt="" width={50} />
                   </Stack>
                   <Stack
-                    direction={"row"}
-                    alignItems={"center"}
+                    direction={{ lg: "row", xs: "column" }}
+                    alignItems={{ lg: "center", xs: "flex-start" }}
                     justifyContent={"space-between"}
+                    spacing={{ xs: 2 }}
                     sx={{ mt: 5 }}
                   >
                     <Stack direction={"row"} alignItems={"center"} spacing={2}>
                       <Typography
                         sx={{
-                          fontSize: 40,
+                          fontSize: { lg: 40, xs: 30 },
                           fontFamily: monument.style.fontFamily,
                           color: COLORS.WHITE,
                         }}
@@ -102,8 +103,16 @@ const Ourvalues = () => {
             </Container>
             <Box sx={{ mt: 4 }}>
               <Swiper
-                slidesPerView={4}
-                spaceBetween={400}
+                breakpoints={{
+                  600: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                  },
+                  1300: {
+                    slidesPerView: 4,
+                    spaceBetween: 400,
+                  },
+                }}
                 modules={[Autoplay]}
                 autoplay={{
                   delay: 2000,
@@ -123,10 +132,10 @@ const Ourvalues = () => {
               </Swiper>
             </Box>
             <Grid container sx={{ mt: 5 }}>
-              <Grid size={8} margin={"auto"}>
+              <Grid size={{ lg: 8, xs: 12 }} margin={"auto"}>
                 <Typography
                   sx={{
-                    fontSize: 38,
+                    fontSize: {lg:38,xs:30},
                     fontFamily: kessel.style.fontFamily,
                     color: "#FFC228",
                     fontWeight: 500,
@@ -138,7 +147,7 @@ const Ourvalues = () => {
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: 37,
+                    fontSize: {lg:37,xs:30},
                     fontFamily: monument.style.fontFamily,
                     fontWeight: 400,
                     lineHeight: "55px",
@@ -151,7 +160,7 @@ const Ourvalues = () => {
                 </Typography>
                 <Grid container sx={{ mt: 3 }}>
                   {COUNTER_CARD_DATA.map((val, i) => (
-                    <Grid size={3} key={i}>
+                    <Grid size={{lg:3,xs:6}} key={i}>
                       <NumberCard
                         number={val.number}
                         suffix={val.suffix}

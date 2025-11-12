@@ -27,7 +27,7 @@ const OurServiceCard = ({
           flexDirection: "column",
           gap: 2,
           p: 3,
-          height: 250,
+          height: { lg: 250, xs: "100%" },
         }}
       >
         {/* <Box

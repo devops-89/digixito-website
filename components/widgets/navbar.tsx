@@ -1,13 +1,7 @@
 "use client";
-import logo from "@/logo/Digixito_Logo.svg";
+import logo from "@/logo/Digixito_black_outline.svg";
 import { COLORS } from "@/utils/enum";
-import {
-  Box,
-  Container,
-  IconButton,
-  Popover,
-  Stack
-} from "@mui/material";
+import { Box, Container, IconButton, Popover, Stack } from "@mui/material";
 import Grow from "@mui/material/Grow";
 import Image from "next/image";
 import Link from "next/link";
@@ -34,7 +28,7 @@ const Navbar = () => {
           justifyContent={"space-between"}
         >
           <Link href={"/"}>
-            <Image src={logo} alt="" width={200} />
+            <Image src={logo} alt="" width={80} />
           </Link>
           <IconButton onClick={handleClick}>
             <Box

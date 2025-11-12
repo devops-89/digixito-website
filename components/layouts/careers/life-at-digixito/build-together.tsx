@@ -8,18 +8,18 @@ const BuildTogether = () => {
     <Box sx={{ py: 10 }}>
       <Container maxWidth="lg">
         <Grid container spacing={10}>
-          <Grid size={6}>
+          <Grid size={{ lg: 6, xs: 12 }}>
             <Image
               src={career}
               alt=""
               style={{ width: "100%", height: 300, borderRadius: 10 }}
             />
           </Grid>
-          <Grid size={6}>
+          <Grid size={{ lg: 6, xs: 12 }}>
             <Typography
               sx={{
                 fontFamily: monument.style.fontFamily,
-                fontSize: 45,
+                fontSize: { lg: 45, xs: 30 },
                 fontWeight: 500,
                 lineHeight: "55px",
                 letterSpacing: "-1.516px",

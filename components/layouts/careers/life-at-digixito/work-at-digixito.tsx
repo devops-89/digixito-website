@@ -18,13 +18,17 @@ const WorkatDigixito = () => {
   return (
     <Box sx={{ py: 10 }}>
       <Container maxWidth="lg">
-        <Stack direction={"row"} alignItems={"center"} spacing={3}>
+        <Stack
+          direction={{ lg: "row", xs: "column" }}
+          alignItems={"center"}
+          spacing={{ lg: 3, xs: 5 }}
+        >
           <Stack direction={"row"} alignItems={"center"} spacing={1}>
             <Box
               sx={{
                 border: "2px solid #000",
                 height: 1,
-                width: 550,
+                width: { lg: 550, xs: 350 },
                 backgroundColor: COLORS.BLACK,
               }}
             ></Box>
@@ -42,10 +46,10 @@ const WorkatDigixito = () => {
           <ImageHeading title="Digixito" />
         </Stack>
         <Grid container sx={{ py: 10 }}>
-          <Grid size={5}>
+          <Grid size={{ lg: 5, xs: 12 }}>
             <Typography
               sx={{
-                fontSize: 40,
+                fontSize: { lg: 40, xs: 30 },
                 fontFamily: kessel.style.fontFamily,
                 lineHeight: "33px",
                 letterSpacing: "-0.63px",
@@ -56,7 +60,7 @@ const WorkatDigixito = () => {
             </Typography>
             <Typography
               sx={{
-                fontSize: 40,
+                fontSize: { lg: 40, xs: 30 },
                 fontFamily: kessel.style.fontFamily,
                 lineHeight: "33px",
                 letterSpacing: "-0.63px",
@@ -66,7 +70,7 @@ const WorkatDigixito = () => {
               and how we act
             </Typography>
           </Grid>
-          <Grid size={7}>
+          <Grid size={{ lg: 7, xs: 12 }}>
             <Typography
               sx={{
                 fontSize: 23,
@@ -88,7 +92,7 @@ const WorkatDigixito = () => {
 
             <Grid container spacing={5} sx={{ mt: 10 }}>
               {WORK_AT_DIGIXITO_CARD_DATA.map((val, i) => (
-                <Grid size={6} key={i}>
+                <Grid size={{ lg: 6, xs: 12 }} key={i}>
                   <WorkatDigixitoCard
                     serial_number={val.serial_number}
                     heading={val.heading}

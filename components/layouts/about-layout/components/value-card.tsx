@@ -21,6 +21,7 @@ const ValueCard = ({ number, title, description }: VALUE_CARD_PROPS) => {
           gap: "20px",
           p: 3,
           textAlign: "left",
+          margin:"auto"
         }}
       >
         <Typography

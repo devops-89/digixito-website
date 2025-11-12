@@ -34,7 +34,7 @@ const BestWorks = () => {
     <Box
       sx={{
         backgroundImage: `url(${gridBanner.src})`,
-        height: {lg:"100vh",xs:"100%"},
+        height: { lg: "100vh", xs: "100%" },
         py: { lg: 20, xs: 6 },
         backgroundPosition: "center",
         backgroundRepeat: "repeat",
@@ -125,6 +125,7 @@ const BestWorks = () => {
                     ":hover": {
                       backgroundColor: COLORS.WHITE,
                     },
+                    display: { lg: "flex", xs: "none" },
                   }}
                 >
                   <ArrowBack />
@@ -133,6 +134,7 @@ const BestWorks = () => {
                   breakpoints={{
                     600: {
                       slidesPerView: 1,
+                      spaceBetween: 20,
                     },
                     1300: {
                       slidesPerView: 2,
@@ -157,6 +159,7 @@ const BestWorks = () => {
                     ":hover": {
                       backgroundColor: COLORS.WHITE,
                     },
+                    display: { lg: "flex", xs: "none" },
                   }}
                 >
                   <ArrowForward />
@@ -164,11 +167,12 @@ const BestWorks = () => {
               </Stack>
 
               <Stack
-                direction={{ lg: "row", xs: "column" }}
+                direction={{ lg: "row", xs: "row" }}
                 alignItems={"center"}
                 justifyContent={"center"}
                 spacing={2}
                 mt={4}
+                sx={{ flexWrap: "wrap",gap:2 }}
               >
                 {chipData.map((val, i) => (
                   <Chip
@@ -180,6 +184,7 @@ const BestWorks = () => {
                       color: "#888",
                       fontSize: 16,
                       letterSpacing: "-0.18px",
+                      mt:2
                     }}
                     label={val.label}
                     key={i}

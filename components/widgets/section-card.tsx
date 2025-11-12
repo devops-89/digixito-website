@@ -16,7 +16,7 @@ const SectionCard = ({ variant, title }: SECTION_CARD_PROPS) => {
           padding: "16px 24px",
           backgroundColor: variant === VARIANTS.DARK ? "#333" : COLORS.PRIMARY,
           zIndex: 4,
-          display: "flex",
+          display: {lg:"flex",xs:"none"},
           alignItems: "center",
           justifyContent: "center",
           // height: 10,

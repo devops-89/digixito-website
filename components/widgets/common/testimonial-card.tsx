@@ -22,7 +22,8 @@ const TestimonialCard = ({
         flexDirection: "column",
         gap: "40px",
         alignItems: "flex-start",
-        width: { lg: 360, xs: 350 },
+        width: { lg: 360, xs: 300 },
+        margin: { lg: "", xs: "auto" },
       }}
     >
       <Stack

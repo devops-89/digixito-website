@@ -27,18 +27,25 @@ const FeaturedProjects = () => {
           alignItems={"center"}
           spacing={2}
           justifyContent={"center"}
+          flexWrap={"wrap"}
         >
           <Typography
             sx={{
-              fontSize: 40,
+              fontSize: { lg: 40, xs: 30 },
               fontFamily: monument.style.fontFamily,
               fontWeight: 400,
             }}
           >
             Our
           </Typography>
-          <ImageHeading title="Featured Projects" sx={{ px: 1 }} />
-          <IconButton
+          <ImageHeading
+            title="Featured Projects"
+            sx={{
+              px: { lg: 1, xs: 0 },
+              width: { lg: "100%", xs: 350 },
+            }}
+          />
+          {/* <IconButton
             sx={{
               backgroundColor: COLORS.PRIMARY,
               width: 64,
@@ -49,7 +56,7 @@ const FeaturedProjects = () => {
             }}
           >
             <ArrowForward />
-          </IconButton>
+          </IconButton> */}
         </Stack>
         <Typography
           sx={{
@@ -58,7 +65,7 @@ const FeaturedProjects = () => {
             fontWeight: 300,
             lineHeight: "24px",
             textAlign: "center",
-            width: 772,
+            width: { lg: 772, xs: "100%" },
             margin: "auto",
             mt: 2,
           }}
@@ -69,7 +76,7 @@ const FeaturedProjects = () => {
 
         <Grid container spacing={4} sx={{ mt: 4 }}>
           {projectData?.project_data.map((val, i) => (
-            <Grid size={6}>
+            <Grid size={{ lg: 6, xs: 12 }}>
               <ProjectsCard
                 project_description={val.project_description}
                 project_name={val.project_name}

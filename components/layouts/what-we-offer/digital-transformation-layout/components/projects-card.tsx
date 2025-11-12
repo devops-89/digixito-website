@@ -17,7 +17,7 @@ const ProjectsCard = ({
           borderRadius: "32px",
           backgroundColor: "#fcfcfc",
           boxShadow: " 4px 4px 0 rgba(0, 0, 0, 0.20)",
-          height: 550,
+          height: { lg: 550, xs:600 },
           position: "relative",
         }}
       >

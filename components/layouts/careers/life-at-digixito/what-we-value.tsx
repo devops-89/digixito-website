@@ -49,7 +49,7 @@ const WhatweValue = () => {
                 <Typography
                   sx={{
                     fontFamily: monument.style.fontFamily,
-                    fontSize: 40,
+                    fontSize: {lg:40,xs:30},
                     fontWeight: 400,
                     color: COLORS.WHITE,
                   }}

@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import logo_initial from "@/logo/digixito_initial.png";
+import logo_initial from "@/logo/Digixito_White_Logo.svg";
 import footer_icon from "@/icons/footer_snake.svg";
 import { LinkedIn, X, YouTube } from "@mui/icons-material";
 import { LINK_LIST_DATA, TERMS_PAGE_LINKS } from "@/assets/data/generic-array";
@@ -40,16 +40,23 @@ const Footer = () => {
               <Box
                 sx={{
                   backgroundColor: COLORS.BLACK,
-                  width: 500,
-                  height: 500,
+                  width: { lg: 500, xs: 380 },
+                  height: { lg: 500, xs: 380 },
                   borderRadius: "50%",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                 }}
               >
-                <Box>
-                  <Image src={logo_initial} alt="" />
+                <Box sx={{}}>
+                  <Box sx={{ textAlign: "center", mb: 2 }}>
+                    <Image
+                      src={logo_initial}
+                      alt=""
+                      width={100}
+                      style={{ margin: "auto" }}
+                    />
+                  </Box>
                   <Stack direction={"row"} alignItems={"center"} spacing={2}>
                     {socialIcons.map((Icon, i) => (
                       <IconButton
