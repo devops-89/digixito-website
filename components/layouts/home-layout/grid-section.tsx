@@ -1,9 +1,10 @@
 "use client";
-import avatar1 from "@/homepage/avatar1.jpg";
-import avatar2 from "@/homepage/avatar2.jpg";
-import avatar3 from "@/homepage/avatar3.jpg";
-import avatar4 from "@/homepage/avatar4.jpg";
-import gridBanner from "@/homepage/grid-banner.jpg";
+import React from "react";
+import avatar1 from "@/public/images/homepage/avatar1.jpg";
+import avatar2 from "@/public/images/homepage/avatar2.jpg";
+import avatar3 from "@/public/images/homepage/avatar3.jpg";
+import avatar4 from "@/public/images/homepage/avatar4.jpg";
+import gridBanner from "@/public/images/homepage/grid-banner.jpg";
 import { COLORS } from "@/utils/enum";
 import { kessel, monument } from "@/utils/fonts";
 import { Circle, PlayArrow } from "@mui/icons-material";
@@ -20,9 +21,6 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { SpikyStructure } from "./components/spiky-structure";
-interface AvatarItem {
-  img: string;
-}
 
 const GridSection = () => {
   const list_Item = [
@@ -37,20 +35,11 @@ const GridSection = () => {
     },
   ];
 
-  const avatars: AvatarItem[] = [
-    {
-      img: avatar1.src,
-    },
-    {
-      img: avatar2.src,
-    },
-    {
-      img: avatar3.src,
-    },
-    {
-      img: avatar4.src,
-    },
-  ];
+  const avatars: string[] = [avatar1.src, avatar2.src, avatar3.src, avatar4.src];
+
+  const avatarElements = avatars.map((src, i) => (
+    <Avatar src={src} key={src} />
+  )) as React.ReactElement[];
 
   const phone = useMediaQuery("(max-width:600px)");
   return (
@@ -79,8 +68,8 @@ const GridSection = () => {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            width: { lg: 600, xs: 350 },
-            height: { lg: 600, xs: 350 },
+            width: { lg: "100%", xs: "100%" },
+            height: { lg: "100%", xs: "100%" },
           }}
         >
           {/* <Image src={cartoon} alt="" width={phone ? 380 : 850} /> */}
@@ -141,19 +130,12 @@ const GridSection = () => {
                 justifyContent: "center",
               }}
             >
-              <AvatarGroup>
-                <>
-                  {avatars.map((val, i) => (
-                    <Avatar src={val.img} key={i} />
-                  ))}
-                </>
-              </AvatarGroup>
+              <AvatarGroup>{avatarElements as any}</AvatarGroup>
               <Typography
                 sx={{
                   fontSize: 20,
                   fontFamily: kessel.style.fontFamily,
                   fontWeight: 500,
-                  letterSpacing: "-0.2px",
                 }}
               >
                 20K

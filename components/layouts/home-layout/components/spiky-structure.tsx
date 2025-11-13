@@ -129,7 +129,13 @@ const SceneContent = React.forwardRef<THREE.Scene>((_props, ref) => {
       <ambientLight intensity={0.6} />
       <directionalLight position={[50, 80, 40]} intensity={1.2} />
       <SpikyMesh />
-      <OrbitControls enableDamping minDistance={10} maxDistance={2000} />
+      <OrbitControls
+        enableDamping
+        minDistance={10}
+        maxDistance={2000}
+        zoomSpeed={0}
+        enableZoom={false}
+      />
     </>
   );
 });

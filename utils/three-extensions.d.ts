@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 declare module "three/examples/jsm/exporters/GLTFExporter" {
     import { Object3D } from "three";
   
