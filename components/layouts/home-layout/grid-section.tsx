@@ -121,7 +121,7 @@ const GridSection = () => {
             px: 2,
           }}
         >
-          <Box>
+          {/* <Box>
             <Box
               sx={{
                 display: "flex",
@@ -153,7 +153,7 @@ const GridSection = () => {
             >
               Active Users Worldwide
             </Typography>
-          </Box>
+          </Box> */}
 
           <Box
             sx={{
