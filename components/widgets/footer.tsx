@@ -16,8 +16,13 @@ import footer_icon from "@/icons/footer_snake.svg";
 import { LinkedIn, X, YouTube } from "@mui/icons-material";
 import { LINK_LIST_DATA, TERMS_PAGE_LINKS } from "@/assets/data/generic-array";
 import LinkList from "./common/link-list";
+import { SvgIconProps } from "@mui/material";
 const Footer = () => {
-  const socialIcons: React.ElementType[] = [X, YouTube, LinkedIn];
+  const socialIcons: React.ComponentType<SvgIconProps>[] = [
+    X,
+    YouTube,
+    LinkedIn,
+  ];
   return (
     <Box sx={{ py: 10 }}>
       <Container maxWidth="lg">
