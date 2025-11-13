@@ -67,7 +67,7 @@ const BestWorks = () => {
                 >
                   Our
                 </Typography>
-                <ImageHeading title="Best Works" />
+                <ImageHeading title="Best Works" sx={{ px: { xs: 1 } }} />
               </Stack>
               <Typography
                 sx={{
@@ -96,7 +96,7 @@ const BestWorks = () => {
           <Box
             sx={{
               backgroundImage: `url(${best_work_banner.src})`,
-              height: { lg: "100vh", xs: "70vh" },
+              height: { lg: "100vh", xs: "90vh" },
 
               //   py: 4,
               width: "100%",
@@ -108,7 +108,14 @@ const BestWorks = () => {
               //   p:5
             }}
           >
-            <Box sx={{ width: "100%", px: 5, position: "absolute", top: 0 }}>
+            <Box
+              sx={{
+                width: "100%",
+                px: { lg: 5, xs: 2 },
+                position: "absolute",
+                top: 0,
+              }}
+            >
               <Stack
                 direction={"row"}
                 alignItems={"center"}
@@ -172,7 +179,7 @@ const BestWorks = () => {
                 justifyContent={"center"}
                 spacing={2}
                 mt={4}
-                sx={{ flexWrap: "wrap",gap:2 }}
+                sx={{ flexWrap: "wrap", gap: 2 }}
               >
                 {chipData.map((val, i) => (
                   <Chip
@@ -184,7 +191,7 @@ const BestWorks = () => {
                       color: "#888",
                       fontSize: 16,
                       letterSpacing: "-0.18px",
-                      mt:2
+                      mt: 2,
                     }}
                     label={val.label}
                     key={i}

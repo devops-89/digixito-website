@@ -37,8 +37,9 @@ const HomeLayouts = () => {
           src={signDigixito}
           alt=""
           style={{
-            width: phone ? 380 : "100%",
+            width: phone ? 300 : "100%",
             position: "absolute",
+            left:"0px"
           }}
         />
       </Container>

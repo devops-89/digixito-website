@@ -21,6 +21,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import Image from "next/image";
+import { SpikyStructure } from "./components/spiky-structure";
 const GridSection = () => {
   const list_Item = [
     {
@@ -54,7 +55,7 @@ const GridSection = () => {
     <Box
       sx={{
         position: "relative",
-        height: { lg: "130vh", xs: "110vh" },
+        height: { lg: "130vh", xs: "150vh" },
         backgroundImage: `url(${gridBanner.src})`,
       }}
     >
@@ -76,9 +77,13 @@ const GridSection = () => {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
+            width: { lg: 600, xs: 350 },
+            height: { lg: 600, xs: 350 },
           }}
         >
-          <Image src={cartoon} alt="" width={phone ? 380 : 850} />
+          {/* <Image src={cartoon} alt="" width={phone ? 380 : 850} /> */}
+
+          <SpikyStructure />
         </Box>
         <Box
           sx={{
@@ -118,7 +123,7 @@ const GridSection = () => {
           sx={{
             position: "absolute",
             bottom: { lg: 100, xs: 0 },
-            width: "100%",
+            width: { lg: "100%", xs: 380 },
             left: "50%",
             transform: "translateX(-50%)",
             maxWidth: "1200px",
@@ -126,7 +131,14 @@ const GridSection = () => {
           }}
         >
           <Box>
-            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: 2,
+                justifyContent: "center",
+              }}
+            >
               <AvatarGroup>
                 {avatars.map((val, i) => (
                   <Avatar src={val.img} key={i} />

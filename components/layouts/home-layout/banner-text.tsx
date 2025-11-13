@@ -38,7 +38,7 @@ const Bannertext = () => {
             <React.Fragment key={i}>
               <Typography
                 sx={{
-                  fontSize: { lg: 62, xs: 18 },
+                  fontSize: { lg: 62, xs: 16 },
                   fontWeight: 800,
                   fontFamily: monument.style.fontFamily,
                 }}
