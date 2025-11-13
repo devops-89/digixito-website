@@ -142,9 +142,11 @@ const GridSection = () => {
               }}
             >
               <AvatarGroup>
-                {avatars.map((val, i) => (
-                  <Avatar src={val.img} key={i} />
-                ))}
+                <>
+                  {avatars.map((val, i) => (
+                    <Avatar src={val.img} key={i} />
+                  ))}
+                </>
               </AvatarGroup>
               <Typography
                 sx={{
