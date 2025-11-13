@@ -87,7 +87,11 @@ const Navbar = () => {
         }}
       >
         <Container maxWidth="lg">
-          {phone ? <MobileHeader /> : <HeaderTabs setAnchorEl={setAnchorEl} />}
+          {phone ? (
+            <MobileHeader setAnchorEl={setAnchorEl} />
+          ) : (
+            <HeaderTabs setAnchorEl={setAnchorEl} />
+          )}
         </Container>
       </Popover>
     </Box>

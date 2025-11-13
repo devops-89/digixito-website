@@ -1,4 +1,10 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, {
+  useRef,
+  useState,
+  useEffect,
+  SetStateAction,
+  Dispatch,
+} from "react";
 import {
   Box,
   Button,
@@ -13,8 +19,12 @@ import { HEADER_LINKS, HEADER_TABS } from "@/assets/data/header-data";
 import { COLORS, HEADER_TABS_DATA } from "@/utils/enum";
 import { kessel } from "@/utils/fonts";
 import { HEADER_LIST_PROPS } from "@/utils/types";
+import Link from "next/link";
 
-const MobileHeader = () => {
+interface HeaderTabsProps {
+  setAnchorEl: Dispatch<SetStateAction<HTMLButtonElement | null>>;
+}
+const MobileHeader = ({ setAnchorEl }: HeaderTabsProps) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [categoryOpen, setCategoryOpen] = useState(false);
   const [categoryData, setCategoryData] = useState<HEADER_LIST_PROPS[] | null>(
@@ -166,17 +176,27 @@ const MobileHeader = () => {
                     </Typography>
                     <List disablePadding>
                       {section.data.map((item, j) => (
-                        <ListItemButton key={j} sx={{ borderRadius: "12px" }}>
-                          <ListItemText
-                            primary={item.label}
-                            slotProps={{
-                              primary: {
-                                fontSize: 14,
-                                fontFamily: kessel.style.fontFamily,
-                              },
-                            }}
-                          />
-                        </ListItemButton>
+                        <Link
+                          href={item.url || "#"}
+                          key={j}
+                          onClick={() => setAnchorEl(null)}
+                          style={{
+                            color: COLORS.BLACK,
+                            textDecoration: "none",
+                          }}
+                        >
+                          <ListItemButton key={j} sx={{ borderRadius: "12px" }}>
+                            <ListItemText
+                              primary={item.label}
+                              slotProps={{
+                                primary: {
+                                  fontSize: 14,
+                                  fontFamily: kessel.style.fontFamily,
+                                },
+                              }}
+                            />
+                          </ListItemButton>
+                        </Link>
                       ))}
                     </List>
                   </Box>
