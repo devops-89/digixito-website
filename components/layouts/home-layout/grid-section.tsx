@@ -46,7 +46,7 @@ const GridSection = () => {
     <Box
       sx={{
         position: "relative",
-        height: { lg: "130vh", xs: "150vh" },
+        height: { lg: "130vh", xs: "90vh" },
         backgroundImage: `url(${gridBanner.src})`,
       }}
     >
@@ -69,7 +69,7 @@ const GridSection = () => {
             left: "50%",
             transform: "translate(-50%, -50%)",
             width: { lg: "100%", xs: "100%" },
-            height: { lg: "100%", xs: "100%" },
+            height: { lg: "100vh", xs: 450 },
           }}
         >
           {/* <Image src={cartoon} alt="" width={phone ? 380 : 850} /> */}
@@ -114,7 +114,7 @@ const GridSection = () => {
           sx={{
             position: "absolute",
             bottom: { lg: 100, xs: 0 },
-            width: { lg: "100%", xs: 380 },
+            width: { lg: "100%", xs: "100%" },
             left: "50%",
             transform: "translateX(-50%)",
             maxWidth: "1200px",

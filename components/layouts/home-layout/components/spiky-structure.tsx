@@ -5,6 +5,7 @@ import React, { useRef, useMemo } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { GLTFExporter } from "three/examples/jsm/exporters/GLTFExporter";
+import { useMediaQuery } from "@mui/material";
 
 interface SpikyStructureProps {
   coreNodes?: number;
@@ -172,13 +173,16 @@ export const SpikyStructure: React.FC = () => {
     );
   };
 
+  const phone = useMediaQuery("(max-width:600px)");
+
   return (
     <div
       style={{
-        width: "100%",
-        height: "100vh",
+        width:phone ? "100%" : "100%",
+        height:phone  ?  "100%" :"100vh",
         position: "relative",
         background: "transparent",
+        zIndex:9999
       }}
     >
       <Canvas
