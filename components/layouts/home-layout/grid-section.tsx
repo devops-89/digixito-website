@@ -3,7 +3,6 @@ import avatar1 from "@/homepage/avatar1.jpg";
 import avatar2 from "@/homepage/avatar2.jpg";
 import avatar3 from "@/homepage/avatar3.jpg";
 import avatar4 from "@/homepage/avatar4.jpg";
-import cartoon from "@/homepage/cartoon-banner.png";
 import gridBanner from "@/homepage/grid-banner.jpg";
 import { COLORS } from "@/utils/enum";
 import { kessel, monument } from "@/utils/fonts";
@@ -20,8 +19,11 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
-import Image from "next/image";
 import { SpikyStructure } from "./components/spiky-structure";
+interface AvatarItem {
+  img: string;
+}
+
 const GridSection = () => {
   const list_Item = [
     {
@@ -35,7 +37,7 @@ const GridSection = () => {
     },
   ];
 
-  const avatars = [
+  const avatars: AvatarItem[] = [
     {
       img: avatar1.src,
     },
