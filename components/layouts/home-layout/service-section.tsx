@@ -3,9 +3,10 @@
 import {
   SERVCIES_ARROW_CARD_DATA,
   SERVICES_TAB,
+  SERVICES_TAB_DATA,
 } from "@/assets/data/generic-array";
 import StarCard from "@/components/widgets/star-card";
-import { COLORS, VARIANTS } from "@/utils/enum";
+import { COLORS, SERVICES_TAB_CONSTANT, VARIANTS } from "@/utils/enum";
 import { kessel, monument } from "@/utils/fonts";
 import { ArrowForward } from "@mui/icons-material";
 import {
@@ -29,7 +30,9 @@ const ServiceSection = () => {
   const [value, setValue] = useState(0);
   const arrowCardsRef = useRef<HTMLDivElement | null>(null);
   const [arrowCardsHeight, setArrowCardsHeight] = useState<number>();
-
+  const [servicesData, setServicesData] = useState(
+    SERVICES_TAB_DATA.AI_TRANSFORMATION
+  );
   useEffect(() => {
     const node = arrowCardsRef.current;
     if (!node) {
@@ -56,9 +59,23 @@ const ServiceSection = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, [value]);
+  const SERVICES_MAP = {
+    "AI Transformation": SERVICES_TAB_DATA.AI_TRANSFORMATION,
+    "Business Transformation": SERVICES_TAB_DATA.BUSINESS_TRANSFORMATION,
+    "Design Intelligence": SERVICES_TAB_DATA.Design_intelligence,
+    "Product Engineering": SERVICES_TAB_DATA.Product_Engineering,
+  } as any;
 
   const tabChangeHandler = (e: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
+    // console.log("e", e);
+
+    // const selectedLabel = SERVICES_TAB[newValue].label;
+
+    const selectedLabel = SERVICES_TAB[newValue]
+      .label as keyof typeof SERVICES_MAP;
+
+    setServicesData(SERVICES_MAP[selectedLabel]);
   };
 
   return (
@@ -98,7 +115,7 @@ const ServiceSection = () => {
                   width: "100%",
                   "& .MuiTab-root": {
                     minHeight: "auto",
-                    padding: "18px 20px", // tighter padding
+                    padding: "18px 20px",
                     borderRadius: "50px",
                     backgroundColor: "#fff",
                     color: "#000",
@@ -170,38 +187,40 @@ const ServiceSection = () => {
           <Grid size={{ lg: 7, xs: 12 }}>
             {SERVICES_TAB.map((val, i) => (
               <TabPanel value={value} index={i} key={i}>
-                <Grid container spacing={2}>
-                  <Grid size={{ lg: 6, xs: 12 }}>
-                    <StarCard
-                      backgroundImage={bgImage.src}
-                      iconPosition="top"
-                      heading="We study the game before we"
-                      boldHeading="change it. "
-                      height={
-                        arrowCardsHeight ? `${arrowCardsHeight}px` : undefined
-                      }
-                    />
+                {servicesData.map((val, i) => (
+                  <Grid container spacing={2} key={i}>
+                    <Grid size={{ lg: 6, xs: 12 }}>
+                      <StarCard
+                        backgroundImage={bgImage.src}
+                        iconPosition="top"
+                        heading={val.starCardData.normalHeading}
+                        boldHeading={val.starCardData.boldHeading}
+                        height={
+                          arrowCardsHeight ? `${arrowCardsHeight}px` : undefined
+                        }
+                      />
+                    </Grid>
+                    <Grid size={{ lg: 6, xs: 12 }}>
+                      <Stack
+                        alignItems="center"
+                        spacing={1}
+                        ref={value === i ? arrowCardsRef : null}
+                      >
+                        {val.data.map((val, i) => (
+                          <ArrowCard
+                            title={val.heading}
+                            textColor={val.textColor}
+                            backgroundColor={val.backgroundColor}
+                            secondTitle={val.bottomTitle}
+                            iconBgColor={val.iconBgColor}
+                            iconColor={val.iconColor}
+                            key={i}
+                          />
+                        ))}
+                      </Stack>
+                    </Grid>
                   </Grid>
-                  <Grid size={{ lg: 6, xs: 12 }}>
-                    <Stack
-                      alignItems="center"
-                      spacing={1}
-                      ref={value === i ? arrowCardsRef : null}
-                    >
-                      {SERVCIES_ARROW_CARD_DATA.map((val, i) => (
-                        <ArrowCard
-                          title={val.title}
-                          textColor={val.textColor}
-                          backgroundColor={val.backgroundColor}
-                          secondTitle={val.secondTitle}
-                          iconBgColor={val.iconBgColor}
-                          iconColor={val.iconColor}
-                          key={i}
-                        />
-                      ))}
-                    </Stack>
-                  </Grid>
-                </Grid>
+                ))}
               </TabPanel>
             ))}
           </Grid>

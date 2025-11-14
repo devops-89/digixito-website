@@ -18,3 +18,10 @@ export enum HEADER_TABS_DATA {
   WHAT_WE_ARE = "What we are",
   CAREERS = "Careers",
 }
+
+export enum SERVICES_TAB_CONSTANT {
+  AI_TRANSFORMATION = "AI Transformation",
+  BUSINESS_TRANSFORMATION = "Business Transformation",
+  PRODUCT_ENGINEERING = "Product Engineering",
+  DESIGN_INTELLIGENCE = "Design Intelligence",
+}

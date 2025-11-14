@@ -21,6 +21,7 @@ import FaqSection from "@/components/widgets/faq-section";
 import SecureConnect from "@/components/widgets/secure-connect";
 import SubFooter from "@/components/widgets/subfooter";
 import signDigixito from "@/banners/digixito-sign.png";
+import ScrollParticles from "./components/particles-morph";
 const HomeLayouts = () => {
   const phone = useMediaQuery("(maxWidth:600px)");
   return (
@@ -43,11 +44,12 @@ const HomeLayouts = () => {
           }}
         />
       </Container>
+      {/* <ScrollParticles /> */}
       <BestService />
       <ServiceSection />
       <HowitWorks />
-      <BestWorks />
-      <Testimonials />
+      {/* <BestWorks />
+      <Testimonials /> */}
       <FaqSection />
       <SecureConnect />
       <SubFooter />

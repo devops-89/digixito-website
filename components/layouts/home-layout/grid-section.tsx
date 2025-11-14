@@ -21,6 +21,9 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { SpikyStructure } from "./components/spiky-structure";
+import Particles from "./components/particles-morph";
+import WireSphere from "./components/WireSphere";
+import AnimatedDotGrid from "./components/Animation-Dot";
 
 const GridSection = () => {
   const list_Item = [
@@ -35,7 +38,12 @@ const GridSection = () => {
     },
   ];
 
-  const avatars: string[] = [avatar1.src, avatar2.src, avatar3.src, avatar4.src];
+  const avatars: string[] = [
+    avatar1.src,
+    avatar2.src,
+    avatar3.src,
+    avatar4.src,
+  ];
 
   const avatarElements = avatars.map((src, i) => (
     <Avatar src={src} key={src} />
@@ -75,6 +83,9 @@ const GridSection = () => {
           {/* <Image src={cartoon} alt="" width={phone ? 380 : 850} /> */}
 
           <SpikyStructure />
+          {/* <WireSphere /> */}
+          {/* <Particles /> */}
+          {/* <AnimatedDotGrid /> */}
         </Box>
         <Box
           sx={{

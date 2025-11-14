@@ -15,11 +15,14 @@ import Link from "next/link";
 import React, { useState } from "react";
 import HeaderTabs from "./common/header-tabs";
 import MobileHeader from "./mobile-header";
+import { Sling as Hamburger } from "hamburger-react";
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
+  const [openMenu, setOpenMenu] = useState(false);
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event?.currentTarget);
+    setOpenMenu(true);
   };
 
   const phone = useMediaQuery("(max-width:600px)");
@@ -28,6 +31,7 @@ const Navbar = () => {
 
   const handleClose = () => {
     setAnchorEl(null);
+    setOpenMenu(false);
   };
   return (
     <Box sx={{ p: 2 }}>
@@ -40,8 +44,8 @@ const Navbar = () => {
           <Link href={"/"}>
             <Image src={logo} alt="" width={80} />
           </Link>
-          <IconButton onClick={handleClick}>
-            <Box
+          <IconButton onClick={handleClick} sx={{color:COLORS.BLACK}}>
+            {/* <Box
               sx={{
                 border: "5px solid #000000",
                 borderRadius: "50%",
@@ -49,7 +53,9 @@ const Navbar = () => {
                 height: 10,
                 backgroundColor: open ? COLORS.BLACK : COLORS.TRANSPARENT,
               }}
-            ></Box>
+            ></Box> */}
+            {/* {open ? <CloseTwoTone /> : <Menu />} */}
+            <Hamburger toggled={openMenu} toggle={setOpenMenu} size={26} />
           </IconButton>
         </Stack>
       </Container>

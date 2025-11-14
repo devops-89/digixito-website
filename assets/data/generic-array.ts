@@ -442,3 +442,116 @@ export const CONTACT_CARD_DATA: CONTACT_CARD_PROPS[] = [
     description: "accounts@digixito.com",
   },
 ];
+
+export const SERVICES_TAB_DATA = {
+  AI_TRANSFORMATION: [
+    {
+      starCardData: {
+        normalHeading: "We study the game before we rewrite",
+        boldHeading: "the rules",
+      },
+
+      data: [
+        {
+          heading: "Specialists who speak the same language: Success",
+          bottomTitle: "Meet our experts",
+          backgroundColor: "#2B2B2B",
+          textColor: "#ffffff",
+          iconBgColor: "#333",
+          iconColor: "#ffffff",
+        },
+        {
+          heading: "We build foundations that outlast economies.",
+          bottomTitle: "See how we work",
+          backgroundColor: COLORS.PRIMARY,
+          textColor: COLORS.BLACK,
+          iconBgColor: "#ffffff",
+          iconColor: "#333333",
+        },
+      ],
+    },
+  ],
+  BUSINESS_TRANSFORMATION: [
+    {
+      starCardData: {
+        normalHeading: "We redesign what your business can become—not just",
+        boldHeading: "what it is.",
+      },
+      data: [
+        {
+          heading: "Strategists who convert complexity into clarity.",
+          bottomTitle: "Meet our experts",
+          backgroundColor: "#2B2B2B",
+          textColor: "#ffffff",
+          iconBgColor: "#333",
+          iconColor: "#ffffff",
+        },
+
+        {
+          heading:
+            "We engineer business foundations that thrive in any market cycle.",
+          bottomTitle: "See how we work",
+          backgroundColor: COLORS.PRIMARY,
+          textColor: COLORS.BLACK,
+          iconBgColor: "#ffffff",
+          iconColor: "#333333",
+        },
+      ],
+    },
+  ],
+  Product_Engineering: [
+    {
+      // heading: "We build products that perform today and evolve for tomorrow",
+      starCardData: {
+        normalHeading: "We build products that perform today and evolve for",
+        boldHeading: "tomorrow",
+      },
+      data: [
+        {
+          heading: "Engineers who turn bold ideas into reliable systems.",
+          bottomTitle: "Meet our experts",
+          backgroundColor: "#2B2B2B",
+          textColor: "#ffffff",
+          iconBgColor: "#333",
+          iconColor: "#ffffff",
+        },
+        {
+          heading:
+            "We craft scalable architectures that grow as fast as you do.",
+          bottomTitle: "See how we work",
+          backgroundColor: COLORS.PRIMARY,
+          textColor: COLORS.BLACK,
+          iconBgColor: "#ffffff",
+          iconColor: "#333333",
+        },
+      ],
+    },
+  ],
+  Design_intelligence: [
+    {
+      // heading: "We design experiences that think, adapt, and convert.",
+      starCardData: {
+        normalHeading: "We design experiences that think, adapt, and",
+        boldHeading: "convert",
+      },
+      data: [
+        {
+          heading: "Designers who blend creativity with behavioral science.",
+          bottomTitle: "Meet our experts",
+          backgroundColor: "#2B2B2B",
+          textColor: "#ffffff",
+          iconBgColor: "#333",
+          iconColor: "#ffffff",
+        },
+        {
+          heading: "We create design systems that stay timeless, not trendy.",
+          bottomTitle: "See how we work",
+          backgroundColor: COLORS.PRIMARY,
+          textColor: COLORS.BLACK,
+          iconBgColor: "#ffffff",
+          iconColor: "#333333",
+        },
+      ],
+    },
+  ],
+};

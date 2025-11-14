@@ -32,13 +32,14 @@ const Bannertext = () => {
           direction={"row"}
           alignItems={"center"}
           justifyContent={"center"}
-          spacing={2}
+          spacing={5}
+          sx={{ ml: 8 }}
         >
           {text.map((val, i) => (
             <React.Fragment key={i}>
               <Typography
                 sx={{
-                  fontSize: { lg: 62, xs: 16 },
+                  fontSize: { lg: 50, xs: 16 },
                   fontWeight: 800,
                   fontFamily: monument.style.fontFamily,
                 }}
