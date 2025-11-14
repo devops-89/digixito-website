@@ -529,7 +529,6 @@ export const SERVICES_TAB_DATA = {
   ],
   Design_intelligence: [
     {
-      // heading: "We design experiences that think, adapt, and convert.",
       starCardData: {
         normalHeading: "We design experiences that think, adapt, and",
         boldHeading: "convert",
