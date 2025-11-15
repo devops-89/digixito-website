@@ -1,11 +1,11 @@
+import Footer from "@/components/widgets/footer";
 import Navbar from "@/components/widgets/navbar";
+import { Box } from "@mui/material";
 import type { Metadata } from "next";
+import Head from "next/head";
 import "swiper/css";
 import "./globals.css";
-import Footer from "@/components/widgets/footer";
-import { Box } from "@mui/material";
-import MobileHeader from "@/components/widgets/mobile-header";
-import Head from "next/head";
+import SmokeyCursor from "@/components/lightswind/smokey-cursor";
 
 export const metadata: Metadata = {
   title: "Digixito",
@@ -29,9 +29,8 @@ export default function RootLayout({
         <Box sx={{ display: { lg: "block", xs: "block" } }}>
           <Navbar />
         </Box>
-        {/* <Box sx={{ display: { lg: "none", xs: "block" } }}>
-          <MobileHeader />
-        </Box> */}
+
+        <SmokeyCursor />
         {children}
         <Footer />
       </body>

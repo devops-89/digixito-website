@@ -44,7 +44,7 @@ const Navbar = () => {
           <Link href={"/"}>
             <Image src={logo} alt="" width={80} />
           </Link>
-          <IconButton onClick={handleClick} sx={{color:COLORS.BLACK}}>
+          <IconButton onClick={handleClick} sx={{ color: COLORS.BLACK }}>
             {/* <Box
               sx={{
                 border: "5px solid #000000",
@@ -96,7 +96,7 @@ const Navbar = () => {
           {phone ? (
             <MobileHeader setAnchorEl={setAnchorEl} />
           ) : (
-            <HeaderTabs setAnchorEl={setAnchorEl} />
+            <HeaderTabs setAnchorEl={setAnchorEl} setMenuOpen={setOpenMenu} />
           )}
         </Container>
       </Popover>

@@ -501,7 +501,6 @@ export const SERVICES_TAB_DATA = {
   ],
   Product_Engineering: [
     {
-      // heading: "We build products that perform today and evolve for tomorrow",
       starCardData: {
         normalHeading: "We build products that perform today and evolve for",
         boldHeading: "tomorrow",

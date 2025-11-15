@@ -16,15 +16,22 @@ import React, { Dispatch, SetStateAction, useState } from "react";
 
 interface HeaderlistProps extends HEADER_LIST_PROPS {
   setAnchorEl: Dispatch<SetStateAction<HTMLButtonElement | null>>;
+  setMenuOpen?: Dispatch<SetStateAction<boolean>>;
 }
 
-const Headerlist = ({ heading, data, setAnchorEl }: HeaderlistProps) => {
+const Headerlist = ({
+  heading,
+  data,
+  setAnchorEl,
+  setMenuOpen,
+}: HeaderlistProps) => {
   const router = useRouter();
 
   const handleChangePage = (url: string) => {
     router.push(url);
     setAnchorEl(null);
-  };
+    setMenuOpen && setMenuOpen(false);
+  };  
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 

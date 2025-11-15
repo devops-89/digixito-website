@@ -10,9 +10,10 @@ import { ArrowBackIos } from "@mui/icons-material";
 
 interface HeaderTabsProps {
   setAnchorEl: Dispatch<SetStateAction<HTMLButtonElement | null>>;
+  setMenuOpen?: Dispatch<SetStateAction<boolean>>;
 }
 
-const HeaderTabs = ({ setAnchorEl }: HeaderTabsProps) => {
+const HeaderTabs = ({ setAnchorEl, setMenuOpen }: HeaderTabsProps) => {
   const [value, setValue] = useState(0);
   const [data, setData] = useState(HEADER_LINKS.what_we_offer);
 
@@ -88,6 +89,7 @@ const HeaderTabs = ({ setAnchorEl }: HeaderTabsProps) => {
                   heading={item.heading}
                   data={item.data}
                   setAnchorEl={setAnchorEl}
+                  setMenuOpen={setMenuOpen}
                 />
               </Grid>
             ))}

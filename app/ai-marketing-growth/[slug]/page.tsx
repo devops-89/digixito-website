@@ -3,40 +3,73 @@ import { DETAILS_PAGE_DETAILS } from "@/assets/data/details-page";
 import DetailsLayout from "@/components/layouts/what-we-offer/digital-transformation-layout";
 import { useDetailsStore } from "@/store/useDetailsStore";
 import { DETAILS_PAGE_PROPS } from "@/utils/types";
-import React, { useEffect, use } from "react";
+import React, { useEffect, useState } from "react";
+import TextType from "@/components/widgets/Typing-text";
+import { Backdrop } from "@mui/material";
 
 interface DigitalTransformationDetailsProps {
-  params: Promise<{
+  params: {
     slug?: string;
-  }>;
+  };
 }
 
 const DigitalTransformationDetails = ({
   params,
 }: DigitalTransformationDetailsProps) => {
-  const { slug } = use(params);
-  const { setData, data, clearData } = useDetailsStore();
-  // const actual_slug = slug?.join("/");
+  const { slug } = params;
+  const { setData, clearData } = useDetailsStore();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (slug) {
-      const filterData = DETAILS_PAGE_DETAILS.find(
-        (page) => slug === page.slug
-      );
+    setLoading(true);
 
-      if (filterData) {
-        setData(filterData as DETAILS_PAGE_PROPS);
+    const timer = setTimeout(() => {
+      if (slug) {
+        const filterData = DETAILS_PAGE_DETAILS.find(
+          (page) => slug === page.slug
+        );
+
+        if (filterData) {
+          setData(filterData as DETAILS_PAGE_PROPS);
+        }
       }
-    }
+
+      setLoading(false);
+    }, 8000);
+
     return () => {
+      clearTimeout(timer);
       clearData();
     };
   }, [slug, setData, clearData]);
-  // console.log("data", data);
 
   return (
     <div>
-      <DetailsLayout />
+      {loading && (
+        <Backdrop
+          open={loading}
+          sx={{
+            zIndex: (theme) => theme.zIndex.modal + 9999,
+            backgroundColor: "#000000",
+            color: "#fff",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <TextType
+            text={[
+              "DIGIXITO — Where Ideas Become Digital Reality.",
+              "Powering Your Business with Cutting-Edge Digital Solutions.",
+            ]}
+            // text={["Text typing effect", "for your websites", "Happy coding!"]}
+            loop={false}
+            style={{ color: "white", fontSize: "24px" }}
+          />
+        </Backdrop>
+      )}
+
+      {!loading && <DetailsLayout />}
     </div>
   );
 };
