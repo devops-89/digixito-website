@@ -10,6 +10,8 @@ import {
 import React from "react";
 import star from "@/icons/star-banner.svg";
 import Image from "next/image";
+import { COLORS } from "@/utils/enum";
+import { useHomepageData } from "@/store/useHomepageData";
 const Bannertext = () => {
   const text = [
     {
@@ -25,6 +27,8 @@ const Bannertext = () => {
 
   const phone = useMediaQuery("(max-width:600px)");
 
+  const { pageData } = useHomepageData();
+
   return (
     <Box>
       <Container maxWidth="lg">
@@ -35,16 +39,18 @@ const Bannertext = () => {
           spacing={5}
           sx={{ ml: 8 }}
         >
-          {text.map((val, i) => (
+          {pageData?.heroSection?.bannerText?.map((val: { heading: string }, i:number) => (
             <React.Fragment key={i}>
               <Typography
                 sx={{
                   fontSize: { lg: 50, xs: 16 },
                   fontWeight: 800,
                   fontFamily: monument.style.fontFamily,
+                  color: COLORS.WHITE,
                 }}
+                data-aos="fade-up"
               >
-                {val.label}
+                {val.heading}
               </Typography>
               {text.length - 1 != i && (
                 <Image src={star} alt="" style={{ height: phone ? 30 : "" }} />

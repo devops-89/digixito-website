@@ -1,9 +1,10 @@
 "use client";
-import star from "@/icons/black-star.svg";
+import star from "@/icons/white-star.png";
 import {
   Box,
   Container,
   Divider,
+  Stack,
   Typography,
   useMediaQuery,
 } from "@mui/material";
@@ -22,17 +23,47 @@ import SecureConnect from "@/components/widgets/secure-connect";
 import SubFooter from "@/components/widgets/subfooter";
 import signDigixito from "@/banners/digixito-sign.png";
 import ScrollParticles from "./components/particles-morph";
+import HeroSection from "./hero-section";
+import { useEffect, useEffectEvent } from "react";
+import Aos from "aos";
+import { useHomepageData } from "@/store/useHomepageData";
+import { useFetchJson } from "@/components/hooks/useFetchData";
 const HomeLayouts = () => {
   const phone = useMediaQuery("(maxWidth:600px)");
+
+  const { pageData, setPageData, cleanPageData } = useHomepageData();
+  const { data, error, loading } = useFetchJson("/locale/homepage.json");
+
+  console.log("homepage data", data);
+
+  useEffect(() => {
+    if (data) {
+      setPageData(data);
+    }
+  }, [setPageData, data]);
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <Box>
-      <Bannertext />
-      <Container>
-        <Divider sx={{ borderColor: COLORS.BLACK }}>
-          <Image src={star} alt="divider star" />
-        </Divider>
-      </Container>
-      <GridSection />
+      <Box sx={{ backgroundColor: COLORS.BLACK }}>
+        <Bannertext />
+
+        <Container>
+          <Stack direction={"row"} alignItems={"center"} spacing={2}>
+            <Box
+              sx={{ backgroundColor: COLORS.WHITE, width: "100%", height: 2 }}
+            ></Box>
+            <Image src={star} alt="divider star" />
+            <Box
+              sx={{ backgroundColor: COLORS.WHITE, width: "100%", height: 2 }}
+            ></Box>
+          </Stack>
+        </Container>
+        <HeroSection />
+      </Box>
+      {/* <GridSection /> */}
       <Container sx={{ position: "relative" }}>
         <Image
           src={signDigixito}
@@ -40,7 +71,7 @@ const HomeLayouts = () => {
           style={{
             width: phone ? 300 : "100%",
             position: "absolute",
-            left:"0px"
+            left: "0px",
           }}
         />
       </Container>

@@ -18,3 +18,37 @@ body {
 .text-type__cursor--hidden {
   display: none;
 }
+
+:root {
+  --spin-duration: 2s; 
+}
+
+.rotator {
+  display: inline-block; 
+  will-change: transform; 
+  transform-origin: center center; 
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin var(--spin-duration) linear infinite;
+}
+
+.reverse {
+  animation-direction: reverse;
+}
+
+/* .spin:hover {
+  animation-play-state: paused;
+} */
+
+@media (prefers-reduced-motion: reduce) {
+  .spin {
+    animation: none;
+  }
+}

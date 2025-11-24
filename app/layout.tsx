@@ -6,6 +6,8 @@ import Head from "next/head";
 import "swiper/css";
 import "./globals.css";
 import SmokeyCursor from "@/components/lightswind/smokey-cursor";
+import "aos/dist/aos.css";
+import "animate.css";
 
 export const metadata: Metadata = {
   title: "Digixito",
@@ -19,18 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        />
-      </Head>
       <body>
         <Box sx={{ display: { lg: "block", xs: "block" } }}>
           <Navbar />
         </Box>
 
-        <SmokeyCursor />
+        {/* <SmokeyCursor /> */}
         {children}
         <Footer />
       </body>

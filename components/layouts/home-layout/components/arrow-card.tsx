@@ -20,6 +20,7 @@ const ArrowCard = ({
         borderRadius: 4,
         padding: "32px",
       }}
+      data-aos="fade-up"
     >
       <Typography
         sx={{
@@ -59,7 +60,10 @@ const ArrowCard = ({
             justifyContent: "center",
             ":hover": {
               backgroundColor: iconBgColor,
+              boxShadow: "0px 0px 0px 2px rgba(255, 255,255,0.50)",
+              scale: 1.1,
             },
+            transition: "0.3s ease all",
           }}
         >
           <ArrowForward

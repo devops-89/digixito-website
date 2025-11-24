@@ -147,3 +147,31 @@ export interface CONTACT_CARD_PROPS {
   heading: string;
   description: string;
 }
+
+interface HERO_SECTION_DATA_PROPS {
+  bannerText: { heading: string }[];
+  heroSectionTitle: string;
+}
+
+interface BEST_SERVICE_DATA_PROPS {
+  heading: string;
+  description: string;
+  imageHeading: {
+    part1: string;
+    part2: string;
+  };
+}
+
+interface OUR_SERVICE_DATA_PROPS {
+  heading1: string;
+  heading2: string;
+  description: string;
+  servicesTabData: { label: string }[];
+  serviceData: OUR_SERVICES_CARD[];
+}
+
+export interface HOMEPAGEDATA_PROPS {
+  heroSection: HERO_SECTION_DATA_PROPS;
+  bestService: BEST_SERVICE_DATA_PROPS;
+  ourServices: OUR_SERVICE_DATA_PROPS;
+}

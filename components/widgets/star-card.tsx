@@ -15,7 +15,14 @@ const StarCard = ({
   isStar,
 }: BEST_SERVICE_CARD_PROPS) => {
   return (
-    <Box sx={{ position: "relative" }}>
+    <Box
+      sx={{
+        position: "relative",
+        overflow: "hidden",
+        borderRadius: "20px",
+      }}
+      data-aos="fade-up"
+    >
       <Box
         sx={{
           backgroundImage: `url(${backgroundImage})`,
@@ -24,6 +31,10 @@ const StarCard = ({
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           borderRadius: "20px",
+          ":hover": {
+            transform: "scale(1.1)",
+          },
+          transition: "0.5s ease all",
         }}
       >
         {heading && boldHeading && (

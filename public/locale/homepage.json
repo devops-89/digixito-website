@@ -1,0 +1,144 @@
+{
+  "title": "Digixito",
+  "heroSection": {
+    "bannerText": [
+      { "heading": "Innovate" },
+      { "heading": "Inspire" },
+      { "heading": "Create" }
+    ],
+    "heroSectionTitle": "Engineering 360° digital experiences from concept to conquest"
+  },
+  "bestService": {
+    "heading": "Provide the best service with out of the box ideas",
+    "description": "we are a passionate team of enthusiasts dedicated to helping businesses succeed in the digital world. With years of experience and a deep understanding of the ever evolving online landscape, we stay at the forefront of industry trends and technologies.",
+    "imageHeading": {
+      "part1": "Genesis to",
+      "part2": "Greatest Creation."
+    }
+  },
+  "ourServices": {
+    "heading1": "Our",
+    "heading2": "Services",
+    "description": "we are a passionate team of enthusiasts dedicated to helping businesses succeed in the digital world. With years of experience and a deep understanding of the ever evolving online landscape, we stay at the forefront of industry trends and technologies.",
+    "servicesTabData": [
+      { "label": "AI Transformation" },
+      { "label": "Business Transformation" },
+      { "label": "Product Engineering" },
+      { "label": "Design Intelligence" }
+    ],
+    "servicesData": {
+      "AI_TRANSFORMATION": [
+        {
+          "starCardData": {
+            "normalHeading": "We study the game before we rewrite",
+            "boldHeading": "the rules"
+          },
+          "data": [
+            {
+              "heading": "Specialists who speak the same language: Success",
+              "bottomTitle": "Meet our experts",
+              "backgroundColor": "#2B2B2B",
+              "textColor": "#ffffff",
+              "iconBgColor": "#333",
+              "iconColor": "#ffffff"
+            },
+            {
+              "heading": "We build foundations that outlast economies.",
+              "bottomTitle": "See how we work",
+              "backgroundColor": "#FFEF46",
+              "textColor": "#000000",
+              "iconBgColor": "#ffffff",
+              "iconColor": "#333333"
+            }
+          ]
+        }
+      ],
+      "BUSINESS_TRANSFORMATION": [
+        {
+          "starCardData": {
+            "normalHeading": "We redesign what your business can become—not just",
+            "boldHeading": "what it is."
+          },
+          "data": [
+            {
+              "heading": "Strategists who convert complexity into clarity.",
+              "bottomTitle": "Meet our experts",
+              "backgroundColor": "#2B2B2B",
+              "textColor": "#ffffff",
+              "iconBgColor": "#333",
+              "iconColor": "#ffffff"
+            },
+            {
+              "heading": "We engineer business foundations that thrive in any market cycle.",
+              "bottomTitle": "See how we work",
+              "backgroundColor": "#FFEF46",
+              "textColor": "#000000",
+              "iconBgColor": "#ffffff",
+              "iconColor": "#333333"
+            }
+          ]
+        }
+      ],
+      "Product_Engineering": [
+        {
+          "starCardData": {
+            "normalHeading": "We build products that perform today and evolve for",
+            "boldHeading": "tomorrow"
+          },
+          "data": [
+            {
+              "heading": "Engineers who turn bold ideas into reliable systems.",
+              "bottomTitle": "Meet our experts",
+              "backgroundColor": "#2B2B2B",
+              "textColor": "#ffffff",
+              "iconBgColor": "#333",
+              "iconColor": "#ffffff"
+            },
+            {
+              "heading": "We craft scalable architectures that grow as fast as you do.",
+              "bottomTitle": "See how we work",
+              "backgroundColor": "#FFEF46",
+              "textColor": "#000000",
+              "iconBgColor": "#ffffff",
+              "iconColor": "#333333"
+            }
+          ]
+        }
+      ],
+      "Design_intelligence": [
+        {
+          "starCardData": {
+            "normalHeading": "We design experiences that think, adapt, and",
+            "boldHeading": "convert"
+          },
+          "data": [
+            {
+              "heading": "Designers who blend creativity with behavioral science.",
+              "bottomTitle": "Meet our experts",
+              "backgroundColor": "#2B2B2B",
+              "textColor": "#ffffff",
+              "iconBgColor": "#333",
+              "iconColor": "#ffffff"
+            },
+            {
+              "heading": "We create design systems that stay timeless, not trendy.",
+              "bottomTitle": "See how we work",
+              "backgroundColor": "#FFEF46",
+              "textColor": "#000000",
+              "iconBgColor": "#ffffff",
+              "iconColor": "#333333"
+            }
+          ]
+        }
+      ]
+    }
+  },
+
+  "how_it_works": {
+    "heading": {
+      "part1": "Why choose",
+      "part2": "Digixito"
+    },
+    "description": "Experience excellence in digital craftsmanship with our team of skilled professionals dedicated to delivering exceptional results."
+  }
+}

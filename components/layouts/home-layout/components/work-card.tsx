@@ -17,6 +17,16 @@ const WorkCard = ({ number, title, description, img }: WORK_CARD_PROPS) => {
         gap: "30px",
         padding: { lg: "40px", xs: "20px" },
         height: 450,
+        ":hover": {
+          boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.3)",
+          ".work-card-image": {
+            transform: "scale(1.05)",
+            transition: "transform 0.3s ease-in-out",
+          },
+        },
+        ".work-card-image": {
+          transition: "transform 0.3s ease-in-out",
+        },
       }}
     >
       <Box
@@ -29,7 +39,9 @@ const WorkCard = ({ number, title, description, img }: WORK_CARD_PROPS) => {
           backgroundRepeat: "no-repeat",
           width: "100%",
           position: "relative",
+          overflow: "hidden",
         }}
+        className="work-card-image"
       >
         <Box
           sx={{
@@ -47,7 +59,7 @@ const WorkCard = ({ number, title, description, img }: WORK_CARD_PROPS) => {
               fontFamily: monument.style.fontFamily,
               lineHeight: "36px",
               letterSpacing: "-0.144px",
-              fontSize: { lg: 24, xs: 18},
+              fontSize: { lg: 24, xs: 18 },
             }}
           >
             {title}

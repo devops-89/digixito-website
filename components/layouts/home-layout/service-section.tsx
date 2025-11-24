@@ -68,9 +68,6 @@ const ServiceSection = () => {
 
   const tabChangeHandler = (e: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
-    // console.log("e", e);
-
-    // const selectedLabel = SERVICES_TAB[newValue].label;
 
     const selectedLabel = SERVICES_TAB[newValue]
       .label as keyof typeof SERVICES_MAP;

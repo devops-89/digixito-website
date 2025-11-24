@@ -1,5 +1,5 @@
 "use client";
-import logo from "@/logo/Digixito_black_outline.svg";
+import logo from "@/logo/Digixito_White_Logo.svg";
 import { COLORS } from "@/utils/enum";
 import {
   Box,
@@ -34,7 +34,7 @@ const Navbar = () => {
     setOpenMenu(false);
   };
   return (
-    <Box sx={{ p: 2 }}>
+    <Box sx={{ p: 2, backgroundColor: COLORS.BLACK, color: COLORS.WHITE }}>
       <Container maxWidth="lg">
         <Stack
           direction={"row"}
@@ -44,7 +44,7 @@ const Navbar = () => {
           <Link href={"/"}>
             <Image src={logo} alt="" width={80} />
           </Link>
-          <IconButton onClick={handleClick} sx={{ color: COLORS.BLACK }}>
+          <IconButton onClick={handleClick} sx={{ color: COLORS.WHITE }}>
             {/* <Box
               sx={{
                 border: "5px solid #000000",

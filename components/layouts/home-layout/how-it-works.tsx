@@ -1,15 +1,14 @@
-import { COLORS, VARIANTS } from "@/utils/enum";
-import { Box, Container, Grid, Stack, Typography } from "@mui/material";
-import React from "react";
-import borderTop from "@/homepage/primary-rotatable-border.png";
-import borderDown from "@/homepage/primary-rotatable-border-down.png";
-import Image from "next/image";
-import SectionCard from "@/components/widgets/section-card";
-import star from "@/icons/white-star.png";
-import { kessel, monument } from "@/utils/fonts";
-import ImageHeading from "@/components/widgets/image-heading";
-import WorkCard from "./components/work-card";
 import { WORK_CARD_DATA } from "@/assets/data/generic-array";
+import ImageHeading from "@/components/widgets/image-heading";
+import SectionCard from "@/components/widgets/section-card";
+import borderDown from "@/homepage/primary-rotatable-border-down.png";
+import borderTop from "@/homepage/primary-rotatable-border.png";
+import star from "@/icons/white-star.png";
+import { COLORS, VARIANTS } from "@/utils/enum";
+import { kessel, monument } from "@/utils/fonts";
+import { Box, Container, Grid, Stack, Typography } from "@mui/material";
+import Image from "next/image";
+import WorkCard from "./components/work-card";
 const HowitWorks = () => {
   return (
     <Box sx={{ position: "relative" }}>
@@ -25,6 +24,7 @@ const HowitWorks = () => {
         }}
       />
       <SectionCard title="How it works" variant={VARIANTS.DARK} />
+
       <Box
         sx={{
           backgroundColor: "#222222",
@@ -39,7 +39,7 @@ const HowitWorks = () => {
         }}
       >
         <Container maxWidth="lg">
-          <Image src={star} alt="" />
+          <Image src={star} alt="" className="rotator spin" />
           <Stack
             direction={{ lg: "row", xs: "column" }}
             alignItems={{ lg: "center", xs: "flex-start" }}
@@ -73,7 +73,12 @@ const HowitWorks = () => {
           </Typography>
           <Grid container sx={{ mt: 3 }} spacing={3}>
             {WORK_CARD_DATA.map((val, i) => (
-              <Grid size={{ lg: 6, xs: 12 }} key={i}>
+              <Grid
+                size={{ lg: 6, xs: 12 }}
+                key={i}
+                data-aos="fade-up"
+                data-aos-delay={i * 100}
+              >
                 <WorkCard
                   title={val.title}
                   description={val.description}
@@ -84,10 +89,11 @@ const HowitWorks = () => {
             ))}
           </Grid>
           <Box sx={{ textAlign: "end", mt: 4 }}>
-            <Image src={star} alt="" />
+            <Image src={star} alt="" className="rotator spin" />
           </Box>
         </Container>
       </Box>
+
       <Image
         src={borderDown}
         alt=""
