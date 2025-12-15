@@ -14,7 +14,7 @@ const DetailsLayout = () => {
       <HeroSection />
       <OurServices />
       <DevelopmentProcess />
-      {/* <FeaturedProjects /> */}
+      <FeaturedProjects />
       <FaqSection />
       <SecureConnect />
       <SubFooter />

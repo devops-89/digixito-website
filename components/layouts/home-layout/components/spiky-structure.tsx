@@ -178,11 +178,11 @@ export const SpikyStructure: React.FC = () => {
   return (
     <div
       style={{
-        width:phone ? "100%" : "100%",
-        height:phone  ?  "100%" :"100vh",
+        width: phone ? "100%" : "100%",
+        height: phone ? "100%" : "100vh",
         position: "relative",
         background: "transparent",
-        zIndex:9999
+        zIndex: 9999,
       }}
     >
       <Canvas
