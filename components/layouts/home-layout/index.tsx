@@ -1,5 +1,5 @@
 "use client";
-import star from "@/icons/white-star.png";
+import star from "@/icons/black-star.svg";
 import {
   Box,
   Container,
@@ -51,7 +51,7 @@ const HomeLayouts = () => {
         <Container>
           <Stack direction={"row"} alignItems={"center"} spacing={2}>
             <Box
-              sx={{ backgroundColor: COLORS.WHITE, width: "100%", height: 2 }}
+              sx={{ backgroundColor: COLORS.BLACK, width: "100%", height: 2 }}
             ></Box>
             <Image src={star} alt="divider star" />
             <Box
