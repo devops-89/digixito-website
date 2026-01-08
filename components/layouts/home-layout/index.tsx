@@ -61,20 +61,9 @@ const HomeLayouts = () => {
             ></Box>
           </Stack>
         </Container>
-        <HeroSection />
       </Box>
-      {/* <GridSection /> */}
-      <Container sx={{ position: "relative" }}>
-        <Image
-          src={signDigixito}
-          alt=""
-          style={{
-            width: phone ? 300 : "100%",
-            position: "absolute",
-            left: "0px",
-          }}
-        />
-      </Container>
+      <GridSection />
+
       {/* <ScrollParticles /> */}
       <BestService />
       <ServiceSection />

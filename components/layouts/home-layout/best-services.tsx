@@ -10,7 +10,7 @@ import { useHomepageData } from "@/store/useHomepageData";
 const BestService = () => {
   const { pageData } = useHomepageData();
   return (
-    <Container sx={{ pt: 50 }}>
+    <Container sx={{ pt: 20 }}>
       <Grid container spacing={3}>
         <Grid size={{ lg: 6, xs: 12 }}>
           <Typography
