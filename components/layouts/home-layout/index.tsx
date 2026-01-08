@@ -34,8 +34,6 @@ const HomeLayouts = () => {
   const { pageData, setPageData, cleanPageData } = useHomepageData();
   const { data, error, loading } = useFetchJson("/locale/homepage.json");
 
-  console.log("homepage data", data);
-
   useEffect(() => {
     if (data) {
       setPageData(data);
@@ -47,7 +45,7 @@ const HomeLayouts = () => {
   }, []);
   return (
     <Box>
-      <Box sx={{ backgroundColor: COLORS.BLACK }}>
+      <Box sx={{ backgroundColor: COLORS.WHITE }}>
         <Bannertext />
 
         <Container>
@@ -57,7 +55,7 @@ const HomeLayouts = () => {
             ></Box>
             <Image src={star} alt="divider star" />
             <Box
-              sx={{ backgroundColor: COLORS.WHITE, width: "100%", height: 2 }}
+              sx={{ backgroundColor: COLORS.BLACK, width: "100%", height: 2 }}
             ></Box>
           </Stack>
         </Container>

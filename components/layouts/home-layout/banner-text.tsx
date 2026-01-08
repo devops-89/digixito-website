@@ -39,24 +39,30 @@ const Bannertext = () => {
           spacing={5}
           sx={{ ml: 8 }}
         >
-          {pageData?.heroSection?.bannerText?.map((val: { heading: string }, i:number) => (
-            <React.Fragment key={i}>
-              <Typography
-                sx={{
-                  fontSize: { lg: 50, xs: 16 },
-                  fontWeight: 800,
-                  fontFamily: monument.style.fontFamily,
-                  color: COLORS.WHITE,
-                }}
-                data-aos="fade-up"
-              >
-                {val.heading}
-              </Typography>
-              {text.length - 1 != i && (
-                <Image src={star} alt="" style={{ height: phone ? 30 : "" }} />
-              )}
-            </React.Fragment>
-          ))}
+          {pageData?.heroSection?.bannerText?.map(
+            (val: { heading: string }, i: number) => (
+              <React.Fragment key={i}>
+                <Typography
+                  sx={{
+                    fontSize: { lg: 50, xs: 16 },
+                    fontWeight: 800,
+                    fontFamily: monument.style.fontFamily,
+                    color: COLORS.BLACK,
+                  }}
+                  data-aos="fade-up"
+                >
+                  {val.heading}
+                </Typography>
+                {text.length - 1 != i && (
+                  <Image
+                    src={star}
+                    alt=""
+                    style={{ height: phone ? 30 : "" }}
+                  />
+                )}
+              </React.Fragment>
+            )
+          )}
         </Stack>
       </Container>
     </Box>
