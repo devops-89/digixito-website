@@ -44,7 +44,7 @@ const Navbar = () => {
           <Link href={"/"}>
             <Image src={logo} alt="" width={80} />
           </Link>
-          <IconButton onClick={handleClick} sx={{ color: COLORS.WHITE }}>
+          <IconButton onClick={handleClick} sx={{ color: COLORS.BLACK }}>
             {/* <Box
               sx={{
                 border: "5px solid #000000",
