@@ -64,14 +64,14 @@ const AboutHeroSection = () => {
             >
               What began in 2013 as a small team of passionate digital marketers
               has grown into a powerhouse of innovation. As the e-commerce wave
-              surged with Amazon, we evolved — expanding our expertise into web
+              surged with Amazon, we evolved expanding our expertise into web
               development, design, and branding. When the AI revolution reshaped
-              the digital landscape, we embraced it early — pioneering virtual
+              the digital landscape, we embraced it early pioneering virtual
               resourcing, automation, and machine learning–driven solutions.
-              Today, Digixito stands as a complete 360° digital ecosystem —
-              rooted in marketing, branching into every domain from e-commerce
-              and AI/ML to Python development and brand transformation. We don’t
-              just adapt to change — we help brands lead it.
+              Today, Digixito stands as a complete 360° digital ecosystem rooted
+              in marketing, branching into every domain from e-commerce and
+              AI/ML to Python development and brand transformation. We don’t
+              just adapt to change we help brands lead it.
             </Typography>
           </Grid>
           <Grid size={{ lg: 6, xs: 12 }}>

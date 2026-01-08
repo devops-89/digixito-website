@@ -474,7 +474,7 @@ export const SERVICES_TAB_DATA = {
   BUSINESS_TRANSFORMATION: [
     {
       starCardData: {
-        normalHeading: "We redesign what your business can become—not just",
+        normalHeading: "We redesign what your business can become not just",
         boldHeading: "what it is.",
       },
       data: [
@@ -488,8 +488,7 @@ export const SERVICES_TAB_DATA = {
         },
 
         {
-          heading:
-            "We engineer business foundations that thrive in any market cycle.",
+          heading: "We build business foundations that thrive in any market.",
           bottomTitle: "See how we work",
           backgroundColor: COLORS.PRIMARY,
           textColor: COLORS.BLACK,
@@ -515,8 +514,7 @@ export const SERVICES_TAB_DATA = {
           iconColor: "#ffffff",
         },
         {
-          heading:
-            "We craft scalable architectures that grow as fast as you do.",
+          heading: "We build scalable architectures that grow with you.",
           bottomTitle: "See how we work",
           backgroundColor: COLORS.PRIMARY,
           textColor: COLORS.BLACK,

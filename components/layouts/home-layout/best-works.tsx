@@ -37,7 +37,7 @@ const BestWorks = () => {
         height: { lg: "100vh", xs: "100%" },
         py: { lg: 20, xs: 6 },
         backgroundPosition: "center",
-        backgroundRepeat: "repeat",
+        backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
     >
@@ -105,6 +105,7 @@ const BestWorks = () => {
               justifyContent: "center",
               position: "relative",
               mt: 5,
+              backgroundRepeat: "no-repeat",
               //   p:5
             }}
           >

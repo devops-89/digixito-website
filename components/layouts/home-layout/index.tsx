@@ -1,33 +1,22 @@
 "use client";
-import star from "@/icons/black-star.svg";
-import {
-  Box,
-  Container,
-  Divider,
-  Stack,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
-import Image from "next/image";
-import Bannertext from "./banner-text";
-import { COLORS } from "@/utils/enum";
-import GridSection from "./grid-section";
-import { monument } from "@/utils/fonts";
-import BestService from "./best-services";
-import ServiceSection from "./service-section";
-import HowitWorks from "./how-it-works";
-import BestWorks from "./best-works";
-import Testimonials from "@/components/widgets/testimonial";
+import { useFetchJson } from "@/components/hooks/useFetchData";
 import FaqSection from "@/components/widgets/faq-section";
 import SecureConnect from "@/components/widgets/secure-connect";
 import SubFooter from "@/components/widgets/subfooter";
-import signDigixito from "@/banners/digixito-sign.png";
-import ScrollParticles from "./components/particles-morph";
-import HeroSection from "./hero-section";
-import { useEffect, useEffectEvent } from "react";
-import Aos from "aos";
+import Testimonials from "@/components/widgets/testimonial";
+import star from "@/icons/black-star.svg";
 import { useHomepageData } from "@/store/useHomepageData";
-import { useFetchJson } from "@/components/hooks/useFetchData";
+import { COLORS } from "@/utils/enum";
+import { Box, Container, Stack, useMediaQuery } from "@mui/material";
+import Aos from "aos";
+import Image from "next/image";
+import { useEffect } from "react";
+import Bannertext from "./banner-text";
+import BestService from "./best-services";
+import BestWorks from "./best-works";
+import GridSection from "./grid-section";
+import HowitWorks from "./how-it-works";
+import ServiceSection from "./service-section";
 const HomeLayouts = () => {
   const phone = useMediaQuery("(maxWidth:600px)");
 
