@@ -28,37 +28,11 @@ import Image from "next/image";
 import ImageHeading from "@/components/widgets/image-heading";
 const ServiceSection = () => {
   const [value, setValue] = useState(0);
-  const arrowCardsRef = useRef<HTMLDivElement | null>(null);
-  const [arrowCardsHeight, setArrowCardsHeight] = useState<number>();
+
   const [servicesData, setServicesData] = useState(
     SERVICES_TAB_DATA.AI_TRANSFORMATION
   );
-  useEffect(() => {
-    const node = arrowCardsRef.current;
-    if (!node) {
-      return;
-    }
 
-    const updateHeight = () => {
-      setArrowCardsHeight(Math.ceil(node.offsetHeight));
-    };
-
-    updateHeight();
-
-    if (typeof ResizeObserver !== "undefined") {
-      const observer = new ResizeObserver(() => updateHeight());
-      observer.observe(node);
-      return () => {
-        observer.disconnect();
-      };
-    }
-
-    const handleResize = () => updateHeight();
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [value]);
   const SERVICES_MAP = {
     "AI Transformation": SERVICES_TAB_DATA.AI_TRANSFORMATION,
     "Business Transformation": SERVICES_TAB_DATA.BUSINESS_TRANSFORMATION,
@@ -146,12 +120,6 @@ const ServiceSection = () => {
                   <Tab
                     key={i}
                     // disableRipple
-                    icon={
-                      <ArrowForward
-                        sx={{ ml: 1, fontSize: 22, color: "#000" }}
-                      />
-                    }
-                    iconPosition="end"
                     label={
                       <Box
                         sx={{
@@ -159,11 +127,10 @@ const ServiceSection = () => {
                           alignItems: "center",
                           justifyContent: "space-between",
                           width: "100%",
-                          gap: 1.5,
                         }}
                       >
                         <Box
-                          sx={{ display: "flex", alignItems: "center", gap: 1 }}
+                          sx={{ display: "flex", alignItems: "center", gap: 2 }}
                         >
                           <Box
                             component="span"
@@ -174,6 +141,10 @@ const ServiceSection = () => {
                           </Box>
                           <Box component="span">{val.label}</Box>
                         </Box>
+                        <ArrowForward
+                          sx={{ fontSize: 22, color: "inherit" }}
+                          className="arrow-icon"
+                        />
                       </Box>
                     }
                   />
@@ -185,24 +156,18 @@ const ServiceSection = () => {
             {SERVICES_TAB.map((val, i) => (
               <TabPanel value={value} index={i} key={i}>
                 {servicesData.map((val, i) => (
-                  <Grid container spacing={2} key={i}>
+                  <Grid container spacing={2} key={i} alignItems="stretch">
                     <Grid size={{ lg: 6, xs: 12 }}>
                       <StarCard
                         backgroundImage={bgImage.src}
                         iconPosition="top"
                         heading={val.starCardData.normalHeading}
                         boldHeading={val.starCardData.boldHeading}
-                        height={
-                          arrowCardsHeight ? `${arrowCardsHeight}px` : undefined
-                        }
+                        height="100%"
                       />
                     </Grid>
                     <Grid size={{ lg: 6, xs: 12 }}>
-                      <Stack
-                        alignItems="center"
-                        spacing={1}
-                        ref={value === i ? arrowCardsRef : null}
-                      >
+                      <Stack alignItems="center" spacing={1} height="100%">
                         {val.data.map((val, i) => (
                           <ArrowCard
                             title={val.heading}

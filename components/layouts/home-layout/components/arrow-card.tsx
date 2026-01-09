@@ -16,9 +16,13 @@ const ArrowCard = ({
     <Box
       sx={{
         backgroundColor: backgroundColor,
-        height: "100%",
+        height: "170px",
         borderRadius: 4,
         padding: "32px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "column",
       }}
       data-aos="fade-up"
     >

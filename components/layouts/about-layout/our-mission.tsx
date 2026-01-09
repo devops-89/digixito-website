@@ -1,7 +1,7 @@
 import StarCard from "@/components/widgets/star-card";
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
-import mission from "@/about-us/mission.jpg";
+import mission from "@/about-us/about-us.jpeg";
 import { kessel, monument } from "@/utils/fonts";
 import ImageHeading from "@/components/widgets/image-heading";
 const OurMission = () => {
@@ -12,18 +12,19 @@ const OurMission = () => {
           container
           spacing={10}
           flexDirection={{ lg: "row", xs: "row-reverse" }}
+          alignItems={"center"}
         >
           <Grid size={{ lg: 5, xs: 12 }}>
-            <StarCard
+            {/* <StarCard
               iconPosition="top"
               backgroundImage={mission.src}
               height={"80vh"}
-            />
+            /> */}
           </Grid>
           <Grid size={{ lg: 7, xs: 12 }}>
             <Typography
               sx={{
-                fontSize: {lg:40,xs:30},
+                fontSize: { lg: 40, xs: 30 },
                 fontFamily: monument.style.fontFamily,
                 fontWeight: 400,
                 lineHeight: "55px",
@@ -42,7 +43,7 @@ const OurMission = () => {
               <Typography
                 sx={{
                   fontFamily: monument.style.fontFamily,
-                  fontSize: {lg:40,xs:30},
+                  fontSize: { lg: 40, xs: 30 },
                   fontWeight: 400,
                 }}
               >
@@ -56,7 +57,7 @@ const OurMission = () => {
                 textAlign: "justify",
                 fontFamily: kessel.style.fontFamily,
                 fontWeight: 500,
-                lineHeight: {lg:"40px",xs:"30px"},
+                lineHeight: { lg: "40px", xs: "30px" },
               }}
             >
               To orchestrate the perfect symphony of strategy, creativity, and

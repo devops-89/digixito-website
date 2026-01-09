@@ -51,9 +51,9 @@ const HomeLayouts = () => {
           </Stack>
         </Container> */}
       </Box>
-      {/* <GridSection /> */}
-      {phone ? <MobileHeroSection /> : <SimpleHeroSection />}
-
+      {/* <GridSection />
+      {phone ? <MobileHeroSection /> : <SimpleHeroSection />} */}
+      <SimpleHeroSection />
       {/* <ScrollParticles /> */}
       <BestService />
       <ServiceSection />

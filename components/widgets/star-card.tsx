@@ -20,13 +20,14 @@ const StarCard = ({
         position: "relative",
         overflow: "hidden",
         borderRadius: "20px",
+        height: height || "60vh",
       }}
       data-aos="fade-up"
     >
       <Box
         sx={{
           backgroundImage: `url(${backgroundImage})`,
-          height: height || "60vh",
+          height: "100%",
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",

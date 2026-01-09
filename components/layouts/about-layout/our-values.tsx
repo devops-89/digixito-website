@@ -70,7 +70,7 @@ const Ourvalues = () => {
                     alignItems={{ lg: "center", xs: "flex-start" }}
                     justifyContent={"space-between"}
                     spacing={{ xs: 2 }}
-                    sx={{ mt: 5 }}
+                    sx={{ mt: 5, mb: 3 }}
                   >
                     <Stack direction={"row"} alignItems={"center"} spacing={2}>
                       <Typography
@@ -93,6 +93,7 @@ const Ourvalues = () => {
                         fontWeight: 400,
                         lineHeight: "20.25px",
                         padding: "18px 39px",
+                        display: { lg: "block", xs: "none" },
                       }}
                     >
                       Join our team
@@ -131,11 +132,11 @@ const Ourvalues = () => {
                 ))}
               </Swiper>
             </Box>
-            <Grid container sx={{ mt: 5 }}>
+            <Grid container sx={{ mt: 7 }}>
               <Grid size={{ lg: 8, xs: 12 }} margin={"auto"}>
                 <Typography
                   sx={{
-                    fontSize: {lg:38,xs:30},
+                    fontSize: { lg: 38, xs: 30 },
                     fontFamily: kessel.style.fontFamily,
                     color: "#FFC228",
                     fontWeight: 500,
@@ -147,7 +148,7 @@ const Ourvalues = () => {
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: {lg:37,xs:30},
+                    fontSize: { lg: 37, xs: 30 },
                     fontFamily: monument.style.fontFamily,
                     fontWeight: 400,
                     lineHeight: "55px",
@@ -160,7 +161,7 @@ const Ourvalues = () => {
                 </Typography>
                 <Grid container sx={{ mt: 3 }}>
                   {COUNTER_CARD_DATA.map((val, i) => (
-                    <Grid size={{lg:3,xs:6}} key={i}>
+                    <Grid size={{ lg: 3, xs: 6 }} key={i}>
                       <NumberCard
                         number={val.number}
                         suffix={val.suffix}
