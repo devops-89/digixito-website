@@ -31,7 +31,7 @@ const ArrowCard = ({
       >
         {title}
       </Typography>
-      <Stack
+      {/* <Stack
         direction={"row"}
         alignItems={"center"}
         justifyContent={"space-between"}
@@ -70,7 +70,7 @@ const ArrowCard = ({
             sx={{ color: iconColor, transform: "rotate(-45deg)" }}
           />
         </IconButton>
-      </Stack>
+      </Stack> */}
     </Box>
   );
 };
