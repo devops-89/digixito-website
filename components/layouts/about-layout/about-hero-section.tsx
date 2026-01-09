@@ -12,7 +12,7 @@ import star from "@/icons/black-star.svg";
 import Image from "next/image";
 import { COLORS } from "@/utils/enum";
 import ImageHeading from "@/components/widgets/image-heading";
-import hero_img from "@/about-us/hero.jpg";
+import hero_img from "@/about-us/about-us.jpg";
 import PageHeading from "@/components/widgets/page-heading";
 const AboutHeroSection = () => {
   return (
@@ -23,7 +23,7 @@ const AboutHeroSection = () => {
           page_title={"Evolved by Challenge,Defined by innovation."}
         />
 
-        <Grid container alignItems={"center"} spacing={5} sx={{ mt: 5 }}>
+        <Grid container alignItems={"center"} spacing={5} sx={{ mt: 0 }}>
           <Grid size={{ lg: 6, xs: 12 }}>
             <Typography
               sx={{
@@ -78,7 +78,7 @@ const AboutHeroSection = () => {
             <Image
               src={hero_img}
               alt=""
-              style={{ width: "100%", objectFit: "contain" }}
+              style={{ width: "100%", height: "auto", borderRadius: "20px" }}
             />
           </Grid>
         </Grid>
