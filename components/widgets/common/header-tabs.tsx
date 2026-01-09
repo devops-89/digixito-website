@@ -2,12 +2,23 @@
 import { HEADER_LINKS, HEADER_TABS } from "@/assets/data/header-data";
 import { COLORS, HEADER_TABS_DATA } from "@/utils/enum";
 import { monument } from "@/utils/fonts";
-import { Box, Button, Grid, Tab, Tabs, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  IconButton,
+  Stack,
+  Tab,
+  Tabs,
+  Typography,
+} from "@mui/material";
 import { Dispatch, SetStateAction, SyntheticEvent, useState } from "react";
 import TabPanel from "../tab-panel";
 import Headerlist from "./header-list";
-import { ArrowBackIos } from "@mui/icons-material";
-
+import { ArrowBackIos, Close } from "@mui/icons-material";
+import { useRouter } from "next/navigation";
+import logo from "@/logo/Digixito_black_outline.svg";
+import Image from "next/image";
 interface HeaderTabsProps {
   setAnchorEl: Dispatch<SetStateAction<HTMLButtonElement | null>>;
   setMenuOpen?: Dispatch<SetStateAction<boolean>>;
@@ -16,6 +27,7 @@ interface HeaderTabsProps {
 const HeaderTabs = ({ setAnchorEl, setMenuOpen }: HeaderTabsProps) => {
   const [value, setValue] = useState(0);
   const [data, setData] = useState(HEADER_LINKS.what_we_offer);
+  const router = useRouter();
 
   const handleChange = (e: SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -25,10 +37,17 @@ const HeaderTabs = ({ setAnchorEl, setMenuOpen }: HeaderTabsProps) => {
         setData(HEADER_LINKS.what_we_offer);
         break;
       case HEADER_TABS_DATA.WHAT_WE_ARE:
-        setData(HEADER_LINKS.what_we_are);
+        setData([]);
+        router.push("/about-us");
+        setAnchorEl(null);
+        setMenuOpen?.(false);
+
         break;
       case HEADER_TABS_DATA.CAREERS:
-        setData(HEADER_LINKS.CAREERS);
+        // setData(HEADER_LINKS.CAREERS);
+        router.push("/careers/life-at-digixito");
+        setAnchorEl(null);
+        setMenuOpen?.(false);
         break;
       default:
         setData([]);
@@ -38,6 +57,18 @@ const HeaderTabs = ({ setAnchorEl, setMenuOpen }: HeaderTabsProps) => {
 
   return (
     <Box sx={{ position: "relative" }}>
+      <Stack
+        direction={"row"}
+        alignItems={"center"}
+        justifyContent={"space-between"}
+        sx={{ mt: 3 }}
+      >
+        <Image src={logo} alt="black outline logo" width={80} />
+
+        <IconButton onClick={() => setAnchorEl(null)}>
+          <Close sx={{ color: COLORS.BLACK, fontSize: 30 }} />
+        </IconButton>
+      </Stack>
       <Tabs
         sx={{
           width: "100%",
@@ -49,6 +80,7 @@ const HeaderTabs = ({ setAnchorEl, setMenuOpen }: HeaderTabsProps) => {
             backgroundColor: `${COLORS.PRIMARY} !important`,
             borderWidth: 2,
           },
+          py: 3,
         }}
         value={value}
         onChange={handleChange}

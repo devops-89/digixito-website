@@ -11,7 +11,7 @@ import SubFooter from "@/components/widgets/subfooter";
 
 const LifeAtDigixitoLayout = () => {
   return (
-    <Box>
+    <Box sx={{ my: 10 }}>
       <Container maxWidth="lg">
         <PageHeading page_name="Careers" page_title="Life at Digixito" />
       </Container>

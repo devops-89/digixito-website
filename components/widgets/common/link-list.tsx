@@ -40,7 +40,7 @@ const LinkList = ({ data }: LINK_LIST_PROPS) => {
                 <Typography
                   sx={{
                     color: "#F5F8FF",
-                    fontSize: {lg:25,xs:20},
+                    fontSize: { lg: 25, xs: 20 },
                     fontFamily: archivo.style.fontFamily,
                     fontWeight: 700,
                     lineHeight: "28px",

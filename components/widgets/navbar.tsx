@@ -1,5 +1,5 @@
 "use client";
-import logo from "@/logo/Digixito_black_outline.svg";
+import logo from "@/logo/Digixito_White_Logo.svg";
 import { COLORS } from "@/utils/enum";
 import {
   Box,
@@ -12,10 +12,13 @@ import {
 import Grow from "@mui/material/Grow";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HeaderTabs from "./common/header-tabs";
 import MobileHeader from "./mobile-header";
 import { Sling as Hamburger } from "hamburger-react";
+import { Menu } from "@mui/icons-material";
+import { usePathname } from "next/navigation";
+import blackOutlineLogo from "@/logo/Digixito_black_outline.svg";
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [openMenu, setOpenMenu] = useState(false);
@@ -26,6 +29,7 @@ const Navbar = () => {
   };
 
   const phone = useMediaQuery("(max-width:600px)");
+  const pathname = usePathname();
 
   const open = Boolean(anchorEl);
 
@@ -33,29 +37,53 @@ const Navbar = () => {
     setAnchorEl(null);
     setOpenMenu(false);
   };
+
+  const [showAbsoluteHeader, setShowAbsoluteHeader] = useState(true);
+
+  useEffect(() => {
+    if (pathname === "/") {
+      setShowAbsoluteHeader(true);
+    } else {
+      setShowAbsoluteHeader(false);
+    }
+  }, [pathname]);
   return (
-    <Box sx={{ p: 2, backgroundColor: COLORS.WHITE, color: COLORS.WHITE }}>
-      <Container maxWidth="lg">
+    <Box
+      sx={{
+        // p: 2,
+        position: "relative",
+        backgroundColor: COLORS.WHITE,
+        zIndex: showAbsoluteHeader ? 1 : 0,
+      }}
+    >
+      <Container
+        maxWidth="lg"
+        sx={{
+          position: showAbsoluteHeader ? "absolute" : "relative",
+          top: showAbsoluteHeader ? 40 : 10,
+          left: showAbsoluteHeader ? "50%" : 0,
+          transform: showAbsoluteHeader ? "translateX(-50%)" : "translateX(0)",
+        }}
+      >
         <Stack
           direction={"row"}
           alignItems="center"
           justifyContent={"space-between"}
         >
           <Link href={"/"}>
-            <Image src={logo} alt="" width={80} />
+            <Image
+              src={showAbsoluteHeader ? logo : blackOutlineLogo}
+              alt=""
+              width={80}
+            />
           </Link>
-          <IconButton onClick={handleClick} sx={{ color: COLORS.BLACK }}>
-            {/* <Box
-              sx={{
-                border: "5px solid #000000",
-                borderRadius: "50%",
-                width: 10,
-                height: 10,
-                backgroundColor: open ? COLORS.BLACK : COLORS.TRANSPARENT,
-              }}
-            ></Box> */}
-            {/* {open ? <CloseTwoTone /> : <Menu />} */}
-            <Hamburger toggled={openMenu} toggle={setOpenMenu} size={26} />
+          <IconButton
+            onClick={handleClick}
+            sx={{ color: showAbsoluteHeader ? COLORS.WHITE : COLORS.BLACK }}
+          >
+            {/* <Hamburger toggled={openMenu} toggle={setOpenMenu} size={26} /> */}
+
+            <Menu sx={{ fontSize: 45 }} />
           </IconButton>
         </Stack>
       </Container>
@@ -78,7 +106,7 @@ const Navbar = () => {
           "& .MuiPaper-root": {
             width: "100%",
             height: "100%",
-            top: "110px !important",
+            top: "0 !important",
             right: "0px !important",
             left: "0px !important",
             "&.MuiPopover-paper": {
@@ -87,7 +115,6 @@ const Navbar = () => {
               boxShadow: "none",
             },
             position: "relative",
-            // pb: 100,
             overflow: "hidden",
           },
         }}

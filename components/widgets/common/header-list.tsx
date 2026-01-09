@@ -31,7 +31,7 @@ const Headerlist = ({
     router.push(url);
     setAnchorEl(null);
     setMenuOpen && setMenuOpen(false);
-  };  
+  };
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -43,9 +43,9 @@ const Headerlist = ({
     <Box>
       <Typography
         sx={{
-          color: "#595959",
+          color: COLORS.BLACK,
           fontSize: 15,
-          fontWeight: 800,
+          fontWeight: 900,
           fontFamily: kessel.style.fontFamily,
         }}
       >

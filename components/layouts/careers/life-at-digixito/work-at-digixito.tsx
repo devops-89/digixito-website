@@ -45,8 +45,11 @@ const WorkatDigixito = () => {
           </Typography>
           <ImageHeading title="Digixito" />
         </Stack>
-        <Grid container sx={{ py: 10 }}>
-          <Grid size={{ lg: 5, xs: 12 }}>
+        <Grid container sx={{ py: 10, alignItems: "flex-start" }}>
+          <Grid
+            size={{ lg: 5, xs: 12 }}
+            sx={{ position: { lg: "sticky", xs: "static" }, top: 100 }}
+          >
             <Typography
               sx={{
                 fontSize: { lg: 40, xs: 30 },

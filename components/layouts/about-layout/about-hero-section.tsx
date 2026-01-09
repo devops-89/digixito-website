@@ -80,18 +80,6 @@ const AboutHeroSection = () => {
               alt=""
               style={{ width: "100%", objectFit: "contain" }}
             />
-
-            {/* <Box
-              sx={{
-                backgroundImage: `url(${hero_img.src})`,
-                height: "80vh",
-                width: "100%",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-
-              }}
-            ></Box> */}
           </Grid>
         </Grid>
       </Container>

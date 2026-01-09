@@ -10,7 +10,7 @@ import SubFooter from "@/components/widgets/subfooter";
 
 const DetailsLayout = () => {
   return (
-    <Box>
+    <Box sx={{ my: 10 }}>
       <HeroSection />
       <OurServices />
       <DevelopmentProcess />

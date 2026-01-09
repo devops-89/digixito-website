@@ -47,7 +47,7 @@ const Bannertext = () => {
                     fontSize: { lg: 50, xs: 16 },
                     fontWeight: 800,
                     fontFamily: monument.style.fontFamily,
-                    color: COLORS.BLACK,
+                    color: COLORS.WHITE,
                   }}
                   data-aos="fade-up"
                 >

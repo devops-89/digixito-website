@@ -223,52 +223,49 @@ export const TERMS_PAGE_LINKS = [
 
 export const LINK_LIST_DATA: LINK_LIST[] = [
   {
-    heading: "Product",
+    heading: "What we offer",
     data: [
       {
-        label: "Overview",
+        label: "AI Transform",
+        url: "/ai-transform",
       },
       {
-        label: "Essential features",
+        label: "Business Transformation",
+        url: "/business-transformation",
       },
       {
-        label: "Security",
+        label: "Product Engineering",
+        url: "/product-engineering",
       },
       {
-        label: "Trading",
+        label: "AI in Marketing & Growth",
+        url: "/ai-marketing-growth",
       },
       {
-        label: "Staking",
+        label: "Design Intelligence",
+        url: "/design-intelligence",
       },
     ],
   },
   {
-    heading: "Education",
+    heading: "What we are",
     data: [
       {
-        label: "Resources",
-      },
-      {
-        label: "Explore",
-      },
-    ],
-  },
-  {
-    heading: "Company",
-    data: [
-      {
-        label: "About",
+        label: "About Us",
         url: "/about-us",
       },
+    ],
+  },
+  {
+    heading: "Career",
+    data: [
       {
-        label: "Careers",
+        label: "Life At Digixito",
+        url: "/careers/life-at-digixito",
       },
       {
-        label: "Contact",
+        label: "Contact Us",
         url: "/contact-us",
-      },
-      {
-        label: "Newsletter",
       },
     ],
   },
