@@ -1,3 +1,4 @@
+"use client";
 import { COLORS } from "@/utils/enum";
 import { kessel, monument } from "@/utils/fonts";
 import {
@@ -7,6 +8,7 @@ import {
   Grid,
   Stack,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import React from "react";
 import logo from "@/logo/Digixito_Logo.svg";
@@ -14,12 +16,13 @@ import Image from "next/image";
 import employLogo from "@/logo/employ_virtual.svg";
 import ecomLogo from "@/logo/eComGuru.svg";
 const SubFooter = () => {
+  const phone = useMediaQuery("(max-width:600px)");
   return (
     <Box
       sx={{
         backgroundColor: COLORS.PRIMARY,
         position: "relative",
-        height: "40vh",
+        height: { lg: "40vh", xs: "100%" },
         py: 10,
         display: "flex",
         alignItems: "center",
@@ -42,7 +45,7 @@ const SubFooter = () => {
           sx={{
             textAlign: "center",
             mt: 4,
-            fontSize: 25,
+            fontSize: { lg: 25, xs: 20 },
             fontFamily: monument.style.fontFamily,
           }}
         >
@@ -50,34 +53,33 @@ const SubFooter = () => {
           industry.{" "}
         </Typography>
 
-        {/* <Stack
-          direction={"row"}
-          alignItems={"center"}
-          justifyContent={"center"}
-          spacing={5}
-          sx={{ mt: 4 }}
-        >
-          <Image src={employLogo} alt="employee logo" height={80} />
-          <Divider
-          orientation="vertical"
-          flexItem
-          sx={{ height: 100, borderColor: COLORS.BLACK }}
-          />
-          <Image src={ecomLogo} alt="ecom logo" height={80} />
-          </Stack> */}
-
-        <Grid container sx={{ mt: 4 }}>
+        <Grid container sx={{ mt: 4 }} spacing={4}>
           <Grid
-            size={6}
-            sx={{ textAlign: "center", borderRight: "1px solid #000" }}
+            size={{ lg: 6, xs: 12 }}
+            sx={{
+              textAlign: "center",
+              borderRight: { lg: "1px solid #000", xs: "none" },
+            }}
           >
-            <Image src={employLogo} alt="employee logo" height={80} />
+            <Image
+              src={employLogo}
+              alt="employee logo"
+              height={phone ? 60 : 80}
+            />
           </Grid>
           <Grid
-            size={6}
-            sx={{ textAlign: "center", borderLeft: "1px solid #000", px: 7 }}
+            size={{ lg: 6, xs: 12 }}
+            sx={{
+              textAlign: "center",
+              borderLeft: { lg: "1px solid #000", xs: "none" },
+              px: 7,
+            }}
           >
-            <Image src={ecomLogo} alt="employee logo" height={80} />
+            <Image
+              src={ecomLogo}
+              alt="employee logo"
+              height={phone ? 40 : 80}
+            />
           </Grid>
         </Grid>
 

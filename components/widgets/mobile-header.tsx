@@ -1,210 +1,159 @@
-import React, {
-  useRef,
-  useState,
-  useEffect,
-  SetStateAction,
-  Dispatch,
-} from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import {
   Box,
   Button,
+  Collapse,
+  IconButton,
   List,
   ListItemButton,
   ListItemText,
   Stack,
   Typography,
 } from "@mui/material";
-import { ArrowDropDown } from "@mui/icons-material";
+import {
+  ArrowDropDown,
+  Close,
+  ExpandLess,
+  ExpandMore,
+} from "@mui/icons-material";
 import { HEADER_LINKS, HEADER_TABS } from "@/assets/data/header-data";
 import { COLORS, HEADER_TABS_DATA } from "@/utils/enum";
 import { kessel } from "@/utils/fonts";
 import { HEADER_LIST_PROPS } from "@/utils/types";
 import Link from "next/link";
+import Image from "next/image";
+import blackLogo from "@/logo/Digixito_black_outline.svg";
 
 interface HeaderTabsProps {
   setAnchorEl: Dispatch<SetStateAction<HTMLButtonElement | null>>;
 }
+
 const MobileHeader = ({ setAnchorEl }: HeaderTabsProps) => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const [categoryOpen, setCategoryOpen] = useState(false);
-  const [categoryData, setCategoryData] = useState<HEADER_LIST_PROPS[] | null>(
-    null
-  );
-  const [anchorIndex, setAnchorIndex] = useState<number | null>(null);
-  const [dropdownTopPx, setDropdownTopPx] = useState<number | null>(null);
-  const [dropdownHeightPx, setDropdownHeightPx] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const computePosition = (buttonIndex: number) => {
-    const btns = containerRef.current?.querySelectorAll("button");
-    const btn = btns
-      ? (btns[buttonIndex] as HTMLElement | undefined)
-      : undefined;
-    if (!btn) {
-      setDropdownTopPx(null);
-      setDropdownHeightPx(null);
-      return;
-    }
-    const rect = btn.getBoundingClientRect();
-    const topPx = Math.max(0, rect.bottom);
-    const available = Math.max(0, window.innerHeight - topPx);
-    const reserved = 16;
-    setDropdownTopPx(topPx);
-    setDropdownHeightPx(Math.max(100, available - reserved));
+  const handleToggle = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
   };
 
-  useEffect(() => {
-    const onResizeOrScroll = () => {
-      if (anchorIndex !== null) computePosition(anchorIndex);
-    };
-    window.addEventListener("resize", onResizeOrScroll);
-    window.addEventListener("scroll", onResizeOrScroll, true);
-    return () => {
-      window.removeEventListener("resize", onResizeOrScroll);
-      window.removeEventListener("scroll", onResizeOrScroll, true);
-    };
-  }, [anchorIndex]);
-
-  const handleOpen = (name: string, index: number) => {
-    let data: HEADER_LIST_PROPS[] | null = null;
-    if (name === HEADER_TABS_DATA.WHAT_WE_OFFER)
-      data = HEADER_LINKS.what_we_offer;
-    else if (name === HEADER_TABS_DATA.WHAT_WE_ARE)
-      data = HEADER_LINKS.what_we_are;
-    else if (name === HEADER_TABS_DATA.CAREERS) data = HEADER_LINKS.CAREERS;
-
-    if (anchorIndex === index && categoryOpen) {
-      // close
-      setCategoryOpen(false);
-      setCategoryData(null);
-      setAnchorIndex(null);
-      setDropdownTopPx(null);
-      setDropdownHeightPx(null);
-    } else {
-      setAnchorIndex(index);
-      setCategoryData(data);
-      setCategoryOpen(true);
-      requestAnimationFrame(() => computePosition(index));
-    }
+  const getSubMenuData = (label: string): HEADER_LIST_PROPS[] => {
+    if (label === HEADER_TABS_DATA.WHAT_WE_OFFER)
+      return HEADER_LINKS.what_we_offer;
+    if (label === HEADER_TABS_DATA.WHAT_WE_ARE) return HEADER_LINKS.what_we_are;
+    if (label === HEADER_TABS_DATA.CAREERS) return HEADER_LINKS.CAREERS;
+    return [];
   };
-
-  useEffect(() => {
-    const onDocClick = (e: MouseEvent) => {
-      if (!categoryOpen) return;
-      if (
-        containerRef.current &&
-        !containerRef.current.contains(e.target as Node)
-      ) {
-        setCategoryOpen(false);
-        setAnchorIndex(null);
-      }
-    };
-    document.addEventListener("click", onDocClick);
-    return () => document.removeEventListener("click", onDocClick);
-  }, [categoryOpen]);
 
   return (
-    <Box ref={containerRef} sx={{ mt: 2, position: "relative" }}>
-      <Stack>
-        {HEADER_TABS.map((val, i) => (
-          <Button
-            key={i}
-            sx={{
-              fontSize: 20,
-              border: "none",
-              borderRadius: "20px",
-              mb: 1,
-              textAlign: "flex-start",
-              justifyContent: "space-between",
-              color: COLORS.BLACK,
-              fontFamily: kessel.style.fontFamily,
-              width: "100%",
-            }}
-            endIcon={<ArrowDropDown />}
-            onClick={() => handleOpen(val.label, i)}
-          >
-            {val.label}
-          </Button>
-        ))}
+    <Box
+      sx={{ mt: 2, position: "relative", height: "100%", overflowY: "auto" }}
+    >
+      <Stack
+        direction="row"
+        alignItems={"center"}
+        spacing={2}
+        justifyContent={"space-between"}
+        sx={{ mt: 3, mb: 2 }}
+      >
+        <Image src={blackLogo} alt="logo" width={60} />
+        <IconButton onClick={() => setAnchorEl(null)}>
+          <Close />
+        </IconButton>
       </Stack>
+      <Stack spacing={1}>
+        {HEADER_TABS.map((val, i) => {
+          const subMenuData = getSubMenuData(val.label);
+          const isOpen = openIndex === i;
 
-      {categoryOpen &&
-        categoryData &&
-        dropdownTopPx !== null &&
-        dropdownHeightPx !== null && (
-          <Box
-            sx={{
-              position: "fixed",
-              top: `${dropdownTopPx}px`,
-              left: 0,
-              right: 0,
-              zIndex: 1400,
-              height: `${dropdownHeightPx}px`,
-              backgroundColor: "#fff",
-              boxShadow: "0 6px 20px rgba(0,0,0,0.12)",
-              borderTop: "1px solid #eee",
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <Box
-              sx={{
-                flex: 1,
-                overflowY: "auto",
-                WebkitOverflowScrolling: "touch",
-                p: 2,
-                pb: 6,
-                "&::-webkit-scrollbar": { width: "6px" },
-                "&::-webkit-scrollbar-thumb": {
-                  backgroundColor: "#ccc",
-                  borderRadius: "6px",
-                },
-              }}
-            >
-              <Stack spacing={2}>
-                {categoryData.map((section, idx) => (
-                  <Box key={idx}>
-                    <Typography
-                      sx={{
-                        color: COLORS.GRAY,
-                        fontSize: 15,
-                        fontWeight: 700,
-                        fontFamily: kessel.style.fontFamily,
-                        mb: 1,
-                      }}
-                    >
-                      {section.heading}
-                    </Typography>
-                    <List disablePadding>
-                      {section.data.map((item, j) => (
-                        <Link
-                          href={item.url || "#"}
-                          key={j}
-                          onClick={() => setAnchorEl(null)}
-                          style={{
-                            color: COLORS.BLACK,
-                            textDecoration: "none",
+          return (
+            <Box key={i}>
+              <Button
+                fullWidth
+                sx={{
+                  fontSize: 20,
+                  justifyContent: "space-between",
+                  color: COLORS.BLACK,
+                  fontFamily: kessel.style.fontFamily,
+                  textTransform: "none",
+                  py: 1.5,
+                }}
+                endIcon={isOpen ? <ExpandLess /> : <ExpandMore />}
+                onClick={() => handleToggle(i)}
+              >
+                {val.label}
+              </Button>
+              <Collapse in={isOpen} timeout="auto" unmountOnExit>
+                <Box
+                  sx={{
+                    pl: 2,
+                    pb: 2,
+                    maxHeight: "50vh",
+                    overflowY: "scroll",
+                    "&::-webkit-scrollbar": { width: "4px" },
+                    "&::-webkit-scrollbar-track": { background: "#f1f1f1" },
+                    "&::-webkit-scrollbar-thumb": {
+                      background: "#888",
+                      borderRadius: "4px",
+                    },
+                    "&::-webkit-scrollbar-thumb:hover": {
+                      background: "#555",
+                    },
+                  }}
+                >
+                  {subMenuData.map((section, idx) => (
+                    <Box key={idx} sx={{ mb: 2 }}>
+                      {section.heading && (
+                        <Typography
+                          sx={{
+                            color: COLORS.GRAY,
+                            fontSize: 14,
+                            fontWeight: 700,
+                            fontFamily: kessel.style.fontFamily,
+                            mb: 1,
+                            mt: 1,
                           }}
                         >
-                          <ListItemButton key={j} sx={{ borderRadius: "12px" }}>
-                            <ListItemText
-                              primary={item.label}
-                              slotProps={{
-                                primary: {
-                                  fontSize: 14,
-                                  fontFamily: kessel.style.fontFamily,
-                                },
+                          {section.heading}
+                        </Typography>
+                      )}
+                      <List disablePadding>
+                        {section.data.map((item, j) => (
+                          <Link
+                            href={item.url || "#"}
+                            key={j}
+                            onClick={() => setAnchorEl(null)}
+                            style={{
+                              textDecoration: "none",
+                              display: "block",
+                            }}
+                          >
+                            <ListItemButton
+                              sx={{
+                                borderRadius: "8px",
+                                py: 0.5,
+                                px: 1,
                               }}
-                            />
-                          </ListItemButton>
-                        </Link>
-                      ))}
-                    </List>
-                  </Box>
-                ))}
-              </Stack>
+                            >
+                              <ListItemText
+                                primary={item.label}
+                                primaryTypographyProps={{
+                                  fontSize: 16,
+                                  fontFamily: kessel.style.fontFamily,
+                                  color: COLORS.BLACK,
+                                  fontWeight: 500,
+                                }}
+                              />
+                            </ListItemButton>
+                          </Link>
+                        ))}
+                      </List>
+                    </Box>
+                  ))}
+                </Box>
+              </Collapse>
             </Box>
-          </Box>
-        )}
+          );
+        })}
+      </Stack>
     </Box>
   );
 };

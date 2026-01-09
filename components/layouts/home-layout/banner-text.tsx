@@ -34,10 +34,10 @@ const Bannertext = () => {
       <Container maxWidth="lg">
         <Stack
           direction={"row"}
-          alignItems={"center"}
-          justifyContent={"center"}
-          spacing={5}
-          sx={{ ml: 8 }}
+          alignItems={{ lg: "center", xs: "flex-start" }}
+          justifyContent={{ lg: "center", xs: "flex-start" }}
+          spacing={{ lg: 5, xs: 2 }}
+          sx={{ ml: { lg: 8, xs: 0 } }}
         >
           {pageData?.heroSection?.bannerText?.map(
             (val: { heading: string }, i: number) => (

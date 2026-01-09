@@ -18,8 +18,9 @@ import GridSection from "./grid-section";
 import HowitWorks from "./how-it-works";
 import ServiceSection from "./service-section";
 import SimpleHeroSection from "./Simple-Hero-Section";
+import MobileHeroSection from "./Mobile-Hero-Section";
 const HomeLayouts = () => {
-  const phone = useMediaQuery("(maxWidth:600px)");
+  const phone = useMediaQuery("(max-width:600px)");
 
   const { pageData, setPageData, cleanPageData } = useHomepageData();
   const { data, error, loading } = useFetchJson("/locale/homepage.json");
@@ -33,6 +34,7 @@ const HomeLayouts = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+
   return (
     <Box>
       <Box sx={{ backgroundColor: COLORS.WHITE }}>
@@ -50,7 +52,7 @@ const HomeLayouts = () => {
         </Container> */}
       </Box>
       {/* <GridSection /> */}
-      <SimpleHeroSection />
+      {phone ? <MobileHeroSection /> : <SimpleHeroSection />}
 
       {/* <ScrollParticles /> */}
       <BestService />

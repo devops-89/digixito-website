@@ -23,8 +23,7 @@ const BestService = () => {
             data-aos="fade-up"
           >
             {/* Provide the best service with out of the box ideas */}
-
-            {pageData?.bestService?.heading}
+            Driving Conversions with our Creative Edge
           </Typography>
           <Divider sx={{ borderColor: COLORS.BLACK, width: "90%" }} />
         </Grid>
@@ -39,7 +38,10 @@ const BestService = () => {
             }}
             data-aos="fade-up"
           >
-            {pageData?.bestService?.description}
+            Our passionate & strategic team builds stronger businesses in a
+            digital-first era. With our deep understanding of the ever-evolving
+            online landscape, we stay at the forefront of industry trends and
+            technologies.
           </Typography>
         </Grid>
       </Grid>

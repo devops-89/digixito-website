@@ -31,7 +31,7 @@ const Footer = () => {
             <Typography
               sx={{
                 fontFamily: monument.style.fontFamily,
-                fontSize: 28,
+                fontSize: { lg: 28, xs: 20 },
                 fontWeight: 800,
                 mb: 2,
               }}
@@ -41,16 +41,22 @@ const Footer = () => {
             <Box sx={{ textAlign: "end" }}>
               <Image src={footer_icon} alt="" width={150} />
             </Box>
-            <Stack direction={"row"} alignItems={"flex-start"} spacing={3}>
+            <Stack
+              direction={"row"}
+              alignItems={"flex-start"}
+              justifyContent={"center"}
+              spacing={3}
+            >
               <Box
                 sx={{
                   backgroundColor: COLORS.BLACK,
-                  width: { lg: 500, xs: 380 },
-                  height: { lg: 500, xs: 380 },
+                  width: { lg: 500, xs: 300 },
+                  height: { lg: 500, xs: 300 },
                   borderRadius: "50%",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  margin: "auto",
                 }}
               >
                 <Box sx={{}}>
@@ -62,7 +68,12 @@ const Footer = () => {
                       style={{ margin: "auto" }}
                     />
                   </Box>
-                  <Stack direction={"row"} alignItems={"center"} spacing={2}>
+                  <Stack
+                    direction={"row"}
+                    alignItems={"center"}
+                    justifyContent={{ xs: "center" }}
+                    spacing={2}
+                  >
                     {socialIcons.map((Icon, i) => (
                       <IconButton
                         key={i}
@@ -71,15 +82,15 @@ const Footer = () => {
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
-                          width: 60,
-                          height: 60,
+                          width: { lg: 60, xs: 40 },
+                          height: { lg: 60, xs: 40 },
                           color: COLORS.WHITE,
                           ":hover": {
                             backgroundColor: "#24262B",
                           },
                         }}
                       >
-                        <Icon />
+                        <Icon sx={{ fontSize: { lg: 20, xs: 16 } }} />
                       </IconButton>
                     ))}
                   </Stack>
