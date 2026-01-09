@@ -17,11 +17,12 @@ import { LinkedIn, X, YouTube } from "@mui/icons-material";
 import { LINK_LIST_DATA, TERMS_PAGE_LINKS } from "@/assets/data/generic-array";
 import LinkList from "./common/link-list";
 import { SvgIconProps } from "@mui/material";
+import Link from "next/link";
 const Footer = () => {
-  const socialIcons: React.ComponentType<SvgIconProps>[] = [
-    X,
-    YouTube,
-    LinkedIn,
+  const socialIcons = [
+    { Icon: X, url: "https://x.com/digixito" },
+    { Icon: YouTube, url: "https://www.youtube.com/@digixito" },
+    { Icon: LinkedIn, url: "https://www.linkedin.com/company/digixito/" },
   ];
   return (
     <Box sx={{ py: 10 }}>
@@ -74,24 +75,25 @@ const Footer = () => {
                     justifyContent={{ xs: "center" }}
                     spacing={2}
                   >
-                    {socialIcons.map((Icon, i) => (
-                      <IconButton
-                        key={i}
-                        sx={{
-                          backgroundColor: "#24262B",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          width: { lg: 60, xs: 40 },
-                          height: { lg: 60, xs: 40 },
-                          color: COLORS.WHITE,
-                          ":hover": {
+                    {socialIcons.map((item, i) => (
+                      <Link href={item.url} key={i} target="_blank">
+                        <IconButton
+                          sx={{
                             backgroundColor: "#24262B",
-                          },
-                        }}
-                      >
-                        <Icon sx={{ fontSize: { lg: 20, xs: 16 } }} />
-                      </IconButton>
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            width: { lg: 60, xs: 40 },
+                            height: { lg: 60, xs: 40 },
+                            color: COLORS.WHITE,
+                            ":hover": {
+                              backgroundColor: "#24262B",
+                            },
+                          }}
+                        >
+                          <item.Icon sx={{ fontSize: { lg: 20, xs: 16 } }} />
+                        </IconButton>
+                      </Link>
                     ))}
                   </Stack>
                 </Box>

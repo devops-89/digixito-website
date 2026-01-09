@@ -33,9 +33,9 @@ const Bannertext = () => {
     <Box>
       <Container maxWidth="lg">
         <Stack
-          direction={"row"}
-          alignItems={{ lg: "center", xs: "flex-start" }}
-          justifyContent={{ lg: "center", xs: "flex-start" }}
+          direction={{ lg: "row", xs: "row" }}
+          alignItems={{ lg: "center", xs: "center" }}
+          justifyContent={{ lg: "center", xs: "center" }}
           spacing={{ lg: 5, xs: 2 }}
           sx={{ ml: { lg: 8, xs: 0 } }}
         >
@@ -44,12 +44,11 @@ const Bannertext = () => {
               <React.Fragment key={i}>
                 <Typography
                   sx={{
-                    fontSize: { lg: 50, xs: 16 },
+                    fontSize: { lg: 50, xs: 15 },
                     fontWeight: 800,
                     fontFamily: monument.style.fontFamily,
                     color: COLORS.WHITE,
                   }}
-                  data-aos="fade-up"
                 >
                   {val.heading}
                 </Typography>

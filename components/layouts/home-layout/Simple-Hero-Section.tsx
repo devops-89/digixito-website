@@ -23,7 +23,7 @@ const SimpleHeroSection = () => {
       <Box
         sx={{
           backgroundImage: `url(${heroImage.src})`,
-          height: "100vh",
+          height: "80vh",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -36,7 +36,7 @@ const SimpleHeroSection = () => {
         <Container maxWidth="lg">
           <Box>
             <Stack
-              direction={{ lg: "row", xs: "column" }}
+              direction={{ lg: "row", xs: "row" }}
               alignItems={"center"}
               spacing={2}
             >
@@ -62,7 +62,7 @@ const SimpleHeroSection = () => {
               />
             </Stack>
             <Stack
-              direction={{ lg: "row", xs: "column" }}
+              direction={{ lg: "row", xs: "row" }}
               alignItems={"center"}
               spacing={4}
               sx={{ ml: {} }}

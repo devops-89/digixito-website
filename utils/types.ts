@@ -6,7 +6,7 @@ export interface BEST_SERVICE_CARD_PROPS {
   boldHeading?: string;
   iconPosition?: "top" | "bottom";
   backgroundImage: string;
-  height?: string;
+  height?: string | number | { [key: string]: string | number };
   isStar?: boolean;
 }
 

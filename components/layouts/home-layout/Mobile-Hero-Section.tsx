@@ -16,7 +16,7 @@ const MobileHeroSection = () => {
           backgroundImage: `url(${backgroundImage.src})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "100vh",
+          height: "90vh",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

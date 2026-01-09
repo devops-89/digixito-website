@@ -10,7 +10,7 @@ import { useHomepageData } from "@/store/useHomepageData";
 const BestService = () => {
   const { pageData } = useHomepageData();
   return (
-    <Container sx={{ pt: 20 }}>
+    <Container sx={{ pt: { lg: 10, xs: 10 } }}>
       <Grid container spacing={3}>
         <Grid size={{ lg: 6, xs: 12 }}>
           <Typography
@@ -22,7 +22,6 @@ const BestService = () => {
             }}
             data-aos="fade-up"
           >
-            {/* Provide the best service with out of the box ideas */}
             Driving Conversions with our Creative Edge
           </Typography>
           <Divider sx={{ borderColor: COLORS.BLACK, width: "90%" }} />
@@ -55,6 +54,7 @@ const BestService = () => {
             boldHeading="Greatest Creation."
             backgroundImage={bgImage2.src}
             iconPosition="bottom"
+            height={{ xs: "40vh", lg: "60vh" }}
           />
         </Grid>
       </Grid>
