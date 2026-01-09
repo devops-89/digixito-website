@@ -21,7 +21,7 @@ const FaqSection = () => {
           <Grid size={{ lg: 6, xs: 12, sm: 6 }}>
             <Typography
               sx={{
-                fontSize: { lg: 38, xs: 30 },
+                fontSize: { lg: 38, xs: 25, sm: 30 },
                 fontFamily: monument.style.fontFamily,
                 textTransform: "capitalize",
               }}

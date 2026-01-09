@@ -84,7 +84,7 @@ const ServiceSection = () => {
             <Stack direction={"row"} alignItems={"center"} spacing={2}>
               <Typography
                 sx={{
-                  fontSize: { lg: 35, xs: 30 },
+                  fontSize: { lg: 35, xs: 25, sm: 30 },
                   fontFamily: monument.style.fontFamily,
                 }}
               >

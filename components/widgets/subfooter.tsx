@@ -17,6 +17,7 @@ import employLogo from "@/logo/employ_virtual.svg";
 import ecomLogo from "@/logo/eComGuru.svg";
 const SubFooter = () => {
   const phone = useMediaQuery("(max-width:600px)");
+  const tablet = useMediaQuery("(max-width:1024px)");
   return (
     <Box
       sx={{
@@ -33,7 +34,7 @@ const SubFooter = () => {
         <Typography
           sx={{
             fontFamily: monument.style.fontFamily,
-            fontSize: { lg: 38, xs: 30 },
+            fontSize: { lg: 38, xs: 20, sm: 25 },
             fontWeight: 400,
             textAlign: "center",
           }}
@@ -45,7 +46,7 @@ const SubFooter = () => {
           sx={{
             textAlign: "center",
             mt: 4,
-            fontSize: { lg: 25, xs: 20 },
+            fontSize: { lg: 25, xs: 16, sm: 20 },
             fontFamily: monument.style.fontFamily,
           }}
         >
@@ -53,9 +54,9 @@ const SubFooter = () => {
           industry.{" "}
         </Typography>
 
-        <Grid container sx={{ mt: 4 }} spacing={4}>
+        <Grid container sx={{ mt: 4 }} spacing={phone ? 2 : tablet ? 1 : 6}>
           <Grid
-            size={{ lg: 6, xs: 12 }}
+            size={{ lg: 6, xs: 12, sm: 6 }}
             sx={{
               textAlign: "center",
               borderRight: { lg: "1px solid #000", xs: "none" },
@@ -64,11 +65,11 @@ const SubFooter = () => {
             <Image
               src={employLogo}
               alt="employee logo"
-              height={phone ? 60 : 80}
+              height={phone ? 30 : tablet ? 40 : 80}
             />
           </Grid>
           <Grid
-            size={{ lg: 6, xs: 12 }}
+            size={{ lg: 6, xs: 12, sm: 6 }}
             sx={{
               textAlign: "center",
               borderLeft: { lg: "none", xs: "none" },
@@ -78,7 +79,7 @@ const SubFooter = () => {
             <Image
               src={ecomLogo}
               alt="employee logo"
-              height={phone ? 40 : 80}
+              height={phone ? 30 : tablet ? 40 : 80}
             />
           </Grid>
         </Grid>

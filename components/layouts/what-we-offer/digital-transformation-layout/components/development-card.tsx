@@ -14,7 +14,7 @@ const DevelopmentCard = ({
       sx={{
         backgroundColor: "#E5E7EC",
         border: "5px solid #fff",
-        padding: "30px 25px",
+        padding: { lg: "30px 25px", xs: "16px 25px", sm: "20px 20px" },
         borderRadius: "32px",
         display: "flex",
         alignItems: "flex-start",
@@ -27,7 +27,7 @@ const DevelopmentCard = ({
         sx={{
           color: COLORS.BLACK,
           fontFamily: monument.style.fontFamily,
-          fontSize: 35,
+          fontSize: { lg: 35, xs: 16, sm: 25 },
           fontWeight: 400,
         }}
       >
@@ -37,7 +37,7 @@ const DevelopmentCard = ({
       <Typography
         sx={{
           fontFamily: monument.style.fontFamily,
-          fontSize: 23,
+          fontSize: { lg: 23, xs: 16, sm: 25 },
           fontWeight: 400,
           textTransform: "capitalize",
         }}
@@ -47,7 +47,7 @@ const DevelopmentCard = ({
       <Typography
         sx={{
           fontFamily: archivo.style.fontFamily,
-          fontSize: 19,
+          fontSize: { lg: 19, xs: 16, sm: 18 },
           fontWeight: 400,
           lineHeight: "30px",
         }}

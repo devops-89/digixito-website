@@ -45,17 +45,24 @@ const DevelopmentProcess = () => {
             >
               <Typography
                 sx={{
-                  fontSize: { lg: 40, xs: 30 },
+                  fontSize: { lg: 40, xs: 16, sm: 25 },
                   fontFamily: monument.style.fontFamily,
                   fontWeight: 400,
                 }}
               >
                 Our
               </Typography>
-              <ImageHeading title="Development" sx={{ width: "100%", px: 1 }} />
+              <ImageHeading
+                title="Development"
+                sx={{
+                  width: "100%",
+                  px: 1,
+                  fontSize: { xs: 16, sm: 25, lg: 40 },
+                }}
+              />
               <Typography
                 sx={{
-                  fontSize: { lg: 40, xs: 30 },
+                  fontSize: { lg: 40, xs: 16, sm: 25 },
                   fontFamily: monument.style.fontFamily,
                   fontWeight: 400,
                   pl: 2,
@@ -97,7 +104,7 @@ const DevelopmentProcess = () => {
             <Container maxWidth="lg">
               <Grid container spacing={{ lg: 4, xs: 12 }} sx={{ mt: -20 }}>
                 {developmentData?.development_process.map((val, i) => (
-                  <Grid size={{ lg: 4, xs: 12 }} key={i}>
+                  <Grid size={{ lg: 4, xs: 12, sm: 6 }} key={i}>
                     <DevelopmentCard
                       process_number={val.process_number}
                       process_title={val.process_title}

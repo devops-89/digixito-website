@@ -52,7 +52,7 @@ const StarCard = ({
             <Box sx={{ textAlign: "center" }}>
               <Typography
                 sx={{
-                  fontSize: 30,
+                  fontSize: { lg: 30, xs: 20, sm: 25 },
                   fontWeight: 400,
                   fontFamily: monument.style.fontFamily,
                   color: COLORS.WHITE,
