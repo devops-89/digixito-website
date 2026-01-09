@@ -21,7 +21,7 @@ const PageHeading = ({
         <Typography
           sx={{
             color: COLORS.BLACK,
-            fontSize: { lg: 50, xs: 35 },
+            fontSize: { lg: 50, xs: 20, sm: 25 },
             fontFamily: monument.style.fontFamily,
             fontWeight: 800,
           }}

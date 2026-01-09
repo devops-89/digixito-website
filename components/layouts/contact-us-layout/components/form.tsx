@@ -16,9 +16,9 @@ const ContactMessageForm = () => {
       <Typography
         sx={{
           fontFamily: monument.style.fontFamily,
-          fontSize: 30,
+          fontSize: { lg: 30, xs: 15, sm: 25 },
           fontWeight: 400,
-          lineHeight: "50px",
+          lineHeight: { lg: "50px", xs: "25px", sm: "25px" },
         }}
       >
         SEND US A MESSAGE
@@ -26,8 +26,8 @@ const ContactMessageForm = () => {
       <Stack
         alignItems={"flex-start"}
         justifyContent={"flex-start"}
-        spacing={7}
-        sx={{ mt: 5 }}
+        spacing={{ lg: 7, xs: 3, sm: 5 }}
+        sx={{ mt: { lg: 5, xs: 2 } }}
       >
         <TextField
           variant="standard"
@@ -36,7 +36,7 @@ const ContactMessageForm = () => {
           sx={{
             "& label": {
               fontFamily: monument.style.fontFamily,
-              fontSize: 23,
+              fontSize: { lg: 23, xs: 15, sm: 20 },
               fontWeight: 400,
             },
           }}
@@ -48,7 +48,7 @@ const ContactMessageForm = () => {
           sx={{
             "& label": {
               fontFamily: monument.style.fontFamily,
-              fontSize: 23,
+              fontSize: { lg: 23, xs: 15, sm: 20 },
               fontWeight: 400,
             },
           }}
@@ -60,7 +60,7 @@ const ContactMessageForm = () => {
           sx={{
             "& label": {
               fontFamily: monument.style.fontFamily,
-              fontSize: 23,
+              fontSize: { lg: 23, xs: 15, sm: 20 },
               fontWeight: 400,
             },
           }}
@@ -72,7 +72,7 @@ const ContactMessageForm = () => {
           sx={{
             "& label": {
               fontFamily: monument.style.fontFamily,
-              fontSize: 23,
+              fontSize: { lg: 23, xs: 15, sm: 20 },
               fontWeight: 400,
             },
           }}
@@ -84,7 +84,7 @@ const ContactMessageForm = () => {
           sx={{
             "& label": {
               fontFamily: monument.style.fontFamily,
-              fontSize: 23,
+              fontSize: { lg: 23, xs: 15, sm: 20 },
               fontWeight: 400,
             },
             "& fieldset": {

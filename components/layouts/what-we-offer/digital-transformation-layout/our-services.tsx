@@ -55,13 +55,13 @@ const OurServices = () => {
               sx={{ position: "relative" }}
             >
               <Stack
-                direction={{ lg: "row", xs: "column" }}
+                direction={{ lg: "row", xs: "column", sm: "row" }}
                 alignItems={"center"}
                 spacing={2}
               >
                 <Typography
                   sx={{
-                    fontSize: { lg: 40, xs: 30 },
+                    fontSize: { lg: 40, xs: 16, sm: 20 },
                     fontFamily: monument.style.fontFamily,
                     color: COLORS.WHITE,
                   }}
@@ -70,14 +70,14 @@ const OurServices = () => {
                 </Typography>
                 <ImageHeading
                   title={service_data?.ourServices?.heading}
-                  sx={{ width: { lg: "100%", xs: 380 } }}
+                  sx={{ width: { lg: "100%", xs: "100%", sm: "100%" } }}
                 />
               </Stack>
             </Stack>
 
             <Typography
               sx={{
-                fontSize: "19",
+                fontSize: { lg: 19, xs: 16, sm: 16 },
                 fontFamily: kessel.style.fontFamily,
                 color: COLORS.WHITE,
                 fontWeight: 300,
@@ -89,7 +89,7 @@ const OurServices = () => {
             </Typography>
             <Grid container sx={{ mt: 4 }} spacing={5}>
               {service_data?.ourServices?.services_data.map((val, i) => (
-                <Grid size={{ lg: 4, xs: 12 }} key={i}>
+                <Grid size={{ lg: 4, xs: 12, sm: 6 }} key={i}>
                   <OurServiceCard
                     service_name={val.service_name}
                     service_description={val.service_description}

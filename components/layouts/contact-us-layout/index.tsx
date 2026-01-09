@@ -6,7 +6,7 @@ import ContactForm from "./contact-form";
 
 const ContactUsLayout = () => {
   return (
-    <Box>
+    <Box sx={{ mt: 5 }}>
       <Container maxWidth="lg">
         <PageHeading page_name="Contact Us" />
       </Container>

@@ -80,7 +80,7 @@ const ServiceSection = () => {
       <SectionCard title="What we do" variant={VARIANTS.PRIMARY} />
       <Container maxWidth="lg">
         <Grid container spacing={5}>
-          <Grid size={{ lg: 5, xs: 12 }}>
+          <Grid size={{ lg: 5, xs: 12, sm: 5 }}>
             <Stack direction={"row"} alignItems={"center"} spacing={2}>
               <Typography
                 sx={{
@@ -118,7 +118,7 @@ const ServiceSection = () => {
                     color: "#000",
                     textTransform: "none",
                     fontFamily: kessel.style.fontFamily,
-                    fontSize: "18px",
+                    fontSize: { lg: "18px", sm: "14px" },
                     fontWeight: 400,
                     justifyContent: "space-between",
                     alignItems: "center",
@@ -181,7 +181,7 @@ const ServiceSection = () => {
               </Tabs>
             </Box>
           </Grid>
-          <Grid size={{ lg: 7, xs: 12 }}>
+          <Grid size={{ lg: 7, xs: 12, sm: 7 }}>
             {SERVICES_TAB.map((val, i) => (
               <TabPanel value={value} index={i} key={i}>
                 {servicesData.map((val, i) => (

@@ -58,18 +58,16 @@ const StarCard = ({
                   color: COLORS.WHITE,
                 }}
               >
-                {heading}
+                {heading} {boldHeading}
               </Typography>
-              <Typography
+              {/* <Typography
                 sx={{
                   fontSize: 35,
-                  fontWeight: 800,
+                  fontWeight: 400,
                   fontFamily: monument.style.fontFamily,
                   color: COLORS.WHITE,
                 }}
-              >
-                {boldHeading}
-              </Typography>
+              ></Typography> */}
             </Box>
           </Box>
         )}

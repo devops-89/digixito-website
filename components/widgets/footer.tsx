@@ -51,8 +51,8 @@ const Footer = () => {
               <Box
                 sx={{
                   backgroundColor: COLORS.BLACK,
-                  width: { lg: 500, xs: 300 },
-                  height: { lg: 500, xs: 300 },
+                  width: { lg: 500, xs: 300, sm: 400 },
+                  height: { lg: 500, xs: 300, sm: 400 },
                   borderRadius: "50%",
                   display: "flex",
                   alignItems: "center",
@@ -108,7 +108,7 @@ const Footer = () => {
                 borderRadius: "50px",
               }}
             >
-              <Stack direction={"row"} alignItems={"center"} spacing={2}>
+              {/* <Stack direction={"row"} alignItems={"center"} spacing={2}>
                 {TERMS_PAGE_LINKS.map((val, i) => (
                   <Typography
                     sx={{
@@ -125,7 +125,7 @@ const Footer = () => {
                     {val.label}
                   </Typography>
                 ))}
-              </Stack>
+              </Stack> */}
 
               <LinkList data={LINK_LIST_DATA} />
             </Box>

@@ -23,14 +23,15 @@ const SimpleHeroSection = () => {
       <Box
         sx={{
           backgroundImage: `url(${heroImage.src})`,
-          height: "80vh",
+          height: { lg: "90vh", sm: "60vh" },
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          py: 20,
+          pt: 10,
+          pb: 2,
         }}
       >
         <Container maxWidth="lg">

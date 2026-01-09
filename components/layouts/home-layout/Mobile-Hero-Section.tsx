@@ -16,10 +16,12 @@ const MobileHeroSection = () => {
           backgroundImage: `url(${backgroundImage.src})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "90vh",
+          height: { lg: "90vh", xs: "100%" },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          pt: 15,
+          pb: 2,
         }}
       >
         <Container maxWidth="lg">
@@ -41,7 +43,7 @@ const MobileHeroSection = () => {
                 lineHeight: "29px",
                 letterSpacing: "0.87px",
                 fontWeight: 700,
-                mt: 3,
+                mt: { lg: 3, xs: 10 },
               }}
             >
               Concept to
@@ -89,7 +91,7 @@ const MobileHeroSection = () => {
           <Box sx={{ mt: 6 }}>
             <Bannertext />
           </Box>
-          <Divider sx={{ borderColor: COLORS.WHITE, mt: 6 }} />
+          <Divider sx={{ borderColor: COLORS.WHITE, mt: { lg: 6, xs: 1 } }} />
         </Container>
       </Box>
     </div>

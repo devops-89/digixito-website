@@ -53,17 +53,17 @@ const ContactForm = () => {
             <Image src={star} width={30} alt="" />
           </Box>
           <Grid container spacing={10}>
-            <Grid size={{ lg: 6, xs: 12 }}>
+            <Grid size={{ lg: 6, xs: 12, sm: 12 }}>
               <Stack direction={"row"} alignItems={"center"} spacing={2}>
                 <ImageHeading
                   title="Contact us"
-                  sx={{ width: { lg: 400, xs: 380 }, px: 1 }}
+                  sx={{ width: { lg: 400, xs: 350 }, px: 1 }}
                 />
                 {/* <Image src={giffty} alt="" style={{ marginTop: -10,transform:"rotate(180deg)" }} /> */}
               </Stack>
               <Typography
                 sx={{
-                  fontSize: 23,
+                  fontSize: { lg: 23, xs: 20, sm: 20 },
                   fontFamily: kessel.style.fontFamily,
                   my: 2,
                 }}
@@ -85,12 +85,16 @@ const ContactForm = () => {
               <Divider sx={{ borderColor: COLORS.BLACK }} />
               <Typography
                 sx={{
-                  fontSize: 30,
+                  fontSize: { lg: 30, xs: 25, sm: 25 },
                   fontFamily: monument.style.fontFamily,
                   fontWeight: 400,
-                  lineHeight: "50px",
-                  letterSpacing: "-1.516px",
-                  my: 3,
+                  lineHeight: { lg: "50px", xs: "25px", sm: "25px" },
+                  // letterSpacing: {
+                  //   lg: "-px",
+                  //   xs: "-1.25px",
+                  //   sm: "-1.25px",
+                  // },
+                  my: { lg: 3, xs: 2, sm: 2 },
                   textAlign: { lg: "flex-start", xs: "center" },
                 }}
               >
@@ -122,7 +126,7 @@ const ContactForm = () => {
                 ))}
               </Stack>
             </Grid>
-            <Grid size={{ lg: 6, xs: 12 }}>
+            <Grid size={{ lg: 6, xs: 12, sm: 12 }}>
               <ContactMessageForm />
             </Grid>
           </Grid>

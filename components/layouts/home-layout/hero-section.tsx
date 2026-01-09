@@ -10,7 +10,7 @@ const HeroSection = () => {
 
   // console.log("hero section data", pageData);
   return (
-    <Box sx={{ py: 10 }}>
+    <Box sx={{ py: 5 }}>
       <Container maxWidth="lg">
         <Typography
           sx={{

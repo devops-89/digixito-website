@@ -60,7 +60,7 @@ const Navbar = () => {
         maxWidth="lg"
         sx={{
           position: showAbsoluteHeader ? "absolute" : "relative",
-          top: showAbsoluteHeader ? 40 : 10,
+          top: showAbsoluteHeader ? 20 : 10,
           left: showAbsoluteHeader ? "50%" : 0,
           transform: showAbsoluteHeader ? "translateX(-50%)" : "translateX(0)",
         }}

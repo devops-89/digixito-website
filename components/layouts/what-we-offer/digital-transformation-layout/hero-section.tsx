@@ -15,7 +15,6 @@ const HeroSection = () => {
     return null;
   }
 
-  // Split heading by "&" to maintain the visual style with bold emphasis
   const headingParts = heroData.heroSection.heading.split(" & ");
   const hasAmpersand = headingParts.length > 1;
   return (
@@ -24,10 +23,10 @@ const HeroSection = () => {
         <PageHeading page_name="What we offer" page_title={heroData.title} />
 
         <Grid container spacing={5} sx={{ mt: 3 }}>
-          <Grid size={{ lg: 6, xs: 12 }}>
+          <Grid size={{ lg: 6, xs: 12, sm: 6 }}>
             <Typography
               sx={{
-                fontSize: { lg: 50, xs: 30 },
+                fontSize: { lg: 50, xs: 20, sm: 20 },
                 fontFamily: monument.style.fontFamily,
                 fontWeight: 800,
                 mb: 3,
@@ -37,10 +36,10 @@ const HeroSection = () => {
             </Typography>
             <Typography
               sx={{
-                fontSize: 19,
+                fontSize: { lg: 19, xs: 15, sm: 15 },
                 fontWeight: 500,
                 fontFamily: kessel.style.fontFamily,
-                lineHeight: "35px",
+                lineHeight: { lg: "35px", xs: "25px", sm: "25px" },
                 whiteSpace: "pre-line",
               }}
             >
@@ -80,11 +79,11 @@ const HeroSection = () => {
               </Button>
             </Stack> */}
           </Grid>
-          <Grid size={{ lg: 6, xs: 12 }}>
+          <Grid size={{ lg: 6, xs: 12, sm: 6 }}>
             <Stack spacing={4}>
               <StarCard
                 backgroundImage={heroImage1.src}
-                height="250px"
+                height={{ lg: "250px", xs: "200px", sm: "200px" }}
                 heading="Enhance customer"
                 boldHeading="Experiences"
               />
@@ -93,7 +92,7 @@ const HeroSection = () => {
                 backgroundImage={heroImage2.src}
                 isStar={true}
                 iconPosition="bottom"
-                height="250px"
+                height={{ lg: "250px", xs: "200px", sm: "200px" }}
                 heading="Reduce human "
                 boldHeading="error"
               />

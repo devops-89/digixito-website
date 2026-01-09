@@ -40,7 +40,7 @@ const OurServiceCard = ({
         ></Box> */}
         <Typography
           sx={{
-            fontSize: 23,
+            fontSize: { lg: 23, xs: 16, sm: 20 },
             fontFamily: monument.style.fontFamily,
             color: COLORS.WHITE,
             fontWeight: 400,
@@ -51,7 +51,7 @@ const OurServiceCard = ({
         </Typography>
         <Typography
           sx={{
-            fontSize: 15,
+            fontSize: { lg: 15, xs: 16, sm: 16 },
             color: "#E6E6E6",
             fontFamily: kessel.style.fontFamily,
             fontWeight: 500,

@@ -18,7 +18,7 @@ const FaqSection = () => {
     >
       <Container maxWidth="lg">
         <Grid container spacing={2}>
-          <Grid size={{ lg: 6, xs: 12 }}>
+          <Grid size={{ lg: 6, xs: 12, sm: 6 }}>
             <Typography
               sx={{
                 fontSize: { lg: 38, xs: 30 },
@@ -82,7 +82,7 @@ const FaqSection = () => {
               </Button> */}
             </Stack>
           </Grid>
-          <Grid size={{ lg: 6, xs: 12 }}>
+          <Grid size={{ lg: 6, xs: 12, sm: 6 }}>
             <FaqQuestionCard data={FAQ_DATA} />
           </Grid>
         </Grid>

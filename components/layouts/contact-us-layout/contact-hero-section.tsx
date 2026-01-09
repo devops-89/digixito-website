@@ -6,21 +6,32 @@ import Image from "next/image";
 import { monument } from "@/utils/fonts";
 const ContactHeroSection = () => {
   const phone = useMediaQuery("(max-width:600px)");
+
+  const tablet = useMediaQuery("(max-width:1024px)");
   return (
     <Box>
       <Container maxWidth="lg">
         <Grid container alignItems={"center"} spacing={{ lg: 20, xs: 5 }}>
-          <Grid size={{ lg: 6, xs: 12 }} sx={{ order: { xs: 2, lg: 1 } }}>
+          <Grid
+            size={{ lg: 6, xs: 12, sm: 6 }}
+            sx={{ order: { xs: 2, lg: 1 } }}
+          >
             <Image
               src={hero_image}
               alt=""
-              style={{ width: phone ? "100%" : "" }}
+              style={{
+                width: phone ? "100%" : tablet ? "350px" : "",
+                height: "auto",
+              }}
             />
           </Grid>
-          <Grid size={{ lg: 6, xs: 12 }} sx={{ order: { xs: 1, lg: 2 } }}>
+          <Grid
+            size={{ lg: 6, xs: 12, sm: 6 }}
+            sx={{ order: { xs: 1, lg: 2 } }}
+          >
             <Typography
               sx={{
-                fontSize: { lg: 50, xs: 35 },
+                fontSize: { lg: 50, xs: 30, sm: 40 },
                 textTransform: "capitalize",
                 fontFamily: monument.style.fontFamily,
                 fontWeight: 400,
@@ -30,7 +41,7 @@ const ContactHeroSection = () => {
             </Typography>
             <Typography
               sx={{
-                fontSize: { lg: 23, xs: 19 },
+                fontSize: { lg: 23, xs: 19, sm: 20 },
                 fontWeight: 500,
                 letterSpacing: "-0.48px",
                 lineHeight: "30px",

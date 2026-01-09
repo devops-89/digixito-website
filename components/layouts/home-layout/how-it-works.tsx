@@ -41,7 +41,7 @@ const HowitWorks = () => {
         <Container maxWidth="lg">
           <Image src={star} alt="" className="rotator spin" />
           <Stack
-            direction={{ lg: "row", xs: "column" }}
+            direction={{ lg: "row", xs: "column", sm: "row" }}
             alignItems={{ lg: "center", xs: "flex-start" }}
             spacing={2}
             justifyContent={{ lg: "center", xs: "flex-start" }}
@@ -74,7 +74,7 @@ const HowitWorks = () => {
           <Grid container sx={{ mt: 3 }} spacing={3}>
             {WORK_CARD_DATA.map((val, i) => (
               <Grid
-                size={{ lg: 6, xs: 12 }}
+                size={{ lg: 6, xs: 12, sm: 6 }}
                 key={i}
                 data-aos="fade-up"
                 data-aos-delay={i * 100}

@@ -71,7 +71,7 @@ const SubFooter = () => {
             size={{ lg: 6, xs: 12 }}
             sx={{
               textAlign: "center",
-              borderLeft: { lg: "1px solid #000", xs: "none" },
+              borderLeft: { lg: "none", xs: "none" },
               px: 7,
             }}
           >
