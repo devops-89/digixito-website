@@ -7,9 +7,11 @@ export const HEADER_TABS = [
   },
   {
     label: HEADER_TABS_DATA.WHAT_WE_ARE,
+    url: "/about-us",
   },
   {
     label: HEADER_TABS_DATA.CAREERS,
+    url: "/careers/life-at-digixito",
   },
 ];
 
@@ -232,35 +234,35 @@ export const HEADER_LINKS = {
   what_we_are: [
     {
       heading: "Our organization",
-      data: [
-        {
-          label: "About Us",
-          url: "/about-us",
-        },
-        {
-          label: "Our team",
-          url: "/our-team",
-        },
-        {
-          label: "AI Ethics & Innovation",
-          url: "/ai-ethics-innovation",
-        },
-      ],
+      // data: [
+      //   {
+      //     label: "About Us",
+      //     url: "/about-us",
+      //   },
+      //   {
+      //     label: "Our team",
+      //     url: "/our-team",
+      //   },
+      //   {
+      //     label: "AI Ethics & Innovation",
+      //     url: "/ai-ethics-innovation",
+      //   },
+      // ],
     },
   ],
   CAREERS: [
     {
       heading: "Join the Future with Digixito",
-      data: [
-        {
-          label: "Career areas",
-          url: "/our-team",
-        },
-        {
-          label: "Life at Digixito",
-          url: "/careers/life-at-digixito",
-        },
-      ],
+      // data: [
+      //   {
+      //     label: "Career areas",
+      //     url: "/our-team",
+      //   },
+      //   {
+      //     label: "Life at Digixito",
+      //     url: "/careers/life-at-digixito",
+      //   },
+      // ],
     },
   ],
 };

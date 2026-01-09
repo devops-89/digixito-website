@@ -38,8 +38,8 @@ const MobileHeader = ({ setAnchorEl }: HeaderTabsProps) => {
   const getSubMenuData = (label: string): HEADER_LIST_PROPS[] => {
     if (label === HEADER_TABS_DATA.WHAT_WE_OFFER)
       return HEADER_LINKS.what_we_offer;
-    if (label === HEADER_TABS_DATA.WHAT_WE_ARE) return [];
-    if (label === HEADER_TABS_DATA.CAREERS) return [];
+    // if (label === HEADER_TABS_DATA.WHAT_WE_ARE) return [];
+    // if (label === HEADER_TABS_DATA.CAREERS) return [];
     return [];
   };
 
@@ -52,9 +52,9 @@ const MobileHeader = ({ setAnchorEl }: HeaderTabsProps) => {
         alignItems={"center"}
         spacing={2}
         justifyContent={"space-between"}
-        sx={{ mt: 3, mb: 2 }}
+        sx={{ mt: 0, mb: 2 }}
       >
-        <Image src={blackLogo} alt="logo" width={60} />
+        <Image src={blackLogo} alt="logo" width={50} />
         <IconButton onClick={() => setAnchorEl(null)}>
           <Close />
         </IconButton>
