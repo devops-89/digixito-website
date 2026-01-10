@@ -74,7 +74,7 @@ const Navbar = () => {
             <Image
               src={showAbsoluteHeader ? logo : blackOutlineLogo}
               alt=""
-              width={80}
+              width={70}
             />
           </Link>
           <IconButton

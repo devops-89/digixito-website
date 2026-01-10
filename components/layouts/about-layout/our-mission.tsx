@@ -15,11 +15,11 @@ const OurMission = () => {
           alignItems={"center"}
         >
           <Grid size={{ lg: 5, xs: 12 }}>
-            {/* <StarCard
+            <StarCard
               iconPosition="top"
               backgroundImage={mission.src}
               height={"80vh"}
-            /> */}
+            />
           </Grid>
           <Grid size={{ lg: 7, xs: 12 }}>
             <Typography

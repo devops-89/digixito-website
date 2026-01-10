@@ -23,6 +23,7 @@ import { HEADER_LIST_PROPS } from "@/utils/types";
 import Link from "next/link";
 import Image from "next/image";
 import blackLogo from "@/logo/Digixito_black_outline.svg";
+import HeaderTabs from "./common/header-tabs";
 
 interface HeaderTabsProps {
   setAnchorEl: Dispatch<SetStateAction<HTMLButtonElement | null>>;
@@ -45,7 +46,14 @@ const MobileHeader = ({ setAnchorEl }: HeaderTabsProps) => {
 
   return (
     <Box
-      sx={{ mt: 2, position: "relative", height: "100%", overflowY: "auto" }}
+      sx={{
+        mt: 2,
+        position: "relative",
+        height: "100vh",
+        overflowY: "hidden",
+        display: "flex",
+        flexDirection: "column",
+      }}
     >
       <Stack
         direction="row"
@@ -59,7 +67,8 @@ const MobileHeader = ({ setAnchorEl }: HeaderTabsProps) => {
           <Close />
         </IconButton>
       </Stack>
-      <Stack spacing={1}>
+      {/* Submenu */}
+      {/* <Stack sx={{ flex: 1, overflowY: "auto" }}>
         {HEADER_TABS.map((val: any, i) => {
           const subMenuData = getSubMenuData(val.label);
           const hasSubMenu = subMenuData && subMenuData.length > 0;
@@ -179,6 +188,61 @@ const MobileHeader = ({ setAnchorEl }: HeaderTabsProps) => {
             </Box>
           );
         })}
+      </Stack> */}
+
+      <Stack sx={{ flexGrow: 1, overflowY: "auto" }}>
+        {HEADER_LINKS.what_we_offer.map((section, idx) => (
+          <Box key={idx} sx={{ mb: 2 }}>
+            {section.heading && (
+              <Typography
+                sx={{
+                  color: COLORS.GRAY,
+                  fontSize: 14,
+                  fontWeight: 700,
+                  fontFamily: kessel.style.fontFamily,
+                  mb: 1,
+                  mt: 1,
+                  textTransform: "uppercase",
+                }}
+              >
+                {section.heading}
+              </Typography>
+            )}
+            <List disablePadding>
+              {section.data.map((item, j) => (
+                <Link
+                  href={item.url || "#"}
+                  key={j}
+                  onClick={() => setAnchorEl(null)}
+                  style={{
+                    textDecoration: "none",
+                    display: "block",
+                  }}
+                >
+                  <ListItemButton
+                    sx={{
+                      borderRadius: "8px",
+                      py: 0.5,
+                      px: 0,
+                    }}
+                  >
+                    <ListItemText
+                      primary={item.label}
+                      slotProps={{
+                        primary: {
+                          fontSize: 16,
+                          fontFamily: kessel.style.fontFamily,
+                          color: COLORS.BLACK,
+                          fontWeight: 500,
+                        },
+                      }}
+                    />
+                  </ListItemButton>
+                </Link>
+              ))}
+            </List>
+          </Box>
+        ))}
       </Stack>
     </Box>
   );

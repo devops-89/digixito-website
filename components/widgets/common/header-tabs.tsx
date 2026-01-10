@@ -19,6 +19,8 @@ import { ArrowBackIos, Close } from "@mui/icons-material";
 import { useRouter } from "next/navigation";
 import logo from "@/logo/Digixito_black_outline.svg";
 import Image from "next/image";
+import employ from "@/logo/employ_virtual.svg";
+import ecomguru from "@/logo/eComGuru.svg";
 interface HeaderTabsProps {
   setAnchorEl: Dispatch<SetStateAction<HTMLButtonElement | null>>;
   setMenuOpen?: Dispatch<SetStateAction<boolean>>;

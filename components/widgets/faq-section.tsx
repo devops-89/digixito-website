@@ -4,6 +4,7 @@ import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import FaqQuestionCard from "./common/faq-question-card";
 import { FAQ_DATA } from "@/assets/data/generic-array";
+import Link from "next/link";
 
 const FaqSection = () => {
   return (
@@ -45,24 +46,26 @@ const FaqSection = () => {
               spacing={4}
               sx={{ mt: 5 }}
             >
-              <Button
-                sx={{
-                  fontFamily: archivo.style.fontFamily,
-                  borderRadius: "50px",
-                  border: "1px solid #010205",
-                  padding: "17px",
-                  width: "176px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontWeight: 700,
-                  textTransform: "capitalize",
-                  fontSize: 16,
-                  color: COLORS.BLACK,
-                }}
-              >
-                Contact Us
-              </Button>
+              <Link href="/contact-us" style={{ textDecoration: "none" }}>
+                <Button
+                  sx={{
+                    fontFamily: archivo.style.fontFamily,
+                    borderRadius: "50px",
+                    border: "1px solid #010205",
+                    padding: "17px",
+                    width: "176px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontWeight: 700,
+                    textTransform: "capitalize",
+                    fontSize: 16,
+                    color: COLORS.BLACK,
+                  }}
+                >
+                  Contact Us
+                </Button>
+              </Link>
               {/* <Button
                 sx={{
                   fontFamily: archivo.style.fontFamily,

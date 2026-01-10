@@ -95,7 +95,7 @@ const ContactForm = () => {
                   //   sm: "-1.25px",
                   // },
                   my: { lg: 3, xs: 2, sm: 2 },
-                  textAlign: { lg: "flex-start", xs: "center" },
+                  textAlign: { lg: "start", xs: "center" },
                 }}
               >
                 Follow Us

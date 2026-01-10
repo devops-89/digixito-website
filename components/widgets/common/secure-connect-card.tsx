@@ -20,7 +20,7 @@ const SecureConnectCard = ({
       <Box
         sx={{
           backgroundImage: `url(${backgroundImage})`,
-          height: {lg:"80vh",xs:"50vh"},
+          height: { lg: "80vh", xs: "50vh" },
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -59,7 +59,7 @@ const SecureConnectCard = ({
               >
                 {description}
               </Typography>
-              {isButton && (
+              {/* {isButton && (
                 <Button
                   startIcon={<Shield />}
                   sx={{
@@ -77,7 +77,7 @@ const SecureConnectCard = ({
                 >
                   {button}
                 </Button>
-              )}
+              )} */}
             </Grid>
           </Grid>
         </Container>

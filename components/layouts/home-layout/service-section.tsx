@@ -163,7 +163,6 @@ const ServiceSection = () => {
                         iconPosition="top"
                         heading={val.starCardData.normalHeading}
                         boldHeading={val.starCardData.boldHeading}
-                        height="100%"
                       />
                     </Grid>
                     <Grid size={{ lg: 6, xs: 12 }}>

@@ -19,6 +19,7 @@ import Bannertext from "./banner-text";
 import star from "@/icons/white-star.png";
 import scroll from "@/homepage/mouse.svg";
 import Link from "next/link";
+import DecryptedText from "@/components/widgets/Decrypted-Text";
 const SimpleHeroSection = () => {
   const phone = useMediaQuery("(max-width:600px)");
   return (
@@ -142,6 +143,19 @@ const SimpleHeroSection = () => {
             >
               Concept to Conquest.
             </Typography>
+            {/* <DecryptedText
+              text="Concept to Conquest."
+              speed={50}
+              maxIterations={10}
+              sequential={false}
+              revealDirection="start"
+              useOriginalCharsOnly={false}
+              characters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+"
+              className=""
+              parentClassName=""
+              encryptedClassName=""
+              animateOn="hover"
+            /> */}
             <Typography
               sx={{
                 fontSize: { lg: 35, xs: 20 },

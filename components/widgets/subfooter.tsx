@@ -23,8 +23,8 @@ const SubFooter = () => {
       sx={{
         backgroundColor: COLORS.PRIMARY,
         position: "relative",
-        height: { lg: "40vh", xs: "100%" },
-        py: 10,
+        height: { lg: "60vh", xs: "60vh" },
+
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -46,15 +46,17 @@ const SubFooter = () => {
           sx={{
             textAlign: "center",
             mt: 4,
+
             fontSize: { lg: 25, xs: 16, sm: 20 },
             fontFamily: monument.style.fontFamily,
           }}
         >
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.{" "}
+          We would love to hear from you and discuss how we can help bring your
+          digital ideas to life. Here are the different ways you can get in
+          touch with us.
         </Typography>
 
-        <Grid container sx={{ mt: 4 }} spacing={phone ? 2 : tablet ? 1 : 6}>
+        {/* <Grid container sx={{ mt: 6 }} spacing={phone ? 2 : tablet ? 1 : 6}>
           <Grid
             size={{ lg: 6, xs: 12, sm: 6 }}
             sx={{
@@ -65,7 +67,7 @@ const SubFooter = () => {
             <Image
               src={employLogo}
               alt="employee logo"
-              height={phone ? 30 : tablet ? 40 : 80}
+              height={phone ? 30 : tablet ? 40 : 50}
             />
           </Grid>
           <Grid
@@ -79,10 +81,10 @@ const SubFooter = () => {
             <Image
               src={ecomLogo}
               alt="employee logo"
-              height={phone ? 30 : tablet ? 40 : 80}
+              height={phone ? 30 : tablet ? 40 : 50}
             />
           </Grid>
-        </Grid>
+        </Grid> */}
 
         {/* <Typography
           sx={{
@@ -99,7 +101,8 @@ const SubFooter = () => {
           digital ideas to life. Here are the different ways you can get in
           touch with us.
         </Typography> */}
-        {/* <Box
+        <Box sx={{ mt: { lg: 20, xs: 20 } }}></Box>
+        <Box
           sx={{
             position: "absolute",
             bottom: 0,
@@ -107,8 +110,8 @@ const SubFooter = () => {
             transform: "translateX(-50%)",
           }}
         >
-          <Image src={logo} alt="" />
-        </Box> */}
+          <Image src={logo} alt="" style={{ width: phone ? 200 : 400 }} />
+        </Box>
       </Container>
     </Box>
   );
