@@ -18,7 +18,7 @@ import {
 } from "@mui/icons-material";
 import { HEADER_LINKS, HEADER_TABS } from "@/assets/data/header-data";
 import { COLORS, HEADER_TABS_DATA } from "@/utils/enum";
-import { kessel } from "@/utils/fonts";
+import { archivo, kessel } from "@/utils/fonts";
 import { HEADER_LIST_PROPS } from "@/utils/types";
 import Link from "next/link";
 import Image from "next/image";
@@ -194,19 +194,21 @@ const MobileHeader = ({ setAnchorEl }: HeaderTabsProps) => {
         {HEADER_LINKS.what_we_offer.map((section, idx) => (
           <Box key={idx} sx={{ mb: 2 }}>
             {section.heading && (
-              <Typography
-                sx={{
-                  color: COLORS.GRAY,
-                  fontSize: 14,
-                  fontWeight: 700,
-                  fontFamily: kessel.style.fontFamily,
-                  mb: 1,
-                  mt: 1,
-                  textTransform: "uppercase",
-                }}
-              >
-                {section.heading}
-              </Typography>
+              <Link href={section.url || "#"} onClick={() => setAnchorEl(null)}>
+                <Typography
+                  sx={{
+                    color: COLORS.BLACK,
+                    fontSize: 16,
+                    fontWeight: 900,
+                    fontFamily: archivo.style.fontFamily,
+                    mb: 1,
+                    mt: 1,
+                    textTransform: "uppercase",
+                  }}
+                >
+                  {section.heading}
+                </Typography>
+              </Link>
             )}
             <List disablePadding>
               {section.data.map((item, j) => (
@@ -230,7 +232,7 @@ const MobileHeader = ({ setAnchorEl }: HeaderTabsProps) => {
                       primary={item.label}
                       slotProps={{
                         primary: {
-                          fontSize: 16,
+                          fontSize: 14,
                           fontFamily: kessel.style.fontFamily,
                           color: COLORS.BLACK,
                           fontWeight: 500,

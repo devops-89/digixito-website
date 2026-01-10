@@ -19,6 +19,7 @@ export const HEADER_LINKS = {
   what_we_offer: [
     {
       heading: "AI Transformation",
+      url: "/ai-transformation",
       data: [
         {
           label: "Machine Learning & Predictive Models",
@@ -103,6 +104,7 @@ export const HEADER_LINKS = {
     },
     {
       heading: "Business Transformation",
+      url: "/business-transformation",
       data: [
         {
           label: "Creative Transformation",
@@ -165,6 +167,7 @@ export const HEADER_LINKS = {
     },
     {
       heading: "Product Engineering",
+      url: "/product-engineering",
       data: [
         {
           label: "Application & SaaS Development",
@@ -186,6 +189,7 @@ export const HEADER_LINKS = {
     },
     {
       heading: "AI in Marketing & Growth",
+      url: "/ai-marketing-growth",
       data: [
         {
           label: "AI-Driven Digital Marketing",
@@ -211,6 +215,7 @@ export const HEADER_LINKS = {
     },
     {
       heading: "Design Intelligence",
+      url: "/design-intelligence",
       data: [
         {
           label: "AI-Powered UI/UX Design",
