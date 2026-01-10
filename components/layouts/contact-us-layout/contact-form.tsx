@@ -22,19 +22,24 @@ import combit from "@/banners/Bitmap.png";
 import star from "@/icons/gold-star.svg";
 import giffty from "@/icons/heading-star.png";
 import ContactMessageForm from "./components/form";
+import Link from "next/link";
 const ContactForm = () => {
   const socialIcons = [
     {
       img: linkedin,
+      url: "https://www.linkedin.com/company/digixito/",
     },
     {
       img: fb,
+      url: "https://www.facebook.com/Digixitomedia",
     },
     {
       img: x,
+      url: "https://x.com/digixito",
     },
     {
       img: instagram,
+      url: "https://www.instagram.com/digixito/",
     },
   ];
   return (
@@ -107,22 +112,23 @@ const ContactForm = () => {
                 spacing={2}
               >
                 {socialIcons.map((val, i) => (
-                  <IconButton
-                    key={i}
-                    sx={{
-                      backgroundColor: COLORS.BLACK,
-                      width: 40,
-                      height: 40,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      ":hover": {
+                  <Link href={val.url} key={i}>
+                    <IconButton
+                      sx={{
                         backgroundColor: COLORS.BLACK,
-                      },
-                    }}
-                  >
-                    <Image src={val.img} alt="" width={20} />
-                  </IconButton>
+                        width: 40,
+                        height: 40,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        ":hover": {
+                          backgroundColor: COLORS.BLACK,
+                        },
+                      }}
+                    >
+                      <Image src={val.img} alt="" width={20} />
+                    </IconButton>
+                  </Link>
                 ))}
               </Stack>
             </Grid>
