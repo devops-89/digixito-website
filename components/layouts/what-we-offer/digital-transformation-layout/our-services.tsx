@@ -66,12 +66,15 @@ const OurServices = () => {
                     color: COLORS.WHITE,
                   }}
                 >
-                  Our
+                  Our {service_data?.ourServices?.heading}
                 </Typography>
-                <ImageHeading
+                {/* <ImageHeading
                   title={service_data?.ourServices?.heading}
-                  sx={{ width: { lg: "100%", xs: "100%", sm: "100%" } }}
-                />
+                  sx={{
+                    width: { lg: "100%", xs: "350", sm: "100%" },
+                    fontSize: { lg: 40, xs: 14, sm: 20 },
+                  }}
+                /> */}
               </Stack>
             </Stack>
 

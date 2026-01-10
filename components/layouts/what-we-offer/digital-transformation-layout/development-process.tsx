@@ -45,22 +45,32 @@ const DevelopmentProcess = () => {
             >
               <Typography
                 sx={{
+                  fontSize: { lg: 40, xs: 20, sm: 25 },
+                  fontFamily: monument.style.fontFamily,
+                  fontWeight: 400,
+                  textAlign: "center",
+                }}
+              >
+                Our Development Process
+              </Typography>
+              {/* <Typography
+                sx={{
                   fontSize: { lg: 40, xs: 16, sm: 25 },
                   fontFamily: monument.style.fontFamily,
                   fontWeight: 400,
                 }}
               >
-                Our
-              </Typography>
-              <ImageHeading
+                Development
+              </Typography> */}
+              {/* <ImageHeading
                 title="Development"
                 sx={{
                   width: "100%",
                   px: 1,
                   fontSize: { xs: 16, sm: 25, lg: 40 },
                 }}
-              />
-              <Typography
+              /> */}
+              {/* <Typography
                 sx={{
                   fontSize: { lg: 40, xs: 16, sm: 25 },
                   fontFamily: monument.style.fontFamily,
@@ -69,7 +79,7 @@ const DevelopmentProcess = () => {
                 }}
               >
                 Process
-              </Typography>
+              </Typography> */}
             </Stack>
             <Image src={star} alt="" width={40} />
           </Stack>
