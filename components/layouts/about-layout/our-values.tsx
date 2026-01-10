@@ -84,7 +84,7 @@ const Ourvalues = () => {
                       </Typography>
                       <ImageHeading title="values" sx={{ px: 1 }} />
                     </Stack>
-                    <Button
+                    {/* <Button
                       sx={{
                         backgroundColor: COLORS.PRIMARY,
                         color: COLORS.BLACK,
@@ -97,7 +97,7 @@ const Ourvalues = () => {
                       }}
                     >
                       Join our team
-                    </Button>
+                    </Button> */}
                   </Stack>
                 </Grid>
               </Grid>
