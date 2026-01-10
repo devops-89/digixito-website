@@ -23,6 +23,7 @@ import star from "@/icons/gold-star.svg";
 import giffty from "@/icons/heading-star.png";
 import ContactMessageForm from "./components/form";
 import Link from "next/link";
+
 const ContactForm = () => {
   const socialIcons = [
     {
