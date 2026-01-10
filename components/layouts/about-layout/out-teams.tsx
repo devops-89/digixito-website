@@ -55,7 +55,7 @@ const OurTeams = () => {
                   of something meaningful, we’d love to hear from you.
                 </Typography>
 
-                <Button
+                {/* <Button
                   sx={{
                     backgroundColor: COLORS.PRIMARY,
                     borderRadius: "14px",
@@ -67,7 +67,7 @@ const OurTeams = () => {
                   }}
                 >
                   Join our team
-                </Button>
+                </Button> */}
               </Box>
             </Grid>
           </Grid>

@@ -12,7 +12,7 @@ import star from "@/icons/black-star.svg";
 import Image from "next/image";
 import { COLORS } from "@/utils/enum";
 import ImageHeading from "@/components/widgets/image-heading";
-import hero_img from "@/about-us/about-hero.jpeg";
+import hero_img from "@/about-us/about-hero-updated.jpg";
 import PageHeading from "@/components/widgets/page-heading";
 const AboutHeroSection = () => {
   return (

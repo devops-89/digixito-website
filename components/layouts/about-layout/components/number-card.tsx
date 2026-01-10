@@ -24,7 +24,7 @@ const NumberCard = ({ number, suffix, title }: COUNT_UP_CARD_PROPS) => {
           textAlign: "center",
         }}
       >
-        {mounted ? (
+        {/* {mounted ? (
           <CountUp
             end={number}
             start={0}
@@ -44,7 +44,9 @@ const NumberCard = ({ number, suffix, title }: COUNT_UP_CARD_PROPS) => {
             {number}
             <span style={{ color: COLORS.PRIMARY }}>{suffix}</span>
           </>
-        )}
+        )} */}
+        {number}
+        <span style={{ color: COLORS.PRIMARY }}>{suffix}</span>
       </Typography>
       <Typography
         sx={{
