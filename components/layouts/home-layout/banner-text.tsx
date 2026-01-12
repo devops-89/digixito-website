@@ -38,6 +38,7 @@ const Bannertext = () => {
           justifyContent={{ lg: "center", xs: "center" }}
           spacing={{ lg: 5, xs: 2 }}
           sx={{ ml: { lg: 8, xs: 0 } }}
+          dat-aos="fade-up"
         >
           {pageData?.heroSection?.bannerText?.map(
             (val: { heading: string }, i: number) => (

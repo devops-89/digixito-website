@@ -1,5 +1,6 @@
-import { useEffect, useState, useRef, ReactNode } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion, HTMLMotionProps } from "motion/react";
+import { Typography, TypographyProps } from "@mui/material";
 
 const styles = {
   wrapper: {
@@ -18,7 +19,13 @@ const styles = {
   },
 };
 
-interface DecryptedTextProps extends HTMLMotionProps<"span"> {
+const MotionTypography = motion(Typography);
+
+interface DecryptedTextProps
+  extends Omit<
+    TypographyProps,
+    "children" | "onAnimationStart" | "onDragStart" | "onDragEnd" | "onDrag"
+  > {
   text: string;
   speed?: number;
   maxIterations?: number;
@@ -30,9 +37,10 @@ interface DecryptedTextProps extends HTMLMotionProps<"span"> {
   parentClassName?: string;
   encryptedClassName?: string;
   animateOn?: "view" | "hover" | "both";
+  motionProps?: HTMLMotionProps<"div">;
 }
 
-export default function DecryptedText({
+export const DecryptedText = ({
   text,
   speed = 50,
   maxIterations = 10,
@@ -43,9 +51,10 @@ export default function DecryptedText({
   className = "",
   parentClassName = "",
   encryptedClassName = "",
-  animateOn = "hover",
+  animateOn = "view",
+  motionProps,
   ...props
-}: DecryptedTextProps) {
+}: DecryptedTextProps) => {
   const [displayText, setDisplayText] = useState<string>(text);
   const [isHovering, setIsHovering] = useState<boolean>(false);
   const [isScrambling, setIsScrambling] = useState<boolean>(false);
@@ -53,7 +62,7 @@ export default function DecryptedText({
     new Set()
   );
   const [hasAnimated, setHasAnimated] = useState<boolean>(false);
-  const containerRef = useRef<HTMLSpanElement>(null);
+  const containerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     let interval: ReturnType<typeof setInterval>;
@@ -231,11 +240,12 @@ export default function DecryptedText({
       : {};
 
   return (
-    <motion.span
+    <MotionTypography
       className={parentClassName}
       ref={containerRef}
       style={styles.wrapper}
       {...hoverProps}
+      {...motionProps}
       {...props}
     >
       <span style={styles.srOnly}>{displayText}</span>
@@ -255,6 +265,6 @@ export default function DecryptedText({
           );
         })}
       </span>
-    </motion.span>
+    </MotionTypography>
   );
-}
+};

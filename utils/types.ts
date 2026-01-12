@@ -17,6 +17,8 @@ export interface ARROW_CARD_PROPS {
   iconBgColor: string;
   iconColor: string;
   secondTitle: string;
+  height?: string | number | { [key: string]: string | number };
+  sx?: any;
 }
 
 export interface SECTION_CARD_PROPS {

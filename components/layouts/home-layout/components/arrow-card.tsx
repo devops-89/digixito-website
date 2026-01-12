@@ -11,18 +11,21 @@ const ArrowCard = ({
   iconColor,
   title,
   secondTitle,
+  height,
+  sx,
 }: ARROW_CARD_PROPS) => {
   return (
     <Box
       sx={{
         backgroundColor: backgroundColor,
-        height: "170px",
+        height: height || "100%",
         borderRadius: 4,
         padding: "32px",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
+        ...sx,
       }}
       data-aos="fade-up"
     >

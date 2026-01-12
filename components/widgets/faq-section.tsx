@@ -37,7 +37,7 @@ const FaqSection = () => {
               }}
             >
               Still you have any questions? Contact our Team via
-              hello@digixito.com
+              info@digixito.com
             </Typography>
             <Stack
               direction={"row"}

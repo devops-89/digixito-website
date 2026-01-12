@@ -163,6 +163,7 @@ const ServiceSection = () => {
                         iconPosition="top"
                         heading={val.starCardData.normalHeading}
                         boldHeading={val.starCardData.boldHeading}
+                        height={{ lg: "60vh", xs: "40vh" }}
                       />
                     </Grid>
                     <Grid size={{ lg: 6, xs: 12 }}>
@@ -176,6 +177,7 @@ const ServiceSection = () => {
                             iconBgColor={val.iconBgColor}
                             iconColor={val.iconColor}
                             key={i}
+                            // sx={{ flex: 1, width: "100%" }}
                           />
                         ))}
                       </Stack>
