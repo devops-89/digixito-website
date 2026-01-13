@@ -577,7 +577,7 @@ Our vision models bring structure to unstructured data — reading, identifying,
     description: `At Digixito, we empower organizations to manage data as a strategic asset.
 Our Data Engineering and MLOps solutions help teams unify data sources, ensure quality, and automate model operations at scale.
 We focus on building the foundation for AI success — enabling faster experimentation, cleaner data, and seamless deployment of production-ready ML models across any infrastructure.`,
-    url: "/ai-transformation/data-engineering-and-mlops",
+    url: "/ai-transformation/data-engineering-mlops",
   },
 ];
 
