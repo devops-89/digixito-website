@@ -1,8 +1,9 @@
 "use client";
 import { COLORS } from "@/utils/enum";
-import { kessel, monument } from "@/utils/fonts";
+import { archivo, kessel, monument } from "@/utils/fonts";
 import {
   Box,
+  Button,
   Container,
   Divider,
   Grid,
@@ -15,6 +16,7 @@ import logo from "@/logo/Digixito_Logo.svg";
 import Image from "next/image";
 import employLogo from "@/logo/employ_virtual.svg";
 import ecomLogo from "@/logo/eComGuru.svg";
+import Link from "next/link";
 const SubFooter = () => {
   const phone = useMediaQuery("(max-width:600px)");
   const tablet = useMediaQuery("(max-width:1024px)");
@@ -38,6 +40,7 @@ const SubFooter = () => {
             fontWeight: 400,
             textAlign: "center",
           }}
+          data-aos="fade-up"
         >
           Thank you for your Interest in Digixito.
         </Typography>
@@ -50,11 +53,30 @@ const SubFooter = () => {
             fontSize: { lg: 25, xs: 16, sm: 20 },
             fontFamily: monument.style.fontFamily,
           }}
+          data-aos="fade-up"
+          data-aos-delay="100"
         >
-          We would love to hear from you and discuss how we can help bring your
-          digital ideas to life. Here are the different ways you can get in
-          touch with us.
+          Ready to turn your vision into victory? Let’s collaborate and engineer
+          your digital dominance from concept to conquest.
         </Typography>
+        <Box sx={{ textAlign: "center" }}>
+          <Link href="/contact-us">
+            <Button
+              sx={{
+                mt: 4,
+                fontFamily: archivo.style.fontFamily,
+                color: COLORS.BLACK,
+                borderRadius: "50px",
+                border: "1px solid" + COLORS.BLACK,
+                padding: "12px 24px",
+                fontWeight: 700,
+                fontSize: 16,
+              }}
+            >
+              Contact Us
+            </Button>
+          </Link>
+        </Box>
 
         {/* <Grid container sx={{ mt: 6 }} spacing={phone ? 2 : tablet ? 1 : 6}>
           <Grid
@@ -109,6 +131,7 @@ const SubFooter = () => {
             left: "50%",
             transform: "translateX(-50%)",
           }}
+          // data-aos="fade-up"
         >
           <Image src={logo} alt="" style={{ width: phone ? 200 : 400 }} />
         </Box>

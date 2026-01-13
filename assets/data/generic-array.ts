@@ -25,7 +25,24 @@ import fish from "@/banners/fish.png";
 import location from "@/contact-us/carbon_location.svg";
 import phone from "@/contact-us/sharp-phone.svg";
 import email from "@/contact-us/email.svg";
-import { title } from "node:process";
+import machineLearning from "@/icons/Ai-transformation/machine-learning.png";
+import generativeAi from "@/icons/Ai-transformation/creative.png";
+import computerVision from "@/icons/Ai-transformation/computer-vision.png";
+import dataEngineering from "@/icons/Ai-transformation/data-science.png";
+import creativeTransformation from "@/icons/Business-Transformation/Creative-Transformation.png";
+import brandStrategy from "@/icons/Business-Transformation/brand-strategy.png";
+import creativeCampaign from "@/icons/Business-Transformation/creative.png";
+import press from "@/icons/Business-Transformation/Press-ads.png";
+import digitalTransformation from "@/icons/Business-Transformation/digital-transformation.png";
+import paidSearch from "@/icons/Business-Transformation/Paid-Search.png";
+import naturalSearch from "@/icons/Business-Transformation/Natural-Search.png";
+import performanceDisplay from "@/icons/Business-Transformation/Performance-Display.png";
+import socialMedia from "@/icons/Business-Transformation/Social-Media-Marketing.png";
+import marketplaceManagement from "@/icons/Business-Transformation/Marketplace-Management.png";
+import catalogManagement from "@/icons/Business-Transformation/Catalog-Management.png";
+import partnervalued from "@/icons/Business-Transformation/Partner-Value.png";
+import salesBoost from "@/icons/Business-Transformation/sales-boost.png";
+import inventorymanagement from "@/icons/Business-Transformation/Inventory-Management.png";
 export const SERVICES_TAB = [
   {
     label: "AI Transformation",
@@ -552,6 +569,7 @@ export const SERVICES_TAB_DATA = {
 
 export const AI_TRANSFORMATION_DATA = [
   {
+    img: machineLearning,
     title: "Machine Learning & Predictive Models",
     description: `At Digixito, we combine the power of machine learning with predictive analytics to build solutions that scale.
 From real-time insights to intelligent automation, our models learn from your data to uncover patterns, forecast outcomes, and enhance performance across your operations.
@@ -559,6 +577,7 @@ We help businesses use AI responsibly — transforming complex datasets into act
     url: "/ai-transformation/machine-learning-and-predictive-models",
   },
   {
+    img: generativeAi,
     title: "Generative AI",
     description: `At Digixito, we harness the potential of Generative AI to bring automation, personalization, and creativity together.
 Our solutions use advanced LLMs and transformer-based architectures to deliver natural conversations, intelligent workflows, and human-like content generation — all tailored to your brand voice.
@@ -566,6 +585,7 @@ From customer engagement to document processing, we design AI systems that not o
     url: "/ai-transformation/generative-ai",
   },
   {
+    img: computerVision,
     title: "Computer Vision & OCR Systems",
     description: `At Digixito, we help businesses unlock the power of computer vision and document intelligence to transform how they process visuals and data.
 From object detection and face recognition to real-time image classification and automated document extraction, our solutions combine AI precision with operational speed.
@@ -573,6 +593,7 @@ Our vision models bring structure to unstructured data — reading, identifying,
     url: "/ai-transformation/computer-vision-and-ocr-systems",
   },
   {
+    img: dataEngineering,
     title: "Data Engineering & MLOps",
     description: `At Digixito, we empower organizations to manage data as a strategic asset.
 Our Data Engineering and MLOps solutions help teams unify data sources, ensure quality, and automate model operations at scale.
@@ -589,6 +610,7 @@ In a world driven by digital-first interactions, brands need more than design; t
 At Digixito, we help companies discover their creative identity and align it with a clear digital strategy.
 Our multidisciplinary approach unites design thinking, marketing psychology, and emerging technology to deliver consistent, meaningful, and high-performing creative ecosystems`,
     url: "/business-transformation/creative-transformation",
+    img: creativeTransformation,
   },
   {
     title: "Brand Strategy",
@@ -597,6 +619,7 @@ Your audience connects with purpose, values, and authenticity. That’s why our 
 At Digixito, we partner with you to define what your brand stands for — then translate that vision into an actionable strategy that influences design, marketing, and customer relationships.
 We blend data, creativity, and psychology to ensure your brand not only looks right but feels right to the people who matter most.`,
     url: "/business-transformation/brand-strategy",
+    img: brandStrategy,
   },
   {
     title: "360° Creative Campaigns",
@@ -606,6 +629,7 @@ Our 360° Creative Campaigns service unifies strategy, storytelling, and design 
 We help brands speak in one powerful voice — whether it’s a digital launch, a social movement, or a product rollout.
 At Digixito, we believe campaigns shouldn’t just be creative — they should be experiential, data-driven, and emotionally intelligent.`,
     url: "/business-transformation/360-creative-campaigns",
+    img: creativeCampaign,
   },
   {
     title: "Press Ads & TV Commercials",
@@ -615,6 +639,7 @@ At Digixito, we blend the art of storytelling with the science of audience psych
 Whether it’s a print ad that captures a thought in one frame or a TVC that moves millions in 30 seconds, we ensure every frame, word, and sound works together to make your brand unforgettable.
 Our creative team crafts campaigns that don’t just sell — they shape perception, build credibility, and drive cultural relevance.`,
     url: "/business-transformation/press-ads-and-tv-commercials",
+    img: press,
   },
   {
     title: "Digital Transformation",
@@ -625,6 +650,7 @@ Our creative team crafts campaigns that don’t just sell — they shape percept
   Our goal is to build future-ready organizations — where technology empowers people, decisions are data-informed, and innovation becomes part of your company’s DNA.
   We don’t just implement tools — we transform the way you think, build, and deliver.`,
     url: "/business-transformation/digital-transformation",
+    img: digitalTransformation,
   },
   {
     title: "Paid Search",
@@ -632,6 +658,7 @@ Our creative team crafts campaigns that don’t just sell — they shape percept
 At Digixito, our Paid Search solutions help brands dominate search results through data-backed precision and creative storytelling. We don’t just drive traffic — we attract intent-driven users who are ready to act.
 Our team leverages years of PPC expertise, advanced keyword intelligence, and conversion-focused landing page design to deliver results that scale revenue, not just clicks. Whether it’s Google Ads, Bing, or YouTube, we optimize every campaign for performance, efficiency, and measurable ROI — ensuring your business is seen, remembered, and chosen.`,
     url: "/business-transformation/paid-search",
+    img: paidSearch,
   },
   {
     title: "Natural Search",
@@ -640,6 +667,7 @@ At Digixito, we specialize in Organic Search Optimization (SEO) that aligns with
 We combine deep keyword research, content optimization, technical SEO, and backlink strategies to ensure your website not only ranks higher but also stays relevant in every search journey.
 Our approach goes beyond traffic — we build digital ecosystems that grow naturally, sustain momentum, and convert audience intent into measurable success.`,
     url: "/business-transformation/natural-search",
+    img: naturalSearch,
   },
   {
     title: "Performance Display",
@@ -650,6 +678,7 @@ Our approach goes beyond traffic — we build digital ecosystems that grow natur
   Our team blends the science of data with the craft of storytelling — ensuring every ad not only looks good but also performs brilliantly.
   We turn visibility into engagement, engagement into action, and action into lasting brand growth.`,
     url: "/business-transformation/performance-display",
+    img: performanceDisplay,
   },
   {
     title: "Social Media Marketing",
@@ -660,6 +689,7 @@ Our approach goes beyond traffic — we build digital ecosystems that grow natur
   We focus on connection over clutter — building brands that don’t just appear on feeds but leave a lasting impression.
   Whether it’s launching a product, scaling brand presence, or creating viral moments, we make sure every pixel and caption has a purpose.`,
     url: "/business-transformation/social-media-marketing",
+    img: socialMedia,
   },
   {
     title: "Marketplace Management",
@@ -669,6 +699,7 @@ Our approach goes beyond traffic — we build digital ecosystems that grow natur
   Our approach blends platform expertise, content optimization, performance ads, and operational efficiency to increase visibility and boost conversions.
   We turn complex marketplace ecosystems into streamlined, scalable, and sales-ready operations that grow your brand’s reach and revenue consistently.`,
     url: "/business-transformation/marketplace-management",
+    img: marketplaceManagement,
   },
   {
     title: "Catalog Management",
@@ -679,6 +710,7 @@ Our approach goes beyond traffic — we build digital ecosystems that grow natur
   From SKUs and attributes to imagery and SEO tagging, we bring clarity, precision, and consistency to your catalog — empowering you to sell effortlessly across e-commerce platforms and marketplaces.
   We make your digital catalog a growth engine, not a data headache.`,
     url: "/business-transformation/catalog-management",
+    img: catalogManagement,
   },
   {
     title: "Inventory Management",
@@ -689,6 +721,7 @@ Our approach goes beyond traffic — we build digital ecosystems that grow natur
   Whether you manage hundreds or thousands of SKUs, we make sure your inventory runs lean, accurate, and aligned with your growth goals.
   We help brands move from manual management to intelligent automation — unlocking operational excellence and higher profitability.`,
     url: "/business-transformation/inventory-management",
+    img: inventorymanagement,
   },
   {
     title: "Partner Value Added Services",
@@ -698,6 +731,7 @@ Our approach goes beyond traffic — we build digital ecosystems that grow natur
   We bridge gaps between systems, services, and solutions — ensuring our partners gain access to extended capabilities, expertise, and new revenue streams.
   Our mission is simple: to co-create smarter solutions that deliver greater value, together.`,
     url: "/business-transformation/partner-value-added-services",
+    img: partnervalued,
   },
   {
     title: "Sales Boost Program",
@@ -705,6 +739,7 @@ Our approach goes beyond traffic — we build digital ecosystems that grow natur
 Our Sales Boost Program merges analytics, creativity, and technology to create powerful growth engines that deliver consistent, measurable results.
 Because growth isn’t about luck — it’s about building a system that sells.`,
     url: "/business-transformation/sales-boost-program",
+    img: salesBoost,
   },
 ];
 

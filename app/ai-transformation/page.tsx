@@ -4,7 +4,7 @@ import ServicesLayoutHeroSection from "@/components/layouts/services-layout/serv
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import { COLORS } from "@/utils/enum";
-import { kessel } from "@/utils/fonts";
+import { kessel, monument } from "@/utils/fonts";
 import FaqSection from "@/components/widgets/faq-section";
 import SecureConnect from "@/components/widgets/secure-connect";
 import SubFooter from "@/components/widgets/subfooter";
@@ -33,7 +33,7 @@ The result: Reduced Costs, Accelerated Growth & Operations that scale intelligen
             variant="h4"
             sx={{
               color: COLORS.WHITE,
-              fontFamily: kessel.style.fontFamily,
+              fontFamily: monument.style.fontFamily,
               textAlign: "center",
               mb: 4,
             }}
@@ -47,7 +47,7 @@ The result: Reduced Costs, Accelerated Growth & Operations that scale intelligen
                   title={val.title}
                   description={val.description}
                   url={val.url}
-                  serial={i + 1}
+                  img={val.img}
                 />
               </Grid>
             ))}

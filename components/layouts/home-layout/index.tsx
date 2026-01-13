@@ -3,22 +3,15 @@ import { useFetchJson } from "@/components/hooks/useFetchData";
 import FaqSection from "@/components/widgets/faq-section";
 import SecureConnect from "@/components/widgets/secure-connect";
 import SubFooter from "@/components/widgets/subfooter";
-import Testimonials from "@/components/widgets/testimonial";
-import star from "@/icons/black-star.svg";
 import { useHomepageData } from "@/store/useHomepageData";
 import { COLORS } from "@/utils/enum";
-import { Box, Container, Stack, useMediaQuery } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import Aos from "aos";
-import Image from "next/image";
 import { useEffect } from "react";
-import Bannertext from "./banner-text";
 import BestService from "./best-services";
-import BestWorks from "./best-works";
-import GridSection from "./grid-section";
 import HowitWorks from "./how-it-works";
 import ServiceSection from "./service-section";
 import SimpleHeroSection from "./Simple-Hero-Section";
-import MobileHeroSection from "./Mobile-Hero-Section";
 const HomeLayouts = () => {
   const phone = useMediaQuery("(max-width:600px)");
 
@@ -32,7 +25,7 @@ const HomeLayouts = () => {
   }, [setPageData, data]);
 
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 1000, mirror: true });
   }, []);
 
   return (

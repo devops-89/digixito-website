@@ -52,6 +52,8 @@ const FaqQuestionCard = ({ data }: FAQ_PROPS) => {
           }}
           expanded={expanded === `panel${i + 1}`}
           onChange={handleChange(`panel${i + 1}`)}
+          data-aos="fade-up"
+          data-aos-delay={i * 100}
         >
           <AccordionSummary
             expandIcon={
