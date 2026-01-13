@@ -52,8 +52,7 @@ const SubFooter = () => {
           }}
         >
           We would love to hear from you and discuss how we can help bring your
-          digital ideas to life. Here are the different ways you can get in
-          touch with us.
+          digital ideas to life.
         </Typography>
 
         {/* <Grid container sx={{ mt: 6 }} spacing={phone ? 2 : tablet ? 1 : 6}>
