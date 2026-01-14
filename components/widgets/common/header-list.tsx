@@ -11,6 +11,7 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { Dispatch, SetStateAction, useState } from "react";
 
@@ -24,6 +25,7 @@ const Headerlist = ({
   data,
   setAnchorEl,
   setMenuOpen,
+  url,
 }: HeaderlistProps) => {
   const router = useRouter();
 
@@ -41,16 +43,18 @@ const Headerlist = ({
 
   return (
     <Box>
-      <Typography
-        sx={{
-          color: COLORS.BLACK,
-          fontSize: 15,
-          fontWeight: 900,
-          fontFamily: kessel.style.fontFamily,
-        }}
-      >
-        {heading}
-      </Typography>
+      <Link href={url || "#"}>
+        <Typography
+          sx={{
+            color: COLORS.BLACK,
+            fontSize: 16,
+            fontWeight: "900",
+            fontFamily: kessel.style.fontFamily,
+          }}
+        >
+          {heading}
+        </Typography>
+      </Link>
 
       <List>
         {data.map((val, i) => (

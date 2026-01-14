@@ -124,6 +124,7 @@ const HeaderTabs = ({ setAnchorEl, setMenuOpen }: HeaderTabsProps) => {
                   data={item.data}
                   setAnchorEl={setAnchorEl}
                   setMenuOpen={setMenuOpen}
+                  url={item.url}
                 />
               </Grid>
             ))}

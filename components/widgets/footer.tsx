@@ -106,9 +106,10 @@ const Footer = () => {
                 backgroundColor: COLORS.BLACK,
                 padding: "47px 60px",
                 borderRadius: "50px",
+                mt: 15,
               }}
             >
-              {/* <Stack direction={"row"} alignItems={"center"} spacing={2}>
+              <Stack direction={"row"} alignItems={"center"} spacing={2}>
                 {TERMS_PAGE_LINKS.map((val, i) => (
                   <Typography
                     sx={{
@@ -125,7 +126,7 @@ const Footer = () => {
                     {val.label}
                   </Typography>
                 ))}
-              </Stack> */}
+              </Stack>
 
               <LinkList data={LINK_LIST_DATA} />
             </Box>
