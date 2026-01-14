@@ -51,8 +51,8 @@ const Footer = () => {
               <Box
                 sx={{
                   backgroundColor: COLORS.BLACK,
-                  width: { lg: 500, xs: 300, sm: 400 },
-                  height: { lg: 500, xs: 300, sm: 400 },
+                  width: { lg: 400, xs: 300, sm: 400 },
+                  height: { lg: 400, xs: 300, sm: 400 },
                   borderRadius: "50%",
                   display: "flex",
                   alignItems: "center",
@@ -106,6 +106,7 @@ const Footer = () => {
                 backgroundColor: COLORS.BLACK,
                 padding: "47px 60px",
                 borderRadius: "50px",
+                mt: 2,
               }}
             >
               {/* <Stack direction={"row"} alignItems={"center"} spacing={2}>
