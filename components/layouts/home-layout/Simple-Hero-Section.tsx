@@ -16,7 +16,6 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import Bannertext from "./banner-text";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 const SimpleHeroSection = () => {
   const phone = useMediaQuery("(max-width:600px)");
