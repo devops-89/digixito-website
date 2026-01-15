@@ -48,7 +48,6 @@ Using agile methodologies and the latest technologies, we ensure rapid iteration
                     title={val.title}
                     description={val.description}
                     url={val.url}
-                    serial={i + 1}
                   />
                 </Grid>
               ))}

@@ -51,7 +51,6 @@ The result: faster growth, lower acquisition costs, and marketing that scales in
                   title={val.title}
                   description={val.description}
                   url={val.url}
-                  serial={i + 1}
                 />
               </Grid>
             ))}
