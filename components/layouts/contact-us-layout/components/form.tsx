@@ -47,6 +47,7 @@ const ContactMessageForm = () => {
       email: "",
       phone: "",
       message: "",
+      title: "Digixito Media Pvt.Ltd.",
     },
     validationSchema: contactValidationSchema,
     onSubmit: (values, { setSubmitting, resetForm }) => {

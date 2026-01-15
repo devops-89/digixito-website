@@ -10,8 +10,8 @@ const FaqSection = () => {
   return (
     <Box
       sx={{
-        py: 10,
-        height: { lg: "100vh", xs: "100%" },
+        pt: 10,
+        height: { lg: "90vh", xs: "100%" },
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -26,6 +26,7 @@ const FaqSection = () => {
                 fontFamily: monument.style.fontFamily,
                 textTransform: "capitalize",
               }}
+              data-aos="fade-up"
             >
               Frequently Asked Questions
             </Typography>
@@ -35,6 +36,7 @@ const FaqSection = () => {
                 fontSize: 18,
                 mt: 4,
               }}
+              data-aos="fade-up"
             >
               Still you have any questions? Contact our Team via
               info@digixito.com
@@ -45,6 +47,7 @@ const FaqSection = () => {
               justifyContent={"flex-start"}
               spacing={4}
               sx={{ mt: 5 }}
+              data-aos="fade-up"
             >
               <Link href="/contact-us" style={{ textDecoration: "none" }}>
                 <Button

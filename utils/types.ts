@@ -85,6 +85,7 @@ export interface HEADER_DATA_PROPS {
 export interface HEADER_LIST_PROPS {
   heading: string;
   data: HEADER_DATA_PROPS[];
+  url?: string;
 }
 
 export interface LIST {

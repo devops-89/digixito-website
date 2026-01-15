@@ -3,19 +3,19 @@ import { Card, CardContent, Typography, Box } from "@mui/material";
 import Link from "next/link";
 import { kessel, monument } from "@/utils/fonts";
 import { COLORS } from "@/utils/enum";
-
+import Image, { StaticImageData } from "next/image";
 interface ServicesCardProps {
   title: string;
   description: string;
   url: string;
-  serial: string | number;
+  img?: StaticImageData;
 }
 
 const ServicesCard: React.FC<ServicesCardProps> = ({
   title,
   description,
   url,
-  serial,
+  img,
 }) => {
   const maxLength = 200;
   const truncated =
@@ -42,31 +42,34 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
         justifyContent: "center",
         alignItems: "flex-start",
         textAlign: "left",
-        minHeight: { lg: 300, xs: 200 },
+        minHeight: { lg: 330, xs: 200 },
         position: "relative",
       }}
     >
       <CardContent sx={{ p: 0, flexGrow: 1 }}>
-        {/* <Box
+        <Box
           sx={{
             backgroundColor: COLORS.PRIMARY,
             width: 60,
             height: 60,
             borderRadius: "20px",
             color: COLORS.BLACK,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            mb: 2,
           }}
         >
-          {serial}
-        </Box> */}
+          {img && <Image src={img} alt="" width={40} height={40} />}
+        </Box>
         <Typography
           variant="h6"
           component="div"
           sx={{
             fontFamily: monument.style.fontFamily,
             fontWeight: 600,
-            mb: 1,
             color: COLORS.WHITE,
-            fontSize: 18,
+            fontSize: 16,
           }}
         >
           {title}
@@ -76,6 +79,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
           sx={{
             fontFamily: kessel.style.fontFamily,
             color: "rgba(255,255,255,0.85)",
+            my: 2,
           }}
         >
           {truncated}

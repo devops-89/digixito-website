@@ -37,8 +37,10 @@ const SecureConnectCard = ({
               margin={"auto"}
               sx={{ textAlign: "center" }}
             >
-              <Image src={img} alt="" width={50} />
+              <Image src={img} alt="" width={50} data-aos="fade-up" />
               <Typography
+                data-aos="fade-up"
+                data-aos-delay={100}
                 sx={{
                   fontSize: 30,
                   fontFamily: monument.style.fontFamily,
@@ -56,6 +58,8 @@ const SecureConnectCard = ({
                   fontFamily: kessel.style.fontFamily,
                   color: isButton ? "#ffffff60" : "#00000060",
                 }}
+                data-aos="fade-up"
+                data-aos-delay={200}
               >
                 {description}
               </Typography>

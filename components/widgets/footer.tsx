@@ -106,27 +106,32 @@ const Footer = () => {
                 backgroundColor: COLORS.BLACK,
                 padding: "47px 60px",
                 borderRadius: "50px",
-                mt: 2,
+                mt: 0.2,
               }}
             >
-              {/* <Stack direction={"row"} alignItems={"center"} spacing={2}>
+              <Stack direction={"row"} alignItems={"center"} spacing={2}>
                 {TERMS_PAGE_LINKS.map((val, i) => (
-                  <Typography
-                    sx={{
-                      color: "#F5F8FF80",
-                      fontSize: 14,
-                      fontFamily: archivo.style.fontFamily,
-                      fontWeight: 400,
-                      lineHeight: "18px",
-                      letterSpacing: "1.4",
-                      textTransform: "uppercase",
-                    }}
+                  <Link
+                    href={val.url}
                     key={i}
+                    style={{ textDecoration: "none" }}
                   >
-                    {val.label}
-                  </Typography>
+                    <Typography
+                      sx={{
+                        color: "#F5F8FF80",
+                        fontSize: 14,
+                        fontFamily: archivo.style.fontFamily,
+                        fontWeight: 400,
+                        lineHeight: "18px",
+                        letterSpacing: "1.4",
+                        textTransform: "uppercase",
+                      }}
+                    >
+                      {val.label}
+                    </Typography>
+                  </Link>
                 ))}
-              </Stack> */}
+              </Stack>
 
               <LinkList data={LINK_LIST_DATA} />
             </Box>
