@@ -16,7 +16,7 @@ const TextBox = ({
   footerDescription,
 }: {
   title: string;
-  description: { label: string }[];
+  description?: { label: string }[];
   listDetails?: { label: string }[];
   footerDescription?: string;
 }) => {
@@ -25,7 +25,7 @@ const TextBox = ({
       <Typography sx={{ fontFamily: monument.style.fontFamily, fontSize: 20 }}>
         {title}
       </Typography>
-      {description.map((val, i) => (
+      {description?.map((val, i) => (
         <Typography
           sx={{ fontFamily: kessel.style.fontFamily, fontSize: 18, mt: 2 }}
           key={i}
