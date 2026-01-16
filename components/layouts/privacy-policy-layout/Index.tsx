@@ -53,6 +53,18 @@ const PrivacyPolicyLayout = () => {
       label: "International Transfers",
       url: "international_transfer",
     },
+    {
+      label: "Your Rights and Choices",
+      url: "your_choices",
+    },
+    {
+      label: "Changes to this Policy",
+      url: "changes_to_this_policy",
+    },
+    {
+      label: "Contact Us",
+      url: "contact_us",
+    },
   ];
 
   const handleScroll = (id: string) => {
@@ -63,7 +75,7 @@ const PrivacyPolicyLayout = () => {
   };
 
   return (
-    <div>
+    <Box sx={{ my: 10 }}>
       <Container maxWidth="lg">
         <Typography
           sx={{ fontSize: 40, fontFamily: monument.style.fontFamily, mt: 5 }}
@@ -147,6 +159,28 @@ const PrivacyPolicyLayout = () => {
                 footerDescription="To exercise these rights, please contact us via the details below."
               />
             </Box>
+            <Box id="changes_to_this_policy" sx={{ mt: 3 }}>
+              <TextBox
+                title="10. Changes to this Policy"
+                description={[
+                  {
+                    label:
+                      "We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. The updated policy will be posted on this page with a revised effective date.",
+                  },
+                ]}
+              />
+            </Box>
+            <Box id="contact_us" sx={{ mt: 3 }}>
+              <TextBox
+                title="11. Contact Us"
+                description={[
+                  {
+                    label:
+                      "If you have any questions or concerns about this Privacy Policy, please contact us at info@digixito.com.",
+                  },
+                ]}
+              />
+            </Box>
           </Grid>
           <Grid size={4}>
             <Box
@@ -156,7 +190,7 @@ const PrivacyPolicyLayout = () => {
                 borderRadius: "10px",
                 p: 2,
                 position: "sticky",
-                top: 0,
+                top: 100,
                 alignSelf: "flex-start",
               }}
             >
@@ -194,7 +228,7 @@ const PrivacyPolicyLayout = () => {
           </Grid>
         </Grid>
       </Container>
-    </div>
+    </Box>
   );
 };
 

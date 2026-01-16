@@ -30,7 +30,7 @@ const DataSharingDisclosure = () => {
   ];
   return (
     <Box>
-      <Typography sx={{ fontSize: 30, fontFamily: monument.style.fontFamily }}>
+      <Typography sx={{ fontSize: 20, fontFamily: monument.style.fontFamily }}>
         5. Data Sharing and Disclosure
       </Typography>
 

@@ -22,7 +22,7 @@ const TextBox = ({
 }) => {
   return (
     <div>
-      <Typography sx={{ fontFamily: monument.style.fontFamily, fontSize: 30 }}>
+      <Typography sx={{ fontFamily: monument.style.fontFamily, fontSize: 20 }}>
         {title}
       </Typography>
       {description.map((val, i) => (

@@ -27,7 +27,7 @@ const LegalBasisProcessing = () => {
   return (
     <div>
       <Typography
-        sx={{ fontSize: 30, fontFamily: monument.style.fontFamily, mt: 2 }}
+        sx={{ fontSize: 20, fontFamily: monument.style.fontFamily, mt: 2 }}
       >
         4. Legal Basis for Processing (Where Applicable)
       </Typography>

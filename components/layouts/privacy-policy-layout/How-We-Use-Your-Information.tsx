@@ -37,7 +37,7 @@ const HowweUseyourInformation = () => {
     <Box>
       <Typography
         sx={{
-          fontSize: 30,
+          fontSize: 20,
           fontFamily: monument.style.fontFamily,
           mt: 5,
           fontWeight: 800,

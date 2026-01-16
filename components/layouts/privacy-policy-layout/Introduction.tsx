@@ -6,7 +6,7 @@ const Introduction = () => {
   return (
     <Box>
       <Typography
-        sx={{ fontSize: 30, fontFamily: monument.style.fontFamily, mt: 5 }}
+        sx={{ fontSize: 20, fontFamily: monument.style.fontFamily, mt: 5 }}
       >
         1. Introduction
       </Typography>
