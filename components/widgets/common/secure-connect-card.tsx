@@ -20,7 +20,7 @@ const SecureConnectCard = ({
       <Box
         sx={{
           backgroundImage: `url(${backgroundImage})`,
-          height: { lg: "80vh", xs: "50vh" },
+          height: { lg: "65vh", xs: "50vh" },
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",

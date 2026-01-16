@@ -40,7 +40,7 @@ const SubFooter = () => {
             fontWeight: 400,
             textAlign: "center",
           }}
-          data-aos="fade-up"
+          // data-aos="fade-up"
         >
           Thank you for your Interest in Digixito.
         </Typography>
@@ -53,8 +53,8 @@ const SubFooter = () => {
             fontSize: { lg: 25, xs: 16, sm: 20 },
             fontFamily: monument.style.fontFamily,
           }}
-          data-aos="fade-up"
-          data-aos-delay="100"
+          // data-aos="fade-up"
+          // data-aos-delay="100"
         >
           We would love to hear from you and discuss how we can help bring your
           digital ideas to life.
