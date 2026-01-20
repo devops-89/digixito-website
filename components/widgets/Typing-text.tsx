@@ -36,9 +36,9 @@ interface TextTypeProps {
 const TextType = ({
   text,
   as: Component = "div",
-  typingSpeed = 30,
+  typingSpeed = 10,
   initialDelay = 0,
-  pauseDuration = 3000,
+  pauseDuration = 1000,
   deletingSpeed = 10,
   loop = true,
   className = "",
@@ -64,7 +64,7 @@ const TextType = ({
 
   const textArray = useMemo(
     () => (Array.isArray(text) ? text : [text]),
-    [text]
+    [text],
   );
 
   const getRandomSpeed = useCallback(() => {
@@ -89,7 +89,7 @@ const TextType = ({
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     observer.observe(containerRef.current);
@@ -144,11 +144,11 @@ const TextType = ({
           timeout = setTimeout(
             () => {
               setDisplayedText(
-                (prev) => prev + processedText[currentCharIndex]
+                (prev) => prev + processedText[currentCharIndex],
               );
               setCurrentCharIndex((prev) => prev + 1);
             },
-            variableSpeed ? getRandomSpeed() : typingSpeed
+            variableSpeed ? getRandomSpeed() : typingSpeed,
           );
         } else if (textArray.length > 1) {
           timeout = setTimeout(() => {
@@ -195,7 +195,10 @@ const TextType = ({
     },
     <span
       className="text-type__content"
-      style={{ color: getCurrentTextColor() || "inherit",fontFamily:kessel.style.fontFamily }}
+      style={{
+        color: getCurrentTextColor() || "inherit",
+        fontFamily: kessel.style.fontFamily,
+      }}
     >
       {displayedText}
     </span>,
@@ -208,7 +211,7 @@ const TextType = ({
       >
         {cursorCharacter}
       </span>
-    )
+    ),
   );
 };
 

@@ -50,6 +50,7 @@ Beautiful aesthetics backed by behavioral science and computational precision—
                     title={val.title}
                     description={val.description}
                     url={val.url}
+                    img={val.img}
                   />
                 </Grid>
               ))}

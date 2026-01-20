@@ -42,7 +42,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
         justifyContent: "center",
         alignItems: "flex-start",
         textAlign: "left",
-        minHeight: { lg: 330, xs: 200 },
+        height: { lg: 400, xs: 200 },
         position: "relative",
       }}
     >

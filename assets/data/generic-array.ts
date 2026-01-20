@@ -43,6 +43,19 @@ import catalogManagement from "@/icons/Business-Transformation/Catalog-Managemen
 import partnervalued from "@/icons/Business-Transformation/Partner-Value.png";
 import salesBoost from "@/icons/Business-Transformation/sales-boost.png";
 import inventorymanagement from "@/icons/Business-Transformation/Inventory-Management.png";
+import applicationDevelopment from "@/icons/product-engineering/application_sass.png";
+import webApplicationDevelopment from "@/icons/product-engineering/web_app.png";
+import systemIntegration from "@/icons/product-engineering/integration.png";
+import cloudInfrastructure from "@/icons/product-engineering/cloud-computing.png";
+import aiDriven from "@/icons/ai-marketing-growth/ai-driven-digital-marketing.png";
+import marketPlace from "@/icons/ai-marketing-growth/marketplace-management.png";
+import brandStrategyPositioning from "@/icons/ai-marketing-growth/brand-strategy-positioning.png";
+import performanceMarketing from "@/icons/ai-marketing-growth/performance-market.png";
+import socialSearchIntelligence from "@/icons/ai-marketing-growth/social-media.png";
+import aiPoweredUiUx from "@/icons/design-intelligence/ai-powered-ui-ux.png";
+import conversationalAI from "@/icons/design-intelligence/conversational-interface-design.png";
+import prototyping from "@/icons/design-intelligence/prototyping-user-research.png";
+import experienceOptimization from "@/icons/design-intelligence/experience-optimization.png";
 export const SERVICES_TAB = [
   {
     label: "AI Transformation",
@@ -750,6 +763,7 @@ export const PRODUCT_ENGINEERING = [
 Our solutions are built to scale, adapt, and perform — enabling startups and enterprises to innovate faster and operate smarter.
 Because great software doesn’t just work — it evolves with your business.`,
     url: "/product-engineering/application-and-saas-development",
+    img: applicationDevelopment,
   },
   {
     title: "Web and Mobile Platforms",
@@ -757,6 +771,7 @@ Because great software doesn’t just work — it evolves with your business.`,
 Whether you’re building a responsive website, enterprise web portal, or next-gen mobile app — we ensure design, technology, and performance come together perfectly.
 Because in today’s world, your platform is your brand.`,
     url: "/product-engineering/web-and-mobile-platforms",
+    img: webApplicationDevelopment,
   },
   {
     title: "System Integration & API Development",
@@ -764,6 +779,7 @@ Because in today’s world, your platform is your brand.`,
 Our integration-first approach eliminates silos, improves data flow, and enhances business agility across every layer of your digital infrastructure.
 Because when your systems talk to each other — your business moves faster.`,
     url: "/product-engineering/system-integration-and-api-development",
+    img: systemIntegration,
   },
   {
     title: "Cloud Infrastructure",
@@ -771,6 +787,7 @@ Because when your systems talk to each other — your business moves faster.`,
 Our cloud solutions are built for agility — ensuring your digital ecosystem runs efficiently, securely, and seamlessly across AWS, Azure, and Google Cloud.
 Because in the digital era, the cloud isn’t just infrastructure — it’s the foundation of innovation.`,
     url: "/product-engineering/cloud-infrastructure",
+    img: cloudInfrastructure,
   },
 ];
 
@@ -783,6 +800,7 @@ At Digixito, we blend data science with storytelling to create AI-powered market
 From automated ad bidding to AI-personalized content, we help you build marketing systems that continuously analyze, optimize, and perform — so every click, conversion, and impression contributes to measurable business growth.
 Our philosophy is simple: let intelligence lead creativity — and creativity humanize data.`,
     url: "/ai-marketing-growth/ai-driven-digital-marketing",
+    img: aiDriven,
   },
   {
     title: "Marketplace Management & Sales Boost",
@@ -793,6 +811,7 @@ We simplify your marketplace journey through data-led management, automation, an
 Our experts handle everything — from onboarding and catalog optimization to performance ads, pricing strategies, and logistics alignment — turning your marketplace operations into a sustainable sales engine.
 We don’t just list your products; we elevate your brand to outperform in every marketplace.`,
     url: "/ai-marketing-growth/market-management-and-sales-boost",
+    img: marketPlace,
   },
   {
     title: "Brand Strategy & Positioning",
@@ -802,6 +821,7 @@ At Digixito, we help brands discover their purpose, define their positioning, an
 Through in-depth market analysis, audience segmentation, and value proposition mapping, we craft brand strategies that make your business stand out, stay relevant, and scale globally.
 We go beyond logos and taglines — creating meaningful brand identities that build relationships and inspire loyalty.`,
     url: "/ai-marketing-growth/brand-strategy-and-positioning",
+    img: brandStrategyPositioning,
   },
   {
     title: "Performance Marketing & Conversion Optimization",
@@ -813,6 +833,7 @@ Our conversion optimization process goes beyond surface-level metrics.
 We analyze data patterns, user behavior, and interaction touchpoints to understand why users act — and how to make them act faster.
 We don’t just run ads — we engineer performance that grows with precision.`,
     url: "/ai-marketing-growth/performance-marketing-and-conversion-optimization",
+    img: performanceMarketing,
   },
 
   {
@@ -823,6 +844,7 @@ At Digixito, we go beyond traditional SEO and SEM by integrating machine learnin
 We don’t just help you appear in search results — we help you dominate them through adaptive strategies that evolve with your audience and Google’s algorithms.
 Our goal is simple: make your brand visible everywhere your audience searches, scrolls, or speaks.`,
     url: "/ai-marketing-growth/social-and-search-intelligence",
+    img: socialSearchIntelligence,
   },
 ];
 
@@ -836,6 +858,7 @@ export const DESIGN_INTELLIGENCE_DATA = [
   Our design philosophy fuses creativity with cognitive intelligence — ensuring your product delivers emotion, efficiency, and engagement in every interaction.
   We don’t just create experiences; we engineer intuitive ecosystems that evolve with your users.`,
     url: "/design-intelligence/ai-powered-ui-ux-design",
+    img: aiPoweredUiUx,
   },
 
   {
@@ -847,6 +870,7 @@ export const DESIGN_INTELLIGENCE_DATA = [
   Our goal is to humanize technology — crafting interactions that feel less mechanical and more meaningful.
   From customer support bots to in-app assistants, every conversation we design enhances usability, accessibility, and engagement.`,
     url: "/design-intelligence/conversational-interface-design",
+    img: conversationalAI,
   },
   {
     title: "Prototyping & User Research",
@@ -857,6 +881,7 @@ export const DESIGN_INTELLIGENCE_DATA = [
   Once validated, we move to rapid prototyping, bringing ideas to life through high-fidelity mockups, wireframes, and interactive prototypes that visualize the user journey before development begins.
   We make sure every design decision is backed by real evidence — not assumptions.`,
     url: "/design-intelligence/prototyping-and-user-research",
+    img: prototyping,
   },
   {
     title: "Experience Optimization",
@@ -867,5 +892,6 @@ export const DESIGN_INTELLIGENCE_DATA = [
   Our approach fuses UX design, behavioral psychology, and performance analytics to enhance engagement, retention, and satisfaction across every platform.
   We refine not just interfaces — but the emotions and experiences that define them.`,
     url: "/design-intelligence/experience-optimization",
+    img: experienceOptimization,
   },
 ];

@@ -25,11 +25,12 @@ const SubFooter = () => {
       sx={{
         backgroundColor: COLORS.PRIMARY,
         position: "relative",
-        height: { lg: "60vh", xs: "60vh" },
+        // height: { lg: "60vh", xs: "60vh" },
 
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        py: 4,
       }}
     >
       <Container maxWidth="lg">

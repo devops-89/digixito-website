@@ -5,7 +5,7 @@ import FaqSection from "@/components/widgets/faq-section";
 import SecureConnect from "@/components/widgets/secure-connect";
 import SubFooter from "@/components/widgets/subfooter";
 import { COLORS } from "@/utils/enum";
-import { kessel } from "@/utils/fonts";
+import { kessel, monument } from "@/utils/fonts";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 
@@ -35,14 +35,14 @@ The result: faster growth, lower acquisition costs, and marketing that scales in
             variant="h4"
             sx={{
               color: COLORS.WHITE,
-              fontFamily: kessel.style.fontFamily,
+              fontFamily: monument.style.fontFamily,
               textAlign: "center",
               mb: 4,
               fontWeight: 600,
               fontSize: 40,
             }}
           >
-            Product Engineering Solutions
+            AI Marketing Growth Solutions
           </Typography>
           <Grid container spacing={2}>
             {AI_MARKETING_GROWTH.map((val, i) => (
@@ -51,6 +51,7 @@ The result: faster growth, lower acquisition costs, and marketing that scales in
                   title={val.title}
                   description={val.description}
                   url={val.url}
+                  img={val.img}
                 />
               </Grid>
             ))}

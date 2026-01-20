@@ -26,7 +26,7 @@ const DigitalTransformationDetails = ({
     const timer = setTimeout(() => {
       if (slug) {
         const filterData = DETAILS_PAGE_DETAILS.find(
-          (page) => slug === page.slug
+          (page) => slug === page.slug,
         );
 
         if (filterData) {

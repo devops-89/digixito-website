@@ -5,7 +5,7 @@ import FaqSection from "@/components/widgets/faq-section";
 import SecureConnect from "@/components/widgets/secure-connect";
 import SubFooter from "@/components/widgets/subfooter";
 import { COLORS } from "@/utils/enum";
-import { kessel } from "@/utils/fonts";
+import { kessel, monument } from "@/utils/fonts";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 
@@ -34,7 +34,7 @@ Using agile methodologies and the latest technologies, we ensure rapid iteration
               variant="h4"
               sx={{
                 color: COLORS.WHITE,
-                fontFamily: kessel.style.fontFamily,
+                fontFamily: monument.style.fontFamily,
                 textAlign: "center",
                 mb: 4,
               }}
@@ -48,6 +48,7 @@ Using agile methodologies and the latest technologies, we ensure rapid iteration
                     title={val.title}
                     description={val.description}
                     url={val.url}
+                    img={val.img}
                   />
                 </Grid>
               ))}
