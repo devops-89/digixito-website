@@ -53,7 +53,7 @@ const ContactMessageForm = () => {
     onSubmit: (values, { setSubmitting, resetForm }) => {
       if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
         console.error(
-          "EmailJS credentials are not set in environment variables."
+          "EmailJS credentials are not set in environment variables.",
         );
         setSnackbarOpen({
           open: true,
@@ -86,7 +86,7 @@ const ContactMessageForm = () => {
                 "Failed to send the message. Please check your connection or try again later.",
               severity: "error",
             });
-          }
+          },
         )
         .finally(() => {
           setSubmitting(false);
