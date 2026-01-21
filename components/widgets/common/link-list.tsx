@@ -67,7 +67,8 @@ const LinkList = ({ data }: LINK_LIST_PROPS) => {
           mt: 2,
         }}
       >
-        © Copyright 2025 Digixito Media Pvt. Ltd . All rights reserved.
+        © Copyright {new Date().getFullYear()} Digixito Media Pvt. Ltd . All
+        rights reserved.
       </Typography>
     </Box>
   );
