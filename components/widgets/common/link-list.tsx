@@ -55,6 +55,20 @@ const LinkList = ({ data }: LINK_LIST_PROPS) => {
           ))}
         </React.Fragment>
       ))}
+      <Typography
+        sx={{
+          color: "#F5F8FF80",
+          fontSize: 12,
+          fontFamily: archivo.style.fontFamily,
+          fontWeight: 400,
+          lineHeight: "18px",
+          letterSpacing: "1.4",
+          textTransform: "uppercase",
+          mt: 2,
+        }}
+      >
+        © Copyright 2025 Digixito Media Pvt. Ltd . All rights reserved.
+      </Typography>
     </Box>
   );
 };
