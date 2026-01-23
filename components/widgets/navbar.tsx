@@ -12,7 +12,7 @@ import {
 import Grow from "@mui/material/Grow";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import HeaderTabs from "./common/header-tabs";
 import MobileHeader from "./mobile-header";
 import { Sling as Hamburger } from "hamburger-react";
@@ -38,55 +38,91 @@ const Navbar = () => {
     setOpenMenu(false);
   };
 
-  const [showAbsoluteHeader, setShowAbsoluteHeader] = useState(true);
+  const isOverlay = pathname === "/";
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    if (pathname === "/") {
-      setShowAbsoluteHeader(true);
-    } else {
-      setShowAbsoluteHeader(false);
-    }
-  }, [pathname]);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <Box
-      sx={{
-        // p: 2,
-        position: "relative",
-        backgroundColor: COLORS.WHITE,
-        zIndex: showAbsoluteHeader ? 1 : 0,
-      }}
-    >
-      <Container
-        maxWidth="lg"
+    <>
+      <Box
         sx={{
-          position: showAbsoluteHeader ? "absolute" : "relative",
-          top: showAbsoluteHeader ? 20 : 10,
-          left: showAbsoluteHeader ? "50%" : 0,
-          transform: showAbsoluteHeader ? "translateX(-50%)" : "translateX(0)",
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 1100,
+          transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+          backgroundColor: isScrolled
+            ? "rgba(255, 255, 255, 0.8)"
+            : isOverlay
+              ? "transparent"
+              : COLORS.WHITE,
+          backdropFilter: isScrolled ? "blur(12px)" : "none",
+          boxShadow: isScrolled
+            ? "0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
+            : "none",
+          py: isScrolled ? 1 : 2.5,
+          borderBottom: isScrolled
+            ? "1px solid rgba(255, 255, 255, 0.3)"
+            : "none",
         }}
       >
-        <Stack
-          direction={"row"}
-          alignItems="center"
-          justifyContent={"space-between"}
+        <Container
+          maxWidth="lg"
+          sx={{
+            transition: "all 0.4s ease",
+          }}
         >
-          <Link href={"/"}>
-            <Image
-              src={showAbsoluteHeader ? logo : blackOutlineLogo}
-              alt=""
-              width={70}
-            />
-          </Link>
-          <IconButton
-            onClick={handleClick}
-            sx={{ color: showAbsoluteHeader ? COLORS.WHITE : COLORS.BLACK }}
+          <Stack
+            direction={"row"}
+            alignItems="center"
+            justifyContent={"space-between"}
           >
-            {/* <Hamburger toggled={openMenu} toggle={setOpenMenu} size={26} /> */}
+            <Link href={"/"}>
+              <Image
+                src={isOverlay && !isScrolled ? logo : blackOutlineLogo}
+                alt=""
+                width={isScrolled ? 55 : 70}
+                style={{
+                  transition: "all 0.4s ease",
+                  filter: isScrolled
+                    ? "drop-shadow(0 0 2px rgba(0,0,0,0.1))"
+                    : "none",
+                }}
+              />
+            </Link>
+            <IconButton
+              onClick={handleClick}
+              sx={{
+                color: isOverlay && !isScrolled ? COLORS.WHITE : COLORS.BLACK,
+                transition: "all 0.4s ease",
+                "&:hover": {
+                  transform: "scale(1.1)",
+                },
+              }}
+            >
+              {/* <Hamburger toggled={openMenu} toggle={setOpenMenu} size={26} /> */}
 
-            <Menu sx={{ fontSize: 45 }} />
-          </IconButton>
-        </Stack>
-      </Container>
+              <Menu sx={{ fontSize: isScrolled ? 30 : 45 }} />
+            </IconButton>
+          </Stack>
+        </Container>
+      </Box>
+      {!isOverlay && (
+        <Box
+          sx={{
+            height: { xs: "72px", lg: "100px" },
+            transition: "all 0.4s ease",
+          }}
+        />
+      )}
       <Popover
         open={open}
         onClose={handleClose}
@@ -127,7 +163,7 @@ const Navbar = () => {
           )}
         </Container>
       </Popover>
-    </Box>
+    </>
   );
 };
 
