@@ -170,7 +170,7 @@ const AboutLayout = () => {
                   {company.desc}
                 </Typography>
 
-                <Box
+                {/* <Box
                   sx={{
                     mt: "auto",
                     display: "flex",
@@ -194,7 +194,7 @@ const AboutLayout = () => {
                   <ArrowForwardIcon
                     sx={{ fontSize: 16, color: COLORS.PRIMARY }}
                   />
-                </Box>
+                </Box> */}
               </Box>
             ))}
           </Stack>
