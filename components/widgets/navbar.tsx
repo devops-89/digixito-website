@@ -1,5 +1,5 @@
 "use client";
-import logo from "@/logo/Digixito_White_Logo.svg";
+import logo from "@/logo/foote_logo.svg";
 import { COLORS } from "@/utils/enum";
 import {
   Box,
@@ -18,7 +18,7 @@ import MobileHeader from "./mobile-header";
 import { Sling as Hamburger } from "hamburger-react";
 import { Menu } from "@mui/icons-material";
 import { usePathname } from "next/navigation";
-import blackOutlineLogo from "@/logo/Digixito_black_outline.svg";
+import blackOutlineLogo from "@/logo/final_black.svg";
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [openMenu, setOpenMenu] = useState(false);

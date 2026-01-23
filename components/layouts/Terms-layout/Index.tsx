@@ -76,7 +76,7 @@ const TermsLayout = () => {
     <Box sx={{ my: 10 }}>
       <Container maxWidth="lg">
         <Grid container spacing={4}>
-          <Grid size={8}>
+          <Grid size={{ lg: 8, xs: 12 }}>
             <Typography
               sx={{ fontSize: 30, fontFamily: monument.style.fontFamily }}
             >
@@ -205,7 +205,7 @@ const TermsLayout = () => {
               />
             </Box>
           </Grid>
-          <Grid size={4}>
+          <Grid size={4} sx={{ display: { lg: "block", xs: "none" } }}>
             <Card sx={{ p: 2, position: "sticky", top: 100 }}>
               <Typography
                 sx={{ fontFamily: monument.style.fontFamily, fontSize: 20 }}

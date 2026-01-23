@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import logo_initial from "@/logo/Digixito_White_Logo.svg";
+import logo_initial from "@/logo/foote_logo.svg";
 import footer_icon from "@/icons/footer_snake.svg";
 import { LinkedIn, X, YouTube } from "@mui/icons-material";
 import { LINK_LIST_DATA, TERMS_PAGE_LINKS } from "@/assets/data/generic-array";

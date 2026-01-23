@@ -83,7 +83,7 @@ const PrivacyPolicyLayout = () => {
           Privacy Policy
         </Typography>
         <Grid container spacing={4} sx={{ mt: 2 }}>
-          <Grid size={8}>
+          <Grid size={{ lg: 8, xs: 12 }}>
             <Box id="introduction">
               <Introduction />
             </Box>
@@ -182,7 +182,7 @@ const PrivacyPolicyLayout = () => {
               />
             </Box>
           </Grid>
-          <Grid size={4}>
+          <Grid size={4} sx={{ display: { lg: "block", xs: "none" } }}>
             <Box
               sx={{
                 backgroundColor: COLORS.WHITE,
