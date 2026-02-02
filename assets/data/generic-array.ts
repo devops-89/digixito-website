@@ -103,21 +103,21 @@ export const WORK_CARD_DATA: WORK_CARD_PROPS[] = [
     number: "02",
     title: "Dedicated Specialists",
     description:
-      "No multitasking. No divided attention. Your brand gets brand strategists. Your growth gets growth engineers. Each expert owns their domain completely. Specialized teams working in perfect sync",
+      "No distractions. No half measures. Brand strategists focus only on your brand. Growth engineers focus only on results.Clear ownership. Total accountability. Experts aligned. Outcomes accelerated.",
   },
   {
     img: work3.src,
     number: "03",
     title: "Zero to hero Brands",
     description:
-      "We architect brands with deep roots, strong enough to weather recessions, agile enough to capture booms. While others chase quick wins, we engineer sustainable growth DNA into every brand element",
+      "We don’t build brands for trends. We architect them for cycles. Deep-rooted enough to endure downturns, agile enough to scale in booms. While others chase short-term wins, we embed sustainable growth DNA into every brand decision",
   },
   {
     img: work4.src,
     number: "04",
     title: "A decade of powers",
     description:
-      "Ten years. Hundreds of brands. Thousands of pivots. We've survived algorithm apocalypses, platform deaths, through recessions and revolutions. We've solved problems without playbooks.",
+      "Ten years. Hundreds of brands. Thousands of pivots. We’ve survived algorithm apocalypses, platform deaths, recessions, and revolutions. We’ve solved problems without playbooks—and built playbooks others now follow.",
   },
 ];
 
@@ -213,7 +213,7 @@ export const SECURE_CARD_DATA: SECURE_CONNECTED_CARD[] = [
     backgroundImage: secure_bg.src,
     heading: "Secure. Smart. Scalable.",
     description:
-      "Digixito is engineered to protect your data while scaling your vision. Security isn’t an add-on — it’s our foundation. ",
+      "Built to protect your data as it scales your vision. Security isn’t an add-on—it’s the foundation everything else stands on.",
     isButton: true,
     button: "Learn About Compliance",
   },
@@ -222,7 +222,7 @@ export const SECURE_CARD_DATA: SECURE_CONNECTED_CARD[] = [
     backgroundImage: connect_bg.src,
     heading: "Connected by Intelligence",
     description:
-      "From marketing tools to AI workflows — Digixito connects everything that drives your growth. One hub. Infinite possibilities.",
+      "We unify your marketing stack and AI workflows into a single, powerful growth engine. One platform. Endless possibilities.",
     isButton: false,
     button: "Discover Integrations",
     // isBut÷
@@ -355,22 +355,22 @@ export const VALUE_CARD_DATA: VALUE_CARD_PROPS[] = [
 
 export const COUNTER_CARD_DATA: COUNT_UP_CARD_PROPS[] = [
   {
-    number: 99,
+    number: 98,
     suffix: "%",
     title: "Customer Satisfaction",
   },
   {
-    number: 32,
+    number: 100,
     suffix: "+",
-    title: "Active Clients",
+    title: "Clients",
   },
   {
-    number: 125,
+    number: 120,
     suffix: "+",
     title: "Team Members",
   },
   {
-    number: 240,
+    number: 50,
     suffix: "%",
     title: "Company Growth",
   },
@@ -481,7 +481,7 @@ export const SERVICES_TAB_DATA = {
 
       data: [
         {
-          heading: "Specialists who speak the same language: Success",
+          heading: "Specialists who speak the language of successful results",
           bottomTitle: "Meet our experts",
           backgroundColor: "#2B2B2B",
           textColor: "#ffffff",

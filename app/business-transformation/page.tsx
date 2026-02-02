@@ -17,10 +17,7 @@ const BusinessTransformation = () => {
           title="Business Transformation"
           description="We reimagine how your business operates. Our transformation approach integrates cutting-edge technology, streamlined processes, and data-driven strategy to eliminate inefficiencies and unlock growth. 
 
-From legacy system modernization and cloud migration to digital workflow optimization, we rebuild your infrastructure for speed & scalability. Whether it's enhancing customer experiences, empowering teams with better tools, or creating new revenue streams through digital innovation, we engineer transformations that deliver measurable ROI. 
-
-The result: a leaner, smarter, future-ready brand that doesn't just survive disruption—it thrives on it.
-
+From legacy system modernization and cloud migration to digital workflow optimization, we rebuild your infrastructure for speed & scalability. Whether it's enhancing customer experiences, empowering teams with better tools, or creating new revenue streams through digital innovation, we engineer transformations that deliver measurable ROI.
 "
           heading="Business Transformation"
           quote1simple="Vision is the"

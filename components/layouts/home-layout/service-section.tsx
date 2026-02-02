@@ -30,7 +30,7 @@ const ServiceSection = () => {
   const [value, setValue] = useState(0);
 
   const [servicesData, setServicesData] = useState(
-    SERVICES_TAB_DATA.AI_TRANSFORMATION
+    SERVICES_TAB_DATA.AI_TRANSFORMATION,
   );
 
   const SERVICES_MAP = {
@@ -62,9 +62,9 @@ const ServiceSection = () => {
                   fontFamily: monument.style.fontFamily,
                 }}
               >
-                Our
+                What We Do
               </Typography>
-              <ImageHeading title="Services" />
+              {/* <ImageHeading title="Do" /> */}
             </Stack>
             <Typography
               sx={{
@@ -74,8 +74,7 @@ const ServiceSection = () => {
                 fontWeight: 300,
               }}
             >
-              Transform your brand with our innovative digital solutions that
-              captivate and engage your audience.
+              Build AI Powered business with Digixito, the all-in-one platform
             </Typography>
             <Box sx={{ width: "100%", mt: 3 }}>
               <Tabs

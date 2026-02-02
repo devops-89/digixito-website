@@ -20,6 +20,7 @@ const page = () => {
 From predictive analytics that anticipate market shifts to chatbots that deliver personalized customer experiences 24/7, Digixito turns data into decisions and processes into competitive advantages. 
 
 The result: Reduced Costs, Accelerated Growth & Operations that scale intelligently with demand.
+
 "
         quote1simple="AI rewards clarity,"
         quote2simple="Builds"

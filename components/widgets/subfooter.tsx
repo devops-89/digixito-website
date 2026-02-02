@@ -34,17 +34,16 @@ const SubFooter = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Typography
+        {/* <Typography
           sx={{
             fontFamily: monument.style.fontFamily,
             fontSize: { lg: 38, xs: 20, sm: 25 },
             fontWeight: 400,
             textAlign: "center",
           }}
-          // data-aos="fade-up"
         >
           Thank you for your Interest in Digixito.
-        </Typography>
+        </Typography> */}
 
         <Typography
           sx={{
@@ -57,8 +56,8 @@ const SubFooter = () => {
           // data-aos="fade-up"
           // data-aos-delay="100"
         >
-          We would love to hear from you and discuss how we can help bring your
-          digital ideas to life.
+          Ready to elevate your story, sharpen your strategy, and get the
+          attention you deserve? Let’s turn clarity into momentum.
         </Typography>
         <Box sx={{ textAlign: "center" }}>
           <Link href="/contact-us">
@@ -124,7 +123,7 @@ const SubFooter = () => {
           digital ideas to life. Here are the different ways you can get in
           touch with us.
         </Typography> */}
-        <Box sx={{ mt: { lg: 20, xs: 20 } }}></Box>
+        {/* <Box sx={{ mt: { lg: 20, xs: 20 } }}></Box>
         <Box
           sx={{
             position: "absolute",
@@ -135,7 +134,7 @@ const SubFooter = () => {
           // data-aos="fade-up"
         >
           <Image src={logo} alt="" style={{ width: phone ? 200 : 400 }} />
-        </Box>
+        </Box> */}
       </Container>
     </Box>
   );

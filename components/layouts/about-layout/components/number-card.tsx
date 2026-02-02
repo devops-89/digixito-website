@@ -24,28 +24,14 @@ const NumberCard = ({ number, suffix, title }: COUNT_UP_CARD_PROPS) => {
           textAlign: "center",
         }}
       >
-        {/* {mounted ? (
+        {mounted && (
           <CountUp
-            end={number}
-            start={0}
-            duration={2}
-            separator=","
-            preserveValue
-          >
-            {({ countUpRef }) => (
-              <>
-                <span ref={countUpRef} />
-                <span style={{ color: COLORS.PRIMARY }}>{suffix}</span>
-              </>
-            )}
-          </CountUp>
-        ) : (
-          <>
-            {number}
-            <span style={{ color: COLORS.PRIMARY }}>{suffix}</span>
-          </>
-        )} */}
-        {number}
+            end={Number(number)}
+            duration={2.5}
+            enableScrollSpy
+            scrollSpyOnce
+          />
+        )}
         <span style={{ color: COLORS.PRIMARY }}>{suffix}</span>
       </Typography>
       <Typography

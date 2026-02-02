@@ -94,7 +94,8 @@ const SimpleHeroSection = () => {
               }}
               data-aos="fade-up"
             >
-              Engineering 360° digital experiences from concept to conquest
+              Engineering 360’ digital experiences for the world’s leading
+              brands
             </Typography>
             <Stack
               direction={{ lg: "row", xs: "column" }}

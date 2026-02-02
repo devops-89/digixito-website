@@ -61,7 +61,7 @@ const Ourvalues = () => {
                         fontFamily: kessel.style.fontFamily,
                       }}
                     >
-                      The values that drive everything we do{" "}
+                      The DNA of everything we build{" "}
                     </Typography>
                     <Image src={star} alt="" width={50} />
                   </Stack>

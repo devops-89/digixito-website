@@ -60,6 +60,7 @@ const WorkCard = ({ number, title, description, img }: WORK_CARD_PROPS) => {
               lineHeight: "36px",
               letterSpacing: "-0.144px",
               fontSize: { lg: 24, xs: 18 },
+              textTransform: "capitalize",
             }}
           >
             {title}

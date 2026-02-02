@@ -68,8 +68,8 @@ const HowitWorks = () => {
               mt: 3,
             }}
           >
-            Experience excellence in digital craftsmanship with our team of
-            skilled professionals dedicated to delivering exceptional results.
+            We make sure your audience finds you everywhere from Google search
+            results to the platforms they scroll every day.
           </Typography>
           <Grid container sx={{ mt: 3 }} spacing={3}>
             {WORK_CARD_DATA.map((val, i) => (
