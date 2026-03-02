@@ -8,6 +8,7 @@ import WorkatDigixito from "./work-at-digixito";
 import HiringPhilosophy from "./hiring-philosophy";
 import SecureConnect from "@/components/widgets/secure-connect";
 import SubFooter from "@/components/widgets/subfooter";
+import OpenRoles from "./Open-Roles";
 
 const LifeAtDigixitoLayout = () => {
   return (
@@ -19,6 +20,7 @@ const LifeAtDigixitoLayout = () => {
       <BuildTogether />
       <WhatweValue />
       <WorkatDigixito />
+      <OpenRoles />
       <HiringPhilosophy />
       <SecureConnect />
       <SubFooter />

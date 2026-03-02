@@ -12,6 +12,7 @@ import BestService from "./best-services";
 import HowitWorks from "./how-it-works";
 import ServiceSection from "./service-section";
 import SimpleHeroSection from "./Simple-Hero-Section";
+import BestWorks from "./best-works";
 const HomeLayouts = () => {
   const phone = useMediaQuery("(max-width:600px)");
 
@@ -30,29 +31,14 @@ const HomeLayouts = () => {
 
   return (
     <Box>
-      <Box sx={{ backgroundColor: COLORS.WHITE }}>
-        {/* <Bannertext /> */}
-        {/* <Container>
-          <Stack direction={"row"} alignItems={"center"} spacing={2}>
-            <Box
-              sx={{ backgroundColor: COLORS.BLACK, width: "100%", height: 2 }}
-            ></Box>
-            <Image src={star} alt="divider star" />
-            <Box
-              sx={{ backgroundColor: COLORS.BLACK, width: "100%", height: 2 }}
-            ></Box>
-          </Stack>
-        </Container> */}
-      </Box>
-      {/* <GridSection />
-      {phone ? <MobileHeroSection /> : <SimpleHeroSection />} */}
+      <Box sx={{ backgroundColor: COLORS.WHITE }}></Box>
+
       <SimpleHeroSection />
-      {/* <ScrollParticles /> */}
+
       <BestService />
       <ServiceSection />
       <HowitWorks />
-      {/* <BestWorks />
-      <Testimonials /> */}
+      <BestWorks />
       <FaqSection />
       <SecureConnect />
       <SubFooter />
