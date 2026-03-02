@@ -8,7 +8,10 @@ const OpenRoles = () => {
     <Box>
       <Container maxWidth="lg">
         <Grid container>
-          <Grid size={4} sx={{}}>
+          <Grid
+            size={4}
+            sx={{ position: { lg: "sticky", xs: "static" }, top: 100 }}
+          >
             <Typography
               sx={{
                 fontSize: 40,
