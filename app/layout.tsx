@@ -10,6 +10,7 @@ import SmokeyCursor from "@/components/lightswind/smokey-cursor";
 import "aos/dist/aos.css";
 import "animate.css";
 import AosInit from "@/components/widgets/AosInit";
+import Modal from "@/components/widgets/Modal";
 
 export const metadata: Metadata = {
   title: "Digixito",
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Modal />
         <AosInit />
         <Box sx={{ display: { lg: "block", xs: "block" } }}>
           <Navbar />

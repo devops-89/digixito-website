@@ -20,13 +20,13 @@ body {
 }
 
 :root {
-  --spin-duration: 2s; 
+  --spin-duration: 2s;
 }
 
 .rotator {
-  display: inline-block; 
-  will-change: transform; 
-  transform-origin: center center; 
+  display: inline-block;
+  will-change: transform;
+  transform-origin: center center;
 }
 
 @keyframes spin {
@@ -51,4 +51,12 @@ body {
   .spin {
     animation: none;
   }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
 }

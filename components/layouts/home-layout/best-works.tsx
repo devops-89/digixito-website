@@ -145,7 +145,7 @@ const BestWorks = () => {
                       spaceBetween: 20,
                     },
                     1300: {
-                      slidesPerView: 2,
+                      slidesPerView: 1,
                       spaceBetween: 50,
                     },
                   }}

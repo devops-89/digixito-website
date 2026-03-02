@@ -178,3 +178,21 @@ export interface HOMEPAGEDATA_PROPS {
   bestService: BEST_SERVICE_DATA_PROPS;
   ourServices: OUR_SERVICE_DATA_PROPS;
 }
+
+export interface RoleCardProps {
+  expanded?: boolean;
+  onToggle?: () => void;
+  title: string;
+  description: string;
+  category: {
+    location: string;
+    type: string;
+    experience: string;
+  }[];
+  requirements: {
+    label: string;
+  }[];
+  offer: {
+    label: string;
+  }[];
+}
