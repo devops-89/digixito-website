@@ -5,12 +5,13 @@ import "animate.css";
 import "aos/dist/aos.css";
 import type { Metadata } from "next";
 import "swiper/css";
+import "animate.css";
+import "aos/dist/aos.css";
 import "./globals.css";
 import SmokeyCursor from "@/components/lightswind/smokey-cursor";
-import "aos/dist/aos.css";
-import "animate.css";
 import AosInit from "@/components/widgets/AosInit";
 import Modal from "@/components/widgets/Modal";
+import ScrollToTop from "@/components/widgets/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Digixito",
@@ -36,6 +37,7 @@ export default function RootLayout({
 
         {/* <SmokeyCursor /> */}
         {children}
+        <ScrollToTop />
         <Footer />
       </body>
     </html>

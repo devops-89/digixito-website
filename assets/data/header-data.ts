@@ -7,7 +7,7 @@ export const HEADER_TABS = [
   },
   {
     label: HEADER_TABS_DATA.WHAT_WE_ARE,
-    url: "/about-us",
+    // url: "/about-us",
   },
   {
     label: HEADER_TABS_DATA.CAREERS,
@@ -253,6 +253,16 @@ export const HEADER_LINKS = {
       //     url: "/ai-ethics-innovation",
       //   },
       // ],
+      data: [
+        {
+          label: "Who we are",
+          url: "/about-us",
+        },
+        {
+          label: "Case Studies",
+          url: "/case-studies",
+        },
+      ],
     },
   ],
   CAREERS: [

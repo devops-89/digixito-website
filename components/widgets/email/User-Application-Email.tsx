@@ -8,23 +8,25 @@ import {
   Preview,
   Section,
   Text,
-  Link,
 } from "@react-email/components";
 import * as React from "react";
 
-interface UserEmailProps {
+interface UserApplicationEmailProps {
   name: string;
-  email: string;
+  roleTitle: string;
 }
 
 const brandColor = "#000";
 const offBlack = "#000000";
 
-const UserEmail = ({ name, email }: UserEmailProps) => {
+const UserApplicationEmail = ({
+  name,
+  roleTitle,
+}: UserApplicationEmailProps) => {
   return (
     <Html>
       <Head />
-      <Preview>Welcome to Digixito!</Preview>
+      <Preview>Thank you for applying to Digixito!</Preview>
       <Body style={main}>
         <Container style={container}>
           <Section style={card}>
@@ -39,27 +41,27 @@ const UserEmail = ({ name, email }: UserEmailProps) => {
             </Section>
 
             <Section style={cardContent}>
-              <Heading style={h1}>Thank You for Reaching Out!</Heading>
+              <Heading style={h1}>Application Received</Heading>
 
-              <Text style={paragraph}>Hello {name},</Text>
+              <Text style={paragraph}>Hi {name},</Text>
               <Text style={paragraph}>
-                We've received your inquiry and we're excited to explore how we
-                can help you achieve your goals with our creative media, digital
-                marketing, and technology solutions.
+                Thank you for applying for the <strong>{roleTitle}</strong>{" "}
+                position at Digixito Media Pvt. Ltd. We have successfully
+                received your application and resume.
               </Text>
 
               <Section style={highlightBox}>
                 <Text style={highlightText}>
-                  Our team is currently reviewing your details. One of our
-                  specialists will get in touch with you shortly to discuss your
-                  project requirements in detail.
+                  Our talent acquisition team will review your profile to see
+                  how your skills and experience align with our needs. If your
+                  qualifications are a match, we will reach out to you with the
+                  next steps.
                 </Text>
               </Section>
 
               <Text style={paragraph}>
-                In the meantime, feel free to browse our website to learn more
-                about our comprehensive services, past projects, and successful
-                case studies.
+                We appreciate your interest in joining our team and wish you the
+                best of luck!
               </Text>
 
               <Section style={footer}>
@@ -80,7 +82,7 @@ const UserEmail = ({ name, email }: UserEmailProps) => {
   );
 };
 
-export default UserEmail;
+export default UserApplicationEmail;
 
 const main = {
   backgroundColor: "#f4f4f5",

@@ -1,6 +1,7 @@
 "use client";
 import { HEADER_LINKS, HEADER_TABS } from "@/assets/data/header-data";
 import { COLORS, HEADER_TABS_DATA } from "@/utils/enum";
+import { HEADER_LIST_PROPS } from "@/utils/types";
 import { monument } from "@/utils/fonts";
 import {
   Box,
@@ -28,7 +29,9 @@ interface HeaderTabsProps {
 
 const HeaderTabs = ({ setAnchorEl, setMenuOpen }: HeaderTabsProps) => {
   const [value, setValue] = useState(0);
-  const [data, setData] = useState(HEADER_LINKS.what_we_offer);
+  const [data, setData] = useState<HEADER_LIST_PROPS[]>(
+    HEADER_LINKS.what_we_offer,
+  );
   const router = useRouter();
 
   const handleChange = (e: SyntheticEvent, newValue: number) => {
@@ -39,18 +42,18 @@ const HeaderTabs = ({ setAnchorEl, setMenuOpen }: HeaderTabsProps) => {
         setData(HEADER_LINKS.what_we_offer);
         break;
       case HEADER_TABS_DATA.WHAT_WE_ARE:
-        setData([]);
-        router.push("/about-us");
-        setAnchorEl(null);
-        setMenuOpen?.(false);
+        setData(HEADER_LINKS.what_we_are);
+        // router.push("/about-us");
+        // setAnchorEl(null);
+        // setMenuOpen?.(false);
 
         break;
       case HEADER_TABS_DATA.CAREERS:
-        // setData(HEADER_LINKS.CAREERS);
         router.push("/careers/life-at-digixito");
         setAnchorEl(null);
         setMenuOpen?.(false);
         break;
+
       default:
         setData([]);
         break;

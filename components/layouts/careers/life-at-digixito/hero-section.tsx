@@ -61,7 +61,7 @@ const HerosectionLife = () => {
                 systems to designing seamless experiences, our team thrives on
                 curiosity, collaboration, and constant learning.
               </Typography>
-              <Box sx={{ textAlign: "center", mt: 3 }}>
+              {/* <Box sx={{ textAlign: "center", mt: 3 }}>
                 <Button
                   sx={{
                     backgroundColor: COLORS.BLACK,
@@ -76,7 +76,7 @@ const HerosectionLife = () => {
                 >
                   See open roles
                 </Button>
-              </Box>
+              </Box> */}
             </Grid>
           </Grid>
         </Container>

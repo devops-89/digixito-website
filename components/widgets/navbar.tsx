@@ -38,7 +38,7 @@ const Navbar = () => {
     setOpenMenu(false);
   };
 
-  const isOverlay = pathname === "/";
+  const isOverlay = pathname === "/" || pathname.startsWith("/case-studies");
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -53,7 +53,7 @@ const Navbar = () => {
     <>
       <Box
         sx={{
-          position: "fixed",
+          // position: "fixed",
           top: 0,
           left: 0,
           right: 0,
@@ -68,7 +68,8 @@ const Navbar = () => {
           boxShadow: isScrolled
             ? "0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
             : "none",
-          py: isScrolled ? 1 : 2.5,
+          // py: isScrolled ? 1 : 2.5,
+          py: 1,
           borderBottom: isScrolled
             ? "1px solid rgba(255, 255, 255, 0.3)"
             : "none",
@@ -87,9 +88,11 @@ const Navbar = () => {
           >
             <Link href={"/"}>
               <Image
-                src={isOverlay && !isScrolled ? logo : blackOutlineLogo}
+                src={
+                  isOverlay && !isScrolled ? blackOutlineLogo : blackOutlineLogo
+                }
                 alt=""
-                width={isScrolled ? 55 : 70}
+                width={isScrolled ? 55 : 100}
                 style={{
                   transition: "all 0.4s ease",
                   filter: isScrolled
@@ -101,7 +104,7 @@ const Navbar = () => {
             <IconButton
               onClick={handleClick}
               sx={{
-                color: isOverlay && !isScrolled ? COLORS.WHITE : COLORS.BLACK,
+                color: isOverlay && !isScrolled ? COLORS.BLACK : COLORS.BLACK,
                 transition: "all 0.4s ease",
                 "&:hover": {
                   transform: "scale(1.1)",

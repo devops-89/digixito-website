@@ -17,7 +17,8 @@ import React, { useState } from "react";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import emailjs from "@emailjs/browser";
-
+import axios from "axios";
+import { MuiTelInput } from "mui-tel-input";
 const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
 const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
 const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
@@ -51,6 +52,30 @@ const ContactMessageForm = () => {
     },
     validationSchema: contactValidationSchema,
     onSubmit: (values, { setSubmitting, resetForm }) => {
+      setSubmitting(true);
+
+      axios
+        .post("/api/contact", values)
+        .then((res) => {
+          // console.log("res", res);
+          setSnackbarOpen({
+            open: true,
+            message: "Your message has been sent successfully!",
+            severity: "success",
+          });
+          resetForm();
+        })
+        .catch((err) => {
+          // console.log("err", err);
+          setSnackbarOpen({
+            open: true,
+            message: "Failed to send the message. Please try again later.",
+            severity: "error",
+          });
+        })
+        .finally(() => {
+          setSubmitting(false);
+        });
       // if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
       //   console.error(
       //     "EmailJS credentials are not set in environment variables.",
@@ -151,9 +176,10 @@ const ContactMessageForm = () => {
             error={formik.touched.email && Boolean(formik.errors.email)}
             helperText={formik.touched.email && formik.errors.email}
           />
-          <TextField
+          <MuiTelInput
             variant="standard"
             label="Phone Number"
+            defaultCountry="IN"
             fullWidth
             sx={{
               "& label": {
@@ -164,9 +190,15 @@ const ContactMessageForm = () => {
             }}
             id="phone"
             value={formik.values.phone}
-            onChange={formik.handleChange}
+            onChange={(newValue) => {
+              formik.setFieldValue("phone", newValue);
+            }}
             error={formik.touched.phone && Boolean(formik.errors.phone)}
-            helperText={formik.touched.phone && formik.errors.phone}
+            helperText={
+              formik.touched.phone && formik.errors.phone
+                ? String(formik.errors.phone)
+                : ""
+            }
           />
           {/* <TextField
           variant="standard"

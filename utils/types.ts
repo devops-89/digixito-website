@@ -196,3 +196,24 @@ export interface RoleCardProps {
     label: string;
   }[];
 }
+
+export interface CASE_STUDY_CARD_PROPS {
+  title: string;
+  shortDescription: string;
+  challenge: {
+    label: string;
+    data?: {
+      label: string;
+    }[];
+    endLine?: string;
+  };
+  solution: {
+    description: {
+      label: string;
+    }[];
+    coreCapabilities: {
+      heading: string;
+      description: string;
+    };
+  };
+}

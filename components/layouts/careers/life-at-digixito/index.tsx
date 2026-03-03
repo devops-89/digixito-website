@@ -12,7 +12,7 @@ import OpenRoles from "./Open-Roles";
 
 const LifeAtDigixitoLayout = () => {
   return (
-    <Box sx={{ my: 10 }}>
+    <Box>
       <Container maxWidth="lg">
         <PageHeading page_name="Careers" page_title="Life at Digixito" />
       </Container>
