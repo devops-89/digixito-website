@@ -239,20 +239,7 @@ export const HEADER_LINKS = {
   what_we_are: [
     {
       heading: "Our organization",
-      // data: [
-      //   {
-      //     label: "About Us",
-      //     url: "/about-us",
-      //   },
-      //   {
-      //     label: "Our team",
-      //     url: "/our-team",
-      //   },
-      //   {
-      //     label: "AI Ethics & Innovation",
-      //     url: "/ai-ethics-innovation",
-      //   },
-      // ],
+
       data: [
         {
           label: "Who we are",
