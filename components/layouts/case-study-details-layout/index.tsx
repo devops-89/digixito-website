@@ -61,7 +61,7 @@ const CaseStudiesLayout = () => {
       </Box>
 
       <Box sx={{ borderTop: "1px solid rgba(0,0,0,0.15)" }}>
-        <Container maxWidth="xl" disableGutters sx={{ px: { xs: 2, md: 4 } }}>
+        <Container maxWidth="lg" disableGutters sx={{ px: { xs: 2, md: 4 } }}>
           {CASE_STUDIES_DATA.map((study) => (
             <CaseStudyCard key={study.id} caseStudy={study} />
           ))}
