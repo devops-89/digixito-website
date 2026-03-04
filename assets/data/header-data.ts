@@ -249,6 +249,10 @@ export const HEADER_LINKS = {
           label: "Case Studies",
           url: "/case-studies",
         },
+        {
+          label: "Blogs",
+          url: "/blogs",
+        },
       ],
     },
   ],

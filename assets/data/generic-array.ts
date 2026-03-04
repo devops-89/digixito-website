@@ -285,6 +285,14 @@ export const LINK_LIST_DATA: LINK_LIST[] = [
         label: "About Us",
         url: "/about-us",
       },
+      {
+        label: "Case Studies",
+        url: "/case-studies",
+      },
+      {
+        label: "Blogs",
+        url: "/blogs",
+      },
     ],
   },
   {

@@ -51,8 +51,8 @@ const Footer = () => {
               <Box
                 sx={{
                   backgroundColor: COLORS.BLACK,
-                  width: { lg: 400, xs: 300, sm: 400 },
-                  height: { lg: 400, xs: 300, sm: 400 },
+                  width: { lg: 520, xs: 300, sm: 400 },
+                  height: { lg: 520, xs: 300, sm: 400 },
                   borderRadius: "50%",
                   display: "flex",
                   alignItems: "center",
@@ -65,7 +65,7 @@ const Footer = () => {
                     <Image
                       src={logo_initial}
                       alt=""
-                      width={100}
+                      width={150}
                       style={{ margin: "auto" }}
                     />
                   </Box>

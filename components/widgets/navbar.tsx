@@ -38,7 +38,10 @@ const Navbar = () => {
     setOpenMenu(false);
   };
 
-  const isOverlay = pathname === "/" || pathname.startsWith("/case-studies");
+  const isOverlay =
+    pathname === "/" ||
+    pathname.startsWith("/case-studies") ||
+    pathname.startsWith("/blogs");
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
