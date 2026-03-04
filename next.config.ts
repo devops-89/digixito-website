@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
+      {
+        protocol: "https",
+        hostname: "up23onagldy9futl.public.blob.vercel-storage.com",
+      },
     ],
   },
 };

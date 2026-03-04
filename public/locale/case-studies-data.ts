@@ -14,81 +14,220 @@ export interface CaseStudyProps {
 
 export const CASE_STUDIES_DATA: CaseStudyProps[] = [
   {
-    id: "ecom-platform-revamp",
-    title: "Revolutionizing E-Commerce with Next.js",
-    clientName: "Global Retail Co.",
-    category: "Product Engineering",
+    id: "healthcare-document-analysis",
+    title: "Healthcare Document Analysis System",
+    clientName: "Healthcare Sector",
+    category: "AI Document Processing",
     shortDescription:
-      "A complete technical overhaul of a legacy e-commerce platform leading to a 45% increase in conversion rates.",
+      "A healthcare information processing system leveraging our RAG Framework and Document Processing modules.",
     fullDescription:
-      "Global Retail Co. approached us with a monolithic architecture that was slow, hard to scale, and costing them potential sales. We completely migrated their infrastructure to a headless commerce architecture using Next.js and specialized cloud APIs.",
+      "A healthcare information processing system that leverages our RAG Framework and Document Processing modules to analyse medical documents and images. The system maintains context while processing complex medical information, enabling healthcare professionals to access and understand relevant patient data and medical literature quickly.",
     challenge:
-      "The client's existing website took over 6 seconds to load interactive elements, drastically affecting mobile conversions. Their database was coupled tightly with the frontend, making adding new features a multi-week endeavor.",
+      "Processing complex medical information and literature quickly while maintaining context.",
     solution:
-      "Our team decoupled the frontend using Next.js, implementing Static Site Generation (SSG) for product catalogs and Server-Side Rendering (SSR) for personalized user carts. We integrated a robust headless CMS to give the marketing team immediate control over content without developer intervention.",
+      "Leveraged the RAG Framework and Document Processing modules to analyze medical documents and images efficiently.",
     results: [
-      { metric: "45%", description: "Increase in Mobile Conversion Rate" },
-      { metric: "3.2x", description: "Faster Average Page Load Time" },
-      { metric: "Zero", description: "Downtime during Black Friday events" },
+      { metric: "Advanced", description: "Document Analysis" },
+      { metric: "RAG", description: "Framework Integration" },
     ],
     coverImage:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200",
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/health-care-document-analysis/healthcare-1.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/health-care-document-analysis/healthcare-2.jpg",
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/health-care-document-analysis/healthcare-3.jpg",
     ],
   },
   {
-    id: "ai-support-agent",
-    title: "Intelligent AI Customer Support Integration",
-    clientName: "FinServe Analytics",
-    category: "AI Transformation",
+    id: "nanoecho-node-detection",
+    title: "NanoEcho Node Detection",
+    clientName: "NanoEcho",
+    category: "Medical Imaging Analysis",
     shortDescription:
-      "Deploying a custom LLM model to handle 70% of Level 1 customer service tickets automatically.",
+      "Advanced medical imaging analysis system for lymph node detection utilizing computer vision.",
     fullDescription:
-      "FinServe Analytics was drowning in repetitive customer support tickets regarding straightforward account inquiries. We designed and trained a custom Language Model embedded directly into their user dashboard to resolve issues instantaneously.",
+      "Advanced medical imaging analysis system for lymph node detection, utilizing computer vision and data point matching algorithms. The system processes medical images to identify and analyze lymph nodes with high accuracy, supporting medical professionals in diagnosis and treatment planning.",
     challenge:
-      "Customer satisfaction metrics were dropping due to 24-hour response delays. The client needed a secure, intelligent system that could parse complex financial data while strictly adhering to compliance regulations.",
+      "Identifying and analyzing lymph nodes in medical images with high accuracy for diagnosis and treatment.",
     solution:
-      "We built a Retrieval-Augmented Generation (RAG) pipeline that securely referenced internal documentation without exposing user data to public AI structures. The chatbot was deployed with a fallback mechanism that seamlessly transferred complex queries to human agents with full context.",
+      "Utilized computer vision and data point matching algorithms from the Environmental Vision System and Custom AI Development modules.",
     results: [
-      { metric: "70%", description: "Reduction in L1 Support Tickets" },
-      { metric: "< 2s", description: "Average AI Response Time" },
-      { metric: "+22%", description: "Increase in Customer CSAT Score" },
+      { metric: "High", description: "Detection Accuracy" },
+      { metric: "Enhanced", description: "Treatment Planning" },
     ],
     coverImage:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/nano-echo-node-detection/nano-echo-1.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/nano-echo-node-detection/nano-echo-2.jpg",
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/nano-echo-node-detection/nano-echo-3.jpg",
     ],
   },
   {
-    id: "brand-identity-refresh",
-    title: "Modernizing a Heritage Brand",
-    clientName: "Brewster & Co.",
-    category: "Business Transformation",
+    id: "stock-market-analysis",
+    title: "Stock Market Analysis Platform",
+    clientName: "Financial Sector",
+    category: "Financial Analysis",
     shortDescription:
-      "A complete 360-degree brand strategy and visual redesign for a 50-year-old coffee roaster.",
+      "A comprehensive financial analysis tool combining real-time market data with AI-driven insights.",
     fullDescription:
-      "Brewster & Co. had a loyal older demographic but struggled to appeal to modern espresso enthusiasts and younger audiences. Our design intelligence team completely reinvented their brand presence from packaging to digital storefronts.",
+      "A comprehensive financial analysis tool that combines real-time market data processing with AI-driven insights. The enhanced version includes voice interaction capabilities, allowing users to query and receive market information through natural speech.",
     challenge:
-      "The core challenge was modernizing the aesthetic without alienating the legacy customers who recognized the brand's long-standing credibility. The existing website was also non-responsive and lacked an online subscription model.",
+      "Analyzing complex real-time market data efficiently and making those insights accessible to users naturally.",
     solution:
-      "We introduced a clean, minimalist design language paired with bold, modern typography while retaining their historic crest icon. We then launched a fully responsive web application featuring a custom coffee subscription builder.",
+      "Combined Knowledge Processing Engine and Custom AI Development, and incorporated a Voice Processing Platform for natural speech queries.",
     results: [
-      { metric: "150%", description: "Growth in Online Subscription Sales" },
-      { metric: "8M+", description: "Impressions from new Social Campaigns" },
-      {
-        metric: "35%",
-        description: "Increase in Under-30 Customer Demographic",
-      },
+      { metric: "Real-time", description: "Market Data Processing" },
+      { metric: "Voice", description: "Interaction Capabilities" },
     ],
     coverImage:
-      "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=1200",
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/stock-market-analysis/stock-1.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&fit=crop&q=80&w=800",
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/stock-market-analysis/stock-2.jpg",
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/stock-market-analysis/stock-3.jpg",
+    ],
+  },
+  {
+    id: "surveillance-system-demo",
+    title: "Surveillance System Demo",
+    clientName: "Security Sector",
+    category: "Computer Vision",
+    shortDescription:
+      "Real-time surveillance monitoring utilizing computer vision for object detection and tracking.",
+    fullDescription:
+      "Real-time surveillance monitoring system utilizing advanced computer vision capabilities for object detection, tracking, and behavior analysis. The system demonstrates practical applications of our vision processing technology in security scenarios.",
+    challenge:
+      "Monitoring and analyzing security scenarios in real-time with continuous object tracking and scalable behavior analysis.",
+    solution:
+      "Deployed Environmental Vision System and Custom AI development for advanced real-time computer vision processing and tracking.",
+    results: [
+      { metric: "Real-time", description: "Object Tracking" },
+      { metric: "Advanced", description: "Behavior Analysis" },
+    ],
+    coverImage:
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/survellience/survellience-1.jpg",
+    gallery: [
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/survellience/survellience-2.jpg",
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/survellience/survellience-3.jpg",
+    ],
+  },
+  {
+    id: "vroar-educational-ai",
+    title: "VRoar Educational AI Enhancement",
+    clientName: "VRoar",
+    category: "EdTech AI",
+    shortDescription:
+      "An intelligent educational support system featuring multiple AI-powered components for student assessment and career guidance.",
+    fullDescription:
+      "An intelligent educational support system featuring multiple AI-powered components: Student profile analysis through writing assessment, Automated performance feedback generation, AI-driven career path planning, and Professional guidance chatbot system.",
+    challenge:
+      "Providing hyper-personalized educational support, writing assessments, and career path planning at massive scale.",
+    solution:
+      "Integrated RAG Framework, Text Generation, Custom Chatbots, and LLM Customization to build an end-to-end learning and feedback platform.",
+    results: [
+      { metric: "Automated", description: "Performance Feedback" },
+      { metric: "AI-driven", description: "Career Path Planning" },
+    ],
+    coverImage:
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/educational-ai/educational-1.jpg",
+    gallery: [
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/educational-ai/educational-2.jpg",
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/educational-ai/educational-3.jpg",
+    ],
+  },
+
+  {
+    id: "interior-designer-digital-twin",
+    title: "Interior Designer Intelligent Digital Twin",
+    clientName: "Real Estate Sector",
+    category: "Interactive 3D AI",
+    shortDescription:
+      "An advanced interactive property visualisation system combining digital twin technology with AI-powered sales assistance.",
+    fullDescription:
+      "An advanced interactive property visualisation system that combines digital twin technology with AI-powered sales assistance. Users can explore properties in photorealistic 3D, customise interior elements like wall colours and furnishings, and interact with an AI assistant that provides detailed property information, answers queries, and guides the sales process. The system creates an immersive, self-guided property exploration experience that enhances the real estate sales process.",
+    challenge:
+      "Supplying immersive property explorations with real-time room customization and an integrated, instant sales assistant.",
+    solution:
+      "Combined Intelligent Digital Twin Platform, Conversational Sales AI, Environmental Vision System, and Image Generation for live spatial customization.",
+    results: [
+      { metric: "Immersive", description: "Photorealistic 3D Exploration" },
+      { metric: "Real-time", description: "Interior Customization" },
+    ],
+    coverImage:
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/digital-twin/digital-twin-1.jpg",
+    gallery: [
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/digital-twin/digital-twin-2.jpg",
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/digital-twin/digital-twin-3.jpg",
+    ],
+  },
+  {
+    id: "shipgpt",
+    title: "ShipGPT",
+    clientName: "Maritime Operations",
+    category: "Cloud SaaS Platform",
+    shortDescription:
+      "Cloud-based SaaS for maritime operations with AI-powered document processing and conversational interface.",
+    fullDescription:
+      "A cloud-based SaaS platform for maritime operations that enables shipping companies to manage multiple vessels through a secure multi-tenant architecture, with role-based access for different crew members. Features an AI-powered document processing system that uses OCR to analyze ship manuals and regulations, automatically generating mechanical and compliance dashboards. Includes ShipGPT, a natural language interface that uses RAG to provide role-specific information access. Automates regulatory compliance tracking and machinery maintenance scheduling.",
+    challenge:
+      "Managing massive multi-language ship manuals/regulations, answering crew queries instantly, and tracking maritime compliance across multiple vessels securely.",
+    solution:
+      "Built a secure multi-tenant architecture utilizing OCR document processing, RAG framework, and Custom Chatbots to deliver the ShipGPT dashboard.",
+    results: [
+      { metric: "Automated", description: "Compliance Tracking" },
+      { metric: "Role-specific", description: "Contextual RAG Access" },
+    ],
+    coverImage:
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/ship-ai/ship-1.jpg",
+    gallery: [
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/ship-ai/ship-2.jpg",
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/ship-ai/ship-3.jpg",
+    ],
+  },
+  {
+    id: "desara-ai",
+    title: "Desara.ai",
+    clientName: "Fashion Industry",
+    category: "AI Fashion Design",
+    shortDescription:
+      "AI based fashion design platform utilizing cloud native solutions to stream and render 3D dresses.",
+    fullDescription:
+      "AI based fashion design platform. Uses cloud native streaming solutions to render 3D dresses in high quality. Intuitive tools to experiment with garments by changing colourways, prints and lighting. Optimizes the flow from research to virtual sampling, reducing design cycles from months to hours. The AI-powered solution dynamically curates content, providing human-like insights and efficient inspiration discovery.",
+    challenge:
+      "Drastically reducing lengthy fashion design cycles while providing rapid, high-quality 3D sampling and inspiration discovery over the cloud.",
+    solution:
+      "Developed GenAI design interfaces for dynamic colors and prints, fully integrated with cloud-native high-quality 3D rendering and streaming.",
+    results: [
+      { metric: "Hours", description: "Design Cycle Time" },
+      { metric: "Immersive", description: "3D Virtual Sampling" },
+    ],
+    coverImage:
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/ai-fashion/fashion-1.jpg",
+    gallery: [
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/ai-fashion/fashion-2.jpg",
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/ai-fashion/fashion-3.jpg",
+    ],
+  },
+  {
+    id: "digital-greeter",
+    title: "Digital Greeter",
+    clientName: "STPI India",
+    category: "Robotics & Vision",
+    shortDescription:
+      "An AI robot that detects staff and guests arriving based on computer vision processing.",
+    fullDescription:
+      "An AI robot deployed at STPI India that detects staff and guests coming in based on computer vision. Utilizes voice synthesis to greet particular persons individually by name and context.",
+    challenge:
+      "Automating the physical front-door greeting process with highly personalized live recognition for incoming staff and guests.",
+    solution:
+      "Integrated hardware robotics with live computer vision for facial/object recognition, passing the outputs into dynamic voice synthesis engines.",
+    results: [
+      { metric: "Automated", description: "Guest Detection" },
+      { metric: "Personalized", description: "Voice Synthesis Greeting" },
+    ],
+    coverImage:
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/stpi/stpi-1.jpg",
+    gallery: [
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/stpi/stpi-2.jpg",
+      "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/stpi/stpi-3.jpg",
     ],
   },
 ];
