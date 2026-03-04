@@ -38,7 +38,6 @@ const HomeLayouts = () => {
       <BestService />
       <ServiceSection />
       <HowitWorks />
-      {/* <BestWorks /> */}
       <FaqSection />
       <SecureConnect />
       <SubFooter />
