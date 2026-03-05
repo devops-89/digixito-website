@@ -217,3 +217,13 @@ export interface CASE_STUDY_CARD_PROPS {
     };
   };
 }
+
+export interface BEST_WORK_CARD_PROPS {
+  img: StaticImageData;
+  title: string;
+  description: string;
+  skills: {
+    label: string;
+  }[];
+  slug: string;
+}
