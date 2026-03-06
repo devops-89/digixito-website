@@ -68,7 +68,7 @@ const BestWorks = () => {
         }}
       />
 
-      <Container maxWidth="xl" sx={{ position: "relative", zIndex: 1 }}>
+      <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
         <SectionCard title="Featured Portfolio" variant={VARIANTS.PRIMARY} />
 
         <Stack

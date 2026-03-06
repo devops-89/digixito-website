@@ -10,16 +10,15 @@ const SectionCard = ({ variant, title }: SECTION_CARD_PROPS) => {
       <Box
         sx={{
           position: "absolute",
-          left: -60,
+          left: -220,
           top: 80,
           transform: "rotate(-90deg )",
           padding: "16px 24px",
           backgroundColor: variant === VARIANTS.DARK ? "#333" : COLORS.PRIMARY,
           zIndex: 4,
-          display: {lg:"flex",xs:"none"},
+          display: { lg: "flex", xs: "none" },
           alignItems: "center",
           justifyContent: "center",
-          // height: 10,
         }}
       >
         <Typography

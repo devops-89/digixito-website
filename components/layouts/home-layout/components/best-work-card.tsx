@@ -21,14 +21,14 @@ const BestWorkCard = ({
         overflow: "hidden",
         width: "100%",
         height: { lg: 600, md: 500, xs: 450 },
-        transform: "translateZ(0)", // Force GPU acceleration
+        transform: "translateZ(0)",
         transition: "all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
         "&:hover": {
           "& .card-image": {
             transform: "scale(1.08)",
           },
           "& .card-overlay": {
-            opacity: 0.85,
+            opacity: 0.95,
           },
           "& .card-content": {
             transform: "translateY(0)",
@@ -42,7 +42,6 @@ const BestWorkCard = ({
         },
       }}
     >
-      {/* Background Image */}
       <Box
         className="card-image"
         sx={{
@@ -74,9 +73,9 @@ const BestWorkCard = ({
           right: 0,
           bottom: 0,
           background:
-            "linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.1) 100%)",
+            "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.2) 100%)",
           zIndex: 2,
-          opacity: 0.7,
+          opacity: 0.8,
           transition: "opacity 0.5s ease",
         }}
       />
@@ -99,8 +98,7 @@ const BestWorkCard = ({
           spacing={2}
         >
           <Box sx={{ flex: 1 }}>
-            {/* Title */}
-            <Typography
+            {/* <Typography
               component="h3"
               sx={{
                 fontFamily: monument.style.fontFamily,
@@ -114,7 +112,7 @@ const BestWorkCard = ({
               }}
             >
               {title}
-            </Typography>
+            </Typography> */}
 
             {/* Hidden initial content that slides up */}
             <Box
@@ -130,10 +128,11 @@ const BestWorkCard = ({
                 sx={{
                   fontFamily: kessel.style.fontFamily,
                   fontSize: { lg: 16, xs: 14 },
-                  color: "rgba(255,255,255,0.7)",
+                  color: COLORS.WHITE,
                   lineHeight: 1.6,
                   maxWidth: "90%",
                   mb: 3,
+                  textShadow: "0 2px 4px rgba(0,0,0,0.8)",
                 }}
               >
                 {description}
