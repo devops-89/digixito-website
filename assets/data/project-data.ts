@@ -143,4 +143,82 @@ export const PROJECT_DATA: BEST_WORK_CARD_PROPS[] = [
     ],
     slug: "namaste-india",
   },
+  {
+    img: netraNiti,
+    title: "NXTGEN Netra Niti",
+    description:
+      "For NXTGEN Netra Niti, we focused on enhancing their digital presence by providing expert UX design, custom website development, and targeted digital marketing strategies. Our approach aimed to create an engaging user experience and drive meaningful online interactions.",
+    skills: [
+      {
+        label: "UX Design",
+      },
+      {
+        label: "Website Development",
+      },
+      {
+        label: "Digital Marketing",
+      },
+    ],
+    slug: "netra-niti",
+  },
+  {
+    img: page1,
+    title: "Page 1 Travel",
+    description:
+      "For Page 1 Travel, we built a modern, high-performance website combining responsive frontend architecture with a robust backend service. Utilizing Next.js and NestJS, we created a scalable and visually engaging platform to enhance the overall traveler experience.",
+    skills: [
+      {
+        label: "Website Development",
+      },
+      {
+        label: "Next.js",
+      },
+      {
+        label: "NestJS",
+      },
+    ],
+    slug: "page-1-travel",
+  },
+  {
+    img: perf,
+    title: "Perf",
+    description:
+      "For Perf, we built a comprehensive digital platform focusing on robust website development and a seamless e-commerce experience. Our goal was to create an intuitive online store that drives sales and provides customers with an effortless shopping journey.",
+    skills: [
+      {
+        label: "Website Development",
+      },
+      {
+        label: "E-commerce",
+      },
+    ],
+    slug: "perf",
+  },
+  {
+    img: rasdelta,
+    title: "Rasdelta",
+    description:
+      "For Rasdelta, we developed and executed a targeted digital marketing strategy. Our focus was on enhancing their online visibility, engaging their primary audience, and driving sustainable digital growth through data-driven campaigns.",
+    skills: [
+      {
+        label: "Digital Marketing",
+      },
+    ],
+    slug: "rasdelta",
+  },
+  {
+    img: shipsmith,
+    title: "Shipsmith",
+    description:
+      "For Shipsmith, we provided a dual approach of custom website development and creative graphic design. We built a responsive, high-performing website paired with compelling visual assets that effectively communicate their brand identity and offerings.",
+    skills: [
+      {
+        label: "Website Development",
+      },
+      {
+        label: "Graphic Works",
+      },
+    ],
+    slug: "shipsmith",
+  },
 ];
