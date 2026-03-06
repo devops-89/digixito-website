@@ -109,7 +109,7 @@ const BestWorks = () => {
             </Typography>
           </Box>
 
-          <Button
+          {/* <Button
             endIcon={<ArrowRightAlt sx={{ fontSize: 32 }} />}
             sx={{
               color: COLORS.WHITE,
@@ -128,7 +128,7 @@ const BestWorks = () => {
             }}
           >
             View All Projects
-          </Button>
+          </Button> */}
         </Stack>
 
         <Box sx={{ position: "relative" }}>
