@@ -10,6 +10,8 @@ export interface CaseStudyProps {
   results: { metric: string; description: string }[];
   coverImage: string;
   gallery: string[];
+  toolsUsed: string[];
+  projectDuration: string;
 }
 
 export const CASE_STUDIES_DATA: CaseStudyProps[] = [
@@ -36,6 +38,8 @@ export const CASE_STUDIES_DATA: CaseStudyProps[] = [
       "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/health-care-document-analysis/healthcare-2.jpg",
       "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/health-care-document-analysis/healthcare-3.jpg",
     ],
+    toolsUsed: ["Python", "TensorFlow", "React", "Node.js"],
+    projectDuration: "6 Months",
   },
   {
     id: "nanoecho-node-detection",
@@ -60,6 +64,8 @@ export const CASE_STUDIES_DATA: CaseStudyProps[] = [
       "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/nano-echo-node-detection/nano-echo-2.jpg",
       "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/nano-echo-node-detection/nano-echo-3.jpg",
     ],
+    toolsUsed: ["OpenCV", "PyTorch", "C++", "React"],
+    projectDuration: "8 Months",
   },
   {
     id: "stock-market-analysis",
@@ -84,6 +90,8 @@ export const CASE_STUDIES_DATA: CaseStudyProps[] = [
       "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/stock-market-analysis/stock-2.jpg",
       "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/stock-market-analysis/stock-3.jpg",
     ],
+    toolsUsed: ["Next.js", "Python", "WebSockets", "NLP"],
+    projectDuration: "5 Months",
   },
   {
     id: "surveillance-system-demo",
@@ -108,6 +116,8 @@ export const CASE_STUDIES_DATA: CaseStudyProps[] = [
       "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/survellience/survellience-2.jpg",
       "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/survellience/survellience-3.jpg",
     ],
+    toolsUsed: ["YOLO", "OpenCV", "AWS", "React"],
+    projectDuration: "4 Months",
   },
   {
     id: "vroar-educational-ai",
@@ -132,6 +142,8 @@ export const CASE_STUDIES_DATA: CaseStudyProps[] = [
       "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/educational-ai/educational-2.jpg",
       "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/educational-ai/educational-3.jpg",
     ],
+    toolsUsed: ["LLMs", "LangChain", "Next.js", "MongoDB"],
+    projectDuration: "7 Months",
   },
 
   {
@@ -157,6 +169,8 @@ export const CASE_STUDIES_DATA: CaseStudyProps[] = [
       "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/digital-twin/digital-twin-2.jpg",
       "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/digital-twin/digital-twin-3.jpg",
     ],
+    toolsUsed: ["Three.js", "WebGL", "React", "AI Image Gen"],
+    projectDuration: "9 Months",
   },
   {
     id: "shipgpt",
@@ -181,6 +195,8 @@ export const CASE_STUDIES_DATA: CaseStudyProps[] = [
       "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/ship-ai/ship-2.jpg",
       "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/ship-ai/ship-3.jpg",
     ],
+    toolsUsed: ["Next.js", "AWS", "OCR", "LLMs"],
+    projectDuration: "12 Months",
   },
   {
     id: "desara-ai",
@@ -205,6 +221,8 @@ export const CASE_STUDIES_DATA: CaseStudyProps[] = [
       "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/ai-fashion/fashion-2.jpg",
       "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/ai-fashion/fashion-3.jpg",
     ],
+    toolsUsed: ["GenAI", "React", "WebGL", "Google Cloud"],
+    projectDuration: "6 Months",
   },
   {
     id: "digital-greeter",
@@ -229,5 +247,7 @@ export const CASE_STUDIES_DATA: CaseStudyProps[] = [
       "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/stpi/stpi-2.jpg",
       "https://up23onagldy9futl.public.blob.vercel-storage.com/case-study/stpi/stpi-3.jpg",
     ],
+    toolsUsed: ["Hardware Integration", "OpenCV", "Python", "TTS"],
+    projectDuration: "3 Months",
   },
 ];

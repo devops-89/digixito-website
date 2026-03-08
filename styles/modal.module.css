@@ -5,17 +5,18 @@
   backdrop-filter: blur(5px);
   position: fixed;
   top: 0;
-  overflow-y: scroll;
   left: 0;
   z-index: 1001;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding: 20px 0;
+  overflow-y: auto;
 }
 
 .modal__content {
-  /* width: 100%; */
-  max-height: 100%;
+  width: auto;
+  max-width: 95%;
   border-radius: 20px;
   position: relative;
   background-color: white;
@@ -24,14 +25,17 @@
     50% 50%,
     0 0;
   background-size: 3.125rem, auto;
-  overflow-y: scroll;
+  margin: auto;
 }
 .modal__content::-webkit-scrollbar {
   width: 0;
 }
 @media screen and (max-width: 600px) {
   .modal__content {
-    min-width: 300px;
+    min-width: unset;
+    width: calc(100% - 30px);
+    margin: 15px auto;
+    border-radius: 16px;
   }
 }
 

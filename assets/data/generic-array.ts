@@ -387,6 +387,7 @@ export const COUNTER_CARD_DATA: COUNT_UP_CARD_PROPS[] = [
 export const WHAT_WE_VALUE_CARD_PROPS: VALUE_LIST_PROPS[] = [
   {
     img: globe,
+    objPath: "/images/career/network_globe_clean.obj",
     data: [
       {
         serial_number: "01",
@@ -410,6 +411,7 @@ export const WHAT_WE_VALUE_CARD_PROPS: VALUE_LIST_PROPS[] = [
   },
   {
     img: fish,
+    objPath: "/images/career/dolphin_network.obj",
     data: [
       {
         serial_number: "04",

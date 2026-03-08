@@ -136,6 +136,7 @@ export interface WHAT_LIST {
 export interface VALUE_LIST_PROPS {
   data: WHAT_LIST[];
   img: StaticImageData;
+  objPath?: string;
   isReverse?: boolean;
 }
 

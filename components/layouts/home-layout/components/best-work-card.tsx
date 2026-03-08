@@ -77,7 +77,7 @@ const BestWorkCard = ({
             background:
               "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.2) 100%)",
             zIndex: 2,
-            opacity: 0.8,
+            opacity: 0,
             transition: "opacity 0.5s ease",
           }}
         />
@@ -166,8 +166,8 @@ const BestWorkCard = ({
               className="icon-btn"
               component="span" // Prevent button inside link warning
               sx={{
-                backgroundColor: "rgba(255,255,255,0.1)",
-                backdropFilter: "blur(10px)",
+                backgroundColor: "rgba(0,0,0,0.6)",
+                backdropFilter: "blur(4px)",
                 color: COLORS.WHITE,
                 border: "1px solid rgba(255,255,255,0.2)",
                 width: { lg: 64, xs: 48 },

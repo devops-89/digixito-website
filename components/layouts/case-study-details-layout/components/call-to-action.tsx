@@ -13,7 +13,9 @@ const CallToAction = ({ onAction }: CallToActionProps) => (
       mt: 15,
       py: 10,
       px: { xs: 4, md: 8 },
-      backgroundColor: COLORS.BLACK,
+      backgroundColor: "#F9FAFB",
+      border: "1px solid #E5E7EB",
+      boxShadow: "0px 4px 20px rgba(0,0,0,0.05)",
       borderRadius: "30px",
       textAlign: "center",
     }}
@@ -24,7 +26,7 @@ const CallToAction = ({ onAction }: CallToActionProps) => (
         fontFamily: monument.style.fontFamily,
         fontWeight: 800,
         fontSize: { xs: 24, md: 40 },
-        color: COLORS.WHITE,
+        color: COLORS.BLACK,
         mb: 3,
       }}
     >

@@ -17,7 +17,8 @@ const CaseStudyCard = ({ caseStudy: study }: CaseStudyCardProps) => {
       href={`/case-studies/${study.id}`}
       sx={{
         display: "flex",
-        alignItems: "center",
+        flexDirection: { xs: "column", md: "row" },
+        alignItems: { xs: "flex-start", md: "center" },
         justifyContent: "space-between",
         py: { xs: 4, md: 6 },
         borderBottom: "1px solid rgba(0, 0, 0, 0.15)",
@@ -27,14 +28,17 @@ const CaseStudyCard = ({ caseStudy: study }: CaseStudyCardProps) => {
         "&:hover": {
           "& .hover-image": {
             opacity: 1,
-            transform: "translate(-50%, -50%) scale(1) rotate(-1deg)",
+            transform: {
+              xs: "none",
+              md: "translate(-50%, -50%) scale(1) rotate(-1deg)",
+            },
           },
           "& .arrow": {
             opacity: 1,
             transform: "translate(0, -50%)",
           },
           "& .title": {
-            transform: "translateX(40px)",
+            transform: { xs: "none", md: "translateX(40px)" },
             color: COLORS.BLACK,
           },
           "& .meta-text": {
@@ -47,19 +51,26 @@ const CaseStudyCard = ({ caseStudy: study }: CaseStudyCardProps) => {
       <Box
         className="hover-image"
         sx={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%) scale(0.85) rotate(0deg)",
-          width: { xs: "280px", md: "500px" },
-          height: { xs: "180px", md: "320px" },
-          opacity: 0,
+          position: { xs: "relative", md: "absolute" },
+          top: { xs: "auto", md: "50%" },
+          left: { xs: "auto", md: "50%" },
+          transform: {
+            xs: "none",
+            md: "translate(-50%, -50%) scale(0.85) rotate(0deg)",
+          },
+          width: { xs: "100%", md: "500px" },
+          height: { xs: "220px", md: "320px" },
+          opacity: { xs: 1, md: 0 },
           transition: "all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)",
           pointerEvents: "none",
           zIndex: 10,
-          borderRadius: "16px",
+          borderRadius: { xs: "12px", md: "16px" },
           overflow: "hidden",
-          boxShadow: "0 20px 50px rgba(0,0,0,0.8)",
+          boxShadow: {
+            xs: "0 10px 30px rgba(0,0,0,0.1)",
+            md: "0 20px 50px rgba(0,0,0,0.8)",
+          },
+          mb: { xs: 3, md: 0 },
         }}
       >
         <Image
@@ -75,8 +86,9 @@ const CaseStudyCard = ({ caseStudy: study }: CaseStudyCardProps) => {
         sx={{
           display: "flex",
           alignItems: "center",
-          flex: { xs: 1, md: 0.5 },
+          flex: { xs: "none", md: 0.5 },
           position: "relative",
+          width: { xs: "100%", md: "auto" },
         }}
       >
         <Typography
@@ -91,6 +103,7 @@ const CaseStudyCard = ({ caseStudy: study }: CaseStudyCardProps) => {
             opacity: 0,
             transform: "translate(-20px, -50%)",
             transition: "all 0.4s ease",
+            display: { xs: "none", md: "block" },
           }}
         >
           &rarr;
@@ -100,8 +113,9 @@ const CaseStudyCard = ({ caseStudy: study }: CaseStudyCardProps) => {
           sx={{
             fontFamily: kessel.style.fontFamily,
             fontSize: { xs: 18, md: 24, lg: 32 },
-            fontWeight: 400,
-            color: "rgba(0,0,0,0.7)",
+            lineHeight: { xs: 1.2, md: 1.4 },
+            fontWeight: { xs: 500, md: 400 },
+            color: { xs: COLORS.BLACK, md: "rgba(0,0,0,0.7)" },
             transition: "all 0.4s ease",
           }}
         >
@@ -109,14 +123,15 @@ const CaseStudyCard = ({ caseStudy: study }: CaseStudyCardProps) => {
         </Typography>
       </Box>
 
-      {/* Center / Right: Meta info */}
       <Box
         sx={{
-          display: { xs: "none", md: "flex" },
-          flex: 0.5,
+          display: "flex",
+          flex: { xs: "none", md: 0.5 },
+          width: { xs: "100%", md: "auto" },
           justifyContent: "space-between",
           alignItems: "center",
-          pl: { md: 4, lg: 10 },
+          pl: { xs: 0, md: 4, lg: 10 },
+          mt: { xs: 2.5, md: 0 },
         }}
       >
         <Typography
@@ -124,9 +139,9 @@ const CaseStudyCard = ({ caseStudy: study }: CaseStudyCardProps) => {
           sx={{
             fontFamily: archivo.style.fontFamily,
             color: "rgba(0,0,0,0.5)",
-            fontSize: 16,
+            fontSize: { xs: 12, md: 16 },
             textTransform: "uppercase",
-            letterSpacing: 1,
+            letterSpacing: 1.5,
             transition: "color 0.4s ease",
           }}
         >
@@ -136,14 +151,15 @@ const CaseStudyCard = ({ caseStudy: study }: CaseStudyCardProps) => {
           className="meta-text"
           sx={{
             fontFamily: archivo.style.fontFamily,
-            color: "rgba(0,0,0,0.5)",
-            fontSize: 16,
+            color: { xs: COLORS.PRIMARY, md: "rgba(0,0,0,0.5)" },
+            fontSize: { xs: 12, md: 16 },
             textTransform: "uppercase",
             letterSpacing: 1,
             transition: "color 0.4s ease",
+            fontWeight: { xs: 600, md: 400 },
           }}
         >
-          Tech
+          View Case Study &rarr;
         </Typography>
       </Box>
     </Box>

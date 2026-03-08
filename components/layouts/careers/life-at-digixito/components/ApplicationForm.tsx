@@ -132,18 +132,20 @@ const ApplicationForm = ({ roleTitle }: ApplicationFormProps) => {
   return (
     <Box
       sx={{
-        width: { xs: "100%", sm: "500px" },
+        width: "100%",
         position: "relative",
-        padding: "24px 30px",
+        padding: { xs: "40px 16px 24px", sm: "24px 30px" },
+        boxSizing: "border-box",
       }}
     >
       <IconButton
         onClick={hideModal}
         sx={{
           position: "absolute",
-          top: 15,
-          right: 15,
+          top: { xs: 8, sm: 15 },
+          right: { xs: 8, sm: 15 },
           color: COLORS.BLACK,
+          zIndex: 10,
         }}
       >
         <Close />
@@ -152,7 +154,7 @@ const ApplicationForm = ({ roleTitle }: ApplicationFormProps) => {
       <Typography
         sx={{
           fontFamily: monument.style.fontFamily,
-          fontSize: { lg: 28, xs: 24, sm: 26 },
+          fontSize: { xs: 20, sm: 26, lg: 28 },
           fontWeight: 800,
           lineHeight: 1.2,
           mb: 1,
@@ -165,9 +167,9 @@ const ApplicationForm = ({ roleTitle }: ApplicationFormProps) => {
       <Typography
         sx={{
           fontFamily: archivo.style.fontFamily,
-          fontSize: 16,
+          fontSize: { xs: 13, sm: 16 },
           color: "#6B7280",
-          mb: 4,
+          mb: { xs: 2.5, sm: 4 },
           fontWeight: 500,
         }}
       >
@@ -176,14 +178,7 @@ const ApplicationForm = ({ roleTitle }: ApplicationFormProps) => {
       </Typography>
 
       <form onSubmit={formik.handleSubmit}>
-        <Box
-          sx={{
-            maxHeight: "calc(100vh - 270px)",
-            overflowY: "auto",
-            pr: 1,
-            mr: -1,
-          }}
-        >
+        <Box sx={{ width: "100%" }}>
           <Stack spacing={2}>
             <TextField
               variant="outlined"
@@ -256,7 +251,10 @@ const ApplicationForm = ({ roleTitle }: ApplicationFormProps) => {
                 startIcon={
                   <CloudUploadOutlined
                     sx={{
-                      fontSize: "32px !important",
+                      fontSize: {
+                        xs: "24px !important",
+                        sm: "32px !important",
+                      },
                       color: fileName ? COLORS.BLACK : "#9CA3AF",
                     }}
                   />
@@ -264,7 +262,7 @@ const ApplicationForm = ({ roleTitle }: ApplicationFormProps) => {
                 sx={{
                   fontFamily: archivo.style.fontFamily,
                   fontWeight: 600,
-                  fontSize: 15,
+                  fontSize: { xs: 14, sm: 15 },
                   border:
                     formik.touched.resume && formik.errors.resume
                       ? "2px dashed #EF4444"
@@ -275,7 +273,7 @@ const ApplicationForm = ({ roleTitle }: ApplicationFormProps) => {
                   color: fileName ? COLORS.BLACK : "#6B7280",
                   justifyContent: "center",
                   textTransform: "none",
-                  py: 3,
+                  py: { xs: 2.5, sm: 3 },
                   px: 3,
                   borderRadius: "12px",
                   flexDirection: "column",
@@ -290,9 +288,11 @@ const ApplicationForm = ({ roleTitle }: ApplicationFormProps) => {
                   transition: "all 0.2s ease-in-out",
                 }}
               >
-                <Box sx={{ textAlign: "center", mt: 1 }}>
+                <Box sx={{ textAlign: "center", mt: { xs: 0.5, sm: 1 } }}>
                   {fileName ? (
-                    <span style={{ color: COLORS.BLACK }}>{fileName}</span>
+                    <span style={{ color: COLORS.BLACK, fontSize: 13 }}>
+                      {fileName}
+                    </span>
                   ) : (
                     <>
                       <span
@@ -300,13 +300,14 @@ const ApplicationForm = ({ roleTitle }: ApplicationFormProps) => {
                           color: COLORS.BLACK,
                           display: "block",
                           marginBottom: "4px",
+                          fontSize: 14,
                         }}
                       >
                         Click to upload Resume
                       </span>
                       <span
                         style={{
-                          fontSize: 13,
+                          fontSize: 12,
                           fontWeight: 400,
                           color: "#9CA3AF",
                           display: "block",
@@ -347,14 +348,14 @@ const ApplicationForm = ({ roleTitle }: ApplicationFormProps) => {
             </Box>
           </Stack>
         </Box>
-        <Box sx={{ pt: 2, pb: 1, px: { xs: 1, md: 0 } }}>
+        <Box sx={{ pt: 3, pb: 1 }}>
           <Button
             sx={{
               fontFamily: monument.style.fontFamily,
               backgroundColor: COLORS.PRIMARY,
               color: COLORS.BLACK,
-              padding: "16px 24px",
-              fontSize: 16,
+              padding: { xs: "14px 24px", sm: "16px 24px" },
+              fontSize: { xs: 14, sm: 16 },
               borderRadius: "50px",
               boxShadow: "0 4px 14px 0 rgba(253, 235, 57, 0.39)",
               "&:hover": {

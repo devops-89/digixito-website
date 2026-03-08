@@ -9,30 +9,29 @@ import { JOB_DESCRIPTION } from "@/public/locale/data";
 const OpenRoles = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   return (
-    <Box sx={{ mb: 20 }}>
+    <Box sx={{ mb: { xs: 10, md: 20 } }}>
       <Container maxWidth="lg">
-        <Grid container>
+        <Grid container spacing={{ xs: 6, md: 0 }}>
           <Grid
-            size={4}
+            size={{ xs: 12, md: 4 }}
             sx={{
-              position: { lg: "sticky", xs: "static" },
-              top: 100,
+              position: { md: "sticky" },
+              top: { md: 100 },
               alignSelf: "flex-start",
             }}
           >
             <Typography
               sx={{
-                fontSize: 40,
+                fontSize: { xs: 32, md: 40 },
                 fontFamily: kessel.style.fontFamily,
                 textTransform: "capitalize",
-                lineHeight: "40px",
-                // letterSpacing: "-0.48px",
+                lineHeight: { xs: "36px", md: "40px" },
                 fontWeight: 600,
               }}
             >
               Our open <br /> roles
             </Typography>
-            <Box sx={{ mt: 4 }}>
+            <Box sx={{ mt: { xs: 2.5, md: 4 } }}>
               <Typography
                 sx={{
                   fontSize: 15,
@@ -49,7 +48,7 @@ const OpenRoles = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid size={8}>
+          <Grid size={{ xs: 12, md: 8 }}>
             <Stack spacing={2}>
               {JOB_DESCRIPTION.map((val, i) => (
                 <RoleCard

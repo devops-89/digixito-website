@@ -24,9 +24,9 @@ const HerosectionLife = () => {
               <Typography
                 sx={{
                   fontFamily: kessel.style.fontFamily,
-                  fontSize: { lg: 56, xs: 35 },
+                  fontSize: { lg: 48, xs: 32 },
                   fontWeight: 700,
-                  lineHeight: "75px",
+                  lineHeight: 1.2,
                   letterSpacing: "-1.51px",
                   textAlign: "center",
                 }}
@@ -37,9 +37,9 @@ const HerosectionLife = () => {
                 sx={{
                   fontFamily: monument.style.fontFamily,
                   textAlign: "center",
-                  fontSize: { lg: 56, xs: 30 },
+                  fontSize: { lg: 48, xs: 28 },
                   fontWeight: 700,
-                  lineHeight: { lG: "75px", xs: "30px" },
+                  lineHeight: 1.2,
                   letterSpacing: "-1.51px",
                 }}
               >
@@ -47,12 +47,12 @@ const HerosectionLife = () => {
               </Typography>
               <Typography
                 sx={{
-                  fontSize: 19,
+                  fontSize: { lg: 18, xs: 16 },
                   fontWeight: 500,
                   fontFamily: kessel.style.fontFamily,
-                  lineHeight: { lg: "48px", xs: "30px" },
+                  lineHeight: 1.6,
                   textAlign: "center",
-                  mt: 2,
+                  mt: 3,
                 }}
               >
                 At Digixito, we believe innovation begins with people curious

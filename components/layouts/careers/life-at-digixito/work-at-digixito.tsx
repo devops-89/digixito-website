@@ -16,19 +16,24 @@ import WorkatDigixitoCard from "./components/work-at-digixito-card";
 import { WORK_AT_DIGIXITO_CARD_DATA } from "@/assets/data/generic-array";
 const WorkatDigixito = () => {
   return (
-    <Box sx={{ py: 10 }}>
+    <Box sx={{ py: { xs: 6, md: 10 } }}>
       <Container maxWidth="lg">
         <Stack
           direction={{ lg: "row", xs: "column" }}
           alignItems={"center"}
           spacing={{ lg: 3, xs: 5 }}
         >
-          <Stack direction={"row"} alignItems={"center"} spacing={1}>
+          <Stack
+            direction={"row"}
+            alignItems={"center"}
+            spacing={1}
+            sx={{ display: { xs: "none", md: "flex" } }}
+          >
             <Box
               sx={{
-                border: "2px solid #000",
-                height: 1,
-                width: { lg: 550, xs: 350 },
+                border: "1px solid #000",
+                height: "2px",
+                width: { lg: 550, md: 350 },
                 backgroundColor: COLORS.BLACK,
               }}
             ></Box>
@@ -36,7 +41,7 @@ const WorkatDigixito = () => {
           </Stack>
           <Typography
             sx={{
-              fontSize: 40,
+              fontSize: { lg: 40, xs: 28 },
               fontFamily: monument.style.fontFamily,
               fontWeight: 400,
             }}
@@ -45,16 +50,19 @@ const WorkatDigixito = () => {
           </Typography>
           <ImageHeading title="Digixito" />
         </Stack>
-        <Grid container sx={{ py: 10, alignItems: "flex-start" }}>
+        <Grid
+          container
+          sx={{ py: { xs: 6, md: 10 }, alignItems: "flex-start" }}
+        >
           <Grid
             size={{ lg: 5, xs: 12 }}
             sx={{ position: { lg: "sticky", xs: "static" }, top: 100 }}
           >
             <Typography
               sx={{
-                fontSize: { lg: 40, xs: 30 },
+                fontSize: { lg: 32, xs: 24 },
                 fontFamily: kessel.style.fontFamily,
-                lineHeight: "33px",
+                lineHeight: 1.2,
                 letterSpacing: "-0.63px",
                 fontWeight: 500,
               }}
@@ -63,9 +71,9 @@ const WorkatDigixito = () => {
             </Typography>
             <Typography
               sx={{
-                fontSize: { lg: 40, xs: 30 },
+                fontSize: { lg: 32, xs: 24 },
                 fontFamily: kessel.style.fontFamily,
-                lineHeight: "33px",
+                lineHeight: 1.2,
                 letterSpacing: "-0.63px",
                 fontWeight: 500,
               }}
@@ -76,9 +84,9 @@ const WorkatDigixito = () => {
           <Grid size={{ lg: 7, xs: 12 }}>
             <Typography
               sx={{
-                fontSize: 23,
+                fontSize: { lg: 18, xs: 16 },
                 fontFamily: kessel.style.fontFamily,
-                lineHeight: "30px",
+                lineHeight: 1.6,
                 letterSpacing: "-0.48px",
                 fontWeight: 500,
                 textAlign: "justify",

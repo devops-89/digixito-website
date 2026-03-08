@@ -63,7 +63,7 @@ const RoleCard = ({
           <Box sx={{ flex: 1, pr: { md: 4 } }}>
             <Typography
               sx={{
-                fontFamily: monument.style.fontFamily,
+                fontFamily: archivo.style.fontFamily,
                 fontWeight: 800,
                 fontSize: { xs: 20, md: 24 },
                 color: COLORS.BLACK,
@@ -94,7 +94,14 @@ const RoleCard = ({
                       borderRadius: "8px",
                     }}
                   />
-                  <Circle sx={{ fontSize: 4, color: "#D1D5DB" }} />
+                  <Box
+                    component={Circle}
+                    sx={{
+                      fontSize: 4,
+                      color: "#D1D5DB",
+                      display: { xs: "none", sm: "block" },
+                    }}
+                  />
                   <Chip
                     label={val.experience}
                     size="small"
@@ -106,7 +113,14 @@ const RoleCard = ({
                       borderRadius: "8px",
                     }}
                   />
-                  <Circle sx={{ fontSize: 4, color: "#D1D5DB" }} />
+                  <Box
+                    component={Circle}
+                    sx={{
+                      fontSize: 4,
+                      color: "#D1D5DB",
+                      display: { xs: "none", sm: "block" },
+                    }}
+                  />
                   <Chip
                     label={val.type}
                     size="small"
@@ -122,18 +136,24 @@ const RoleCard = ({
               ))}
             </Stack>
           </Box>
-          <Box sx={{ mt: { xs: 2, md: 0 } }}>
-            <Stack direction="row" alignItems="center" spacing={2}>
+          <Box sx={{ mt: { xs: 3, md: 0 }, width: { xs: "100%", md: "auto" } }}>
+            <Stack
+              direction="row"
+              alignItems="center"
+              justifyContent="space-between"
+              spacing={2}
+            >
               <Button
                 onClick={() => showModal(<ApplicationForm roleTitle={title} />)}
                 sx={{
                   fontFamily: monument.style.fontFamily,
                   backgroundColor: COLORS.PRIMARY,
                   color: COLORS.BLACK,
-                  padding: "10px 20px",
-                  fontSize: 14,
+                  padding: { xs: "12px 24px", md: "10px 20px" },
+                  fontSize: { xs: 12, md: 14 },
                   borderRadius: "50px",
                   boxShadow: "0 4px 14px 0 rgba(253, 235, 57, 0.39)",
+                  flex: { xs: 1, md: "none" },
                   "&:hover": {
                     backgroundColor: COLORS.PRIMARY,
                     opacity: 0.9,
@@ -153,6 +173,8 @@ const RoleCard = ({
                   backgroundColor: isOpen ? "#F9FAFB" : "transparent",
                   "&:hover": { backgroundColor: "#F3F4F6" },
                   flexShrink: 0,
+                  width: { xs: 44, md: 40 },
+                  height: { xs: 44, md: 40 },
                 }}
                 onClick={handleToggle}
               >
@@ -169,8 +191,8 @@ const RoleCard = ({
         <Collapse in={isOpen}>
           <Box
             sx={{
-              px: { xs: 2, md: 4 },
-              pb: 4,
+              px: { xs: 2.5, md: 4 },
+              pb: { xs: 3, md: 4 },
               borderTop: "1px solid #E5E7EB",
               mt: 2,
               pt: 4,
@@ -180,7 +202,7 @@ const RoleCard = ({
               sx={{
                 fontFamily: monument.style.fontFamily,
                 fontWeight: 800,
-                fontSize: 20,
+                fontSize: { xs: 18, md: 20 },
                 color: COLORS.BLACK,
                 mb: 2,
               }}
@@ -193,17 +215,17 @@ const RoleCard = ({
                 mb: 4,
                 color: "#4B5563",
                 lineHeight: 1.6,
-                fontSize: 16,
+                fontSize: { xs: 14, md: 16 },
               }}
             >
               {description}
             </Typography>
 
-            <Stack spacing={4}>
+            <Stack spacing={{ xs: 3, md: 4 }}>
               <Box
                 sx={{
                   backgroundColor: "#F9FAFB",
-                  p: { xs: 3, md: 4 },
+                  p: { xs: 2.5, md: 4 },
                   borderRadius: "16px",
                   height: "100%",
                 }}
@@ -212,7 +234,7 @@ const RoleCard = ({
                   sx={{
                     fontFamily: monument.style.fontFamily,
                     fontWeight: 800,
-                    fontSize: 18,
+                    fontSize: { xs: 16, md: 18 },
                     color: COLORS.BLACK,
                     mb: 2,
                   }}
@@ -227,7 +249,9 @@ const RoleCard = ({
                       disablePadding
                       sx={{ mb: 1.5, alignItems: "flex-start" }}
                     >
-                      <ListItemAvatar sx={{ minWidth: 28, mt: 0.5 }}>
+                      <ListItemAvatar
+                        sx={{ minWidth: { xs: 24, md: 28 }, mt: 0.5 }}
+                      >
                         <Circle
                           sx={{ width: 8, height: 8, color: COLORS.BLACK }}
                         />
@@ -239,7 +263,7 @@ const RoleCard = ({
                             sx: {
                               fontFamily: archivo.style.fontFamily,
                               color: "#4B5563",
-                              fontSize: 16,
+                              fontSize: { xs: 14, md: 16 },
                               lineHeight: 1.6,
                             },
                           },
@@ -253,7 +277,7 @@ const RoleCard = ({
               <Box
                 sx={{
                   backgroundColor: "#F9FAFB",
-                  p: { xs: 3, md: 4 },
+                  p: { xs: 2.5, md: 4 },
                   borderRadius: "16px",
                   height: "100%",
                 }}
@@ -262,7 +286,7 @@ const RoleCard = ({
                   sx={{
                     fontFamily: monument.style.fontFamily,
                     fontWeight: 800,
-                    fontSize: 18,
+                    fontSize: { xs: 16, md: 18 },
                     color: COLORS.BLACK,
                     mb: 2,
                   }}
@@ -277,7 +301,9 @@ const RoleCard = ({
                       disablePadding
                       sx={{ mb: 1.5, alignItems: "flex-start" }}
                     >
-                      <ListItemAvatar sx={{ minWidth: 28, mt: 0.5 }}>
+                      <ListItemAvatar
+                        sx={{ minWidth: { xs: 24, md: 28 }, mt: 0.5 }}
+                      >
                         <Circle
                           sx={{ width: 8, height: 8, color: COLORS.BLACK }}
                         />
@@ -289,7 +315,7 @@ const RoleCard = ({
                             sx: {
                               fontFamily: archivo.style.fontFamily,
                               color: "#4B5563",
-                              fontSize: 16,
+                              fontSize: { xs: 14, md: 16 },
                               lineHeight: 1.6,
                             },
                           },

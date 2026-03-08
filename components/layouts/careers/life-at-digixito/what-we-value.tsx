@@ -12,7 +12,7 @@ import { WHAT_WE_VALUE_CARD_PROPS } from "@/assets/data/generic-array";
 const WhatweValue = () => {
   return (
     <div>
-      <Box sx={{ position: "relative", mt: 10 }}>
+      <Box sx={{ position: "relative", mt: { xs: 6, md: 10 } }}>
         <Image
           src={borderTop}
           alt=""
@@ -35,7 +35,7 @@ const WhatweValue = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            py: 10,
+            py: { xs: 6, md: 10 },
           }}
         >
           <Container maxWidth="lg">
@@ -49,7 +49,7 @@ const WhatweValue = () => {
                 <Typography
                   sx={{
                     fontFamily: monument.style.fontFamily,
-                    fontSize: {lg:40,xs:30},
+                    fontSize: { lg: 40, xs: 28 },
                     fontWeight: 400,
                     color: COLORS.WHITE,
                   }}
@@ -65,11 +65,11 @@ const WhatweValue = () => {
               />
             </Stack>
             {WHAT_WE_VALUE_CARD_PROPS.map((val, i) => (
-              <Box sx={{ my: 5 }}>
+              <Box key={i} sx={{ my: 5 }}>
                 <WhatWeValueCard
                   data={val.data}
                   img={val.img}
-                  key={i}
+                  objPath={val.objPath}
                   isReverse={val.isReverse}
                 />
               </Box>

@@ -5,7 +5,7 @@ import { SECURE_CARD_DATA } from "@/assets/data/generic-array";
 
 const SecureConnect = () => {
   return (
-    <Box sx={{ mt: 5 }}>
+    <Box sx={{ mt: { xs: 6, md: 10 } }}>
       <Grid container>
         {SECURE_CARD_DATA.map((val, i) => (
           <Grid size={{ lg: 6, xs: 12, sm: 6 }} key={i}>
