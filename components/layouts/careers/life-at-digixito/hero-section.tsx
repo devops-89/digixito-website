@@ -9,7 +9,7 @@ const HerosectionLife = () => {
       <Box
         sx={{
           backgroundImage: `url(${digixitoSign.src})`,
-          height: { lg: "80vh", xs: "60vh" },
+          height: { lg: "80vh", xs: "40vh" },
           backgroundPosition: "center",
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",

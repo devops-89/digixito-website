@@ -47,7 +47,7 @@ const WhatWeValueCard = ({
           flexDirection={isReverse ? "row-reverse" : "row"}
         >
           <Grid size={{ lg: 6, xs: 12 }} sx={{ textAlign: "center" }}>
-            {objPath ? (
+            {/* {objPath ? (
               <Box
                 sx={{
                   width: phone ? 350 : "100%",
@@ -56,7 +56,7 @@ const WhatWeValueCard = ({
                   color: COLORS.WHITE,
                 }}
               >
-                {/* <ThreeDViewer path={objPath} /> */}
+                <ThreeDViewer path={objPath} />
               </Box>
             ) : (
               <Image
@@ -68,7 +68,16 @@ const WhatWeValueCard = ({
                   margin: "auto",
                 }}
               />
-            )}
+            )} */}
+            <Image
+              src={img}
+              alt=""
+              style={{
+                width: phone ? 350 : "100%",
+                height: phone ? 350 : 500,
+                margin: "auto",
+              }}
+            />
           </Grid>
           <Grid size={{ lg: 6, xs: 12 }}>
             {data.map((val, i) => (

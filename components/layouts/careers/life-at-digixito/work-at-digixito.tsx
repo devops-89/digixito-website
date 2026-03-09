@@ -16,12 +16,13 @@ import WorkatDigixitoCard from "./components/work-at-digixito-card";
 import { WORK_AT_DIGIXITO_CARD_DATA } from "@/assets/data/generic-array";
 const WorkatDigixito = () => {
   return (
-    <Box sx={{ py: { xs: 6, md: 10 } }}>
+    <Box sx={{ py: { xs: 4, md: 10 } }}>
       <Container maxWidth="lg">
         <Stack
-          direction={{ lg: "row", xs: "column" }}
+          direction={{ lg: "row", xs: "row" }}
           alignItems={"center"}
-          spacing={{ lg: 3, xs: 5 }}
+          spacing={{ lg: 3, xs: 2 }}
+          justifyContent={{ lg: "flex-start", xs: "flex-start" }}
         >
           <Stack
             direction={"row"}
@@ -58,28 +59,34 @@ const WorkatDigixito = () => {
             size={{ lg: 5, xs: 12 }}
             sx={{ position: { lg: "sticky", xs: "static" }, top: 100 }}
           >
-            <Typography
-              sx={{
-                fontSize: { lg: 32, xs: 24 },
-                fontFamily: kessel.style.fontFamily,
-                lineHeight: 1.2,
-                letterSpacing: "-0.63px",
-                fontWeight: 500,
-              }}
+            <Stack
+              direction={{ lg: "column", xs: "row" }}
+              spacing={{ lg: 0, xs: 1 }}
+              sx={{ mb: 2 }}
             >
-              What we value
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: { lg: 32, xs: 24 },
-                fontFamily: kessel.style.fontFamily,
-                lineHeight: 1.2,
-                letterSpacing: "-0.63px",
-                fontWeight: 500,
-              }}
-            >
-              and how we act
-            </Typography>
+              <Typography
+                sx={{
+                  fontSize: { lg: 32, xs: 24 },
+                  fontFamily: kessel.style.fontFamily,
+                  lineHeight: 1.2,
+                  letterSpacing: "-0.63px",
+                  fontWeight: 500,
+                }}
+              >
+                What we value{" "}
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: { lg: 32, xs: 24 },
+                  fontFamily: kessel.style.fontFamily,
+                  lineHeight: 1.2,
+                  letterSpacing: "-0.63px",
+                  fontWeight: 500,
+                }}
+              >
+                {"  "} and how we act
+              </Typography>
+            </Stack>
           </Grid>
           <Grid size={{ lg: 7, xs: 12 }}>
             <Typography

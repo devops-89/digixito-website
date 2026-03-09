@@ -20,17 +20,33 @@ const OpenRoles = () => {
               alignSelf: "flex-start",
             }}
           >
-            <Typography
-              sx={{
-                fontSize: { xs: 32, md: 40 },
-                fontFamily: kessel.style.fontFamily,
-                textTransform: "capitalize",
-                lineHeight: { xs: "36px", md: "40px" },
-                fontWeight: 600,
-              }}
+            <Stack
+              direction={{ lg: "column", xs: "row" }}
+              spacing={{ lg: 0, xs: 1 }}
             >
-              Our open <br /> roles
-            </Typography>
+              <Typography
+                sx={{
+                  fontSize: { xs: 32, md: 40 },
+                  fontFamily: kessel.style.fontFamily,
+                  textTransform: "capitalize",
+                  lineHeight: { xs: "36px", md: "40px" },
+                  fontWeight: 600,
+                }}
+              >
+                Our open
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: { xs: 32, md: 40 },
+                  fontFamily: kessel.style.fontFamily,
+                  textTransform: "capitalize",
+                  lineHeight: { xs: "36px", md: "40px" },
+                  fontWeight: 600,
+                }}
+              >
+                roles
+              </Typography>
+            </Stack>
             <Box sx={{ mt: { xs: 2.5, md: 4 } }}>
               <Typography
                 sx={{

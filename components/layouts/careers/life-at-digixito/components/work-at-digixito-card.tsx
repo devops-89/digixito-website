@@ -28,7 +28,7 @@ const WorkatDigixitoCard = ({
         </Typography>
         <Typography
           sx={{
-            fontSize: 30,
+            fontSize: { lg: 30, xs: 28 },
             fontWeight: 700,
             lineHeight: "33px",
             letterSpacing: "-0.63px",
