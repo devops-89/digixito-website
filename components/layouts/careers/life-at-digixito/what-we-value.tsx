@@ -39,19 +39,24 @@ const WhatweValue = () => {
           }}
         >
           <Container maxWidth="lg">
-            <Stack direction={"row"} alignItems={"flex-start"} spacing={5}>
+            <Stack
+              direction={"row"}
+              alignItems={"flex-start"}
+              spacing={{ xs: 1, md: 5 }}
+            >
               <Stack
                 direction={"row"}
                 alignItems={"center"}
                 justifyContent={"flex-start"}
-                spacing={3}
+                spacing={{ xs: 1, md: 3 }}
               >
                 <Typography
                   sx={{
                     fontFamily: monument.style.fontFamily,
-                    fontSize: { lg: 40, xs: 28 },
+                    fontSize: { lg: 32, md: 28, xs: 18 },
                     fontWeight: 400,
                     color: COLORS.WHITE,
+                    textTransform: "uppercase",
                   }}
                 >
                   What
@@ -61,7 +66,7 @@ const WhatweValue = () => {
               <Image
                 src={star}
                 alt="gold star"
-                style={{ width: 30, alignSelf: "flex-start", marginTop: -20 }}
+                style={{ width: 20, alignSelf: "flex-start", marginTop: -10 }}
               />
             </Stack>
             {WHAT_WE_VALUE_CARD_PROPS.map((val, i) => (

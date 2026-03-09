@@ -19,10 +19,10 @@ const WorkatDigixito = () => {
     <Box sx={{ py: { xs: 4, md: 10 } }}>
       <Container maxWidth="lg">
         <Stack
-          direction={{ lg: "row", xs: "row" }}
+          direction={"row"}
           alignItems={"center"}
-          spacing={{ lg: 3, xs: 2 }}
-          justifyContent={{ lg: "flex-start", xs: "flex-start" }}
+          spacing={{ md: 3, xs: 1 }}
+          justifyContent={"flex-start"}
         >
           <Stack
             direction={"row"}
@@ -42,9 +42,10 @@ const WorkatDigixito = () => {
           </Stack>
           <Typography
             sx={{
-              fontSize: { lg: 40, xs: 28 },
+              fontSize: { lg: 32, md: 28, xs: 18 },
               fontFamily: monument.style.fontFamily,
               fontWeight: 400,
+              whiteSpace: "nowrap",
             }}
           >
             Work at
@@ -59,32 +60,28 @@ const WorkatDigixito = () => {
             size={{ lg: 5, xs: 12 }}
             sx={{ position: { lg: "sticky", xs: "static" }, top: 100 }}
           >
-            <Stack
-              direction={{ lg: "column", xs: "row" }}
-              spacing={{ lg: 0, xs: 1 }}
-              sx={{ mb: 2 }}
-            >
+            <Stack direction={"column"} spacing={0} sx={{ mb: 2 }}>
               <Typography
                 sx={{
-                  fontSize: { lg: 32, xs: 24 },
+                  fontSize: { lg: 32, md: 28, xs: 20 },
                   fontFamily: kessel.style.fontFamily,
                   lineHeight: 1.2,
                   letterSpacing: "-0.63px",
                   fontWeight: 500,
                 }}
               >
-                What we value{" "}
+                What we value
               </Typography>
               <Typography
                 sx={{
-                  fontSize: { lg: 32, xs: 24 },
+                  fontSize: { lg: 32, md: 28, xs: 20 },
                   fontFamily: kessel.style.fontFamily,
                   lineHeight: 1.2,
                   letterSpacing: "-0.63px",
                   fontWeight: 500,
                 }}
               >
-                {"  "} and how we act
+                and how we act
               </Typography>
             </Stack>
           </Grid>

@@ -39,8 +39,7 @@ const MobileHeader = ({ setAnchorEl }: HeaderTabsProps) => {
   const getSubMenuData = (label: string): HEADER_LIST_PROPS[] => {
     if (label === HEADER_TABS_DATA.WHAT_WE_OFFER)
       return HEADER_LINKS.what_we_offer;
-    // if (label === HEADER_TABS_DATA.WHAT_WE_ARE) return [];
-    // if (label === HEADER_TABS_DATA.CAREERS) return [];
+    if (label === HEADER_TABS_DATA.WHAT_WE_ARE) return HEADER_LINKS.what_we_are;
     return [];
   };
 
@@ -67,97 +66,89 @@ const MobileHeader = ({ setAnchorEl }: HeaderTabsProps) => {
           <Close />
         </IconButton>
       </Stack>
-      {/* Submenu */}
-      {/* <Stack sx={{ flex: 1, overflowY: "auto" }}>
-        {HEADER_TABS.map((val: any, i) => {
-          const subMenuData = getSubMenuData(val.label);
+
+      <Stack sx={{ flexGrow: 1, overflowY: "auto", pb: 10 }}>
+        {HEADER_TABS.map((tab, i) => {
+          const subMenuData = getSubMenuData(tab.label);
           const hasSubMenu = subMenuData && subMenuData.length > 0;
           const isOpen = openIndex === i;
 
           return (
-            <Box key={i}>
+            <Box key={i} sx={{ mb: 1 }}>
               {hasSubMenu ? (
                 <>
                   <Button
                     fullWidth
                     sx={{
-                      fontSize: 20,
+                      fontSize: 18,
                       justifyContent: "space-between",
                       color: COLORS.BLACK,
-                      fontFamily: kessel.style.fontFamily,
-                      textTransform: "none",
+                      fontFamily: archivo.style.fontFamily,
+                      textTransform: "uppercase",
+                      fontWeight: 700,
                       py: 1.5,
+                      px: 0,
                     }}
                     endIcon={isOpen ? <ExpandLess /> : <ExpandMore />}
                     onClick={() => handleToggle(i)}
                   >
-                    {val.label}
+                    {tab.label}
                   </Button>
                   <Collapse in={isOpen} timeout="auto" unmountOnExit>
-                    <Box
-                      sx={{
-                        pl: 2,
-                        pb: 2,
-                        maxHeight: "50vh",
-                        overflowY: "scroll",
-                        "&::-webkit-scrollbar": { width: "4px" },
-                        "&::-webkit-scrollbar-track": { background: "#f1f1f1" },
-                        "&::-webkit-scrollbar-thumb": {
-                          background: "#888",
-                          borderRadius: "4px",
-                        },
-                        "&::-webkit-scrollbar-thumb:hover": {
-                          background: "#555",
-                        },
-                      }}
-                    >
+                    <Box sx={{ pl: 2, pb: 1 }}>
                       {subMenuData.map((section, idx) => (
                         <Box key={idx} sx={{ mb: 2 }}>
                           {section.heading && (
                             <Typography
                               sx={{
-                                color: COLORS.GRAY,
+                                color: COLORS.BLACK,
                                 fontSize: 14,
-                                fontWeight: 700,
-                                fontFamily: kessel.style.fontFamily,
+                                fontWeight: 600,
+                                fontFamily: archivo.style.fontFamily,
                                 mb: 1,
                                 mt: 1,
+                                textTransform: "uppercase",
+                                opacity: 0.7,
                               }}
                             >
                               {section.heading}
                             </Typography>
                           )}
-                          <List disablePadding>
-                            {section.data.map((item, j) => (
-                              <Link
-                                href={item.url || "#"}
-                                key={j}
-                                onClick={() => setAnchorEl(null)}
-                                style={{
-                                  textDecoration: "none",
-                                  display: "block",
-                                }}
-                              >
-                                <ListItemButton
-                                  sx={{
-                                    borderRadius: "8px",
-                                    py: 0.5,
-                                    px: 1,
+                          {section.data && (
+                            <List disablePadding>
+                              {section.data.map((item, j) => (
+                                <Link
+                                  href={item.url || "#"}
+                                  key={j}
+                                  onClick={() => setAnchorEl(null)}
+                                  style={{
+                                    textDecoration: "none",
+                                    display: "block",
                                   }}
                                 >
-                                  <ListItemText
-                                    primary={item.label}
-                                    primaryTypographyProps={{
-                                      fontSize: 16,
-                                      fontFamily: kessel.style.fontFamily,
-                                      color: COLORS.BLACK,
-                                      fontWeight: 500,
+                                  <ListItemButton
+                                    sx={{
+                                      borderRadius: "8px",
+                                      py: 0.5,
+                                      px: 0,
                                     }}
-                                  />
-                                </ListItemButton>
-                              </Link>
-                            ))}
-                          </List>
+                                  >
+                                    <ListItemText
+                                      primary={item.label}
+                                      slotProps={{
+                                        primary: {
+                                          fontSize: 14,
+                                          fontFamily: kessel.style.fontFamily,
+                                          color: COLORS.BLACK,
+                                          fontWeight: 500,
+                                        },
+                                      }}
+                                    />
+                                  </ListItemButton>
+                                </Link>
+                              ))}
+                            </List>
+                          )}
                         </Box>
                       ))}
                     </Box>
@@ -165,86 +156,31 @@ const MobileHeader = ({ setAnchorEl }: HeaderTabsProps) => {
                 </>
               ) : (
                 <Link
-                  href={val.url || "#"}
+                  href={tab.url || "#"}
                   style={{ textDecoration: "none", display: "block" }}
                   onClick={() => setAnchorEl(null)}
                 >
                   <Button
                     fullWidth
                     sx={{
-                      fontSize: 20,
+                      fontSize: 18,
                       justifyContent: "flex-start",
                       color: COLORS.BLACK,
-                      fontFamily: kessel.style.fontFamily,
-                      textTransform: "none",
+                      fontFamily: archivo.style.fontFamily,
+                      textTransform: "uppercase",
+                      fontWeight: 700,
                       py: 1.5,
+                      px: 0,
                       textAlign: "left",
                     }}
                   >
-                    {val.label}
+                    {tab.label}
                   </Button>
                 </Link>
               )}
             </Box>
           );
         })}
-      </Stack> */}
-
-      <Stack sx={{ flexGrow: 1, overflowY: "auto" }}>
-        {HEADER_LINKS.what_we_offer.map((section, idx) => (
-          <Box key={idx} sx={{ mb: 2 }}>
-            {section.heading && (
-              <Link href={section.url || "#"} onClick={() => setAnchorEl(null)}>
-                <Typography
-                  sx={{
-                    color: COLORS.BLACK,
-                    fontSize: 16,
-                    fontWeight: 900,
-                    fontFamily: archivo.style.fontFamily,
-                    mb: 1,
-                    mt: 1,
-                    textTransform: "uppercase",
-                  }}
-                >
-                  {section.heading}
-                </Typography>
-              </Link>
-            )}
-            <List disablePadding>
-              {section.data.map((item, j) => (
-                <Link
-                  href={item.url || "#"}
-                  key={j}
-                  onClick={() => setAnchorEl(null)}
-                  style={{
-                    textDecoration: "none",
-                    display: "block",
-                  }}
-                >
-                  <ListItemButton
-                    sx={{
-                      borderRadius: "8px",
-                      py: 0.5,
-                      px: 0,
-                    }}
-                  >
-                    <ListItemText
-                      primary={item.label}
-                      slotProps={{
-                        primary: {
-                          fontSize: 14,
-                          fontFamily: kessel.style.fontFamily,
-                          color: COLORS.BLACK,
-                          fontWeight: 500,
-                        },
-                      }}
-                    />
-                  </ListItemButton>
-                </Link>
-              ))}
-            </List>
-          </Box>
-        ))}
       </Stack>
     </Box>
   );

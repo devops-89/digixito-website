@@ -21,15 +21,17 @@ const HiringPhilosophy = () => {
     <Box sx={{ py: { xs: 6, md: 10 } }}>
       <Container maxWidth="lg">
         <Stack
-          direction={{ lg: "row", xs: "column" }}
+          direction={"row"}
           alignItems={"center"}
-          spacing={2}
+          justifyContent={"center"}
+          spacing={{ xs: 1, md: 3 }}
         >
           <Typography
             sx={{
-              fontSize: { lg: 40, xs: 28 },
+              fontSize: { lg: 32, md: 28, xs: 18 },
               fontFamily: monument.style.fontFamily,
               textAlign: "center",
+              whiteSpace: "nowrap",
             }}
           >
             our Hiring

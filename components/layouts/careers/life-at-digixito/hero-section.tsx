@@ -16,6 +16,7 @@ const HerosectionLife = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          py: 5,
         }}
       >
         <Container maxWidth="lg">

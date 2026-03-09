@@ -95,7 +95,7 @@ const Navbar = () => {
                   isOverlay && !isScrolled ? blackOutlineLogo : blackOutlineLogo
                 }
                 alt=""
-                width={isScrolled ? 55 : 100}
+                width={isScrolled ? 55 : phone ? 60 : 100}
                 style={{
                   transition: "all 0.4s ease",
                   filter: isScrolled
