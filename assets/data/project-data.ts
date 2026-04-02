@@ -32,24 +32,24 @@ export const PROJECT_DATA: BEST_WORK_CARD_PROPS[] = [
     ],
     slug: "red-chief",
   },
-  {
-    img: hscore,
-    title: "Hscore",
-    description:
-      "For HScore, we designed and developed a complete digital platform that enables seamless sports scoring and match management. The project included crafting an intuitive UI/UX experience, building a high-performance website using Next.js, and developing a cross-platform mobile application using React Native. Our focus was to create a fast, scalable, and user-friendly system that allows players, organizers, and viewers to track scores and manage matches efficiently across devices.",
-    skills: [
-      {
-        label: "UX Design",
-      },
-      {
-        label: "Web Development",
-      },
-      {
-        label: "Mobile Application",
-      },
-    ],
-    slug: "hscore",
-  },
+  // {
+  //   img: hscore,
+  //   title: "Hscore",
+  //   description:
+  //     "For HScore, we designed and developed a complete digital platform that enables seamless sports scoring and match management. The project included crafting an intuitive UI/UX experience, building a high-performance website using Next.js, and developing a cross-platform mobile application using React Native. Our focus was to create a fast, scalable, and user-friendly system that allows players, organizers, and viewers to track scores and manage matches efficiently across devices.",
+  //   skills: [
+  //     {
+  //       label: "UX Design",
+  //     },
+  //     {
+  //       label: "Web Development",
+  //     },
+  //     {
+  //       label: "Mobile Application",
+  //     },
+  //   ],
+  //   slug: "hscore",
+  // },
   {
     img: gcube,
     title: "Gcube",
