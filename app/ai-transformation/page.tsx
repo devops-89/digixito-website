@@ -9,6 +9,15 @@ import FaqSection from "@/components/widgets/faq-section";
 import SecureConnect from "@/components/widgets/secure-connect";
 import SubFooter from "@/components/widgets/subfooter";
 
+export const metadata = {
+  title: "AI Transformation | Digixito",
+  description:
+    "Our AI transformation integrates machine learning, automation, and intelligent systems across every touchpoint of your brand to reduce costs and accelerate growth.",
+  alternates: {
+    canonical: "/ai-transformation",
+  },
+};
+
 const page = () => {
   return (
     <Box sx={{ mt: 5 }}>

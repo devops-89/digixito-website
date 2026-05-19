@@ -1,11 +1,11 @@
 "use client";
 import { DETAILS_PAGE_DETAILS } from "@/assets/data/details-page";
 import DetailsLayout from "@/components/layouts/what-we-offer/digital-transformation-layout";
+import TextType from "@/components/widgets/Typing-text";
 import { useDetailsStore } from "@/store/useDetailsStore";
 import { DETAILS_PAGE_PROPS } from "@/utils/types";
-import React, { useEffect, useState } from "react";
-import TextType from "@/components/widgets/Typing-text";
 import { Backdrop } from "@mui/material";
+import { useEffect, useState } from "react";
 
 interface DigitalTransformationDetailsProps {
   params: {

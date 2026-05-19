@@ -1,25 +1,25 @@
 "use client";
-import React, { useState } from "react";
+import { useModal } from "@/store/useModal";
+import { COLORS } from "@/utils/enum";
+import { archivo, monument } from "@/utils/fonts";
+import { Close, CloudUploadOutlined } from "@mui/icons-material";
 import {
+  Alert,
+  AlertColor,
   Box,
   Button,
   CircularProgress,
+  IconButton,
+  Snackbar,
   Stack,
   TextField,
   Typography,
-  IconButton,
-  Snackbar,
-  Alert,
-  AlertColor,
 } from "@mui/material";
-import { Close, CloudUploadOutlined } from "@mui/icons-material";
-import * as Yup from "yup";
-import { useFormik } from "formik";
 import axios from "axios";
+import { useFormik } from "formik";
 import { MuiTelInput } from "mui-tel-input";
-import { COLORS } from "@/utils/enum";
-import { monument, archivo } from "@/utils/fonts";
-import { useModal } from "@/store/useModal";
+import { useState } from "react";
+import * as Yup from "yup";
 
 interface ApplicationFormProps {
   roleTitle: string;

@@ -9,6 +9,15 @@ import { kessel } from "@/utils/fonts";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 
+export const metadata = {
+  title: "Design Intelligence | Digixito",
+  description:
+    "We merge artistic brilliance with AI-powered insights to create designs that don't just look stunning—they perform. Our Design Intelligence approach uses data analytics, user behavior patterns, and machine learning to inform every creative decision.",
+  alternates: {
+    canonical: "/design-intelligence",
+  },
+};
+
 const DesignIntelligence = () => {
   return (
     <div>

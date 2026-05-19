@@ -9,6 +9,15 @@ import { kessel, monument } from "@/utils/fonts";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 
+export const metadata = {
+  title: "AI in Marketing & Growth | Digixito",
+  description:
+    "Digixito deploys artificial intelligence to transform marketing from guesswork into precision science. Our AI-powered solutions deliver hyper-personalized campaigns, predictive customer insights, and automated optimization across every channel.",
+  alternates: {
+    canonical: "/ai-marketing-growth",
+  },
+};
+
 const MarketingGrowth = () => {
   return (
     <div>

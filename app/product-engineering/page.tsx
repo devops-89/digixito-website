@@ -9,6 +9,15 @@ import { kessel, monument } from "@/utils/fonts";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 
+export const metadata = {
+  title: "Product Engineering | Digixito",
+  description:
+    "Digixito transforms ideas into exceptional digital products that users love and markets demand. Our end-to-end product engineering combines strategic planning, cutting-edge development, and user-centric design to build scalable, high-performance solutions.",
+  alternates: {
+    canonical: "/product-engineering",
+  },
+};
+
 const ProductEngineering = () => {
   return (
     <div>

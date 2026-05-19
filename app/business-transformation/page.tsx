@@ -9,6 +9,15 @@ import { kessel, monument } from "@/utils/fonts";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 
+export const metadata = {
+  title: "Business Transformation | Digixito",
+  description:
+    "We reimagine how your business operates. Our transformation approach integrates cutting-edge technology, streamlined processes, and data-driven strategy to eliminate inefficiencies and unlock growth.",
+  alternates: {
+    canonical: "/business-transformation",
+  },
+};
+
 const BusinessTransformation = () => {
   return (
     <div>
