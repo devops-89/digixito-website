@@ -7,6 +7,7 @@ import { Box } from "@mui/material";
 import "animate.css";
 import "aos/dist/aos.css";
 import type { Metadata } from "next";
+import Script from "next/script";
 import "swiper/css";
 import "./globals.css";
 
@@ -30,6 +31,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-32L56P6T48"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-32L56P6T48');
+          `}
+        </Script>
         <Modal />
         <AosInit />
         <Box sx={{ display: { lg: "block", xs: "block" } }}>
