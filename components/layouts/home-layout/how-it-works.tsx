@@ -9,6 +9,7 @@ import { kessel, monument } from "@/utils/fonts";
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import WorkCard from "./components/work-card";
+
 const HowitWorks = () => {
   return (
     <Box sx={{ position: "relative" }}>
@@ -23,6 +24,7 @@ const HowitWorks = () => {
           height: 50,
         }}
       />
+
       <SectionCard title="How it works" variant={VARIANTS.DARK} />
 
       <Box
@@ -40,6 +42,7 @@ const HowitWorks = () => {
       >
         <Container maxWidth="lg">
           <Image src={star} alt="" className="rotator spin" />
+
           <Stack
             direction={{ lg: "row", xs: "column", sm: "row" }}
             alignItems={{ lg: "center", xs: "flex-start" }}
@@ -47,6 +50,7 @@ const HowitWorks = () => {
             justifyContent={{ lg: "center", xs: "flex-start" }}
           >
             <Typography
+              component="h2"
               sx={{
                 textAlign: "center",
                 color: COLORS.WHITE,
@@ -56,9 +60,12 @@ const HowitWorks = () => {
             >
               why choose
             </Typography>
+
             <ImageHeading title="Digixito." />
           </Stack>
+
           <Typography
+            component="h3"
             sx={{
               color: COLORS.GRAY_90,
               fontSize: 18,
@@ -71,6 +78,7 @@ const HowitWorks = () => {
             We make sure your audience finds you everywhere from Google search
             results to the platforms they scroll every day.
           </Typography>
+
           <Grid container sx={{ mt: 3 }} spacing={3}>
             {WORK_CARD_DATA.map((val, i) => (
               <Grid
@@ -88,6 +96,7 @@ const HowitWorks = () => {
               </Grid>
             ))}
           </Grid>
+
           <Box sx={{ textAlign: "end", mt: 4 }}>
             <Image src={star} alt="" className="rotator spin" />
           </Box>

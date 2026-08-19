@@ -1,12 +1,10 @@
 import StarCard from "@/components/widgets/star-card";
-import { COLORS } from "@/utils/enum";
-import { kessel, monument } from "@/utils/fonts";
-import { BEST_SERVICE_CARD_PROPS } from "@/utils/types";
-import { Container, Divider, Grid, Typography } from "@mui/material";
-import React from "react";
 import bgImage1 from "@/homepage/best-service1.png";
 import bgImage2 from "@/homepage/best-service2.png";
 import { useHomepageData } from "@/store/useHomepageData";
+import { COLORS } from "@/utils/enum";
+import { kessel, monument } from "@/utils/fonts";
+import { Container, Divider, Grid, Typography } from "@mui/material";
 const BestService = () => {
   const { pageData } = useHomepageData();
   return (
@@ -14,6 +12,7 @@ const BestService = () => {
       <Grid container spacing={3}>
         <Grid size={{ lg: 6, xs: 12, sm: 6 }}>
           <Typography
+          variant="h2"
             sx={{
               fontFamily: monument.style.fontFamily,
               fontSize: { lg: 28, xs: 22 },

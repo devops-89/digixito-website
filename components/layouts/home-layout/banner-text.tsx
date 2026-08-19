@@ -1,4 +1,7 @@
 "use client";
+import star from "@/icons/star-banner.svg";
+import { useHomepageData } from "@/store/useHomepageData";
+import { COLORS } from "@/utils/enum";
 import { monument } from "@/utils/fonts";
 import {
   Box,
@@ -7,11 +10,8 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
-import React from "react";
-import star from "@/icons/star-banner.svg";
 import Image from "next/image";
-import { COLORS } from "@/utils/enum";
-import { useHomepageData } from "@/store/useHomepageData";
+import React from "react";
 const Bannertext = () => {
   const text = [
     {
@@ -44,6 +44,8 @@ const Bannertext = () => {
             (val: { heading: string }, i: number) => (
               <React.Fragment key={i}>
                 <Typography
+                component="h4"
+                variant="h4"
                   sx={{
                     fontSize: { lg: 50, xs: 15 },
                     fontWeight: 800,

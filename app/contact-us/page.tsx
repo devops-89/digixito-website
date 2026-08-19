@@ -1,10 +1,10 @@
+import type { Metadata } from "next";
+import { SEO_DATA } from "@/utils/seo-metadata";
 import ContactUsLayout from "@/components/layouts/contact-us-layout";
 import React from "react";
 
-export const metadata = {
-  title: "Contact Us | Digixito",
-  description:
-    "Get in touch with Digixito. Let's discuss how we can help you accelerate growth and design intelligent solutions.",
+export const metadata: Metadata = {
+  ...SEO_DATA["/contact-us"],
   alternates: {
     canonical: "/contact-us",
   },

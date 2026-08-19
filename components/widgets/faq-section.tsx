@@ -1,10 +1,16 @@
+import { FAQ_DATA } from "@/assets/data/generic-array";
 import { COLORS } from "@/utils/enum";
 import { archivo, kessel, monument } from "@/utils/fonts";
-import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
-import React from "react";
-import FaqQuestionCard from "./common/faq-question-card";
-import { FAQ_DATA } from "@/assets/data/generic-array";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Stack,
+  Typography,
+} from "@mui/material";
 import Link from "next/link";
+import FaqQuestionCard from "./common/faq-question-card";
 
 const FaqSection = () => {
   return (
@@ -21,6 +27,7 @@ const FaqSection = () => {
         <Grid container spacing={2}>
           <Grid size={{ lg: 6, xs: 12, sm: 6 }}>
             <Typography
+              component="h2"
               sx={{
                 fontSize: { lg: 38, xs: 25, sm: 30 },
                 fontFamily: monument.style.fontFamily,
@@ -30,7 +37,9 @@ const FaqSection = () => {
             >
               Frequently Asked Questions
             </Typography>
+
             <Typography
+              component="h3"
               sx={{
                 fontFamily: kessel.style.fontFamily,
                 fontSize: 18,
@@ -41,6 +50,7 @@ const FaqSection = () => {
               Still you have any questions? Contact our Team via
               info@digixito.com
             </Typography>
+
             <Stack
               direction={"row"}
               alignItems={"center"}
@@ -69,6 +79,7 @@ const FaqSection = () => {
                   Contact Us
                 </Button>
               </Link>
+
               {/* <Button
                 sx={{
                   fontFamily: archivo.style.fontFamily,
@@ -88,6 +99,7 @@ const FaqSection = () => {
               </Button> */}
             </Stack>
           </Grid>
+
           <Grid size={{ lg: 6, xs: 12, sm: 6 }}>
             <FaqQuestionCard data={FAQ_DATA} />
           </Grid>

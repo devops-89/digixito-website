@@ -1,12 +1,14 @@
 "use client";
 
 import {
-  SERVCIES_ARROW_CARD_DATA,
   SERVICES_TAB,
-  SERVICES_TAB_DATA,
+  SERVICES_TAB_DATA
 } from "@/assets/data/generic-array";
+import SectionCard from "@/components/widgets/section-card";
 import StarCard from "@/components/widgets/star-card";
-import { COLORS, SERVICES_TAB_CONSTANT, VARIANTS } from "@/utils/enum";
+import TabPanel from "@/components/widgets/tab-panel";
+import bgImage from "@/homepage/best-service3.png";
+import { VARIANTS } from "@/utils/enum";
 import { kessel, monument } from "@/utils/fonts";
 import { ArrowForward } from "@mui/icons-material";
 import {
@@ -18,14 +20,8 @@ import {
   Tabs,
   Typography,
 } from "@mui/material";
-import React, { useEffect, useRef, useState } from "react";
-import bgImage from "@/homepage/best-service3.png";
-import TabPanel from "@/components/widgets/tab-panel";
+import React, { useState } from "react";
 import ArrowCard from "./components/arrow-card";
-import SectionCard from "@/components/widgets/section-card";
-import headingBanner from "@/homepage/heading-banner.png";
-import Image from "next/image";
-import ImageHeading from "@/components/widgets/image-heading";
 const ServiceSection = () => {
   const [value, setValue] = useState(0);
 
@@ -57,6 +53,7 @@ const ServiceSection = () => {
           <Grid size={{ lg: 5, xs: 12, sm: 5 }}>
             <Stack direction={"row"} alignItems={"center"} spacing={2}>
               <Typography
+              variant="h2"
                 sx={{
                   fontSize: { lg: 35, xs: 25 },
                   fontFamily: monument.style.fontFamily,
@@ -67,6 +64,7 @@ const ServiceSection = () => {
               {/* <ImageHeading title="Do" /> */}
             </Stack>
             <Typography
+            component="h3"
               sx={{
                 mt: 4,
                 fontFamily: kessel.style.fontFamily,

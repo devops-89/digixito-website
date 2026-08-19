@@ -3,7 +3,7 @@ import Footer from "@/components/widgets/footer";
 import Modal from "@/components/widgets/Modal";
 import Navbar from "@/components/widgets/navbar";
 import ScrollToTop from "@/components/widgets/ScrollToTop";
-import { Box } from "@mui/material";
+
 import "animate.css";
 import "aos/dist/aos.css";
 import type { Metadata } from "next";
@@ -46,9 +46,9 @@ export default function RootLayout({
         </Script>
         <Modal />
         <AosInit />
-        <Box sx={{ display: { lg: "block", xs: "block" } }}>
+        <div>
           <Navbar />
-        </Box>
+        </div>
 
         {/* <SmokeyCursor /> */}
         {children}

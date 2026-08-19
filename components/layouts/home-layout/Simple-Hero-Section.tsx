@@ -50,6 +50,7 @@ const SimpleHeroSection = () => {
               Concept to Conquest.
             </Typography> */}
             <BlurText
+              component="h1"
               text="Concept to Conquest."
               delay={150}
               animateBy="words"
@@ -84,6 +85,8 @@ const SimpleHeroSection = () => {
               }}
             /> */}
             <Typography
+            component="h3"
+            variant="h3"
               sx={{
                 fontSize: { lg: 35, xs: 20 },
                 fontWeight: 500,

@@ -2,7 +2,6 @@ import { COLORS, VARIANTS } from "@/utils/enum";
 import { kessel } from "@/utils/fonts";
 import { SECTION_CARD_PROPS } from "@/utils/types";
 import { Box, Typography } from "@mui/material";
-import React from "react";
 
 const SectionCard = ({ variant, title }: SECTION_CARD_PROPS) => {
   return (
@@ -22,6 +21,7 @@ const SectionCard = ({ variant, title }: SECTION_CARD_PROPS) => {
         }}
       >
         <Typography
+          component="h3"
           sx={{
             color: variant === VARIANTS.DARK ? COLORS.WHITE : COLORS.BLACK,
             fontFamily: kessel.style.fontFamily,

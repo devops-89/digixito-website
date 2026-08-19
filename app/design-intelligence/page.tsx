@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { SEO_DATA } from "@/utils/seo-metadata";
 import { DESIGN_INTELLIGENCE_DATA } from "@/assets/data/generic-array";
 import ServicesCard from "@/components/layouts/services-layout/Services-Card";
 import ServicesLayoutHeroSection from "@/components/layouts/services-layout/services-layout-hero-section";
@@ -9,10 +11,8 @@ import { kessel } from "@/utils/fonts";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 
-export const metadata = {
-  title: "Design Intelligence | Digixito",
-  description:
-    "We merge artistic brilliance with AI-powered insights to create designs that don't just look stunning—they perform. Our Design Intelligence approach uses data analytics, user behavior patterns, and machine learning to inform every creative decision.",
+export const metadata: Metadata = {
+  ...SEO_DATA["/design-intelligence"],
   alternates: {
     canonical: "/design-intelligence",
   },

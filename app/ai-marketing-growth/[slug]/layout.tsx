@@ -1,3 +1,4 @@
+import { SEO_DATA } from "@/utils/seo-metadata";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
@@ -12,6 +13,18 @@ export async function generateMetadata({
   params,
 }: DetailsLayoutProps): Promise<Metadata> {
   const { slug } = await params;
+  
+  const path = `/${"ai-marketing-growth"}/${slug}`;
+  const seo = SEO_DATA[path];
+
+  if (seo) {
+    return {
+      title: seo.title,
+      description: seo.description,
+      keywords: seo.keywords,
+      alternates: { canonical: path },
+    };
+  }
 
   const formattedSlug = slug
     .replace(/-/g, " ")
@@ -19,11 +32,9 @@ export async function generateMetadata({
 
   return {
     title: `${formattedSlug} | Digixito`,
-
-    description: `Explore ${formattedSlug} AI marketing and growth solutions offered by Digixito.`,
-
+    description: `Explore ${formattedSlug} solutions offered by Digixito.`,
     alternates: {
-      canonical: `/ai-marketing-growth/${slug}`,
+      canonical: path,
     },
   };
 }

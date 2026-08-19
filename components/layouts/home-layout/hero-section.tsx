@@ -1,9 +1,8 @@
+import { useHomepageData } from "@/store/useHomepageData";
 import { COLORS } from "@/utils/enum";
 import { monument } from "@/utils/fonts";
 import { Box, Container, Typography } from "@mui/material";
-import React from "react";
 import ThreeGalaxy from "./components/Galaxy";
-import { useHomepageData } from "@/store/useHomepageData";
 
 const HeroSection = () => {
   const { pageData } = useHomepageData();

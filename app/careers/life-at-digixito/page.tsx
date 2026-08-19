@@ -1,10 +1,10 @@
+import type { Metadata } from "next";
+import { SEO_DATA } from "@/utils/seo-metadata";
 import LifeAtDigixitoLayout from "@/components/layouts/careers/life-at-digixito";
 import React from "react";
 
-export const metadata = {
-  title: "Life at Digixito | Careers",
-  description:
-    "Join us and be part of a team that is redefining the future of digital business and technology.",
+export const metadata: Metadata = {
+  ...SEO_DATA["/careers/life-at-digixito"],
   alternates: {
     canonical: "/careers/life-at-digixito",
   },

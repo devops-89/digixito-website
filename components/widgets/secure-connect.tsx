@@ -1,11 +1,21 @@
-import { Box, Grid } from "@mui/material";
-import React from "react";
-import SecureConnectCard from "./common/secure-connect-card";
 import { SECURE_CARD_DATA } from "@/assets/data/generic-array";
+import { monument } from "@/utils/fonts";
+import { Box, Grid, Typography } from "@mui/material";
+import SecureConnectCard from "./common/secure-connect-card";
 
 const SecureConnect = () => {
   return (
     <Box sx={{ mt: { xs: 6, md: 10 } }}>
+      <Typography
+        component="h2"
+        sx={{
+          display: "none",
+          fontFamily: monument.style.fontFamily,
+        }}
+      >
+        Secure Digital Solutions & Business Connectivity
+      </Typography>
+
       <Grid container>
         {SECURE_CARD_DATA.map((val, i) => (
           <Grid size={{ lg: 6, xs: 12, sm: 6 }} key={i}>

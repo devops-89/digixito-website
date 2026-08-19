@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { SEO_DATA } from "@/utils/seo-metadata";
 import { AI_TRANSFORMATION_DATA } from "@/assets/data/generic-array";
 import ServicesCard from "@/components/layouts/services-layout/Services-Card";
 import ServicesLayoutHeroSection from "@/components/layouts/services-layout/services-layout-hero-section";
@@ -9,10 +11,8 @@ import FaqSection from "@/components/widgets/faq-section";
 import SecureConnect from "@/components/widgets/secure-connect";
 import SubFooter from "@/components/widgets/subfooter";
 
-export const metadata = {
-  title: "AI Transformation | Digixito",
-  description:
-    "Our AI transformation integrates machine learning, automation, and intelligent systems across every touchpoint of your brand to reduce costs and accelerate growth.",
+export const metadata: Metadata = {
+  ...SEO_DATA["/ai-transformation"],
   alternates: {
     canonical: "/ai-transformation",
   },

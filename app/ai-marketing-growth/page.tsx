@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { SEO_DATA } from "@/utils/seo-metadata";
 import { AI_MARKETING_GROWTH } from "@/assets/data/generic-array";
 import ServicesCard from "@/components/layouts/services-layout/Services-Card";
 import ServicesLayoutHeroSection from "@/components/layouts/services-layout/services-layout-hero-section";
@@ -9,10 +11,8 @@ import { kessel, monument } from "@/utils/fonts";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 
-export const metadata = {
-  title: "AI in Marketing & Growth | Digixito",
-  description:
-    "Digixito deploys artificial intelligence to transform marketing from guesswork into precision science. Our AI-powered solutions deliver hyper-personalized campaigns, predictive customer insights, and automated optimization across every channel.",
+export const metadata: Metadata = {
+  ...SEO_DATA["/ai-marketing-growth"],
   alternates: {
     canonical: "/ai-marketing-growth",
   },

@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { SEO_DATA } from "@/utils/seo-metadata";
 import { BUSINESS_TRANSFORMATION_DATA } from "@/assets/data/generic-array";
 import ServicesCard from "@/components/layouts/services-layout/Services-Card";
 import ServicesLayoutHeroSection from "@/components/layouts/services-layout/services-layout-hero-section";
@@ -9,10 +11,8 @@ import { kessel, monument } from "@/utils/fonts";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 
-export const metadata = {
-  title: "Business Transformation | Digixito",
-  description:
-    "We reimagine how your business operates. Our transformation approach integrates cutting-edge technology, streamlined processes, and data-driven strategy to eliminate inefficiencies and unlock growth.",
+export const metadata: Metadata = {
+  ...SEO_DATA["/business-transformation"],
   alternates: {
     canonical: "/business-transformation",
   },
