@@ -19,9 +19,14 @@ export const SEO_DATA: Record<string, { title: string; description: string; keyw
     description: "Grow powerful marketing insights with AI-driven social and search intelligence. Digixito helps businesses analyze trends, understand audiences, and optimize brands growth.",
     keywords: "SEO Strategy Services , SEO Audit Services",
   },
+  "/ai-marketing-growth/performance-marketing-and-conversion-optimization": {
+    title: "Performance Marketing & CRO Services For Global Brands Growth",
+    description: "Boost sales and leads with advanced performance marketing, paid advertising solutions, and conversion optimization strategies.",
+    keywords: "Performance Marketing Agency",
+  },
   "/ai-transformation": {
     title: "AI Transformation Services & AI Process Automation | Digixito",
-    description: "Boost business efficiency with AI Process Automation and AI Workflow Automation from Digixito. Automate workflows, reduce costs, improve productivity, and accelerate digital transformation.",
+    description: "Boost business efficiency with AI Process Automation and AI Workflow Automation from Digixito. Automate workflows, and accelerate digital transformation.",
     keywords: "AI Process Automation , AI Workflow Automation, AI transformation services",
   },
   "/ai-transformation/generative-ai": {
@@ -201,7 +206,7 @@ export const SEO_DATA: Record<string, { title: string; description: string; keyw
   },
   "/blogs": {
     title: "AI & Innovation, Product Engineering Blogs | Digixito",
-    description: "Explore blogs on AI & Innovation, Product Engineering and Design Intelligence. Get expert SEO and marketing tips from Digixito.",
+    description: "Explore blogs on AI & Innovation, Product Engineering and Design Intelligence. Get expert SEO and marketing tips from Digixito",
     keywords: "Digital Marketing Agency blogs , Web Application Development blogs",
   },
 };
