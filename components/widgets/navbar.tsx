@@ -43,8 +43,10 @@ const Navbar = () => {
     pathname.startsWith("/case-studies") ||
     pathname.startsWith("/blogs");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
@@ -52,8 +54,16 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  if (!mounted) {
+    return (
+      <header>
+        {!isOverlay && <div style={{ height: "100px" }} />}
+      </header>
+    );
+  }
+
   return (
-    <>
+    <header>
       <Box
         sx={{
           // position: "fixed",
@@ -95,7 +105,7 @@ const Navbar = () => {
                   isOverlay && !isScrolled ? blackOutlineLogo : blackOutlineLogo
                 }
                 alt=""
-                width={isScrolled ? 55 : phone ? 60 : 100}
+                width={isScrolled ? 55 : (mounted && phone) ? 60 : 100}
                 style={{
                   transition: "all 0.4s ease",
                   filter: isScrolled
@@ -162,14 +172,14 @@ const Navbar = () => {
         }}
       >
         <Container maxWidth="lg">
-          {phone ? (
+          {(mounted && phone) ? (
             <MobileHeader setAnchorEl={setAnchorEl} />
           ) : (
             <HeaderTabs setAnchorEl={setAnchorEl} setMenuOpen={setOpenMenu} />
           )}
         </Container>
       </Popover>
-    </>
+    </header>
   );
 };
 

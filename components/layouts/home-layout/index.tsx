@@ -9,7 +9,7 @@ import { Box, useMediaQuery } from "@mui/material";
 import Aos from "aos";
 import { useEffect } from "react";
 import BestService from "./best-services";
-import BestWorks from "./bestworks";
+import BestWorks2 from "./bestWorks2";
 import HowitWorks from "./how-it-works";
 import ServiceSection from "./service-section";
 import SimpleHeroSection from "./Simple-Hero-Section";
@@ -38,7 +38,7 @@ const HomeLayouts = () => {
       <BestService />
       <ServiceSection />
       <HowitWorks />
-      <BestWorks/>
+      <BestWorks2/>
       <FaqSection />
       <SecureConnect />
       <SubFooter />

@@ -47,10 +47,6 @@ const PolaroidCard = ({
             "& .card-hover-overlay": {
               opacity: 0.25,
             },
-            "& .view-project-btn": {
-              opacity: 1,
-              transform: "translate(-50%, -50%) scale(1)",
-            },
           },
         }}
       >
@@ -102,40 +98,6 @@ const PolaroidCard = ({
             }}
           />
 
-          {/* Hover Button "(View Project)" */}
-          <Box
-            className="view-project-btn"
-            sx={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%) scale(0.8)",
-              backgroundColor: "#ffffff",
-              color: "#000000",
-              border: "1px solid #000000",
-              borderRadius: "50px",
-              px: 3,
-              py: 1,
-              zIndex: 3,
-              opacity: 0,
-              transition: "opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)",
-              whiteSpace: "nowrap",
-              pointerEvents: "none",
-              boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.1)",
-            }}
-          >
-            <Typography
-              sx={{
-                fontFamily: monument.style.fontFamily,
-                fontSize: { xs: "10px", sm: "11px", md: "12px" },
-                fontWeight: 600,
-                textTransform: "uppercase",
-                letterSpacing: "0.5px",
-              }}
-            >
-              (View Project)
-            </Typography>
-          </Box>
         </Box>
 
         {/* Polaroid Bottom Band */}

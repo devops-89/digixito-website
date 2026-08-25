@@ -25,7 +25,7 @@ import PolaroidCard from "./components/polaroid-card";
 const MotionTypography = motion(Typography);
 
 const BestWorks2 = () => {
-    const projects = PROJECT_DATA.slice(0, 12);
+    const projects = React.useMemo(() => PROJECT_DATA.slice(0, 12), []);
     const [isHovered, setIsHovered] = useState(false);
     const [activeIndex, setActiveIndex] = useState(0);
     const [isClient, setIsClient] = useState(false);
@@ -65,9 +65,6 @@ const BestWorks2 = () => {
     setIsHovered(true);
     } else if (e.target === e.currentTarget) {
     setIsHovered(false);
-    if (swiperInstance && !swiperInstance.destroyed) {
-        swiperInstance.slideTo(0);
-    }
     }
 };
 
@@ -216,9 +213,6 @@ return (
         }}
         onMouseLeave={() => {
             setIsHovered(false);
-            if (swiperInstance && !swiperInstance.destroyed) {
-            swiperInstance.slideTo(0);
-            }
         }}
         onClick={handleContainerClick}
         onTouchStart={() => {
@@ -243,7 +237,6 @@ return (
             if (swiperInstance && !swiperInstance.destroyed)
                 swiperInstance.slidePrev();
             }}
-            disabled={activeIndex === 0}
             sx={{
             position: "absolute",
             left: { lg: "-12%", md: "-1%", xs: "0%"},
@@ -256,8 +249,8 @@ return (
             height: { md: 56, xs: 44},
             border: "1px solid rgba(255,255,255,0.1)",
             backdropFilter: "blur(8px)",
-            opacity: isHovered && activeIndex > 0 ? 1 : 0,
-            pointerEvents: isHovered && activeIndex > 0 ? "auto" : "none",
+            opacity: isHovered ? 1 : 0,
+            pointerEvents: isHovered ? "auto" : "none",
             transition: "all 0.3s ease",
             display: { xs: "none", md: "flex"},
             "&:hover": {
@@ -274,7 +267,6 @@ return (
             if (swiperInstance && !swiperInstance.destroyed)
                 swiperInstance.slideNext();
             }}
-            disabled={activeIndex === projects.length - 1}
             sx={{
             position: "absolute",
             right: { lg: "-15%", md: "-1%", xs: "0%"},
@@ -287,8 +279,8 @@ return (
             height: { md: 56, xs: 44},
             border: "1px solid rgba(255,255,255,0.1)",
             backdropFilter: "blur(8px)",
-            opacity: isHovered && activeIndex < projects.length - 1 ? 1 : 0,
-            pointerEvents: isHovered && activeIndex < projects.length - 1 ? "auto" : "none",
+            opacity: isHovered ? 1 : 0,
+            pointerEvents: isHovered ? "auto" : "none",
             transition: "all 0.3s ease",
             display: {  xs: "none", md: "flex" },
             "&:hover": {
@@ -315,13 +307,13 @@ return (
             <Swiper
                 modules={[Autoplay]}
                 onSwiper={setSwiperInstance}
-                onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+                onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
                 centeredSlides={true}
                 slidesPerView={"auto"}
                 spaceBetween={cardGap + 80}
                 allowTouchMove={isHovered}
                 speed={600}
-                rewind={true}
+                loop={true}
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
                 style={{ width: "100%", height: "100%", overflow: "visible" }}
             >
