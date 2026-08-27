@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { Roboto } from "next/font/google";
 export const monument = localFont({
   src: "../assets/fonts/MonumentExtended-Regular.otf",
 });
@@ -9,4 +10,12 @@ export const kessel = localFont({
 
 export const archivo = localFont({
   src: "../assets/fonts/Archivo.ttf",
+});
+
+export const roboto = Roboto({
+  weight: "variable",
+});
+
+export const kessel_bold = localFont({
+  src: "../assets/fonts/font-bold.otf",
 });

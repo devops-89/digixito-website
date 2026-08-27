@@ -13,6 +13,7 @@ import BestWorks from "./bestworks";
 import HowitWorks from "./how-it-works";
 import ServiceSection from "./service-section";
 import SimpleHeroSection from "./Simple-Hero-Section";
+import HeroSection3 from "./components/HeroSection3";
 const HomeLayouts = () => {
   const phone = useMediaQuery("(max-width:600px)");
 
@@ -33,12 +34,13 @@ const HomeLayouts = () => {
     <Box>
       <Box sx={{ backgroundColor: COLORS.WHITE }}></Box>
 
-      <SimpleHeroSection />
+      {/* <SimpleHeroSection /> */}
+      <HeroSection3 />
 
       <BestService />
       <ServiceSection />
       <HowitWorks />
-      <BestWorks/>
+      <BestWorks />
       <FaqSection />
       <SecureConnect />
       <SubFooter />

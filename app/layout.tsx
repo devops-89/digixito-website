@@ -10,6 +10,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "swiper/css";
 import "./globals.css";
+import Header2 from "@/components/widgets/Header2";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.digixito.com"),
@@ -29,8 +30,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-32L56P6T48"
           strategy="afterInteractive"
@@ -46,9 +47,8 @@ export default function RootLayout({
         </Script>
         <Modal />
         <AosInit />
-        <div>
-          <Navbar />
-        </div>
+        <div>{/* <Navbar /> */}</div>
+        <Header2 />
 
         {/* <SmokeyCursor /> */}
         {children}
