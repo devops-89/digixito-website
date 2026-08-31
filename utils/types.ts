@@ -228,3 +228,10 @@ export interface BEST_WORK_CARD_PROPS {
   }[];
   slug: string;
 }
+
+export interface PROJECT_CARD_DATA_PROPS {
+  projectName: string;
+  department: string;
+  img: StaticImageData;
+  description?: string;
+}
