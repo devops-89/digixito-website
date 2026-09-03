@@ -10,6 +10,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "swiper/css";
 import "./globals.css";
+import Header2 from "@/components/widgets/Header2";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.digixito.com"),
@@ -23,37 +24,40 @@ export const metadata: Metadata = {
   },
 };
 
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-32L56P6T48"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        <AppRouterCacheProvider>
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-32L56P6T48"
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
 
-            gtag('config', 'G-32L56P6T48');
-          `}
-        </Script>
-        <Modal />
-        <AosInit />
-        <div>
-          <Navbar />
-        </div>
+              gtag('config', 'G-32L56P6T48');
+            `}
+          </Script>
+          <Modal />
+          <AosInit />
+          <div>{/* <Navbar /> */}</div>
+          <Header2 />
 
-        {/* <SmokeyCursor /> */}
-        {children}
-        <ScrollToTop />
-        <Footer />
+          {/* <SmokeyCursor /> */}
+          {children}
+          <ScrollToTop />
+          <Footer />
+        </AppRouterCacheProvider>
       </body>
     </html>
   );

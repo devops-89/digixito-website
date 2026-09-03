@@ -9,10 +9,10 @@ import { Box, useMediaQuery } from "@mui/material";
 import Aos from "aos";
 import { useEffect } from "react";
 import BestService from "./best-services";
-import BestWorks2 from "./bestWorks2";
+import HeroSection3 from "./components/HeroSection3";
 import HowitWorks from "./how-it-works";
+import OurProjects from "./Our-Projects";
 import ServiceSection from "./service-section";
-import SimpleHeroSection from "./Simple-Hero-Section";
 const HomeLayouts = () => {
   const phone = useMediaQuery("(max-width:600px)");
 
@@ -33,12 +33,14 @@ const HomeLayouts = () => {
     <Box>
       <Box sx={{ backgroundColor: COLORS.WHITE }}></Box>
 
-      <SimpleHeroSection />
+      {/* <SimpleHeroSection /> */}
+      <HeroSection3 />
 
       <BestService />
       <ServiceSection />
       <HowitWorks />
-      <BestWorks2/>
+      {/* <BestWorks /> */}
+      <OurProjects />
       <FaqSection />
       <SecureConnect />
       <SubFooter />

@@ -89,7 +89,7 @@ const Navbar = () => {
         }}
       >
         <Container
-          maxWidth="lg"
+          maxWidth="xl"
           sx={{
             transition: "all 0.4s ease",
           }}

@@ -13,9 +13,13 @@ export const HEADER_TABS = [
     label: HEADER_TABS_DATA.CAREERS,
     url: "/careers/life-at-digixito",
   },
+  {
+    label: HEADER_TABS_DATA.PROJECTS,
+    url: "/projects",
+  },
 ];
 
-export const HEADER_LINKS = {
+export const HEADER_LINKS: Record<string, HEADER_LIST_PROPS[]> = {
   what_we_offer: [
     {
       heading: "AI Transformation",
@@ -259,6 +263,7 @@ export const HEADER_LINKS = {
   CAREERS: [
     {
       heading: "Join the Future with Digixito",
+      data: [],
       // data: [
       //   {
       //     label: "Career areas",

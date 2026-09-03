@@ -17,6 +17,7 @@ export enum HEADER_TABS_DATA {
   WHAT_WE_OFFER = "What we offer",
   WHAT_WE_ARE = "What we are",
   CAREERS = "Careers",
+  PROJECTS = "Our Projects",
 }
 
 export enum SERVICES_TAB_CONSTANT {
@@ -24,4 +25,11 @@ export enum SERVICES_TAB_CONSTANT {
   BUSINESS_TRANSFORMATION = "Business Transformation",
   PRODUCT_ENGINEERING = "Product Engineering",
   DESIGN_INTELLIGENCE = "Design Intelligence",
+}
+
+export enum PROJECTS_DEPARTMENT {
+  ALL = "All",
+  DIGITAL = "Digital",
+  CREATIVE = "Creative",
+  DEVELOPMENT = "Development",
 }

@@ -1,6 +1,3 @@
-import { BEST_WORK_CARD_PROPS } from "@/utils/types";
-import redchief from "@/projects/REDCHIEF.png";
-import hscore from "@/projects/HSCORE.png";
 import gcube from "@/projects/G_CUBE.png";
 import gabicci from "@/projects/GABICCI.png";
 import hautebaby from "@/projects/HAUTE_BABY.png";
@@ -11,12 +8,17 @@ import netraNiti from "@/projects/NXTGEN_NETRA_NITI.png";
 import page1 from "@/projects/PAGE_1_TRAVEL.png";
 import perf from "@/projects/PERF.png";
 import rasdelta from "@/projects/RASDELTA.png";
+import redchief from "@/projects/REDCHIEF.png";
 import shipsmith from "@/projects/SHIPSMITH.png";
+import maxbupa from "@/projects/old-projects/max-bupa/max-bupa.jpg";
+import { BEST_WORK_CARD_PROPS } from "@/utils/types";
 // import allCanFarm from '@/projects/'
 export const PROJECT_DATA: BEST_WORK_CARD_PROPS[] = [
   {
     img: redchief,
     title: "Red Chief",
+    industry: "Retail & Apparel",
+    service: "E-commerce Operations",
     description:
       "For Red Chief, our focus was on strengthening the brand’s e-commerce presence by managing and optimizing online sales operations. This involved handling product listings, monitoring marketplace performance, and ensuring smooth order flow across digital channels. The objective was to improve product visibility, streamline online sales processes, and support consistent revenue growth across the e-commerce ecosystem.",
     skills: [
@@ -315,10 +317,13 @@ export const PROJECT_DATA: BEST_WORK_CARD_PROPS[] = [
     slug: "microsoft",
   },
   {
-    img: perf,
+    img: maxbupa,
     title: "Max Bupa Health Insurance",
     description:
-      "Max Bupa Health Insurance Company is collaboration between Max India Limited and UK based healthcare services experts, Bupa. With the clear vision of reality and six decades of rich expertise in healthcare services, we have brought together the smiling faces of people, to be called as India's admired health insurance company. We utilized Email marketing to interested buyers to reach the target audience and generate leads with a 1.5 to 2% conversion rate.",
+      "Max Bupa Health Insurance Company is a collaboration between Max India Limited and UK based healthcare services experts, Bupa. With the clear vision of reality and six decades of rich expertise in healthcare services, we have brought together the smiling faces of people, to be called as India's admired health insurance company. We utilized Email marketing to interested buyers to reach the target audience and generate leads with a 1.5 to 2% conversion rate. \n\nOur approach involved deep market research to segment the audience and personalize the outreach, yielding phenomenal engagement. The results exceeded initial projections, establishing a new standard for customer acquisition in the insurance space.",
+    challenges: "The primary challenge was reaching a highly saturated and competitive health insurance market while ensuring the communication stood out. We had to build trust with potential customers who were often overwhelmed with generic promotional emails, and convert this skepticism into high-quality leads without increasing the cost per acquisition.",
+    strategy: "Our strategy centered on a hyper-personalized email marketing campaign. We segmented the audience based on demographics, past interactions, and specific health interests. By leveraging A/B testing on subject lines and interactive email content, we ensured higher open rates. We also optimized the landing pages for seamless user journeys, making the lead generation process frictionless.",
+    results: "The campaign achieved a consistent 1.5% to 2% conversion rate, significantly outperforming industry averages. We generated a 40% increase in qualified leads within the first quarter and saw a 25% reduction in overall customer acquisition costs, firmly establishing Max Bupa as a preferred choice among the targeted demographic.",
     skills: [
       {
         label: "Digital Marketing",

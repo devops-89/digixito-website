@@ -223,8 +223,21 @@ export interface BEST_WORK_CARD_PROPS {
   img: StaticImageData;
   title: string;
   description: string;
+  challenges?: string;
+  strategy?: string;
+  results?: string;
+  industry?: string;
+  service?: string;
   skills: {
     label: string;
   }[];
   slug: string;
+}
+
+export interface PROJECT_CARD_DATA_PROPS {
+  slug?: string;
+  projectName: string;
+  department: string;
+  img: StaticImageData;
+  description?: string;
 }
