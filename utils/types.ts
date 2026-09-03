@@ -226,6 +226,7 @@ export interface BEST_WORK_CARD_PROPS {
   challenges?: string;
   strategy?: string;
   results?: string;
+  videoUrl?: string;
   industry?: string;
   service?: string;
   skills: {

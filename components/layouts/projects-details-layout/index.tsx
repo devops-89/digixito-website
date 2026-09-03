@@ -1,15 +1,14 @@
 "use client";
-import { COLORS } from "@/utils/enum";
-import { Box, Container, Grid, Typography } from "@mui/material";
-import { useEffect, useState } from "react";
 import BlurText from "@/components/BlurText";
-import { motion, useScroll, useTransform } from "motion/react";
+import { COLORS } from "@/utils/enum";
+import { Box, Container, Grid } from "@mui/material";
+import { motion } from "motion/react";
+import { useEffect, useState } from "react";
 
 import CallToAction from "@/components/layouts/case-study-details-layout/components/call-to-action";
-import ProjectOverview from "./components/ProjectOverview";
-import ProjectServices from "./components/ProjectServices";
-import MoreProjects from "./components/MoreProjects";
 import { BEST_WORK_CARD_PROPS } from "@/utils/types";
+import MoreProjects from "./components/MoreProjects";
+import ProjectOverview from "./components/ProjectOverview";
 
 const MotionBox = motion(Box);
 
@@ -86,7 +85,7 @@ const ProjectDetailsLayout = ({ project }: Props) => {
                 industry={project.industry}
                 service={project.service}
               />
-              <ProjectServices skills={project.skills} />
+              {/* <ProjectServices skills={project.skills} /> */}
             </Box>
           </Grid>
         </Grid>
