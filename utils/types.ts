@@ -234,10 +234,21 @@ export interface BEST_WORK_CARD_PROPS {
   slug: string;
 }
 
+export interface projectDetails {
+  img?: StaticImageData;
+  title: string;
+  description: string[];
+  strategies?: { label: string; data: { description: string }[] };
+  videoUrl1?: string;
+  videoUrl2?: string;
+  videoUrl3?: string;
+}
+
 export interface PROJECT_CARD_DATA_PROPS {
   slug?: string;
   projectName: string;
   department: string;
   img: StaticImageData;
   description?: string;
+  details?: projectDetails;
 }

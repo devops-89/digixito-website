@@ -3,26 +3,41 @@ import { Box, Typography, Grid } from "@mui/material";
 import { COLORS } from "@/utils/enum";
 import { kessel_bold, archivo } from "@/utils/fonts";
 import { motion } from "motion/react";
-import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 
 const MotionBox = motion(Box);
 
 const getServiceDescription = (label: string) => {
   const map: Record<string, string> = {
-    "Web Development": "Building high-performance, scalable web architectures with cutting-edge tech.",
-    "Web Design": "Crafting intuitive, engaging, and modern user interfaces that captivate users.",
-    "E-commerce Operations": "Optimizing online sales, inventory, and customer journeys for maximum conversion.",
-    "E-Commerce": "End-to-end e-commerce solutions tailored for exponential growth and revenue.",
-    "Digital Marketing": "Data-driven campaigns engineered to boost brand visibility, engagement, and ROI.",
-    "Mobile Application": "Creating seamless, lightning-fast cross-platform mobile experiences.",
-    "UX Design": "Deep user-centric research and design to ensure frictionless, delightful interactions.",
-    "Graphic Works": "Compelling visual assets and brand identities that leave a lasting impression.",
-    "Online Sales": "Advanced strategies and tools designed to maximize conversion rates and overall revenue.",
-    "Marketplace Management": "End-to-end handling of marketplace listings, optimization, and strategy.",
-    "Next.js": "React framework for highly optimized, SEO-friendly, and ultra-fast applications.",
-    NestJS: "Progressive Node.js framework for efficient, reliable, and scalable backend services.",
+    "Web Development":
+      "Building high-performance, scalable web architectures with cutting-edge tech.",
+    "Web Design":
+      "Crafting intuitive, engaging, and modern user interfaces that captivate users.",
+    "E-commerce Operations":
+      "Optimizing online sales, inventory, and customer journeys for maximum conversion.",
+    "E-Commerce":
+      "End-to-end e-commerce solutions tailored for exponential growth and revenue.",
+    "Digital Marketing":
+      "Data-driven campaigns engineered to boost brand visibility, engagement, and ROI.",
+    "Mobile Application":
+      "Creating seamless, lightning-fast cross-platform mobile experiences.",
+    "UX Design":
+      "Deep user-centric research and design to ensure frictionless, delightful interactions.",
+    "Graphic Works":
+      "Compelling visual assets and brand identities that leave a lasting impression.",
+    "Online Sales":
+      "Advanced strategies and tools designed to maximize conversion rates and overall revenue.",
+    "Marketplace Management":
+      "End-to-end handling of marketplace listings, optimization, and strategy.",
+    "Next.js":
+      "React framework for highly optimized, SEO-friendly, and ultra-fast applications.",
+    NestJS:
+      "Progressive Node.js framework for efficient, reliable, and scalable backend services.",
   };
-  return map[label] || "Delivering excellence through specialized, strategic, and precise execution.";
+  return (
+    map[label] ||
+    "Delivering excellence through specialized, strategic, and precise execution."
+  );
 };
 
 interface ProjectServicesProps {
@@ -31,7 +46,14 @@ interface ProjectServicesProps {
 
 const ProjectServices = ({ skills }: ProjectServicesProps) => {
   return (
-    <Box sx={{ width: "100%", pt: { xs: 8, md: 12 }, pb: { xs: 10, md: 15 }, overflow: "hidden" }}>
+    <Box
+      sx={{
+        width: "100%",
+        pt: { xs: 8, md: 12 },
+        pb: { xs: 10, md: 15 },
+        overflow: "hidden",
+      }}
+    >
       <Box sx={{ textAlign: "center", mb: 8 }}>
         <Typography
           variant="h3"
@@ -134,7 +156,7 @@ const ProjectServices = ({ skills }: ProjectServicesProps) => {
               >
                 {getServiceDescription(skill.label)}
               </Typography>
-              
+
               {/* CSS for the hover highlight animation */}
               <style jsx global>{`
                 .MuiBox-root:hover > .hover-highlight {

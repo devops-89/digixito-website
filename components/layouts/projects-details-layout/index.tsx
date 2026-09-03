@@ -9,11 +9,12 @@ import CallToAction from "@/components/layouts/case-study-details-layout/compone
 import ProjectOverview from "./components/ProjectOverview";
 import ProjectServices from "./components/ProjectServices";
 import MoreProjects from "./components/MoreProjects";
+import { BEST_WORK_CARD_PROPS } from "@/utils/types";
 
 const MotionBox = motion(Box);
 
 interface Props {
-  project: any;
+  project: BEST_WORK_CARD_PROPS;
 }
 
 const ProjectDetailsLayout = ({ project }: Props) => {
@@ -27,13 +28,16 @@ const ProjectDetailsLayout = ({ project }: Props) => {
 
   const sentences = project.description?.split(". ").filter(Boolean) || [];
   const mid = Math.ceil(sentences.length / 2) || 1;
-  const overviewText = sentences.slice(0, mid).join(". ") + (sentences.length ? "." : "");
-  const approachText = sentences.slice(mid).join(". ") + (sentences.length > 1 ? "." : "");
+  const overviewText =
+    sentences.slice(0, mid).join(". ") + (sentences.length ? "." : "");
+  const approachText =
+    sentences.slice(mid).join(". ") + (sentences.length > 1 ? "." : "");
 
   return (
-    <Box sx={{ backgroundColor: COLORS.WHITE, minHeight: "100vh", pb: 10, pt: 0 }}>
-      <Container maxWidth="xl">
-        
+    <Box
+      sx={{ backgroundColor: COLORS.WHITE, minHeight: "100vh", pb: 10, pt: 0 }}
+    >
+      <Container maxWidth="lg">
         <Grid container spacing={4} sx={{ pt: { xs: 8, md: 16 } }}>
           {/* Left Column: Sticky Title */}
           <Grid size={{ xs: 12, md: 4 }}>
@@ -50,7 +54,7 @@ const ProjectDetailsLayout = ({ project }: Props) => {
                 .blur-text-hero {
                   font-family: "Inter", "Roboto", "Helvetica Neue", sans-serif;
                   font-weight: 800;
-                  color: #1F2326;
+                  color: #1f2326;
                   font-size: clamp(2.5rem, 4vw, 4.5rem);
                   text-transform: capitalize;
                   letter-spacing: -0.02em;
@@ -64,7 +68,13 @@ const ProjectDetailsLayout = ({ project }: Props) => {
 
           {/* Right Column: Scrolling Content */}
           <Grid size={{ xs: 12, md: 8 }}>
-            <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 6, md: 10 } }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: { xs: 6, md: 10 },
+              }}
+            >
               <ProjectOverview
                 projectTitle={project.title}
                 overviewText={overviewText}
@@ -81,13 +91,15 @@ const ProjectDetailsLayout = ({ project }: Props) => {
           </Grid>
         </Grid>
       </Container>
-      
+
       {/* Full Width Dark Section for More Projects */}
       <MoreProjects currentSlug={project.slug} />
 
       <Container maxWidth="xl">
         <Box mt={{ xs: 10, md: 15 }}>
-            <CallToAction onAction={() => window.location.href = "/contact-us"} />
+          <CallToAction
+            onAction={() => (window.location.href = "/contact-us")}
+          />
         </Box>
       </Container>
     </Box>

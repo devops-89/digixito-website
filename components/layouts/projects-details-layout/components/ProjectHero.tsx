@@ -14,7 +14,7 @@ interface ProjectHeroProps {
 
 const ProjectHero = ({ img, title }: ProjectHeroProps) => {
   const handleAnimationComplete = () => {
-    console.log('Animation completed!');
+    console.log("Animation completed!");
   };
 
   return (
@@ -24,7 +24,7 @@ const ProjectHero = ({ img, title }: ProjectHeroProps) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        pt: 0, 
+        pt: 0,
         pb: { xs: 6, md: 10 },
         backgroundColor: COLORS.WHITE,
       }}
@@ -59,7 +59,12 @@ const ProjectHero = ({ img, title }: ProjectHeroProps) => {
           }}
         />
 
-        <Grid container spacing={{ xs: 6, md: 4 }} alignItems="center" sx={{ zIndex: 1, position: "relative" }}>
+        <Grid
+          container
+          spacing={{ xs: 6, md: 4 }}
+          alignItems="center"
+          sx={{ zIndex: 1, position: "relative" }}
+        >
           {/* Left Side: Text */}
           <Grid size={{ xs: 12, md: 6 }}>
             <MotionBox
@@ -68,7 +73,15 @@ const ProjectHero = ({ img, title }: ProjectHeroProps) => {
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               sx={{ display: "flex", flexDirection: "column", gap: 3 }}
             >
-              <Box sx={{ width: "100%", position: "relative", minHeight: "120px", display: "flex", alignItems: "center" }}>
+              <Box
+                sx={{
+                  width: "100%",
+                  position: "relative",
+                  minHeight: "120px",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
                 <BlurText
                   text={title}
                   delay={150}
@@ -82,30 +95,13 @@ const ProjectHero = ({ img, title }: ProjectHeroProps) => {
                 .blur-text-hero {
                   font-family: "Inter", "Roboto", "Helvetica Neue", sans-serif;
                   font-weight: 800;
-                  color: #1F2326;
+                  color: #1f2326;
                   font-size: clamp(2.5rem, 6vw, 4.5rem);
                   text-transform: capitalize;
                   letter-spacing: -0.02em;
                   line-height: 1.1;
                 }
               `}</style>
-
-              <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-                <Box sx={{ width: 40, height: 2, backgroundColor: COLORS.PRIMARY }} />
-                <Typography
-                  sx={{
-                    fontFamily: archivo.style.fontFamily,
-                    color: COLORS.PRIMARY,
-                    fontSize: { xs: 16, md: 20 },
-                    fontWeight: 700,
-                    textTransform: "uppercase",
-                    letterSpacing: "0.15em",
-                  }}
-                >
-                  by Digixito
-                </Typography>
-                <Box sx={{ width: 40, height: 2, backgroundColor: COLORS.PRIMARY }} />
-              </Box>
             </MotionBox>
           </Grid>
 
@@ -114,13 +110,17 @@ const ProjectHero = ({ img, title }: ProjectHeroProps) => {
             <MotionBox
               initial={{ opacity: 0, x: 50, scale: 0.95 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              transition={{
+                duration: 0.8,
+                delay: 0.2,
+                ease: [0.16, 1, 0.3, 1],
+              }}
               whileHover={{ scale: 1.03 }}
-              sx={{ 
-                width: "100%", 
-                display: "flex", 
+              sx={{
+                width: "100%",
+                display: "flex",
                 justifyContent: "center",
-                transition: "transform 0.4s ease"
+                transition: "transform 0.4s ease",
               }}
             >
               <Image

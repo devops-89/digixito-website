@@ -1,6 +1,6 @@
 "use client";
-import { PROJECT_DATA } from "@/assets/data/project-data";
 import ProjectCard2 from "@/components/layouts/home-layout/components/ProjectCard2";
+import { PROJECT_DATA } from "@/assets/data/project-data";
 import { COLORS } from "@/utils/enum";
 import { Box, Container, Typography } from "@mui/material";
 import { motion } from "motion/react";
@@ -22,7 +22,14 @@ const MoreProjects = ({ currentSlug }: Props) => {
   if (!moreProjects || moreProjects.length === 0) return null;
 
   return (
-    <Box sx={{ backgroundColor: "#FFFFFF", py: { xs: 8, md: 12 }, width: "100%", overflow: "hidden" }}>
+    <Box
+      sx={{
+        backgroundColor: "#FFFFFF",
+        py: { xs: 8, md: 12 },
+        width: "100%",
+        overflow: "hidden",
+      }}
+    >
       <Container maxWidth="xl">
         <MotionBox
           initial={{ opacity: 0, y: 30 }}
@@ -72,11 +79,14 @@ const MoreProjects = ({ currentSlug }: Props) => {
           >
             {moreProjects.map((project, idx) => (
               <SwiperSlide key={project.slug}>
-                <Link href={`/projects/${project.slug}`} style={{ textDecoration: "none" }}>
+                <Link
+                  href={`/projects/${project.slug}`}
+                  style={{ textDecoration: "none" }}
+                >
                   <ProjectCard2
                     slug={project.slug}
                     projectName={project.title}
-                    department={project.industry || project.service || "Digital"}
+                    department={project.industry || "General"}
                     img={project.img}
                     description={project.description}
                   />

@@ -29,12 +29,31 @@ export const PROJECTS_TABS_DATA = [
 
 export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
   {
-    slug: "maxbupa-case-study",
+    slug: "max-bupa-health-insurance",
     img: max_logo,
     projectName: "Max Bupa",
     department: PROJECTS_DEPARTMENT.DIGITAL,
     description:
       "Max Bupa Health Insurance Company is collaboration between Max India Limited and UK based healthcare services experts, Bupa. With the clear vision of reality and six decades of rich expertise in healthcare services, we have brought together the smiling faces of people, to be called as India's admired health insurance company. With the rising in the quality of the services of ours, we are able to provide our worthy services to 29 million customer-bases in over 190 countries. Max Bupa Health Insurance Company together brings its expertise in Family health and wellness with the aim of customer and caring for you, for life.",
+    details: {
+      title: "Max Bupa Health Insurance",
+      description: [
+        "Max Bupa Health Insurance Company is collaboration between Max India Limited and UK based healthcare services experts, Bupa. With the clear vision of reality and six decades of rich expertise in healthcare services, we have brought together the smiling faces of people, to be called as India's admired health insurance company. With the rising in the quality of the services of ours, we are able to provide our worthy services to 29 million customer-bases in over 190 countries. Max Bupa Health Insurance Company together brings its expertise in Family health and wellness with the aim of customer and caring for you, for life.",
+      ],
+      strategies: {
+        label: "Email marketing to interested buyers",
+        data: [
+          {
+            description:
+              "This is one of the best cost effective ways to reach the target audience. We use the tools such as mailchain to track our interested buyers and get it touch with them. From the directory of our customer database, we provide them quality exposure about our brand and its benefits. This strategy helps in targeting the niche buyers by matching the demand and supply.",
+          },
+          {
+            description:
+              "Keeping the interested buyers in mind, the main objective of the mailer campaign is the lead generation. We provide the solution by optimising the campaign, targeting at different levels and segmentation of the database. This helps us in getting the desired result of 1.5 to 2% conversion rate.",
+          },
+        ],
+      },
+    },
   },
   {
     slug: "jk-tyres",

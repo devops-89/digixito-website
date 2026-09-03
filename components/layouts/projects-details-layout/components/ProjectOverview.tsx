@@ -19,20 +19,19 @@ interface ProjectOverviewProps {
   service?: string;
 }
 
-const ProjectOverview = ({ 
-  projectTitle, 
-  overviewText, 
-  approachText, 
-  challenges, 
-  strategy, 
+const ProjectOverview = ({
+  projectTitle,
+  overviewText,
+  approachText,
+  challenges,
+  strategy,
   results,
   img,
   industry,
-  service
+  service,
 }: ProjectOverviewProps) => {
   return (
     <Box sx={{ width: "100%", pb: { xs: 6, md: 10 } }}>
-      
       <MotionBox
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -90,7 +89,13 @@ const ProjectOverview = ({
           >
             Service
           </Typography>
-          <Typography sx={{ fontFamily: archivo.style.fontFamily, color: "#1F2326", fontSize: "16px" }}>
+          <Typography
+            sx={{
+              fontFamily: archivo.style.fontFamily,
+              color: "#1F2326",
+              fontSize: "16px",
+            }}
+          >
             {service || "Consulting"}
           </Typography>
         </Box>
@@ -108,7 +113,13 @@ const ProjectOverview = ({
           >
             Industry
           </Typography>
-          <Typography sx={{ fontFamily: archivo.style.fontFamily, color: "#1F2326", fontSize: "16px" }}>
+          <Typography
+            sx={{
+              fontFamily: archivo.style.fontFamily,
+              color: "#1F2326",
+              fontSize: "16px",
+            }}
+          >
             {industry || "Technology"}
           </Typography>
         </Box>
@@ -121,7 +132,14 @@ const ProjectOverview = ({
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          sx={{ mb: 10, borderRadius: "16px", overflow: "hidden", position: "relative", width: "100%", pt: "56.25%" /* 16:9 Aspect Ratio */ }}
+          sx={{
+            mb: 10,
+            borderRadius: "16px",
+            overflow: "hidden",
+            position: "relative",
+            width: "100%",
+            pt: "56.25%" /* 16:9 Aspect Ratio */,
+          }}
         >
           <Image
             src={img}
@@ -133,49 +151,57 @@ const ProjectOverview = ({
       )}
 
       {/* Content Sections */}
-      <Box sx={{ display: "flex", flexDirection: "column", gap: 8, maxWidth: "800px" }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          gap: 8,
+          maxWidth: "800px",
+        }}
+      >
         {[
           { title: "The Challenge", text: challenges },
           { title: "Our Approach", text: approachText },
           { title: "The Strategy", text: strategy },
-          { title: "Result Achieved", text: results }
-        ].map((section, idx) => (
-          section.text && section.text.length > 3 && (
-            <MotionBox
-              key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6 }}
-            >
-              <Typography
-                sx={{
-                  fontFamily: `"Inter", "Roboto", "Helvetica Neue", sans-serif`,
-                  color: "#1F2326",
-                  fontSize: { xs: 24, md: 28 },
-                  fontWeight: 500,
-                  mb: 3,
-                  letterSpacing: "-0.01em"
-                }}
+          { title: "Result Achieved", text: results },
+        ].map(
+          (section, idx) =>
+            section.text &&
+            section.text.length > 3 && (
+              <MotionBox
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6 }}
               >
-                {section.title}
-              </Typography>
-              <Typography
-                sx={{
-                  fontFamily: archivo.style.fontFamily,
-                  color: "#4A5568",
-                  fontSize: { xs: 16, md: 18 },
-                  lineHeight: 1.8,
-                  fontWeight: 400,
-                }}
-              >
-                {section.text}
-              </Typography>
-            </MotionBox>
-          )
-        ))}
+                <Typography
+                  sx={{
+                    fontFamily: `"Inter", "Roboto", "Helvetica Neue", sans-serif`,
+                    color: "#1F2326",
+                    fontSize: { xs: 24, md: 28 },
+                    fontWeight: 500,
+                    mb: 3,
+                    letterSpacing: "-0.01em",
+                  }}
+                >
+                  {section.title}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontFamily: archivo.style.fontFamily,
+                    color: "#4A5568",
+                    fontSize: { xs: 16, md: 18 },
+                    lineHeight: 1.8,
+                    fontWeight: 400,
+                  }}
+                >
+                  {section.text}
+                </Typography>
+              </MotionBox>
+            ),
+        )}
       </Box>
-
     </Box>
   );
 };

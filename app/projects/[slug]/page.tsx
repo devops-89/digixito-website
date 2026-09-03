@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import ProjectDetailsLayout from "@/components/layouts/projects-details-layout";
-import { PROJECT_DATA } from "@/assets/data/project-data";
 import { notFound, useParams } from "next/navigation";
+import { PROJECT_DATA } from "@/assets/data/project-data";
 
 export default function ProjectDetailsPage() {
   const params = useParams();

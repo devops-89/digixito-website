@@ -1,364 +1,70 @@
-import gcube from "@/projects/G_CUBE.png";
-import gabicci from "@/projects/GABICCI.png";
-import hautebaby from "@/projects/HAUTE_BABY.png";
-import highmast from "@/projects/HIGHMAST.png";
-import mytreks from "@/projects/MY_TREKS.AI.png";
-import namasteIndia from "@/projects/NAMASTE_INDIA.png";
-import netraNiti from "@/projects/NXTGEN_NETRA_NITI.png";
-import page1 from "@/projects/PAGE_1_TRAVEL.png";
-import perf from "@/projects/PERF.png";
-import rasdelta from "@/projects/RASDELTA.png";
-import redchief from "@/projects/REDCHIEF.png";
-import shipsmith from "@/projects/SHIPSMITH.png";
-import maxbupa from "@/projects/old-projects/max-bupa/max-bupa.jpg";
+import jk_logo from "@/projects/old-projects/jktyre/jk-logo.png";
+import max_logo from "@/projects/old-projects/max-bupa/max-bupa-logo.png";
+import microsoft from "@/projects/old-projects/microsoft/microsoft-logo.png";
+import hp_logo from "@/projects/old-projects/hp/hp-logo.png";
 import { BEST_WORK_CARD_PROPS } from "@/utils/types";
-// import allCanFarm from '@/projects/'
+
 export const PROJECT_DATA: BEST_WORK_CARD_PROPS[] = [
   {
-    img: redchief,
-    title: "Red Chief",
-    industry: "Retail & Apparel",
-    service: "E-commerce Operations",
-    description:
-      "For Red Chief, our focus was on strengthening the brand’s e-commerce presence by managing and optimizing online sales operations. This involved handling product listings, monitoring marketplace performance, and ensuring smooth order flow across digital channels. The objective was to improve product visibility, streamline online sales processes, and support consistent revenue growth across the e-commerce ecosystem.",
-    skills: [
-      {
-        label: "E-commerce Operations",
-      },
-      {
-        label: "Online Sales",
-      },
-      {
-        label: "Marketplace Management",
-      },
-    ],
-    slug: "red-chief",
-  },
-  // {
-  //   img: hscore,
-  //   title: "Hscore",
-  //   description:
-  //     "For HScore, we designed and developed a complete digital platform that enables seamless sports scoring and match management. The project included crafting an intuitive UI/UX experience, building a high-performance website using Next.js, and developing a cross-platform mobile application using React Native. Our focus was to create a fast, scalable, and user-friendly system that allows players, organizers, and viewers to track scores and manage matches efficiently across devices.",
-  //   skills: [
-  //     {
-  //       label: "UX Design",
-  //     },
-  //     {
-  //       label: "Web Development",
-  //     },
-  //     {
-  //       label: "Mobile Application",
-  //     },
-  //   ],
-  //   slug: "hscore",
-  // },
-  {
-    img: gcube,
-    title: "Gcube",
-    description:
-      "For Gcube, our engagement was focused exclusively on designing and developing their website. Our objective was to create a modern, responsive, and user-friendly digital presence that effectively communicates their brand and services.",
-    skills: [
-      {
-        label: "Web Development",
-      },
-      {
-        label: "Web Design",
-      },
-    ],
-    slug: "gcube",
-  },
-  {
-    img: gabicci,
-    title: "Gabicci",
-    description:
-      "For Gabicci, our focus was on strengthening the brand’s e-commerce presence by managing and optimizing online sales operations. This involves providing a seamless shopping experience and ensuring smooth order flow to support consistent revenue growth.",
-    skills: [
-      {
-        label: "E-commerce Operations",
-      },
-      {
-        label: "Online Sales",
-      },
-    ],
-    slug: "gabicci",
-  },
-  {
-    img: hautebaby,
-    title: "Haute Baby",
-    description:
-      "For Haute Baby, we delivered a comprehensive e-commerce and digital marketing solution. We developed and optimized their digital storefront for a better online shopping experience and executed targeted marketing campaigns to drive traffic, increase brand visibility, and boost overall online sales.",
-    skills: [
-      {
-        label: "E-commerce Operations",
-      },
-      {
-        label: "Digital Marketing",
-      },
-      {
-        label: "Web Development",
-      },
-    ],
-    slug: "hautebaby",
-  },
-  {
-    img: highmast,
-    title: "Highmast",
-    description:
-      "For Highmast, we provided end-to-end website development services. We focused on building a robust, responsive, and visually appealing corporate website that effectively showcases their services and expertise, ensuring an optimal user experience across all devices.",
-    skills: [
-      {
-        label: "Website Development",
-      },
-      {
-        label: "Web Design",
-      },
-    ],
-    slug: "highmast",
-  },
-  {
-    img: mytreks,
-    title: "MyTreks.ai",
-    description:
-      "For MyTreks.ai, we delivered a multi-platform digital experience by developing a comprehensive responsive website, a robust web application, and an intuitive mobile application. Our unified approach ensured consistent branding, seamless data synchronization, and an optimal user journey across all touchpoints.",
-    skills: [
-      {
-        label: "Mobile Application",
-      },
-      {
-        label: "Website Development",
-      },
-      {
-        label: "Web Application",
-      },
-    ],
-    slug: "mytreks-ai",
-  },
-  {
-    img: namasteIndia,
-    title: "Namaste India",
-    description:
-      "For Namaste India, we managed their digital presence through targeted digital marketing strategies. Our approach focused on engaging their audience, boosting brand awareness, and driving meaningful online interactions.",
-    skills: [
-      {
-        label: "Digital Marketing",
-      },
-    ],
-    slug: "namaste-india",
-  },
-  {
-    img: netraNiti,
-    title: "NXTGEN Netra Niti",
-    description:
-      "For NXTGEN Netra Niti, we focused on enhancing their digital presence by providing expert UX design, custom website development, and targeted digital marketing strategies. Our approach aimed to create an engaging user experience and drive meaningful online interactions.",
-    skills: [
-      {
-        label: "UX Design",
-      },
-      {
-        label: "Website Development",
-      },
-      {
-        label: "Digital Marketing",
-      },
-    ],
-    slug: "netra-niti",
-  },
-  {
-    img: page1,
-    title: "Page 1 Travel",
-    description:
-      "For Page 1 Travel, we built a modern, high-performance website combining responsive frontend architecture with a robust backend service. Utilizing Next.js and NestJS, we created a scalable and visually engaging platform to enhance the overall traveler experience.",
-    skills: [
-      {
-        label: "Website Development",
-      },
-      {
-        label: "Next.js",
-      },
-      {
-        label: "NestJS",
-      },
-    ],
-    slug: "page-1-travel",
-  },
-  {
-    img: perf,
-    title: "Perf",
-    description:
-      "For Perf, we built a comprehensive digital platform focusing on robust website development and a seamless e-commerce experience. Our goal was to create an intuitive online store that drives sales and provides customers with an effortless shopping journey.",
-    skills: [
-      {
-        label: "Website Development",
-      },
-      {
-        label: "E-commerce",
-      },
-    ],
-    slug: "perf",
-  },
-  {
-    img: rasdelta,
-    title: "Rasdelta",
-    description:
-      "For Rasdelta, we developed and executed a targeted digital marketing strategy. Our focus was on enhancing their online visibility, engaging their primary audience, and driving sustainable digital growth through data-driven campaigns.",
-    skills: [
-      {
-        label: "Digital Marketing",
-      },
-    ],
-    slug: "rasdelta",
-  },
-  {
-    img: shipsmith,
-    title: "Shipsmith",
-    description:
-      "For Shipsmith, we provided a dual approach of custom website development and creative graphic design. We built a responsive, high-performing website paired with compelling visual assets that effectively communicate their brand identity and offerings.",
-    skills: [
-      {
-        label: "Website Development",
-      },
-      {
-        label: "Graphic Works",
-      },
-    ],
-    slug: "shipsmith",
-  },
-  {
-    img: redchief,
-    title: "Ornet",
-    description:
-      "ORNET wanted to place its three products namely Terrain Bull, Industrial HD, Power Gripper in an unconditional toughness niche, which are born to perform with an unmatched durability, all across the terrains. When the circumstances become adverse, they grip on the road and move beyond the toughness. That's what ORNET wanted to trump about their products. So we came and amplified it with our powerful creativity. The outcome was an aggressive campaign that created an outstanding and an outlasting effect throughout its target audience.",
-    skills: [
-      {
-        label: "Creative Works",
-      },
-      {
-        label: "Digital Marketing",
-      },
-    ],
-    slug: "ornet",
-  },
-  {
-    img: perf,
-    title: "BellaCasa",
-    description:
-      "A Dazzler with his MUSE. Target Audience: Fashion enthusiasts, sports lover, travelers. Motives: Individualist, Updated with latest trends, Fitness conscious, Restless and assertive.",
-    skills: [
-      {
-        label: "Creative Works",
-      },
-    ],
-    slug: "bellacasa",
-  },
-  {
-    img: shipsmith,
-    title: "Bhonko",
-    description:
-      "Consumers and Sellers, these two entities are the interface of a much more complex network of any commercial market. Many times condition of conflict arises between them, but the point is where they should shout it out. That's were Bhonko comes. Bhonko is a platform where the consumers can file their complaint and unconditionally seek help and better justice for the cause of their shouting.",
-    skills: [
-      {
-        label: "Creative Works",
-      },
-    ],
-    slug: "bhonko",
-  },
-  {
-    img: redchief,
-    title: "HP",
-    description:
-      "Let's Print Innovation. A project focused on creative designing and innovation for HP.",
-    skills: [
-      {
-        label: "Creative Works",
-      },
-    ],
-    slug: "hp",
-  },
-  {
-    img: shipsmith,
-    title: "J.K TYRES",
-    description:
-      "The occasion was a celebration of an association. J.K wanted to rejoice the journey of unsung heroes, termed BAADSHAH, people who are rolling and rising on the roads to maintain your every day's essential supply chain. We were given a task in hand to reflect the heroic life of some of the significant achievers who have associated for long with J.K, through our films. What followed next was capturing their life's rollercoaster journey and making them relive some of their magical moments through our films. J.K wanted to reflect the PAN India reach for their farm category product SONA1 while also highlighting its major features. On a tight deadline, they desired a corporate film which should arouse an interest towards the product.",
-    skills: [
-      {
-        label: "Creative Works",
-      },
-    ],
-    slug: "jk-tyres",
-  },
-  {
-    img: perf,
-    title: "Kharkiv Aviation Institute",
-    description:
-      "Kharkiv Aviation Institute (KhAI) is one of the most renowned universities in the world, providing courses in Aeronautical and Aerospace Engineering. We performed Search Engine Optimization (SEO) resulting in a 204% increase in visits.",
-    skills: [
-      {
-        label: "Digital Marketing",
-      },
-      {
-        label: "SEO",
-      },
-    ],
-    slug: "khaiedu-case-study",
-  },
-  {
-    img: shipsmith,
-    title: "MICROSOFT",
-    description:
-      "Ultimately advertising is about selling Brands in an utmost creative way. So one fine day technology giant Microsoft opened its door for us, and we walked inside with our restless passion. They were impressed, and we were passionately excited, so we collaborated on Digital advertising campaign for their products; Office 365 Standalone and Azure. This time we crossed our boundaries both in terms of work and reach, as the campaign was directed to run in Indonesia, Singapore, Malaysia, and Vietnam. We adroitly maneuvered our creative's, landing page and user registration platform to get the bell of lead generation ringing. The result was that the bell kept on ringing.",
-    skills: [
-      {
-        label: "Creative Works",
-      },
-      {
-        label: "Digital Marketing",
-      },
-    ],
     slug: "microsoft",
+    img: microsoft,
+    title: "Microsoft Office 365 & Azure Campaign",
+    description: "Ultimately advertising is about selling Brands in an utmost creative way. We collaborated on a Digital advertising campaign for their products: Office 365 Standalone and Azure, crossing boundaries in Indonesia, Singapore, Malaysia, and Vietnam. We adroitly maneuvered our creatives, landing page, and user registration platform to get the bell of lead generation ringing. The result was that the bell kept on ringing.",
+    challenges: "Reaching a diverse target audience across multiple Southeast Asian countries with tailored messaging that resonates with enterprise users and decision-makers.",
+    strategy: "Developed localized digital campaigns for each region, optimized landing pages for high conversion, and implemented a robust user registration platform to capture high-quality leads.",
+    results: "Generated an unprecedented volume of qualified leads across Indonesia, Singapore, Malaysia, and Vietnam, significantly boosting adoption rates for Office 365 and Azure.",
+    industry: "Technology & Software",
+    service: "Digital Marketing",
+    skills: [
+      { label: "Digital Marketing" },
+      { label: "UX Design" },
+      { label: "Web Development" }
+    ]
   },
   {
-    img: maxbupa,
+    slug: "max-bupa-health-insurance",
+    img: max_logo,
     title: "Max Bupa Health Insurance",
-    description:
-      "Max Bupa Health Insurance Company is a collaboration between Max India Limited and UK based healthcare services experts, Bupa. With the clear vision of reality and six decades of rich expertise in healthcare services, we have brought together the smiling faces of people, to be called as India's admired health insurance company. We utilized Email marketing to interested buyers to reach the target audience and generate leads with a 1.5 to 2% conversion rate. \n\nOur approach involved deep market research to segment the audience and personalize the outreach, yielding phenomenal engagement. The results exceeded initial projections, establishing a new standard for customer acquisition in the insurance space.",
-    challenges: "The primary challenge was reaching a highly saturated and competitive health insurance market while ensuring the communication stood out. We had to build trust with potential customers who were often overwhelmed with generic promotional emails, and convert this skepticism into high-quality leads without increasing the cost per acquisition.",
-    strategy: "Our strategy centered on a hyper-personalized email marketing campaign. We segmented the audience based on demographics, past interactions, and specific health interests. By leveraging A/B testing on subject lines and interactive email content, we ensured higher open rates. We also optimized the landing pages for seamless user journeys, making the lead generation process frictionless.",
-    results: "The campaign achieved a consistent 1.5% to 2% conversion rate, significantly outperforming industry averages. We generated a 40% increase in qualified leads within the first quarter and saw a 25% reduction in overall customer acquisition costs, firmly establishing Max Bupa as a preferred choice among the targeted demographic.",
+    description: "Max Bupa Health Insurance Company together brings its expertise in Family health and wellness with the aim of customer and caring for you, for life. With the rising in the quality of the services of ours, we are able to provide our worthy services to 29 million customer-bases in over 190 countries.",
+    challenges: "Increasing brand awareness and customer acquisition in a highly competitive health insurance market while educating potential customers on complex policies.",
+    strategy: "Implemented a targeted email marketing campaign focusing on lead generation. Segmented the database to deliver personalized messaging and optimized the campaign for maximum engagement.",
+    results: "Achieved a solid 1.5% to 2% conversion rate by matching demand and supply, effectively reaching the niche buyers and boosting policy sales.",
+    industry: "Healthcare & Insurance",
+    service: "Digital Marketing",
     skills: [
-      {
-        label: "Digital Marketing",
-      },
-      {
-        label: "Email Marketing",
-      },
-    ],
-    slug: "maxbupa-case-study",
+      { label: "Digital Marketing" },
+      { label: "Graphic Works" }
+    ]
   },
   {
-    img: shipsmith,
-    title: "National Medical University",
-    description:
-      "O. O. Bogomolets National Medical University is the world class medical university in Ukraine, established in 1841 and accredited with the fourth level of accreditation, the highest level of accreditation by the Ministry of Education and Science. The quality education with the amalgamation of international exposure for the students sets it apart from the other medical universities. We improved Keyword Ranking and Increased Conversion Rates through SEO.",
+    slug: "jk-tyres",
+    img: jk_logo,
+    title: "JK Tyre - BAADSHAH Campaign",
+    description: "J.K wanted to rejoice the journey of unsung heroes, termed BAADSHAH, people who are rolling and rising on the roads to maintain your every day's essential supply chain. We were given a task in hand to reflect the heroic life of some of the significant achievers who have associated for long with J.K.",
+    challenges: "Capturing the authentic and gritty reality of truck drivers' lives while weaving a compelling narrative that aligns with JK Tyre's brand values.",
+    strategy: "Produced a series of high-quality documentary-style films capturing the rollercoaster journey of long-time JK Tyre associates, celebrating their magical moments.",
+    results: "Created a deeply emotional connection with the target audience, significantly increasing brand loyalty and engagement across digital platforms.",
+    industry: "Automotive",
+    service: "Creative & Branding",
     skills: [
-      {
-        label: "Digital Marketing",
-      },
-      {
-        label: "SEO",
-      },
-    ],
-    slug: "nmu-case-study",
+      { label: "Graphic Works" },
+      { label: "Digital Marketing" }
+    ]
   },
   {
-    img: perf,
-    title: "Furo",
-    description:
-      "Furo shoes grip on the ground and never let you down. We build a creative campaign around Furo. In the first creative, we give the shoes trait of a leopard. Wear these sports shoes and be agile like the big cats. Other part of the campaign focus on the sportsperson. Playing on the brand insight, sportsperson are dedicated, focused and confident in their shoes.",
+    slug: "hp",
+    img: hp_logo,
+    title: "HP Page Wide Pro",
+    description: "HP needed to decode a design for the digital campaigning of their product HP Page Wide Pro 577dw MFP. We sat with them on the meeting table and astonished them with our creative imprint. With our digital strategy, we manufactured a smart and productive digital campaign.",
+    challenges: "Positioning a new enterprise-grade printer in a saturated market and clearly communicating its revolutionary features and cost-saving benefits.",
+    strategy: "Engineered a targeted digital campaign highlighting the product's disruptive technology, utilizing high-impact visuals and data-driven ad placements.",
+    results: "Successfully redefined the market perception of the product, resulting in a substantial increase in product inquiries and B2B sales pipeline growth.",
+    industry: "Consumer Electronics",
+    service: "Creative Strategy",
     skills: [
-      {
-        label: "Creative Works",
-      },
-    ],
-    slug: "rspl",
-  },
+      { label: "Graphic Works" },
+      { label: "Digital Marketing" },
+      { label: "UX Design" }
+    ]
+  }
 ];
