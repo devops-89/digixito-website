@@ -172,3 +172,4 @@ const ProjectServices = ({ skills }: ProjectServicesProps) => {
 };
 
 export default ProjectServices;
+export default ProjectServices;
