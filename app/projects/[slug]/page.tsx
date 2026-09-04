@@ -2,11 +2,11 @@
 import React from "react";
 import ProjectDetailsLayout from "@/components/layouts/projects-details-layout";
 import { notFound, useParams } from "next/navigation";
-import { PROJECT_DATA } from "@/assets/data/project-data";
+import { OLD_PROJECTS_DATA } from "@/utils/constant";
 
 export default function ProjectDetailsPage() {
   const params = useParams();
-  const project = PROJECT_DATA.find((p) => p.slug === params?.slug);
+  const project = OLD_PROJECTS_DATA.find((p) => p.slug === params?.slug);
 
   if (!project) {
     notFound();

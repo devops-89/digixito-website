@@ -78,7 +78,7 @@ const MoreProjects = ({ currentSlug }: Props) => {
             style={{ paddingBottom: "60px", paddingTop: "20px" }}
           >
             {moreProjects.map((project, idx) => (
-              <SwiperSlide key={project.slug}>
+              <SwiperSlide key={project.slug} style={{ height: "auto", display: "flex" }}>
                 <ProjectCard2 {...project} />
               </SwiperSlide>
             ))}

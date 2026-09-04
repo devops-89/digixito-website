@@ -18,7 +18,7 @@ const ProjectCard2 = ({
   description,
 }: PROJECT_CARD_DATA_PROPS) => {
   return (
-    <Box sx={{ position: "relative", width: "100%", pt: 2 }}>
+    <Box sx={{ position: "relative", width: "100%", pt: 2, height: "100%", display: "flex", flexDirection: "column" }}>
       <Box
         sx={{
           background: "linear-gradient(135deg, #222222 0%, #161616 100%)",
@@ -28,6 +28,10 @@ const ProjectCard2 = ({
           color: "#fff",
           position: "relative",
           zIndex: 1,
+          height: "100%",
+          flexGrow: 1,
+          display: "flex",
+          flexDirection: "column",
           transition: "all 0.4s ease",
           "&:hover": {
             // boxShadow: "0 20px 40px rgba(0,0,0,0.5)",
@@ -111,7 +115,7 @@ const ProjectCard2 = ({
         </Box>
 
         <Box
-          sx={{ p: 4, pb: 3, pt: 5, position: "relative", zIndex: 1, mt: 5 }}
+          sx={{ p: 4, pb: 3, pt: 5, position: "relative", zIndex: 1, mt: 5, display: "flex", flexDirection: "column", flexGrow: 1 }}
         >
           <Stack direction="row" alignItems="center" spacing={2} sx={{ mb: 4 }}>
             <Box
@@ -158,12 +162,37 @@ const ProjectCard2 = ({
             {description}
           </Typography>
 
-          {slug ? (
-            <Link href={`/projects/${slug}`} style={{ textDecoration: "none" }}>
+          <Box sx={{ mt: "auto", pt: 3 }}>
+            {slug ? (
+              <Link href={`/projects/${slug}`} style={{ textDecoration: "none" }}>
+                <Box
+                  className="read-more-btn"
+                  sx={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 1,
+                    color: "#F6C344",
+                    cursor: "pointer",
+                    fontFamily: roboto.style.fontFamily,
+                    fontWeight: 700,
+                    fontSize: 16,
+                    "&:hover": {
+                      "& svg": {
+                        transform: "translateX(5px)",
+                      },
+                    },
+                    "& svg": {
+                      transition: "transform 0.3s ease",
+                    },
+                  }}
+                >
+                  Read More <ArrowRightAltIcon />
+                </Box>
+              </Link>
+            ) : (
               <Box
                 className="read-more-btn"
                 sx={{
-                  mt: 3,
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 1,
@@ -184,33 +213,8 @@ const ProjectCard2 = ({
               >
                 Read More <ArrowRightAltIcon />
               </Box>
-            </Link>
-          ) : (
-            <Box
-              className="read-more-btn"
-              sx={{
-                mt: 3,
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 1,
-                color: "#F6C344",
-                cursor: "pointer",
-                fontFamily: roboto.style.fontFamily,
-                fontWeight: 700,
-                fontSize: 16,
-                "&:hover": {
-                  "& svg": {
-                    transform: "translateX(5px)",
-                  },
-                },
-                "& svg": {
-                  transition: "transform 0.3s ease",
-                },
-              }}
-            >
-              Read More <ArrowRightAltIcon />
-            </Box>
-          )}
+            )}
+          </Box>
         </Box>
       </Box>
     </Box>

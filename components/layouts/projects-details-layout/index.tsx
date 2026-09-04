@@ -6,31 +6,50 @@ import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
 import CallToAction from "@/components/layouts/case-study-details-layout/components/call-to-action";
-import { BEST_WORK_CARD_PROPS } from "@/utils/types";
+import { PROJECT_CARD_DATA_PROPS } from "@/utils/types";
 import MoreProjects from "./components/MoreProjects";
 import ProjectOverview from "./components/ProjectOverview";
 
 const MotionBox = motion(Box);
 
 interface Props {
-  project: BEST_WORK_CARD_PROPS;
+  project: PROJECT_CARD_DATA_PROPS;
 }
 
 const ProjectDetailsLayout = ({ project }: Props) => {
-  const [mounted, setMounted] = useState(false);
-
   useEffect(() => {
-    setMounted(true);
+    window.scrollTo(0, 0);
   }, []);
 
-  if (!mounted) return null;
-
-  const sentences = project.description?.split(". ").filter(Boolean) || [];
+  const projectTitle = project.details?.title || project.projectName;
+  const projectDescription = project.details?.description?.join(" ") || project.description || "";
+  const sentences = projectDescription?.split(". ").filter(Boolean) || [];
   const mid = Math.ceil(sentences.length / 2) || 1;
   const overviewText =
     sentences.slice(0, mid).join(". ") + (sentences.length ? "." : "");
   const approachText =
     sentences.slice(mid).join(". ") + (sentences.length > 1 ? "." : "");
+
+  let challenges = "";
+  let strategy = project.details?.strategies?.label || "";
+  let results = "";
+
+  const strategyData = project.details?.strategies?.data || [];
+  if (strategyData.length > 0) {
+    const firstDesc = strategyData[0].description;
+    const secondDesc = strategyData.length > 1 ? strategyData[1].description : "";
+    if (firstDesc.startsWith("Challenge:")) {
+      challenges = firstDesc.replace("Challenge: ", "");
+    } else {
+      challenges = firstDesc;
+    }
+    
+    if (secondDesc.startsWith("Result:")) {
+      results = secondDesc.replace("Result: ", "");
+    } else {
+      results = secondDesc;
+    }
+  }
 
   return (
     <Box
@@ -42,7 +61,7 @@ const ProjectDetailsLayout = ({ project }: Props) => {
           <Grid size={{ xs: 12, md: 4 }}>
             <Box sx={{ position: { md: "sticky" }, top: "160px" }}>
               <BlurText
-                text={project.title}
+                text={projectTitle}
                 delay={150}
                 animateBy="words"
                 direction="top"
@@ -75,24 +94,25 @@ const ProjectDetailsLayout = ({ project }: Props) => {
               }}
             >
               <ProjectOverview
-                projectTitle={project.title}
+                projectTitle={projectTitle}
                 overviewText={overviewText}
                 approachText={approachText}
-                challenges={project.challenges}
-                strategy={project.strategy}
-                results={project.results}
+                challenges={challenges}
+                strategy={strategy}
+                results={results}
                 img={project.img}
-                industry={project.industry}
-                service={project.service}
+                industry={project.department}
+                service={project.department}
+                videoUrls={[project.details?.videoUrl1, project.details?.videoUrl2, project.details?.videoUrl3]}
               />
-              {/* <ProjectServices skills={project.skills} /> */}
+              {/* <ProjectServices skills={[]} /> */}
             </Box>
           </Grid>
         </Grid>
       </Container>
 
       {/* Full Width Dark Section for More Projects */}
-      <MoreProjects currentSlug={project.slug} />
+      <MoreProjects currentSlug={project.slug || ""} />
 
       <Container maxWidth="xl">
         <Box mt={{ xs: 10, md: 15 }}>

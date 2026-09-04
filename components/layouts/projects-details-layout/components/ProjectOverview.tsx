@@ -17,6 +17,7 @@ interface ProjectOverviewProps {
   img?: string | StaticImageData;
   industry?: string;
   service?: string;
+  videoUrls?: (string | undefined)[];
 }
 
 const ProjectOverview = ({
@@ -29,6 +30,7 @@ const ProjectOverview = ({
   img,
   industry,
   service,
+  videoUrls = [],
 }: ProjectOverviewProps) => {
   return (
     <Box sx={{ width: "100%", pb: { xs: 6, md: 10 } }}>
@@ -202,6 +204,56 @@ const ProjectOverview = ({
             ),
         )}
       </Box>
+      {/* Video Content */}
+      {videoUrls && videoUrls.some(url => url) && (
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 6, mt: 8 }}>
+          <Typography
+            sx={{
+              fontFamily: `"Inter", "Roboto", "Helvetica Neue", sans-serif`,
+              color: "#1F2326",
+              fontSize: { xs: 24, md: 28 },
+              fontWeight: 500,
+              mb: 1,
+              letterSpacing: "-0.01em",
+            }}
+          >
+            Project Videos
+          </Typography>
+          {videoUrls.map(
+            (url, idx) =>
+              url && (
+                <MotionBox
+                  key={idx}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                  sx={{
+                    borderRadius: "16px",
+                    overflow: "hidden",
+                    position: "relative",
+                    width: "100%",
+                    pt: "56.25%" /* 16:9 Aspect Ratio */,
+                  }}
+                >
+                  <iframe
+                    src={url}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      border: "none",
+                    }}
+                  />
+                </MotionBox>
+              )
+          )}
+        </Box>
+      )}
     </Box>
   );
 };
