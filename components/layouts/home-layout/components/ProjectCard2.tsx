@@ -15,6 +15,7 @@ const ProjectCard2 = ({
   projectName,
   department,
   img,
+  logo,
   description,
 }: PROJECT_CARD_DATA_PROPS) => {
   return (
@@ -132,7 +133,7 @@ const ProjectCard2 = ({
               }}
             >
               <Image
-                src={img}
+                src={logo || img}
                 alt={projectName}
                 style={{ width: "100%", height: "auto", objectFit: "contain" }}
               />

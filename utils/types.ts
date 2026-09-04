@@ -250,6 +250,7 @@ export interface PROJECT_CARD_DATA_PROPS {
   projectName: string;
   department: string;
   img: StaticImageData;
+  logo?: StaticImageData;
   description?: string;
   details?: projectDetails;
 }

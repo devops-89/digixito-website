@@ -1,13 +1,13 @@
-import jk_logo from "@/projects/old-projects/jktyre/jk-logo.png";
-import max_logo from "@/projects/old-projects/max-bupa/max-bupa-logo.png";
-import microsoft from "@/projects/old-projects/microsoft/microsoft-logo.png";
-import hp_logo from "@/projects/old-projects/hp/hp-logo.png";
-import ornet_logo from "@/projects/old-projects/ornet/apollo.png";
 import bellaCasa from "@/projects/old-projects/bella-casa/bella-casa-logo.png";
 import bhonko from "@/projects/old-projects/bhonko/bhonko.png";
 import gcube from "@/projects/old-projects/gcube/g-cube-logo.png";
+import hp_logo from "@/projects/old-projects/hp/hp-logo.png";
+import jk_logo from "@/projects/old-projects/jktyre/jk-logo.png";
 import khaiedu from "@/projects/old-projects/khaiedu/xai.png";
+import max_logo from "@/projects/old-projects/max-bupa/max-bupa-logo.png";
+import microsoft from "@/projects/old-projects/microsoft/microsoft-logo.png";
 import nmu from "@/projects/old-projects/nmu/nmu.png";
+import ornet_logo from "@/projects/old-projects/ornet/apollo.png";
 import rspl from "@/projects/old-projects/redchief/red-chief-logo.png";
 
 import { BEST_WORK_CARD_PROPS } from "@/utils/types";

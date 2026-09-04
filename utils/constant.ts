@@ -1,21 +1,30 @@
-import jk_logo from "@/projects/old-projects/jktyre/jk-logo.png";
-import max_logo from "@/projects/old-projects/max-bupa/max-bupa-logo.png";
-import microsoft from "@/projects/old-projects/microsoft/microsoft-logo.png";
-import hp_logo from "@/projects/old-projects/hp/hp-logo.png";
-import ornet_logo from "@/projects/old-projects/ornet/apollo.png";
+import gcubepic from "@/projects/G_CUBE.png";
+import gabiccipic from "@/projects/GABICCI.png";
+import hauteBabypic from "@/projects/HAUTE_BABY.png";
+import highmastpic from "@/projects/HIGHMAST.png";
+import mytrekspic from "@/projects/MY_TREKS.AI.png";
+import namastepic from "@/projects/NAMASTE_INDIA.png";
+import netrapic from "@/projects/NXTGEN_NETRA_NITI.png";
 import bellaCasa from "@/projects/old-projects/bella-casa/bella-casa-logo.png";
 import bhonko from "@/projects/old-projects/bhonko/bhonko.png";
 import gcube from "@/projects/old-projects/gcube/g-cube-logo.png";
-import khaiedu from "@/projects/old-projects/khaiedu/xai.png";
-import nmu from "@/projects/old-projects/nmu/nmu.png";
-import rspl from "@/projects/old-projects/redchief/red-chief-logo.png";
-import mytreks from "@/projects/old-projects/my-treks/logo-mytreks.png";
-import redchief from "@/projects/old-projects/redchief/red-chief-logo.png";
 import hautebaby from "@/projects/old-projects/haute-baby/haute_baby.png";
-import netraniti from "@/projects/old-projects/netra-niti/netra_niti.png";
-import rasdelta from "@/projects/old-projects/ras-delta/RasDelta.png";
+import hp_logo from "@/projects/old-projects/hp/hp-logo.png";
+import jk_logo from "@/projects/old-projects/jktyre/jk-logo.png";
+import khaiedu from "@/projects/old-projects/khaiedu/xai.png";
+import max_logo from "@/projects/old-projects/max-bupa/max-bupa-logo.png";
+import microsoft from "@/projects/old-projects/microsoft/microsoft-logo.png";
+import mytreks from "@/projects/old-projects/my-treks/logo-mytreks.png";
 import namasteIndia from "@/projects/old-projects/namaste-india/namaste_india.png";
-
+import netraniti from "@/projects/old-projects/netra-niti/netra_niti.png";
+import nmu from "@/projects/old-projects/nmu/nmu.png";
+import ornet_logo from "@/projects/old-projects/ornet/apollo.png";
+import rasdelta from "@/projects/old-projects/ras-delta/RasDelta.png";
+import { default as redchief, default as rspl } from "@/projects/old-projects/redchief/red-chief-logo.png";
+import page1 from "@/projects/PAGE_1_TRAVEL.png";
+import raspic from "@/projects/RASDELTA.png";
+import redchiefpic from "@/projects/REDCHIEF.png";
+import shipimg from "@/projects/SHIPSMITH.png";
 import { PROJECTS_DEPARTMENT } from "./enum";
 import { PROJECT_CARD_DATA_PROPS } from "./types";
 
@@ -37,6 +46,7 @@ export const PROJECTS_TABS_DATA = [
 export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
   {
     slug: "max-bupa-health-insurance",
+    logo: max_logo,
     img: max_logo,
     projectName: "Max Bupa",
     department: PROJECTS_DEPARTMENT.DIGITAL,
@@ -210,7 +220,8 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
   },
   {
     slug: "gcube",
-    img: gcube,
+    logo: gcube,
+    img: gcubepic,
     projectName: "G-Cube",
     department: PROJECTS_DEPARTMENT.DIGITAL,
     description: "G-Cube required a strategic overhaul of their digital presence to better reflect their industry-leading e-learning solutions and connect with global enterprises.",
@@ -328,10 +339,11 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
       }
     }
   }
-,
+  ,
   {
     slug: "mytreks-ai",
-    img: mytreks,
+    logo: mytreks,
+    img: mytrekspic,
     projectName: "Mytreks",
     department: PROJECTS_DEPARTMENT.DEVELOPMENT,
     description: "MyTreks.ai is an AI-powered career discovery and college-preparation platform that helps middle and high school students build clarity, confidence, and direction for their future. The platform combines personalized AI-powered learning roadmaps with strengths-based assessments, gamified activities, 1:1 coaching, career counseling, professional mentorship, webinars, and real-world internship opportunities. Through its MyTrekShip program, students gain practical experience by working on live projects with companies over a structured three-week period, supported by mentors and guided milestones. MyTreks.ai also enables parents to stay involved in their child’s development while providing companies with an opportunity to mentor students and offer micro-internships. Overall, the platform focuses on helping students discover their strengths, explore career possibilities, develop essential skills, and make more informed decisions about their academic and professional future.",
@@ -344,7 +356,8 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
   },
   {
     slug: "red-chief",
-    img: redchief,
+    logo: redchief,
+    img: redchiefpic,
     projectName: "Red Chief",
     department: PROJECTS_DEPARTMENT.CREATIVE,
     description: "Red Chief is an Indian lifestyle and footwear brand founded in 1997, known primarily for its premium leather footwear for men. The brand focuses on combining Indian craftsmanship, durability, comfort, and contemporary styling, offering products such as formal shoes, casual shoes, sneakers, boots, loafers, sandals, and sports footwear. In addition to footwear, Red Chief has expanded into men’s clothing and accessories, including T-shirts, shirts, jeans, belts, socks, and shoe-care products. Its website provides a complete e-commerce experience with product browsing, search, filters, offers, cart and checkout, order tracking, store locator, and franchise information. Red Chief also operates 230+ stores across India, positioning itself as a broader men’s lifestyle brand rather than only a footwear company.",
@@ -357,7 +370,8 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
   },
   {
     slug: "hautebaby",
-    img: hautebaby,
+    logo: hautebaby,
+    img: hauteBabypic,
     projectName: "Haute Baby",
     department: PROJECTS_DEPARTMENT.DEVELOPMENT,
     description: "Haute Baby is a premium baby clothing brand that offers stylish and comfortable clothes for babies and toddlers. The brand is known for its unique designs, high-quality fabrics, and attention to detail. Haute Baby's website provides a complete e-commerce experience with product browsing, search, filters, offers, cart and checkout, order tracking, and store locator. The brand also offers a loyalty program for its customers.",
@@ -370,7 +384,8 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
   },
   {
     slug: "namaste-india",
-    img: namasteIndia,
+    logo: namasteIndia,
+    img: namastepic,
     projectName: "Namaste India",
     department: PROJECTS_DEPARTMENT.DEVELOPMENT,
     description: "Namaste India is an Indian dairy and frozen-dessert brand focused on providing fresh, nutritious, and quality food products to consumers. Operated by NIF Private Limited and supported by the RSPL Group, the brand offers a wide range of dairy products including milk, curd, paneer, ghee, butter, lassi, flavoured milk, and buttermilk. Namaste India has also expanded into ice creams and frozen desserts, offering a diverse portfolio of cones, cups, bars, kulfis, tubs, family packs, and ice-cream cakes in both classic and traditional Indian flavours. The brand emphasizes quality, modern processing technology, and fresh milk to deliver products designed for everyday consumption as well as indulgent occasions.",
@@ -383,7 +398,8 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
   },
   {
     slug: "netra-niti",
-    img: netraniti,
+    logo: netraniti,
+    img: netrapic,
     projectName: "Netra Niti",
     department: PROJECTS_DEPARTMENT.DEVELOPMENT,
     description: "Netra Niti is a child-focused eye-care platform dedicated to preventing and managing childhood myopia through early detection, personalized treatment, and continuous vision monitoring. The platform provides comprehensive services including school vision screenings, eye examinations, advanced myopia-control treatments, personalized care plans, and preventive lifestyle guidance. Its 360° vision protection approach combines modern diagnostic techniques, evidence-based treatments such as atropine therapy and Ortho-K, and ongoing monitoring to help protect children’s eyesight in the long term. Netra Niti also focuses on educating parents and children about healthy vision habits, including spending time outdoors, limiting screen exposure, maintaining a safe reading distance, and getting regular eye check-ups. Overall, the platform aims to provide scientific, accessible, and child-centered eye care that supports healthier vision and brighter futures for children.",
@@ -396,7 +412,8 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
   },
   {
     slug: "rasdelta",
-    img: rasdelta,
+    logo: rasdelta,
+    img: raspic,
     projectName: "Ras Delta",
     department: PROJECTS_DEPARTMENT.DIGITAL,
     description: "Rasdelta is an Indian luxury bathroom and wellness solutions company specializing in the design, manufacturing, and supply of premium bathing and relaxation products. The company offers a comprehensive range of products including bathtubs, Jacuzzi and whirlpool systems, multifunction shower enclosures, shower panels, rain showers, steam baths, sauna rooms, and other wellness equipment. Rasdelta combines modern technology, innovative designs, quality materials, and functional features to deliver a luxurious and spa-like bathing experience for customers. With a focus on comfort, aesthetics, and wellness, the company provides solutions suitable for modern residential and commercial spaces, helping transform conventional bathrooms into sophisticated relaxation and rejuvenation environments.",
@@ -406,5 +423,62 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
         "Rasdelta is an Indian luxury bathroom and wellness solutions company specializing in the design, manufacturing, and supply of premium bathing and relaxation products. The company offers a comprehensive range of products including bathtubs, Jacuzzi and whirlpool systems, multifunction shower enclosures, shower panels, rain showers, steam baths, sauna rooms, and other wellness equipment. Rasdelta combines modern technology, innovative designs, quality materials, and functional features to deliver a luxurious and spa-like bathing experience for customers. With a focus on comfort, aesthetics, and wellness, the company provides solutions suitable for modern residential and commercial spaces, helping transform conventional bathrooms into sophisticated relaxation and rejuvenation environments."
       ]
     }
-  }
+  },
+  {
+    slug: "shipsmith",
+    logo: shipimg,
+    img: shipimg,
+    projectName: "Ship Smith",
+    department: PROJECTS_DEPARTMENT.DEVELOPMENT,
+    description: "For Shipsmith, we provided a dual approach of custom website development and creative graphic design.We built a responsive, high-performing website paired with compelling visual assets that effectively communicate their brand identity and offerings.",
+    details: {
+      title: "Ship Smith",
+      description: [
+        "For Shipsmith, we provided a dual approach of custom website development and creative graphic design.We built a responsive, high-performing website paired with compelling visual assets that effectively communicate their brand identity and offerings."
+      ]
+    }
+  },
+  {
+    slug: "gabicci",
+    logo: gabiccipic,
+    img: gabiccipic,
+    projectName: "Gabicci",
+    department: PROJECTS_DEPARTMENT.DIGITAL,
+    description: "For Gabicci, our focus was on strengthening the brand’s e-commerce presence by managing and optimizing online sales operations.This involves providing a seamless shopping experience and ensuring smooth order flow to support consistent revenue growth.",
+    details: {
+      title: "Gabicci",
+      description: [
+        "For Gabicci, our focus was on strengthening the brand’s e-commerce presence by managing and optimizing online sales operations.This involves providing a seamless shopping experience and ensuring smooth order flow to support consistent revenue growth."
+      ]
+    }
+  },
+  {
+    slug: "hishmast",
+    logo: highmastpic,
+    img: highmastpic,
+    projectName: "Highmast",
+    department: PROJECTS_DEPARTMENT.DEVELOPMENT,
+    description: "For Highmast, we provided end-to-end website development services.We focused on building a robust, responsive, and visually appealing corporate website that effectively showcases their services and expertise, ensuring an optimal user experience across all devices.",
+    details: {
+      title: "Highmast",
+      description: [
+        "For Highmast, we provided end-to-end website development services.We focused on building a robust, responsive, and visually appealing corporate website that effectively showcases their services and expertise, ensuring an optimal user experience across all devices."
+      ]
+    }
+  },
+  {
+    slug: "pageone",
+    logo: page1,
+    img: page1,
+    projectName: "Page 1 travel",
+    department: PROJECTS_DEPARTMENT.DEVELOPMENT,
+    description: "For Page 1 Travel, we built a modern, high-performance website combining responsive frontend architecture with a robust backend service.Utilizing Next.js and NestJS, we created a scalable and visually engaging platform to enhance the overall traveler experience.",
+    details: {
+      title: "Page 1 Travel",
+      description: [
+        "For Page 1 Travel, we built a modern, high-performance website combining responsive frontend architecture with a robust backend service.Utilizing Next.js and NestJS, we created a scalable and visually engaging platform to enhance the overall traveler experience."
+      ]
+    }
+  },
+
 ];
