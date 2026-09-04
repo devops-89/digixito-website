@@ -43,7 +43,7 @@ const HeroSection3 = () => {
                       lineHeight: "85px",
                     }}
                   >
-                    Designing the{" "}
+                    Engineering the{" "}
                     <Typography
                       component={"span"}
                       sx={{
@@ -55,9 +55,9 @@ const HeroSection3 = () => {
                         lineHeight: "85px",
                       }}
                     >
-                      Next Generation
+                      Future
                     </Typography>{" "}
-                    of Brands
+                    with AI
                   </Typography>
                   <Typography
                     sx={{
@@ -68,8 +68,9 @@ const HeroSection3 = () => {
                       fontFamily: kessel.style.fontFamily,
                     }}
                   >
-                    At Digixito, we don't just build websites; we engineer
-                    digital experiences.
+                    A team of strategic thinkers and artists, inspired by the
+                    past and driven by the future and committed to deliver only
+                    the best to ambitious brands in a competitive landscape.
                   </Typography>
                 </Grid>
               </Grid>
