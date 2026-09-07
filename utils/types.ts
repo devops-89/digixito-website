@@ -243,13 +243,15 @@ export interface projectDetails {
   videoUrl1?: string;
   videoUrl2?: string;
   videoUrl3?: string;
+  images?: string[];
+  heroImage?: string;
 }
 
 export interface PROJECT_CARD_DATA_PROPS {
   slug?: string;
   projectName: string;
   department: string;
-  img: StaticImageData;
+  img?: StaticImageData;
   logo?: StaticImageData;
   description?: string;
   details?: projectDetails;

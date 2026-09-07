@@ -1,9 +1,6 @@
-import { COLORS } from "@/utils/enum";
-import { Box, Typography, Grid } from "@mui/material";
-import { archivo } from "@/utils/fonts";
+import { Box, Typography, Container } from "@mui/material";
 import { motion } from "motion/react";
 import Image, { StaticImageData } from "next/image";
-import BlurText from "@/components/BlurText";
 
 const MotionBox = motion(Box);
 
@@ -13,10 +10,6 @@ interface ProjectHeroProps {
 }
 
 const ProjectHero = ({ img, title }: ProjectHeroProps) => {
-  const handleAnimationComplete = () => {
-    console.log("Animation completed!");
-  };
-
   return (
     <Box
       sx={{
@@ -24,124 +17,110 @@ const ProjectHero = ({ img, title }: ProjectHeroProps) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        pt: 0,
-        pb: { xs: 6, md: 10 },
-        backgroundColor: COLORS.WHITE,
+        pt: { xs: 4, md: 8 },
+        pb: { xs: 2, md: 4 },
+        backgroundColor: "transparent",
       }}
     >
-      <Box
-        sx={{
-          position: "relative",
-          width: "100%",
-          maxWidth: "1400px",
-          backgroundColor: "#F8F9FA",
-          borderRadius: { xs: "0 0 32px 32px", md: "0 0 48px 48px" },
-          px: { xs: 3, md: 8 },
-          py: { xs: 6, md: 10 },
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          boxShadow: "0 10px 40px rgba(0,0,0,0.04)",
-          overflow: "hidden",
-        }}
-      >
-        {/* Decorative background element */}
+      <Container maxWidth="lg">
+        {/* Header Section */}
         <Box
           sx={{
-            position: "absolute",
-            width: 400,
-            height: 400,
-            borderRadius: "50%",
-            background: `radial-gradient(circle, ${COLORS.PRIMARY}15 0%, transparent 70%)`,
-            top: "-100px",
-            right: "-100px",
-            zIndex: 0,
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "flex-end",
+            borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
+            pb: 2,
+            mb: { xs: 4, md: 6 },
+            flexDirection: { xs: "column", md: "row" },
+            gap: 2,
           }}
-        />
-
-        <Grid
-          container
-          spacing={{ xs: 6, md: 4 }}
-          alignItems="center"
-          sx={{ zIndex: 1, position: "relative" }}
         >
-          {/* Left Side: Text */}
-          <Grid size={{ xs: 12, md: 6 }}>
-            <MotionBox
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              sx={{ display: "flex", flexDirection: "column", gap: 3 }}
-            >
-              <Box
-                sx={{
-                  width: "100%",
-                  position: "relative",
-                  minHeight: "120px",
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                <BlurText
-                  text={title}
-                  delay={150}
-                  animateBy="words"
-                  direction="top"
-                  onAnimationComplete={handleAnimationComplete}
-                  className="blur-text-hero"
-                />
-              </Box>
-              <style jsx global>{`
-                .blur-text-hero {
-                  font-family: "Inter", "Roboto", "Helvetica Neue", sans-serif;
-                  font-weight: 800;
-                  color: #1f2326;
-                  font-size: clamp(2.5rem, 6vw, 4.5rem);
-                  text-transform: capitalize;
-                  letter-spacing: -0.02em;
-                  line-height: 1.1;
-                }
-              `}</style>
-            </MotionBox>
-          </Grid>
-
-          {/* Right Side: Image */}
-          <Grid size={{ xs: 12, md: 6 }}>
-            <MotionBox
-              initial={{ opacity: 0, x: 50, scale: 0.95 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
-              transition={{
-                duration: 0.8,
-                delay: 0.2,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              whileHover={{ scale: 1.03 }}
+          <MotionBox
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Typography
+              variant="h1"
               sx={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "center",
-                transition: "transform 0.4s ease",
+                color: "#1F2326",
+                fontWeight: 600,
+                fontSize: { xs: "2rem", md: "3rem" },
+                fontFamily: '"Inter", sans-serif',
               }}
             >
-              <Image
-                src={img}
-                alt={title}
-                width={800}
-                height={600}
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  objectFit: "contain",
-                  maxHeight: "65vh",
-                  filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.15))",
-                }}
-              />
-            </MotionBox>
-          </Grid>
-        </Grid>
-      </Box>
+              {title}
+            </Typography>
+          </MotionBox>
+          <MotionBox
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Typography
+              sx={{
+                color: "#FFEF46",
+                fontSize: { xs: "1rem", md: "1.25rem" },
+                fontWeight: 600,
+                textShadow: "0px 1px 2px rgba(0,0,0,0.1)", // Add subtle shadow for readability on light bg
+              }}
+            >
+              Project Details
+            </Typography>
+          </MotionBox>
+        </Box>
+
+        {/* Hero Mockup Image Section */}
+        <Box
+          sx={{
+            position: "relative",
+            width: "100%",
+            borderRadius: { xs: "24px", md: "48px" },
+            overflow: "hidden",
+            boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
+          }}
+        >
+          {/* Yellow Curtain Reveal Animation */}
+          <MotionBox
+            initial={{ y: 0 }}
+            animate={{ y: "-100%" }}
+            transition={{ duration: 1, ease: [0.76, 0, 0.24, 1], delay: 0.1 }}
+            sx={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: "rgba(255, 239, 70, 0.4)", // Very light semi-transparent yellow
+              zIndex: 2,
+            }}
+          />
+
+          <MotionBox
+            initial={{ scale: 1.15, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
+            sx={{ display: "flex", width: "100%", height: "100%" }}
+          >
+            <Image
+              src={img || "/images/projects/heroimg.jpg"}
+              alt={`${title} Hero Background`}
+              width={1400}
+              height={900}
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+              }}
+              priority
+            />
+          </MotionBox>
+        </Box>
+      </Container>
     </Box>
   );
 };
 
 export default ProjectHero;
+

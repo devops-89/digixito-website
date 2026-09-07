@@ -10,6 +10,8 @@ import { PROJECT_CARD_DATA_PROPS } from "@/utils/types";
 import MoreProjects from "./components/MoreProjects";
 import ProjectOverview from "./components/ProjectOverview";
 
+import ProjectHero from "./components/ProjectHero";
+
 const MotionBox = motion(Box);
 
 interface Props {
@@ -22,13 +24,8 @@ const ProjectDetailsLayout = ({ project }: Props) => {
   }, []);
 
   const projectTitle = project.details?.title || project.projectName;
-  const projectDescription = project.details?.description?.join(" ") || project.description || "";
-  const sentences = projectDescription?.split(". ").filter(Boolean) || [];
-  const mid = Math.ceil(sentences.length / 2) || 1;
-  const overviewText =
-    sentences.slice(0, mid).join(". ") + (sentences.length ? "." : "");
-  const approachText =
-    sentences.slice(mid).join(". ") + (sentences.length > 1 ? "." : "");
+  const overviewText = project.details?.description || project.description || [];
+  const approachText = "";
 
   let challenges = "";
   let strategy = project.details?.strategies?.label || "";
@@ -51,64 +48,37 @@ const ProjectDetailsLayout = ({ project }: Props) => {
     }
   }
 
+  // Use heroImage or img or details.images[0] or logo as a fallback
+  const heroImage = project.details?.heroImage || project.img || (project.details?.images && project.details.images[0]) || project.logo || "";
+
   return (
     <Box
       sx={{ backgroundColor: COLORS.WHITE, minHeight: "100vh", pb: 10, pt: 0 }}
     >
-      <Container maxWidth="lg">
-        <Grid container spacing={4} sx={{ pt: { xs: 8, md: 16 } }}>
-          {/* Left Column: Sticky Title */}
-          <Grid size={{ xs: 12, md: 4 }}>
-            <Box sx={{ position: { md: "sticky" }, top: "160px" }}>
-              <BlurText
-                text={projectTitle}
-                delay={150}
-                animateBy="words"
-                direction="top"
-                className="blur-text-hero"
-              />
-
-              <style jsx global>{`
-                .blur-text-hero {
-                  font-family: "Inter", "Roboto", "Helvetica Neue", sans-serif;
-                  font-weight: 800;
-                  color: #1f2326;
-                  font-size: clamp(2.5rem, 4vw, 4.5rem);
-                  text-transform: capitalize;
-                  letter-spacing: -0.02em;
-                  line-height: 1.1;
-                  margin: 0;
-                  margin-bottom: 8px;
-                }
-              `}</style>
-            </Box>
-          </Grid>
-
-          {/* Right Column: Scrolling Content */}
-          <Grid size={{ xs: 12, md: 8 }}>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                gap: { xs: 6, md: 10 },
-              }}
-            >
-              <ProjectOverview
-                projectTitle={projectTitle}
-                overviewText={overviewText}
-                approachText={approachText}
-                challenges={challenges}
-                strategy={strategy}
-                results={results}
-                img={project.img}
-                industry={project.department}
-                service={project.department}
-                videoUrls={[project.details?.videoUrl1, project.details?.videoUrl2, project.details?.videoUrl3]}
-              />
-              {/* <ProjectServices skills={[]} /> */}
-            </Box>
-          </Grid>
-        </Grid>
+      <ProjectHero img={heroImage} title={projectTitle} />
+      
+      <Container maxWidth="lg" sx={{ pt: { xs: 2, md: 4 } }}>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: { xs: 6, md: 10 },
+          }}
+        >
+          <ProjectOverview
+            projectTitle={projectTitle}
+            overviewText={overviewText}
+            approachText={approachText}
+            challenges={challenges}
+            strategy={strategy}
+            results={results}
+            img={project.img}
+            industry={project.department}
+            service={project.department}
+            videoUrls={[project.details?.videoUrl1, project.details?.videoUrl2, project.details?.videoUrl3]}
+            images={project.details?.images}
+          />
+        </Box>
       </Container>
 
       {/* Full Width Dark Section for More Projects */}

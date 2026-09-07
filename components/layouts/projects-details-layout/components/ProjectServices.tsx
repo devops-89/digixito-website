@@ -1,9 +1,8 @@
-import React from "react";
-import { Box, Typography, Grid } from "@mui/material";
 import { COLORS } from "@/utils/enum";
-import { kessel_bold, archivo } from "@/utils/fonts";
-import { motion } from "motion/react";
+import { archivo, kessel_bold } from "@/utils/fonts";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
+import { Box, Grid, Typography } from "@mui/material";
+import { motion } from "motion/react";
 
 const MotionBox = motion(Box);
 
@@ -171,5 +170,4 @@ const ProjectServices = ({ skills }: ProjectServicesProps) => {
   );
 };
 
-export default ProjectServices;
 export default ProjectServices;

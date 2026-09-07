@@ -1,7 +1,5 @@
 import gcubepic from "@/projects/G_CUBE.png";
-import gabiccipic from "@/projects/GABICCI.png";
 import hauteBabypic from "@/projects/HAUTE_BABY.png";
-import highmastpic from "@/projects/HIGHMAST.png";
 import mytrekspic from "@/projects/MY_TREKS.AI.png";
 import namastepic from "@/projects/NAMASTE_INDIA.png";
 import netrapic from "@/projects/NXTGEN_NETRA_NITI.png";
@@ -11,20 +9,15 @@ import gcube from "@/projects/old-projects/gcube/g-cube-logo.png";
 import hautebaby from "@/projects/old-projects/haute-baby/haute_baby.png";
 import hp_logo from "@/projects/old-projects/hp/hp-logo.png";
 import jk_logo from "@/projects/old-projects/jktyre/jk-logo.png";
-import khaiedu from "@/projects/old-projects/khaiedu/xai.png";
 import max_logo from "@/projects/old-projects/max-bupa/max-bupa-logo.png";
 import microsoft from "@/projects/old-projects/microsoft/microsoft-logo.png";
 import mytreks from "@/projects/old-projects/my-treks/logo-mytreks.png";
 import namasteIndia from "@/projects/old-projects/namaste-india/namaste_india.png";
 import netraniti from "@/projects/old-projects/netra-niti/netra_niti.png";
-import nmu from "@/projects/old-projects/nmu/nmu.png";
 import ornet_logo from "@/projects/old-projects/ornet/apollo.png";
 import rasdelta from "@/projects/old-projects/ras-delta/RasDelta.png";
-import { default as redchief, default as rspl } from "@/projects/old-projects/redchief/red-chief-logo.png";
-import page1 from "@/projects/PAGE_1_TRAVEL.png";
+import { default as rspl } from "@/projects/old-projects/redchief/red-chief-logo.png";
 import raspic from "@/projects/RASDELTA.png";
-import redchiefpic from "@/projects/REDCHIEF.png";
-import shipimg from "@/projects/SHIPSMITH.png";
 import { PROJECTS_DEPARTMENT } from "./enum";
 import { PROJECT_CARD_DATA_PROPS } from "./types";
 
@@ -47,15 +40,15 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
   {
     slug: "max-bupa-health-insurance",
     logo: max_logo,
-    img: max_logo,
     projectName: "Max Bupa",
     department: PROJECTS_DEPARTMENT.DIGITAL,
     description:
       "Max Bupa Health Insurance Company is collaboration between Max India Limited and UK based healthcare services experts, Bupa. With the clear vision of reality and six decades of rich expertise in healthcare services, we have brought together the smiling faces of people, to be called as India\'s admired health insurance company. With the rising in the quality of the services of ours, we are able to provide our worthy services to 29 million customer-bases in over 190 countries. Max Bupa Health Insurance Company together brings its expertise in Family health and wellness with the aim of customer and caring for you, for life.",
     details: {
+      heroImage: "/images/projects/hero/maxHero.png",
       title: "Max Bupa Health Insurance",
       description: [
-        "Max Bupa Health Insurance Company is collaboration between Max India Limited and UK based healthcare services experts, Bupa. With the clear vision of reality and six decades of rich expertise in healthcare services, we have brought together the smiling faces of people, to be called as India\'s admired health insurance company. With the rising in the quality of the services of ours, we are able to provide our worthy services to 29 million customer-bases in over 190 countries. Max Bupa Health Insurance Company together brings its expertise in Family health and wellness with the aim of customer and caring for you, for life.",
+        "Max Bupa Health Insurance Company is collaboration between Max India Limited and UK based healthcare services experts, Bupa. With the clear vision of reality and six decades of rich expertise in healthcare services, we have brought together the smiling faces of people, to be called as India's admired health insurance company. With the rising in the quality of the services of ours, we are able to provide our worthy services to 29 million customer-bases in over 190 countries. Max Bupa Health Insurance Company together brings its expertise in Family health and wellness with the aim of customer and caring for you, for life.",
       ],
       strategies: {
         label: "Email marketing to interested buyers",
@@ -74,14 +67,21 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
   },
   {
     slug: "microsoft",
-    img: microsoft,
-    projectName: "Microsoft Office 365 & Azure Campaign",
+    logo: microsoft,
+    projectName: "Microsoft",
     department: PROJECTS_DEPARTMENT.DEVELOPMENT,
     description: "Ultimately advertising is about selling Brands in an utmost creative way. We collaborated on a Digital advertising campaign for their products: Office 365 Standalone and Azure, crossing boundaries in Indonesia, Singapore, Malaysia, and Vietnam. We adroitly maneuvered our creatives, landing page, and user registration platform to get the bell of lead generation ringing.",
     details: {
+      heroImage: "/images/projects/hero/microsofthero.png",
       title: "Microsoft Office 365 & Azure Campaign",
+      images: [
+        "/images/projects/old-projects/microsoft/microsoft1.jpg",
+        "/images/projects/old-projects/microsoft/microsoft2.jpg"
+      ],
       description: [
-        "Ultimately advertising is about selling Brands in an utmost creative way. We collaborated on a Digital advertising campaign for their products: Office 365 Standalone and Azure, crossing boundaries in Indonesia, Singapore, Malaysia, and Vietnam. We adroitly maneuvered our creatives, landing page, and user registration platform to get the bell of lead generation ringing."
+        "Ultimately advertising is about selling Brands in an utmost creative way. So one fine day technology giant Microsoft opened its door for us, and we walked inside with our restless passion. They were impressed, and we were passionately excited, so we collaborated on Digital advertising campaign for their products; Office 365 Standalone and Azure.",
+        "This time we crossed our boundaries both in terms of work and reach, as the campaign was directed to run in Indonesia, Singapore, Malaysia, and Vietnam.",
+        "We adroitly maneuvered our creative's, landing page and user registration platform to get the bell of lead generation ringing. The result was that the bell kept on ringing."
       ],
       strategies: {
         label: "Developed localized digital campaigns for each region, optimized landing pages for high conversion, and implemented a robust user registration platform to capture high-quality leads.",
@@ -94,19 +94,21 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
           }
         ]
       },
-      videoUrl1: "https://player.vimeo.com/video/25924530?title=0&byline=0&portrait=0"
     }
   },
   {
     slug: "jk-tyres",
-    img: jk_logo,
+    logo: jk_logo,
     projectName: "JK Tyre",
     department: PROJECTS_DEPARTMENT.CREATIVE,
     description: "J.K wanted to rejoice the journey of unsung heroes, termed BAADSHAH, people who are rolling and rising on the roads to maintain your every day's essential supply chain. We were given a task in hand to reflect the heroic life of some of the significant achievers who have associated for long with J.K.",
     details: {
+      heroImage: "/images/projects/hero/jktyrehero.png",
       title: "JK Tyre",
       description: [
-        "J.K wanted to rejoice the journey of unsung heroes, termed BAADSHAH, people who are rolling and rising on the roads to maintain your every day's essential supply chain. We were given a task in hand to reflect the heroic life of some of the significant achievers who have associated for long with J.K."
+        "The occasion was a celebration of an association. J.K wanted to rejoice the journey of unsung heroes, termed BAADSHAH, people who are rolling and rising on the roads to maintain your every day's essential supply chain. We were given a task in hand to reflect the heroic life of some of the significant achievers who have associated for long with J.K, through our films. What followed next was capturing their life's rollercoaster journey and making them relive some of their magical moments through our films.",
+        "Common go through our films, feel it for yourself!",
+        "J.K wanted to reflect the PAN India reach for their farm category product SONA1 while also highlighting its major features. On a tight deadline, they desired a corporate film which should arouse an interest towards the product. What we did is for you to see!"
       ],
       strategies: {
         label: "Produced a series of high-quality documentary-style films capturing the rollercoaster journey of long-time JK Tyre associates, celebrating their magical moments.",
@@ -119,19 +121,26 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
           }
         ]
       },
-      videoUrl1: "https://www.youtube.com/embed/F91vnolqrrg"
+      videoUrl1: "https://www.youtube.com/watch?v=F91vnolqrrg",
+      videoUrl2: "https://www.youtube.com/watch?v=1s-6PW8PV9E"
     }
   },
   {
     slug: "hp",
-    img: hp_logo,
-    projectName: "HP Page Wide Pro",
+    logo: hp_logo,
+    projectName: "HP",
     department: PROJECTS_DEPARTMENT.CREATIVE,
     description: "HP needed to decode a design for the digital campaigning of their product HP Page Wide Pro 577dw MFP. We sat with them on the meeting table and astonished them with our creative imprint. With our digital strategy, we manufactured a smart and productive digital campaign.",
     details: {
-      title: "HP Page Wide Pro",
+      heroImage: "/images/projects/hero/hphero.png",
+      title: "HP",
+      images: [
+        "/images/projects/old-projects/hp/hp-1.jpg",
+        "/images/projects/old-projects/hp/hp-2.jpg"
+      ],
       description: [
-        "HP needed to decode a design for the digital campaigning of their product HP Page Wide Pro 577dw MFP. We sat with them on the meeting table and astonished them with our creative imprint. With our digital strategy, we manufactured a smart and productive digital campaign."
+        "They have taught the world to print, and scan. There's no one better than them, who has engineered this art to supreme sublimity. HP needed to decode a design for the digital campaigning of their product HP Page Wide Pro 577dw MFP.",
+        "We sat with them on the meeting table and astonished them with our creative imprint. With our digital strategy, we manufactured a smart and productive digital campaign based on the products revolutionary features that had the potential to redefine the market."
       ],
       strategies: {
         label: "Engineered a targeted digital campaign highlighting the product's disruptive technology, utilizing high-impact visuals and data-driven ad placements.",
@@ -148,14 +157,24 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
   },
   {
     slug: "ornet",
-    img: ornet_logo,
-    projectName: "Apollo Ornet",
+    logo: ornet_logo,
+    projectName: "Ornet",
     department: PROJECTS_DEPARTMENT.DEVELOPMENT,
     description: "ORNET wanted to place its three products namely Terrain Bull, Industrial HD, Power Gripper in an unconditional toughness niche, which are born to perform with an unmatched durability, all across the terrains.",
     details: {
-      title: "Apollo Ornet",
+      heroImage: "/images/projects/hero/ornethero.png",
+      title: "Ornet",
+      images: [
+        "/images/projects/old-projects/ornet/ornet1.jpg",
+        "/images/projects/old-projects/ornet/ornet2.jpg",
+        "/images/projects/old-projects/ornet/ornet3.jpg",
+        "/images/projects/old-projects/ornet/ornet4.jpg",
+        "/images/projects/old-projects/ornet/ornet5.jpg",
+        "/images/projects/old-projects/ornet/ornet6.jpg"
+      ],
       description: [
-        "ORNET wanted to place its three products namely Terrain Bull, Industrial HD, Power Gripper in an unconditional toughness niche, which are born to perform with an unmatched durability, all across the terrains."
+        "ORNET wanted to place its three products namely Terrain Bull, Industrial HD, Power Gripper in an unconditional toughness niche, which are born to perform with an unmatched durability, all across the terrains. When the circumstances become adverse, they grip on the road and move beyond the toughness. That's what ORNET wanted to trump about their products. So we came and amplified it with our powerful creativity.",
+        "The outcome was an aggressive campaign that created an outstanding and an outlasting effect throughout its target audience."
       ],
       strategies: {
         label: "Developed an aggressive, visually striking creative campaign that amplified the product's rugged capabilities and unmatched endurance.",
@@ -172,14 +191,25 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
   },
   {
     slug: "bellacasa",
-    img: bellaCasa,
+    logo: bellaCasa,
     projectName: "Bella Casa",
     department: PROJECTS_DEPARTMENT.CREATIVE,
     description: "The BellaCasa Fashion and Retail Ltd, the bedsheet brand in its remodeling phase met us with a competitor in mind. From our first creative photo shoot for their product catalog, we completely changed their outline and set the tone towards a more premium and glamorous outlook.",
     details: {
+      heroImage: "/images/projects/hero/bellaHero.png",
       title: "Bella Casa",
+      images: [
+        "/images/projects/old-projects/bella-casa/bella-casa1.jpg",
+        "/images/projects/old-projects/bella-casa/bella-casa2.jpg",
+        "/images/projects/old-projects/bella-casa/bella-casa3.jpg",
+        "/images/projects/old-projects/bella-casa/bella-casa4.jpg",
+        "/images/projects/old-projects/bella-casa/bella-casa5.jpg"
+      ],
       description: [
-        "The BellaCasa Fashion and Retail Ltd, the bedsheet brand in its remodeling phase met us with a competitor in mind. From our first creative photo shoot for their product catalog, we completely changed their outline and set the tone towards a more premium and glamorous outlook."
+        "The BellaCasa Fashion and Retail Ltd, the bedsheet brand in its remodeling phase met us with a competitor in mind and with our artistry they have soared above and beyond their competitor in terms of their recent work. From our first creative photo shoot for their product catalog, we completely changed their outline and set the tone towards more premium and glamorous outlook.",
+        "With our artistic wand, we did create a midnight Snow White out of Bellacasa. The aftereffect was both tantalizing and dazzling. It made everyone desire for more.",
+        "The desire for more effect took the shape of the sizzling storm, and suddenly the bling-bang happened when the mesmerizing diva Jacqueline agreed to get wrapped in Bellacasa style.",
+        "We orchestrated very sophisticated and elegant photo shoot, which enhanced the magical aura of Jaqueline."
       ],
       strategies: {
         label: "Orchestrated a sophisticated and elegant creative photo shoot featuring Jacqueline Fernandez, redefining the brand's aesthetic to be tantalizing and dazzling.",
@@ -196,14 +226,24 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
   },
   {
     slug: "bhonko",
-    img: bhonko,
+    logo: bhonko,
     projectName: "Bhonko",
     department: PROJECTS_DEPARTMENT.DIGITAL,
     description: "Bhonko aimed to disrupt the digital space with an innovative platform. We focused on enhancing their overall digital performance and ensuring their voice was heard loud and clear.",
     details: {
+      heroImage: "/images/projects/hero/bhonkoHero.png",
       title: "Bhonko",
+      images: [
+        "/images/projects/old-projects/bhonko/bhonko1.jpg",
+        "/images/projects/old-projects/bhonko/bhonko2.jpg",
+        "/images/projects/old-projects/bhonko/bhonko3.jpg",
+        "/images/projects/old-projects/bhonko/bhonko4.jpg",
+        "/images/projects/old-projects/bhonko/bhonko5.jpg",
+        "/images/projects/old-projects/bhonko/bhonko6.jpg"
+      ],
       description: [
-        "Bhonko aimed to disrupt the digital space with an innovative platform. We focused on enhancing their overall digital performance and ensuring their voice was heard loud and clear."
+        "Consumers and Sellers, these two entities are the interface of a much more complex network of any commercial market. Many times condition of conflict arises between them, but the point is where they should shout it out. That's were Bhonko comes. Bhonko is a platform where the consumers can file their complaint and unconditionally seek help and better justice for the cause of their shouting.",
+        "The task in hand was to empower this powerful brand with our creative designing aspect. What we did was something beyond the arc, with our imagination we shot few notches above the expectations of everyone."
       ],
       strategies: {
         label: "Implemented a comprehensive performance enhancement strategy, optimizing all digital touchpoints for maximum visibility and user retention.",
@@ -226,9 +266,15 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
     department: PROJECTS_DEPARTMENT.DIGITAL,
     description: "G-Cube required a strategic overhaul of their digital presence to better reflect their industry-leading e-learning solutions and connect with global enterprises.",
     details: {
+      heroImage: "/images/projects/hero/gcubeHero.png",
       title: "G-Cube",
+      images: [
+        "/images/projects/old-projects/gcube/g-cube1.jpg",
+        "/images/projects/old-projects/gcube/g-cube2.jpg"
+      ],
       description: [
-        "G-Cube required a strategic overhaul of their digital presence to better reflect their industry-leading e-learning solutions and connect with global enterprises."
+        "GCUBE as a firm provides a one-stop solution with their innovative educative products at the organization level. Their model of learning encompasses majorly one thing called SIMPLICITY. The source code for the genesis of their products has been based on cracking this one big egg; COMPLEXITY.",
+        "We were given a task to highlight this facet of GCUBE with added shine of our creative glitter. So, we took out our creative sprays, sparkled it here and there, and what we came out with was something called WOW."
       ],
       strategies: {
         label: "Executed a targeted digital transformation focusing on B2B lead generation, utilizing content marketing and specialized ad placements.",
@@ -243,88 +289,102 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
       }
     }
   },
-  {
-    slug: "khaiedu",
-    img: khaiedu,
-    projectName: "KhAI Edu",
-    department: PROJECTS_DEPARTMENT.DIGITAL,
-    description: "\"Kharkiv Aviation Institute\"(KhAI) is one of the most renowned universities in the world, providing courses in Aeronautical and Aerospace Engineering. They partnered with us for their digital performance enhancement.",
-    details: {
-      title: "KhAI Edu",
-      description: [
-        "\"Kharkiv Aviation Institute\"(KhAI) is one of the most renowned universities in the world, providing courses in Aeronautical and Aerospace Engineering. They partnered with us for their digital performance enhancement."
-      ],
-      strategies: {
-        label: "Deployed a highly targeted international digital marketing campaign, optimizing the university's online portals to reduce friction in the application process.",
-        data: [
-          {
-            description: "Challenge: Attracting a higher volume of international students for specialized aerospace programs in a competitive global education landscape."
-          },
-          {
-            description: "Result: 2016 marked the highest number of International students' applications. Intake increased to 164% and the website bounce rate was reduced by 57%."
-          }
-        ]
-      }
-    }
-  },
-  {
-    slug: "nmu",
-    img: nmu,
-    projectName: "O.O. Bogomolets NMU",
-    department: PROJECTS_DEPARTMENT.DIGITAL,
-    description: "O. O. Bogomolets National Medical University is a world-class medical university in Ukraine. The quality education with the amalgamation of international exposure sets it apart.",
-    details: {
-      title: "O.O. Bogomolets NMU",
-      description: [
-        "O. O. Bogomolets National Medical University is a world-class medical university in Ukraine. The quality education with the amalgamation of international exposure sets it apart."
-      ],
-      strategies: {
-        label: "Implemented a comprehensive SEO and digital marketing strategy tailored to international students, aiming to capture the highest targeted organic traffic.",
-        data: [
-          {
-            description: "Challenge: Generating high-quality leads and increasing international student enrollments from diverse global markets."
-          },
-          {
-            description: "Result: NMU received the maximum number of international student applications in 2016, with total student intake increasing by 1350% due to highly targeted organic SERP traffic."
-          }
-        ]
-      }
-    }
-  },
-  {
-    slug: "paragon",
-    img: jk_logo,
-    projectName: "Paragon",
-    department: PROJECTS_DEPARTMENT.CREATIVE,
-    description: "Paragon required a robust digital solution to showcase their premium offerings and establish a stronger connection with their target demographic.",
-    details: {
-      title: "Paragon",
-      description: [
-        "Paragon required a robust digital solution to showcase their premium offerings and establish a stronger connection with their target demographic."
-      ],
-      strategies: {
-        label: "Developed a refined creative strategy coupled with targeted digital outreach to elevate the brand's premium positioning.",
-        data: [
-          {
-            description: "Challenge: Differentiating the brand in a crowded marketplace and driving meaningful online engagement."
-          },
-          {
-            description: "Result: Achieved sustained growth in digital engagement metrics and successfully repositioned the brand in the minds of the target audience."
-          }
-        ]
-      }
-    }
-  },
+  // {
+  //   slug: "khaiedu",
+  //   logo: khaiedu,
+  //   projectName: "KhAI Edu",
+  //   department: PROJECTS_DEPARTMENT.DIGITAL,
+  //   description: "\"Kharkiv Aviation Institute\"(KhAI) is one of the most renowned universities in the world, providing courses in Aeronautical and Aerospace Engineering. They partnered with us for their digital performance enhancement.",
+  //   details: {
+  //     heroImage: "/images/projects/hero/khaieduhero.png",
+  //     title: "KhAI Edu",
+  //     images: [
+  //       "/images/projects/old-projects/xai/kharkiv.jpg",
+  //       "/images/projects/old-projects/xai/kharkiv-2.jpg"
+  //     ],
+  //     description: [
+  //       "\"Kharkiv Aviation Institute\"(KhAI) is one of the most renowned universities in the world, providing courses in Aeronautical and Aerospace Engineering. They partnered with us for their digital performance enhancement."
+  //     ],
+  //     strategies: {
+  //       label: "Deployed a highly targeted international digital marketing campaign, optimizing the university's online portals to reduce friction in the application process.",
+  //       data: [
+  //         {
+  //           description: "Challenge: Attracting a higher volume of international students for specialized aerospace programs in a competitive global education landscape."
+  //         },
+  //         {
+  //           description: "Result: 2016 marked the highest number of International students' applications. Intake increased to 164% and the website bounce rate was reduced by 57%."
+  //         }
+  //       ]
+  //     }
+  //   }
+  // },
+  // {
+  //   slug: "nmu",
+  //   logo: nmu,
+  //   projectName: "O.O. Bogomolets NMU",
+  //   department: PROJECTS_DEPARTMENT.DIGITAL,
+  //   description: "O. O. Bogomolets National Medical University is a world-class medical university in Ukraine. The quality education with the amalgamation of international exposure sets it apart.",
+  //   details: {
+  //     title: "O.O. Bogomolets NMU",
+  //     description: [
+  //       "O. O. Bogomolets National Medical University is a world-class medical university in Ukraine. The quality education with the amalgamation of international exposure sets it apart."
+  //     ],
+  //     strategies: {
+  //       label: "Implemented a comprehensive SEO and digital marketing strategy tailored to international students, aiming to capture the highest targeted organic traffic.",
+  //       data: [
+  //         {
+  //           description: "Challenge: Generating high-quality leads and increasing international student enrollments from diverse global markets."
+  //         },
+  //         {
+  //           description: "Result: NMU received the maximum number of international student applications in 2016, with total student intake increasing by 1350% due to highly targeted organic SERP traffic."
+  //         }
+  //       ]
+  //     }
+  //   }
+  // },
+  // {
+  //   slug: "paragon",
+  //   logo: jk_logo,
+  //   projectName: "Paragon",
+  //   department: PROJECTS_DEPARTMENT.CREATIVE,
+  //   description: "Paragon required a robust digital solution to showcase their premium offerings and establish a stronger connection with their target demographic.",
+  //   details: {
+  //     title: "Paragon",
+  //     description: [
+  //       "Paragon required a robust digital solution to showcase their premium offerings and establish a stronger connection with their target demographic."
+  //     ],
+  //     strategies: {
+  //       label: "Developed a refined creative strategy coupled with targeted digital outreach to elevate the brand's premium positioning.",
+  //       data: [
+  //         {
+  //           description: "Challenge: Differentiating the brand in a crowded marketplace and driving meaningful online engagement."
+  //         },
+  //         {
+  //           description: "Result: Achieved sustained growth in digital engagement metrics and successfully repositioned the brand in the minds of the target audience."
+  //         }
+  //       ]
+  //     }
+  //   }
+  // },
   {
     slug: "rspl",
-    img: rspl,
+    logo: rspl,
     projectName: "RSPL - Furo",
     department: PROJECTS_DEPARTMENT.CREATIVE,
     description: "Furo Sports, a dynamic brand by RSPL Limited, aimed to capture the attention of fashion enthusiasts, sports lovers, and travelers through high-impact digital campaigns.",
     details: {
+      heroImage: "/images/projects/hero/furohero.png",
       title: "RSPL - Furo",
+      images: [
+        "/images/projects/old-projects/rspl/rspl1.jpg",
+        "/images/projects/old-projects/rspl/rspl2.jpg",
+        "/images/projects/old-projects/rspl/rspl3.jpg",
+        "/images/projects/old-projects/rspl/rspl4.jpg",
+        "/images/projects/old-projects/rspl/rspl5.jpg",
+        "/images/projects/old-projects/rspl/rspl6.jpg"
+      ],
       description: [
-        "Furo Sports, a dynamic brand by RSPL Limited, aimed to capture the attention of fashion enthusiasts, sports lovers, and travelers through high-impact digital campaigns."
+        "Main brand communication for its target audience, needed to be around the grip of the shoe. Acknowledging the fact that sport shoe can be connected to the motivating passion athletes carry and there want to create special moments with their every action. We weaved a campaign that connected the word grip to their athleticism. This struck a chord with their target audience and it ran across a wide range of spectators."
       ],
       strategies: {
         label: "Designed a high-energy creative campaign targeting active demographics across platforms like MTV, YouTube, Vimeo, and Star Sports.",
@@ -348,26 +408,27 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
     department: PROJECTS_DEPARTMENT.DEVELOPMENT,
     description: "MyTreks.ai is an AI-powered career discovery and college-preparation platform that helps middle and high school students build clarity, confidence, and direction for their future. The platform combines personalized AI-powered learning roadmaps with strengths-based assessments, gamified activities, 1:1 coaching, career counseling, professional mentorship, webinars, and real-world internship opportunities. Through its MyTrekShip program, students gain practical experience by working on live projects with companies over a structured three-week period, supported by mentors and guided milestones. MyTreks.ai also enables parents to stay involved in their child’s development while providing companies with an opportunity to mentor students and offer micro-internships. Overall, the platform focuses on helping students discover their strengths, explore career possibilities, develop essential skills, and make more informed decisions about their academic and professional future.",
     details: {
+      heroImage: "/images/projects/hero/treksHero.png",
       title: "Mytreks",
       description: [
         "MyTreks.ai is an AI-powered career discovery and college-preparation platform that helps middle and high school students build clarity, confidence, and direction for their future. The platform combines personalized AI-powered learning roadmaps with strengths-based assessments, gamified activities, 1:1 coaching, career counseling, professional mentorship, webinars, and real-world internship opportunities. Through its MyTrekShip program, students gain practical experience by working on live projects with companies over a structured three-week period, supported by mentors and guided milestones. MyTreks.ai also enables parents to stay involved in their child’s development while providing companies with an opportunity to mentor students and offer micro-internships. Overall, the platform focuses on helping students discover their strengths, explore career possibilities, develop essential skills, and make more informed decisions about their academic and professional future."
       ]
     }
   },
-  {
-    slug: "red-chief",
-    logo: redchief,
-    img: redchiefpic,
-    projectName: "Red Chief",
-    department: PROJECTS_DEPARTMENT.CREATIVE,
-    description: "Red Chief is an Indian lifestyle and footwear brand founded in 1997, known primarily for its premium leather footwear for men. The brand focuses on combining Indian craftsmanship, durability, comfort, and contemporary styling, offering products such as formal shoes, casual shoes, sneakers, boots, loafers, sandals, and sports footwear. In addition to footwear, Red Chief has expanded into men’s clothing and accessories, including T-shirts, shirts, jeans, belts, socks, and shoe-care products. Its website provides a complete e-commerce experience with product browsing, search, filters, offers, cart and checkout, order tracking, store locator, and franchise information. Red Chief also operates 230+ stores across India, positioning itself as a broader men’s lifestyle brand rather than only a footwear company.",
-    details: {
-      title: "Red Chief",
-      description: [
-        "Red Chief is an Indian lifestyle and footwear brand founded in 1997, known primarily for its premium leather footwear for men. The brand focuses on combining Indian craftsmanship, durability, comfort, and contemporary styling, offering products such as formal shoes, casual shoes, sneakers, boots, loafers, sandals, and sports footwear. In addition to footwear, Red Chief has expanded into men’s clothing and accessories, including T-shirts, shirts, jeans, belts, socks, and shoe-care products. Its website provides a complete e-commerce experience with product browsing, search, filters, offers, cart and checkout, order tracking, store locator, and franchise information. Red Chief also operates 230+ stores across India, positioning itself as a broader men’s lifestyle brand rather than only a footwear company."
-      ]
-    }
-  },
+  // {
+  //   slug: "red-chief",
+  //   logo: redchief,
+  //   img: redchiefpic,
+  //   projectName: "Red Chief",
+  //   department: PROJECTS_DEPARTMENT.CREATIVE,
+  //   description: "Red Chief is an Indian lifestyle and footwear brand founded in 1997, known primarily for its premium leather footwear for men. The brand focuses on combining Indian craftsmanship, durability, comfort, and contemporary styling, offering products such as formal shoes, casual shoes, sneakers, boots, loafers, sandals, and sports footwear. In addition to footwear, Red Chief has expanded into men’s clothing and accessories, including T-shirts, shirts, jeans, belts, socks, and shoe-care products. Its website provides a complete e-commerce experience with product browsing, search, filters, offers, cart and checkout, order tracking, store locator, and franchise information. Red Chief also operates 230+ stores across India, positioning itself as a broader men’s lifestyle brand rather than only a footwear company.",
+  //   details: {
+  //     title: "Red Chief",
+  //     description: [
+  //       "Red Chief is an Indian lifestyle and footwear brand founded in 1997, known primarily for its premium leather footwear for men. The brand focuses on combining Indian craftsmanship, durability, comfort, and contemporary styling, offering products such as formal shoes, casual shoes, sneakers, boots, loafers, sandals, and sports footwear. In addition to footwear, Red Chief has expanded into men’s clothing and accessories, including T-shirts, shirts, jeans, belts, socks, and shoe-care products. Its website provides a complete e-commerce experience with product browsing, search, filters, offers, cart and checkout, order tracking, store locator, and franchise information. Red Chief also operates 230+ stores across India, positioning itself as a broader men’s lifestyle brand rather than only a footwear company."
+  //     ]
+  //   }
+  // },
   {
     slug: "hautebaby",
     logo: hautebaby,
@@ -376,6 +437,7 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
     department: PROJECTS_DEPARTMENT.DEVELOPMENT,
     description: "Haute Baby is a premium baby clothing brand that offers stylish and comfortable clothes for babies and toddlers. The brand is known for its unique designs, high-quality fabrics, and attention to detail. Haute Baby's website provides a complete e-commerce experience with product browsing, search, filters, offers, cart and checkout, order tracking, and store locator. The brand also offers a loyalty program for its customers.",
     details: {
+      heroImage: "/images/projects/hero/hauteHero.png",
       title: "Haute Baby",
       description: [
         "Haute Baby is a premium baby clothing brand that offers stylish and comfortable clothes for babies and toddlers. The brand is known for its unique designs, high-quality fabrics, and attention to detail. Haute Baby's website provides a complete e-commerce experience with product browsing, search, filters, offers, cart and checkout, order tracking, and store locator. The brand also offers a loyalty program for its customers."
@@ -390,6 +452,7 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
     department: PROJECTS_DEPARTMENT.DEVELOPMENT,
     description: "Namaste India is an Indian dairy and frozen-dessert brand focused on providing fresh, nutritious, and quality food products to consumers. Operated by NIF Private Limited and supported by the RSPL Group, the brand offers a wide range of dairy products including milk, curd, paneer, ghee, butter, lassi, flavoured milk, and buttermilk. Namaste India has also expanded into ice creams and frozen desserts, offering a diverse portfolio of cones, cups, bars, kulfis, tubs, family packs, and ice-cream cakes in both classic and traditional Indian flavours. The brand emphasizes quality, modern processing technology, and fresh milk to deliver products designed for everyday consumption as well as indulgent occasions.",
     details: {
+      heroImage: "/images/projects/hero/namasteHero.png",
       title: "Namaste India",
       description: [
         "Namaste India is an Indian dairy and frozen-dessert brand focused on providing fresh, nutritious, and quality food products to consumers. Operated by NIF Private Limited and supported by the RSPL Group, the brand offers a wide range of dairy products including milk, curd, paneer, ghee, butter, lassi, flavoured milk, and buttermilk. Namaste India has also expanded into ice creams and frozen desserts, offering a diverse portfolio of cones, cups, bars, kulfis, tubs, family packs, and ice-cream cakes in both classic and traditional Indian flavours. The brand emphasizes quality, modern processing technology, and fresh milk to deliver products designed for everyday consumption as well as indulgent occasions."
@@ -404,6 +467,7 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
     department: PROJECTS_DEPARTMENT.DEVELOPMENT,
     description: "Netra Niti is a child-focused eye-care platform dedicated to preventing and managing childhood myopia through early detection, personalized treatment, and continuous vision monitoring. The platform provides comprehensive services including school vision screenings, eye examinations, advanced myopia-control treatments, personalized care plans, and preventive lifestyle guidance. Its 360° vision protection approach combines modern diagnostic techniques, evidence-based treatments such as atropine therapy and Ortho-K, and ongoing monitoring to help protect children’s eyesight in the long term. Netra Niti also focuses on educating parents and children about healthy vision habits, including spending time outdoors, limiting screen exposure, maintaining a safe reading distance, and getting regular eye check-ups. Overall, the platform aims to provide scientific, accessible, and child-centered eye care that supports healthier vision and brighter futures for children.",
     details: {
+      heroImage: "/images/projects/hero/netraHero.png",
       title: "Netra Niti",
       description: [
         "Netra Niti is a child-focused eye-care platform dedicated to preventing and managing childhood myopia through early detection, personalized treatment, and continuous vision monitoring. The platform provides comprehensive services including school vision screenings, eye examinations, advanced myopia-control treatments, personalized care plans, and preventive lifestyle guidance. Its 360° vision protection approach combines modern diagnostic techniques, evidence-based treatments such as atropine therapy and Ortho-K, and ongoing monitoring to help protect children’s eyesight in the long term. Netra Niti also focuses on educating parents and children about healthy vision habits, including spending time outdoors, limiting screen exposure, maintaining a safe reading distance, and getting regular eye check-ups. Overall, the platform aims to provide scientific, accessible, and child-centered eye care that supports healthier vision and brighter futures for children."
@@ -418,67 +482,68 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
     department: PROJECTS_DEPARTMENT.DIGITAL,
     description: "Rasdelta is an Indian luxury bathroom and wellness solutions company specializing in the design, manufacturing, and supply of premium bathing and relaxation products. The company offers a comprehensive range of products including bathtubs, Jacuzzi and whirlpool systems, multifunction shower enclosures, shower panels, rain showers, steam baths, sauna rooms, and other wellness equipment. Rasdelta combines modern technology, innovative designs, quality materials, and functional features to deliver a luxurious and spa-like bathing experience for customers. With a focus on comfort, aesthetics, and wellness, the company provides solutions suitable for modern residential and commercial spaces, helping transform conventional bathrooms into sophisticated relaxation and rejuvenation environments.",
     details: {
+      heroImage: "/images/projects/hero/rasdeltahero.png",
       title: "Ras Delta",
       description: [
         "Rasdelta is an Indian luxury bathroom and wellness solutions company specializing in the design, manufacturing, and supply of premium bathing and relaxation products. The company offers a comprehensive range of products including bathtubs, Jacuzzi and whirlpool systems, multifunction shower enclosures, shower panels, rain showers, steam baths, sauna rooms, and other wellness equipment. Rasdelta combines modern technology, innovative designs, quality materials, and functional features to deliver a luxurious and spa-like bathing experience for customers. With a focus on comfort, aesthetics, and wellness, the company provides solutions suitable for modern residential and commercial spaces, helping transform conventional bathrooms into sophisticated relaxation and rejuvenation environments."
       ]
     }
   },
-  {
-    slug: "shipsmith",
-    logo: shipimg,
-    img: shipimg,
-    projectName: "Ship Smith",
-    department: PROJECTS_DEPARTMENT.DEVELOPMENT,
-    description: "For Shipsmith, we provided a dual approach of custom website development and creative graphic design.We built a responsive, high-performing website paired with compelling visual assets that effectively communicate their brand identity and offerings.",
-    details: {
-      title: "Ship Smith",
-      description: [
-        "For Shipsmith, we provided a dual approach of custom website development and creative graphic design.We built a responsive, high-performing website paired with compelling visual assets that effectively communicate their brand identity and offerings."
-      ]
-    }
-  },
-  {
-    slug: "gabicci",
-    logo: gabiccipic,
-    img: gabiccipic,
-    projectName: "Gabicci",
-    department: PROJECTS_DEPARTMENT.DIGITAL,
-    description: "For Gabicci, our focus was on strengthening the brand’s e-commerce presence by managing and optimizing online sales operations.This involves providing a seamless shopping experience and ensuring smooth order flow to support consistent revenue growth.",
-    details: {
-      title: "Gabicci",
-      description: [
-        "For Gabicci, our focus was on strengthening the brand’s e-commerce presence by managing and optimizing online sales operations.This involves providing a seamless shopping experience and ensuring smooth order flow to support consistent revenue growth."
-      ]
-    }
-  },
-  {
-    slug: "hishmast",
-    logo: highmastpic,
-    img: highmastpic,
-    projectName: "Highmast",
-    department: PROJECTS_DEPARTMENT.DEVELOPMENT,
-    description: "For Highmast, we provided end-to-end website development services.We focused on building a robust, responsive, and visually appealing corporate website that effectively showcases their services and expertise, ensuring an optimal user experience across all devices.",
-    details: {
-      title: "Highmast",
-      description: [
-        "For Highmast, we provided end-to-end website development services.We focused on building a robust, responsive, and visually appealing corporate website that effectively showcases their services and expertise, ensuring an optimal user experience across all devices."
-      ]
-    }
-  },
-  {
-    slug: "pageone",
-    logo: page1,
-    img: page1,
-    projectName: "Page 1 travel",
-    department: PROJECTS_DEPARTMENT.DEVELOPMENT,
-    description: "For Page 1 Travel, we built a modern, high-performance website combining responsive frontend architecture with a robust backend service.Utilizing Next.js and NestJS, we created a scalable and visually engaging platform to enhance the overall traveler experience.",
-    details: {
-      title: "Page 1 Travel",
-      description: [
-        "For Page 1 Travel, we built a modern, high-performance website combining responsive frontend architecture with a robust backend service.Utilizing Next.js and NestJS, we created a scalable and visually engaging platform to enhance the overall traveler experience."
-      ]
-    }
-  },
+  // {
+  //   slug: "shipsmith",
+  //   logo: shipimg,
+  //   img: shipimg,
+  //   projectName: "Ship Smith",
+  //   department: PROJECTS_DEPARTMENT.DEVELOPMENT,
+  //   description: "For Shipsmith, we provided a dual approach of custom website development and creative graphic design.We built a responsive, high-performing website paired with compelling visual assets that effectively communicate their brand identity and offerings.",
+  //   details: {
+  //     title: "Ship Smith",
+  //     description: [
+  //       "For Shipsmith, we provided a dual approach of custom website development and creative graphic design.We built a responsive, high-performing website paired with compelling visual assets that effectively communicate their brand identity and offerings."
+  //     ]
+  //   }
+  // },
+  // {
+  //   slug: "gabicci",
+  //   logo: gabiccipic,
+  //   img: gabiccipic,
+  //   projectName: "Gabicci",
+  //   department: PROJECTS_DEPARTMENT.DIGITAL,
+  //   description: "For Gabicci, our focus was on strengthening the brand’s e-commerce presence by managing and optimizing online sales operations.This involves providing a seamless shopping experience and ensuring smooth order flow to support consistent revenue growth.",
+  //   details: {
+  //     title: "Gabicci",
+  //     description: [
+  //       "For Gabicci, our focus was on strengthening the brand’s e-commerce presence by managing and optimizing online sales operations.This involves providing a seamless shopping experience and ensuring smooth order flow to support consistent revenue growth."
+  //     ]
+  //   }
+  // },
+  // {
+  //   slug: "hishmast",
+  //   logo: highmastpic,
+  //   img: highmastpic,
+  //   projectName: "Highmast",
+  //   department: PROJECTS_DEPARTMENT.DEVELOPMENT,
+  //   description: "For Highmast, we provided end-to-end website development services.We focused on building a robust, responsive, and visually appealing corporate website that effectively showcases their services and expertise, ensuring an optimal user experience across all devices.",
+  //   details: {
+  //     title: "Highmast",
+  //     description: [
+  //       "For Highmast, we provided end-to-end website development services.We focused on building a robust, responsive, and visually appealing corporate website that effectively showcases their services and expertise, ensuring an optimal user experience across all devices."
+  //     ]
+  //   }
+  // },
+  // {
+  //   slug: "pageone",
+  //   logo: page1,
+  //   img: page1,
+  //   projectName: "Page 1 travel",
+  //   department: PROJECTS_DEPARTMENT.DEVELOPMENT,
+  //   description: "For Page 1 Travel, we built a modern, high-performance website combining responsive frontend architecture with a robust backend service.Utilizing Next.js and NestJS, we created a scalable and visually engaging platform to enhance the overall traveler experience.",
+  //   details: {
+  //     title: "Page 1 Travel",
+  //     description: [
+  //       "For Page 1 Travel, we built a modern, high-performance website combining responsive frontend architecture with a robust backend service.Utilizing Next.js and NestJS, we created a scalable and visually engaging platform to enhance the overall traveler experience."
+  //     ]
+  //   }
+  // },
 
 ];
