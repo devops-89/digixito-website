@@ -235,16 +235,43 @@ export interface BEST_WORK_CARD_PROPS {
   slug: string;
 }
 
+export interface strategies {
+  description: string[];
+  details: {
+    heading: string;
+    data: LIST[];
+    endDescription?: string;
+  };
+}
+
+export interface LIST {
+  primary?: string;
+  secondary?: string;
+}
+
+export interface ProjectResult {
+  description: string[];
+  details?: {
+    heading: string;
+    data: LIST[];
+  };
+}
+
 export interface projectDetails {
   img?: StaticImageData;
   title: string;
   description: string[];
-  strategies?: { label: string; data: { description: string }[] };
+  strategies?: strategies;
   videoUrl1?: string;
   videoUrl2?: string;
   videoUrl3?: string;
-  images?: string[];
-  heroImage?: string;
+  images?: (string | StaticImageData)[];
+  heroImage?: StaticImageData | string;
+  result: ProjectResult;
+  conclusion: { description: string[] };
+}
+export interface CREATIVE_DETAILS {
+  img?: string[];
 }
 
 export interface PROJECT_CARD_DATA_PROPS {

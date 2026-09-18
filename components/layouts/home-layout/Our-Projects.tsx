@@ -1,41 +1,36 @@
 import { COLORS } from "@/utils/enum";
-import { kessel_bold, monument } from "@/utils/fonts";
+import { monument } from "@/utils/fonts";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import ProjectContainer from "./components/Project-Container";
+import AnimatedProjectContainer from "./components/AnimatedProjectContainer";
 import Link from "next/link";
 
 const OurProjects = () => {
   return (
     <Box
       sx={{
-        minHeight: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
         backgroundColor: "#ffffff",
         py: 10,
       }}
     >
       <Container maxWidth="lg">
         <Grid container alignItems={"center"} sx={{ mb: 3 }}>
-          <Grid size={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <Typography
               sx={{
-                fontSize: 60,
+                fontSize: { xs: 40, md: 60 },
                 fontFamily: monument.style.fontFamily,
-                lineHeight: "80px",
+                lineHeight: { xs: "50px", md: "80px" },
                 letterSpacing: "-1.52px",
               }}
             >
               Our Curated{" "}
               <Typography
                 sx={{
-                  fontSize: 60,
+                  fontSize: { xs: 40, md: 60 },
                   fontFamily: monument.style.fontFamily,
-                  lineHeight: "80px",
+                  lineHeight: { xs: "50px", md: "80px" },
                   letterSpacing: "-1.52px",
-                  //   color: COLORS.PRIMARY,
                 }}
                 component={"span"}
               >
@@ -43,7 +38,7 @@ const OurProjects = () => {
               </Typography>
             </Typography>
           </Grid>
-          <Grid size={6} sx={{ textAlign: "end" }}>
+          {/* <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: { xs: "left", md: "end" }, mt: { xs: 2, md: 0 } }}>
             <Link href="/projects">
               <Button
                 sx={{
@@ -57,10 +52,12 @@ const OurProjects = () => {
                 View All Projects
               </Button>
             </Link>
-          </Grid>
+          </Grid> */}
         </Grid>
-        <ProjectContainer />
       </Container>
+
+      {/* Full width animated scroll container */}
+      <AnimatedProjectContainer />
     </Box>
   );
 };

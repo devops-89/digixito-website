@@ -4,7 +4,6 @@ import mytrekspic from "@/projects/MY_TREKS.AI.png";
 import namastepic from "@/projects/NAMASTE_INDIA.png";
 import netrapic from "@/projects/NXTGEN_NETRA_NITI.png";
 import bellaCasa from "@/projects/old-projects/bella-casa/bella-casa-logo.png";
-import bhonko from "@/projects/old-projects/bhonko/bhonko.png";
 import gcube from "@/projects/old-projects/gcube/g-cube-logo.png";
 import hautebaby from "@/projects/old-projects/haute-baby/haute_baby.png";
 import hp_logo from "@/projects/old-projects/hp/hp-logo.png";
@@ -16,10 +15,17 @@ import namasteIndia from "@/projects/old-projects/namaste-india/namaste_india.pn
 import netraniti from "@/projects/old-projects/netra-niti/netra_niti.png";
 import ornet_logo from "@/projects/old-projects/ornet/apollo.png";
 import rasdelta from "@/projects/old-projects/ras-delta/RasDelta.png";
-import { default as rspl } from "@/projects/old-projects/redchief/red-chief-logo.png";
+// import { default as rspl } from "@/projects/old-projects/redchief/red-chief-logo.png";
+import home_shop_logo from "@/projects/old-projects/home-shop18/home-shop-logo.webp";
+import home_shop_banner from "@/projects/old-projects/home-shop18/home_shop_banner.png";
+import maxBupa6 from "@/projects/old-projects/max-bupa/max-bupa-hero.png";
+import furo from "@/projects/old-projects/redchief/furo_logo.png";
 import raspic from "@/projects/RASDELTA.png";
 import { PROJECTS_DEPARTMENT } from "./enum";
 import { PROJECT_CARD_DATA_PROPS } from "./types";
+import microsoftHero from "@/projects/old-projects/microsoft/hero-banner.png";
+import microsoft1 from "@/projects/old-projects/microsoft/microsoft1.jpg";
+import microsoft2 from "@/projects/old-projects/microsoft/microsoft2.jpg";
 
 export const PROJECTS_TABS_DATA = [
   {
@@ -45,22 +51,219 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
     description:
       "Max Bupa Health Insurance Company is collaboration between Max India Limited and UK based healthcare services experts, Bupa. With the clear vision of reality and six decades of rich expertise in healthcare services, we have brought together the smiling faces of people, to be called as India\'s admired health insurance company. With the rising in the quality of the services of ours, we are able to provide our worthy services to 29 million customer-bases in over 190 countries. Max Bupa Health Insurance Company together brings its expertise in Family health and wellness with the aim of customer and caring for you, for life.",
     details: {
-      heroImage: "/images/projects/hero/maxHero.png",
+      heroImage: maxBupa6,
       title: "Max Bupa Health Insurance",
       description: [
-        "Max Bupa Health Insurance Company is collaboration between Max India Limited and UK based healthcare services experts, Bupa. With the clear vision of reality and six decades of rich expertise in healthcare services, we have brought together the smiling faces of people, to be called as India's admired health insurance company. With the rising in the quality of the services of ours, we are able to provide our worthy services to 29 million customer-bases in over 190 countries. Max Bupa Health Insurance Company together brings its expertise in Family health and wellness with the aim of customer and caring for you, for life.",
+        "To improve the conversion rate of the email campaigns, which was initially less than 0.03%, by developing a more targeted, engaging, and conversion-focused email marketing strategy. The objective was to reach the right audience with relevant messaging, improve engagement, and ultimately generate a higher number of qualified buyers and conversions.",
       ],
       strategies: {
-        label: "Email marketing to interested buyers",
-        data: [
-          {
-            description:
-              "This is one of the best cost effective ways to reach the target audience. We use the tools such as mailchain to track our interested buyers and get it touch with them. From the directory of our customer database, we provide them quality exposure about our brand and its benefits. This strategy helps in targeting the niche buyers by matching the demand and supply.",
-          },
-          {
-            description:
-              "Keeping the interested buyers in mind, the main objective of the mailer campaign is the lead generation. We provide the solution by optimising the campaign, targeting at different levels and segmentation of the database. This helps us in getting the desired result of 1.5 to 2% conversion rate.",
-          },
+        description: [
+          "A creative and data-driven emailer campaign was developed with a strong emphasis on clear communication and compelling calls to action. A series of campaigns were designed and executed to optimize performance at different stages of the customer journey.",
+        ],
+        details: {
+          heading: "The strategy focused on:",
+          data: [
+            {
+              primary: "Audience Segmentation",
+              secondary:
+                "The database was segmented based on customer profiles, interests, purchase behaviour, engagement levels, and other relevant parameters.",
+            },
+            {
+              primary: "Targeted Communication",
+              secondary:
+                "Different email messages were created for specific audience segments to ensure that the content was relevant to their needs and interests.",
+            },
+            {
+              primary: "Creative & Content",
+              secondary:
+                "Visually appealing emailers were designed with concise messaging, strong value propositions, and clear calls to action.",
+            },
+            {
+              primary: "Campaign Testing",
+              secondary:
+                "Multiple campaign variations were tested to understand which subject lines, content, offers, and creative approaches generated better engagement.",
+            },
+            {
+              primary: "Campaign Execution",
+              secondary:
+                "A series of email campaigns were planned and delivered at different levels, targeting awareness, consideration, and conversion.",
+            },
+            {
+              primary: "Performance Optimization",
+              secondary:
+                "Campaign performance was continuously monitored through engagement and conversion metrics. Based on the insights, targeting, messaging, and campaign execution were refined.",
+            },
+            {
+              primary: "Database Optimization",
+              secondary:
+                "High-performing audience segments were prioritized while inactive or less relevant contacts were filtered to improve overall campaign effectiveness.",
+            },
+          ],
+          endDescription:
+            "This approach helped in targeting niche buyers by effectively matching demand with supply, ensuring that the right message reached the right audience at the right stage of their buying journey.",
+        },
+      },
+      result: {
+        description: [
+          "The implementation of the targeted email marketing strategy resulted in a significant improvement in conversion performance.",
+          "The conversion rate increased from an initial less than 0.03% to approximately 2.5%–3%, representing a substantial improvement over the previous performance.",
+          "The campaign also helped improve audience targeting, engagement, and the effectiveness of communication by focusing on users who were more likely to respond to the offerings.",
+        ],
+        details: {
+          heading: "Key Outcomes",
+          data: [
+            {
+              primary: "Initial Conversion Rate: Less than 0.03%",
+            },
+            {
+              primary: "Final Conversion Rate: 2.5%–3%",
+            },
+            {
+              primary: "Significant increase in conversions",
+            },
+            {
+              primary: "Improved audience targeting and segmentation",
+            },
+            {
+              primary: "Better engagement with relevant customer groups",
+            },
+            {
+              primary:
+                "More effective matching of customer demand with available offerings",
+            },
+            {
+              primary: "Improved overall efficiency of email campaigns",
+            },
+          ],
+        },
+      },
+      conclusion: {
+        description: [
+          "The campaign demonstrated that a well-planned, creative, and data-driven email marketing strategy can significantly improve conversion performance. By combining audience segmentation, personalized communication, creative testing, targeted campaigns, and continuous optimization, the campaign was able to deliver substantially better results.",
+          "The strategy also established a stronger foundation for future campaigns, allowing successful audience segments, messaging approaches, and campaign formats to be further optimized and scaled for continued growth.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "home-shop18",
+    logo: home_shop_logo,
+    projectName: "HomeShop18",
+    department: PROJECTS_DEPARTMENT.DIGITAL,
+    description:
+      "To strengthen HomeshoP18’s online presence and drive significant growth in search visibility, conversions, and revenue through a focused digital marketing strategy.",
+    details: {
+      heroImage: home_shop_banner,
+      title: "HomeShop18",
+      description: [
+        "The primary objective was to overcome the challenge of declining revenue and a high multiplier by improving search rankings, increasing qualified traffic, and reaching a much larger audience across high-volume e-commerce and electronics-related search terms.",
+        "The campaign focused on targeting highly competitive keywords with substantial search demand and converting this increased visibility into measurable business growth.",
+        "The campaign focused on targeting highly competitive keywords with substantial search demand and converting this increased visibility into measurable business growth.",
+      ],
+      strategies: {
+        description: [
+          "A comprehensive Search Engine Marketing and SEO strategy was implemented to improve HomeshoP18’s visibility across highly competitive and high-volume search terms.",
+        ],
+        details: {
+          heading: "The strategy focused on:",
+          data: [
+            {
+              primary: "Keyword Research & Targeting",
+              secondary:
+                "Identified thousands of relevant and commercially valuable keywords related to online shopping, electronics, kitchenware, home appliances, and other product categories.",
+            },
+            {
+              primary: "High-Volume Keyword Optimization",
+              secondary:
+                "Focused on keywords with a combined search volume of more than 22 million, creating significant opportunities to increase organic visibility and website traffic.",
+            },
+            {
+              primary: "Competitive Keyword Strategy",
+              secondary:
+                "Targeted highly competitive search terms such as online shopping, electronic items, electronics shopping, kitchenware, and home appliances.",
+            },
+            {
+              primary: "On-Page Optimization",
+              secondary:
+                "Optimized website content, landing pages, metadata, headings, and product/category pages around targeted keywords.",
+            },
+            {
+              primary: "Content Strategy",
+              secondary:
+                "Developed and optimized relevant content to improve search relevance and establish stronger visibility across multiple product categories.",
+            },
+            {
+              primary: "Technical SEO",
+              secondary:
+                "Improved website structure, indexing, internal linking, and other technical elements to support better search engine crawling and ranking.",
+            },
+            {
+              primary: "Search Ranking Optimization",
+              secondary:
+                "Continuously monitored keyword positions and refined the strategy based on ranking performance and search trends.",
+            },
+            {
+              primary: "Conversion Focus",
+              secondary:
+                "The increased search visibility was aligned with commercial intent, ensuring that traffic generated through targeted keywords had a stronger potential to convert into customers.",
+            },
+          ],
+          endDescription:
+            "The strategy successfully helped bring 72% of the targeted keywords to the first page within six months, significantly expanding HomeshoP18’s search visibility and reach.",
+        },
+      },
+      result: {
+        description: [
+          "The strategy delivered a significant improvement in both search visibility and business performance.",
+          "Within six months, 72% of the targeted keywords achieved first-page rankings, helping HomeshoP18 gain visibility across a search landscape with more than 22 million monthly search opportunities.",
+          "This increased visibility contributed to substantial growth in conversions and revenue.",
+        ],
+        details: {
+          heading: "Key Outcomes",
+          data: [
+            {
+              primary:
+                "72% of targeted keywords reached the first page within 6 months.",
+            },
+            {
+              primary: "Targeted keywords represented 22M+ search volume.",
+            },
+            {
+              primary:
+                "All Conversions: Increased from 12,860 in Nov 2015 to 36,746 in Mar 2016.",
+            },
+            {
+              primary: "Conversion Growth: +185.73%",
+            },
+            {
+              primary:
+                "Revenue: Increased from ₹21,715,712 in Nov 2015 to ₹57,644,934 in Mar 2016.",
+            },
+            {
+              primary: "Revenue Growth: +165.45%",
+            },
+            {
+              primary:
+                "Expanded visibility across highly competitive e-commerce and electronics keywords.",
+            },
+            {
+              primary:
+                "Increased opportunities to attract qualified, high-intent users.",
+            },
+            {
+              primary:
+                "Improved overall digital performance and contribution to business growth.",
+            },
+          ],
+        },
+      },
+      conclusion: {
+        description: [
+          "The Homeshop18 campaign demonstrated how a focused, data-driven SEO and digital marketing strategy can transform search visibility into measurable business results.",
+          "The strategy also established a stronger foundation for future campaigns, allowing successful audience segments, messaging approaches, and campaign formats to be further optimized and scaled for continued growth.",
+          "By targeting high-volume commercial keywords, optimizing the website for search engines, continuously monitoring rankings, and focusing on conversion-oriented traffic, the campaign achieved strong improvements in both organic visibility and business performance.",
+          "With 72% of targeted keywords reaching the first page within six months, conversions increasing by 185.73%, and revenue growing by 165.45%, the strategy established a strong foundation for continued growth.",
+          "The results highlight the impact of combining keyword intelligence, technical optimization, content strategy, search visibility, and conversion-focused execution to scale an e-commerce business.",
         ],
       },
     },
@@ -69,98 +272,190 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
     slug: "microsoft",
     logo: microsoft,
     projectName: "Microsoft",
-    department: PROJECTS_DEPARTMENT.DEVELOPMENT,
-    description: "Ultimately advertising is about selling Brands in an utmost creative way. We collaborated on a Digital advertising campaign for their products: Office 365 Standalone and Azure, crossing boundaries in Indonesia, Singapore, Malaysia, and Vietnam. We adroitly maneuvered our creatives, landing page, and user registration platform to get the bell of lead generation ringing.",
+    department: PROJECTS_DEPARTMENT.DIGITAL,
+    description:
+      "Ultimately advertising is about selling Brands in an utmost creative way. We collaborated on a Digital advertising campaign for their products: Office 365 Standalone and Azure, crossing boundaries in Indonesia, Singapore, Malaysia, and Vietnam. We adroitly maneuvered our creatives, landing page, and user registration platform to get the bell of lead generation ringing.",
     details: {
-      heroImage: "/images/projects/hero/microsofthero.png",
+      heroImage: microsoftHero,
       title: "Microsoft Office 365 & Azure Campaign",
-      images: [
-        "/images/projects/old-projects/microsoft/microsoft1.jpg",
-        "/images/projects/old-projects/microsoft/microsoft2.jpg"
-      ],
+      images: [microsoft1, microsoft2],
       description: [
-        "Ultimately advertising is about selling Brands in an utmost creative way. So one fine day technology giant Microsoft opened its door for us, and we walked inside with our restless passion. They were impressed, and we were passionately excited, so we collaborated on Digital advertising campaign for their products; Office 365 Standalone and Azure.",
-        "This time we crossed our boundaries both in terms of work and reach, as the campaign was directed to run in Indonesia, Singapore, Malaysia, and Vietnam.",
-        "We adroitly maneuvered our creative's, landing page and user registration platform to get the bell of lead generation ringing. The result was that the bell kept on ringing."
+        "To create and execute a high-impact digital advertising campaign for Microsoft, promoting its Office 365 Standalone and Microsoft Azure solutions across key Southeast Asian markets.",
+        "The primary objective was to generate a strong pipeline of qualified leads and user registrations by combining creative digital communication with a seamless conversion journey.",
       ],
+
       strategies: {
-        label: "Developed localized digital campaigns for each region, optimized landing pages for high conversion, and implemented a robust user registration platform to capture high-quality leads.",
-        data: [
-          {
-            description: "Challenge: Reaching a diverse target audience across multiple Southeast Asian countries with tailored messaging that resonates with enterprise users and decision-makers."
-          },
-          {
-            description: "Result: Generated an unprecedented volume of qualified leads across Indonesia, Singapore, Malaysia, and Vietnam, significantly boosting adoption rates for Office 365 and Azure."
-          }
-        ]
+        description: [
+          "The campaign was built around the idea that advertising is not simply about selling a product, but about presenting a brand and its value proposition in the most creative and compelling way possible.",
+          "A comprehensive digital advertising ecosystem was developed for Microsoft’s Office 365 Standalone and Azure offerings.",
+        ],
+        details: {
+          heading: "The strategy focused on:",
+          data: [
+            {
+              primary: "Creative Campaign Development",
+              secondary:
+                "Developed engaging and visually compelling advertising creatives designed to capture attention and communicate the key benefits of Microsoft’s products.",
+            },
+            {
+              primary: "Multi-Market Execution",
+              secondary:
+                "Extended the campaign across Indonesia, Singapore, Malaysia, and Vietnam, adapting the communication and execution to suit different regional audiences.",
+            },
+            {
+              primary: "Audience Targeting",
+              secondary:
+                "Identified and targeted relevant professional, business, and technology-focused audiences with a higher potential for product interest and conversion.",
+            },
+            {
+              primary: "Landing Page Optimization",
+              secondary:
+                "Designed and optimized dedicated landing pages to ensure that the messaging remained consistent from the advertisement through to the conversion stage.",
+            },
+            {
+              primary: "User Registration Platform",
+              secondary:
+                "Created a streamlined registration experience to minimize friction and make it easier for interested users to submit their information.",
+            },
+            {
+              primary: "Conversion-Focused Journey",
+              secondary:
+                "Connected the advertising creatives, landing pages, and registration platform into a single conversion funnel designed specifically for lead generation.",
+            },
+            {
+              primary: "Continuous Optimization",
+              secondary:
+                "Monitored campaign performance and refined creatives, targeting, landing-page communication, and registration flows to improve lead-generation efficiency.",
+            },
+          ],
+          endDescription:
+            "By carefully maneuvering the creative, landing page, targeting, and registration experience, the campaign transformed initial audience interest into measurable lead-generation opportunities.",
+        },
       },
-    }
+      result: {
+        description: [
+          "The campaign successfully expanded Microsoft’s digital advertising reach across four key Southeast Asian markets while creating a strong and consistent lead-generation funnel.",
+          "The integrated approach helped turn advertising engagement into registrations and qualified leads, demonstrating the effectiveness of combining creative communication with a conversion-focused digital experience.",
+        ],
+        details: {
+          heading: "Key Outcomes",
+          data: [
+            {
+              primary:
+                "Successfully executed digital campaigns for Microsoft Office 365 Standalone and Azure.",
+            },
+            {
+              primary:
+                "Expanded campaign reach across Indonesia, Singapore, Malaysia, and Vietnam.",
+            },
+            {
+              primary:
+                "Created a complete digital funnel from advertisement → landing page → user registration → lead generation.",
+            },
+            {
+              primary:
+                "Improved the ability to capture and manage interested prospects.",
+            },
+            {
+              primary:
+                "Generated a consistent flow of registrations and leads.",
+            },
+            {
+              primary:
+                "Successfully combined creative advertising with performance-driven execution.",
+            },
+            {
+              primary:
+                "Established a scalable campaign approach that could be adapted across multiple markets.",
+            },
+          ],
+        },
+      },
+
+      conclusion: {
+        description: [
+          "The Microsoft campaign demonstrated the power of combining creative advertising, precise audience targeting, optimized landing pages, and a seamless registration experience to drive measurable business outcomes.",
+          "What began as an opportunity to work with one of the world's leading technology brands evolved into a multi-market digital campaign spanning four countries.",
+          "By pushing beyond conventional advertising boundaries and connecting creativity with performance, the campaign successfully created a continuous flow of user registrations and lead-generation opportunities for Microsoft’s Office 365 Standalone and Azure solutions.",
+          "The campaign reinforced a simple principle: great creative captures attention, but a well-designed digital journey turns that attention into action.",
+        ],
+      },
+    },
   },
   {
     slug: "jk-tyres",
     logo: jk_logo,
     projectName: "JK Tyre",
     department: PROJECTS_DEPARTMENT.CREATIVE,
-    description: "J.K wanted to rejoice the journey of unsung heroes, termed BAADSHAH, people who are rolling and rising on the roads to maintain your every day's essential supply chain. We were given a task in hand to reflect the heroic life of some of the significant achievers who have associated for long with J.K.",
+    description:
+      "J.K wanted to rejoice the journey of unsung heroes, termed BAADSHAH, people who are rolling and rising on the roads to maintain your every day's essential supply chain. We were given a task in hand to reflect the heroic life of some of the significant achievers who have associated for long with J.K.",
     details: {
       heroImage: "/images/projects/hero/jktyrehero.png",
       title: "JK Tyre",
       description: [
         "The occasion was a celebration of an association. J.K wanted to rejoice the journey of unsung heroes, termed BAADSHAH, people who are rolling and rising on the roads to maintain your every day's essential supply chain. We were given a task in hand to reflect the heroic life of some of the significant achievers who have associated for long with J.K, through our films. What followed next was capturing their life's rollercoaster journey and making them relive some of their magical moments through our films.",
         "Common go through our films, feel it for yourself!",
-        "J.K wanted to reflect the PAN India reach for their farm category product SONA1 while also highlighting its major features. On a tight deadline, they desired a corporate film which should arouse an interest towards the product. What we did is for you to see!"
+        "J.K wanted to reflect the PAN India reach for their farm category product SONA1 while also highlighting its major features. On a tight deadline, they desired a corporate film which should arouse an interest towards the product. What we did is for you to see!",
       ],
       strategies: {
-        label: "Produced a series of high-quality documentary-style films capturing the rollercoaster journey of long-time JK Tyre associates, celebrating their magical moments.",
+        label:
+          "Produced a series of high-quality documentary-style films capturing the rollercoaster journey of long-time JK Tyre associates, celebrating their magical moments.",
         data: [
           {
-            description: "Challenge: Capturing the authentic and gritty reality of truck drivers' lives while weaving a compelling narrative that aligns with JK Tyre's brand values."
+            description:
+              "Challenge: Capturing the authentic and gritty reality of truck drivers' lives while weaving a compelling narrative that aligns with JK Tyre's brand values.",
           },
           {
-            description: "Result: Created a deeply emotional connection with the target audience, significantly increasing brand loyalty and engagement across digital platforms."
-          }
-        ]
+            description:
+              "Result: Created a deeply emotional connection with the target audience, significantly increasing brand loyalty and engagement across digital platforms.",
+          },
+        ],
       },
       videoUrl1: "https://www.youtube.com/watch?v=F91vnolqrrg",
-      videoUrl2: "https://www.youtube.com/watch?v=1s-6PW8PV9E"
-    }
+      videoUrl2: "https://www.youtube.com/watch?v=1s-6PW8PV9E",
+    },
   },
   {
     slug: "hp",
     logo: hp_logo,
     projectName: "HP",
     department: PROJECTS_DEPARTMENT.CREATIVE,
-    description: "HP needed to decode a design for the digital campaigning of their product HP Page Wide Pro 577dw MFP. We sat with them on the meeting table and astonished them with our creative imprint. With our digital strategy, we manufactured a smart and productive digital campaign.",
+    description:
+      "HP needed to decode a design for the digital campaigning of their product HP Page Wide Pro 577dw MFP. We sat with them on the meeting table and astonished them with our creative imprint. With our digital strategy, we manufactured a smart and productive digital campaign.",
     details: {
       heroImage: "/images/projects/hero/hphero.png",
       title: "HP",
       images: [
         "/images/projects/old-projects/hp/hp-1.jpg",
-        "/images/projects/old-projects/hp/hp-2.jpg"
+        "/images/projects/old-projects/hp/hp-2.jpg",
       ],
       description: [
         "They have taught the world to print, and scan. There's no one better than them, who has engineered this art to supreme sublimity. HP needed to decode a design for the digital campaigning of their product HP Page Wide Pro 577dw MFP.",
-        "We sat with them on the meeting table and astonished them with our creative imprint. With our digital strategy, we manufactured a smart and productive digital campaign based on the products revolutionary features that had the potential to redefine the market."
+        "We sat with them on the meeting table and astonished them with our creative imprint. With our digital strategy, we manufactured a smart and productive digital campaign based on the products revolutionary features that had the potential to redefine the market.",
       ],
       strategies: {
-        label: "Engineered a targeted digital campaign highlighting the product's disruptive technology, utilizing high-impact visuals and data-driven ad placements.",
+        label:
+          "Engineered a targeted digital campaign highlighting the product's disruptive technology, utilizing high-impact visuals and data-driven ad placements.",
         data: [
           {
-            description: "Challenge: Positioning a new enterprise-grade printer in a saturated market and clearly communicating its revolutionary features and cost-saving benefits."
+            description:
+              "Challenge: Positioning a new enterprise-grade printer in a saturated market and clearly communicating its revolutionary features and cost-saving benefits.",
           },
           {
-            description: "Result: Successfully redefined the market perception of the product, resulting in a substantial increase in product inquiries and B2B sales pipeline growth."
-          }
-        ]
-      }
-    }
+            description:
+              "Result: Successfully redefined the market perception of the product, resulting in a substantial increase in product inquiries and B2B sales pipeline growth.",
+          },
+        ],
+      },
+    },
   },
   {
     slug: "ornet",
     logo: ornet_logo,
     projectName: "Ornet",
     department: PROJECTS_DEPARTMENT.DEVELOPMENT,
-    description: "ORNET wanted to place its three products namely Terrain Bull, Industrial HD, Power Gripper in an unconditional toughness niche, which are born to perform with an unmatched durability, all across the terrains.",
+    description:
+      "ORNET wanted to place its three products namely Terrain Bull, Industrial HD, Power Gripper in an unconditional toughness niche, which are born to perform with an unmatched durability, all across the terrains.",
     details: {
       heroImage: "/images/projects/hero/ornethero.png",
       title: "Ornet",
@@ -170,31 +465,35 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
         "/images/projects/old-projects/ornet/ornet3.jpg",
         "/images/projects/old-projects/ornet/ornet4.jpg",
         "/images/projects/old-projects/ornet/ornet5.jpg",
-        "/images/projects/old-projects/ornet/ornet6.jpg"
+        "/images/projects/old-projects/ornet/ornet6.jpg",
       ],
       description: [
         "ORNET wanted to place its three products namely Terrain Bull, Industrial HD, Power Gripper in an unconditional toughness niche, which are born to perform with an unmatched durability, all across the terrains. When the circumstances become adverse, they grip on the road and move beyond the toughness. That's what ORNET wanted to trump about their products. So we came and amplified it with our powerful creativity.",
-        "The outcome was an aggressive campaign that created an outstanding and an outlasting effect throughout its target audience."
+        "The outcome was an aggressive campaign that created an outstanding and an outlasting effect throughout its target audience.",
       ],
       strategies: {
-        label: "Developed an aggressive, visually striking creative campaign that amplified the product's rugged capabilities and unmatched endurance.",
+        label:
+          "Developed an aggressive, visually striking creative campaign that amplified the product's rugged capabilities and unmatched endurance.",
         data: [
           {
-            description: "Challenge: Communicating extreme durability and unconditional toughness across diverse industrial and terrain segments in a highly competitive market."
+            description:
+              "Challenge: Communicating extreme durability and unconditional toughness across diverse industrial and terrain segments in a highly competitive market.",
           },
           {
-            description: "Result: The campaign created an outstanding and outlasting effect throughout the target audience, establishing Ornet as the premier choice for extreme terrains."
-          }
-        ]
-      }
-    }
+            description:
+              "Result: The campaign created an outstanding and outlasting effect throughout the target audience, establishing Ornet as the premier choice for extreme terrains.",
+          },
+        ],
+      },
+    },
   },
   {
     slug: "bellacasa",
     logo: bellaCasa,
     projectName: "Bella Casa",
     department: PROJECTS_DEPARTMENT.CREATIVE,
-    description: "The BellaCasa Fashion and Retail Ltd, the bedsheet brand in its remodeling phase met us with a competitor in mind. From our first creative photo shoot for their product catalog, we completely changed their outline and set the tone towards a more premium and glamorous outlook.",
+    description:
+      "The BellaCasa Fashion and Retail Ltd, the bedsheet brand in its remodeling phase met us with a competitor in mind. From our first creative photo shoot for their product catalog, we completely changed their outline and set the tone towards a more premium and glamorous outlook.",
     details: {
       heroImage: "/images/projects/hero/bellaHero.png",
       title: "Bella Casa",
@@ -203,91 +502,65 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
         "/images/projects/old-projects/bella-casa/bella-casa2.jpg",
         "/images/projects/old-projects/bella-casa/bella-casa3.jpg",
         "/images/projects/old-projects/bella-casa/bella-casa4.jpg",
-        "/images/projects/old-projects/bella-casa/bella-casa5.jpg"
+        "/images/projects/old-projects/bella-casa/bella-casa5.jpg",
       ],
       description: [
         "The BellaCasa Fashion and Retail Ltd, the bedsheet brand in its remodeling phase met us with a competitor in mind and with our artistry they have soared above and beyond their competitor in terms of their recent work. From our first creative photo shoot for their product catalog, we completely changed their outline and set the tone towards more premium and glamorous outlook.",
         "With our artistic wand, we did create a midnight Snow White out of Bellacasa. The aftereffect was both tantalizing and dazzling. It made everyone desire for more.",
         "The desire for more effect took the shape of the sizzling storm, and suddenly the bling-bang happened when the mesmerizing diva Jacqueline agreed to get wrapped in Bellacasa style.",
-        "We orchestrated very sophisticated and elegant photo shoot, which enhanced the magical aura of Jaqueline."
+        "We orchestrated very sophisticated and elegant photo shoot, which enhanced the magical aura of Jaqueline.",
       ],
       strategies: {
-        label: "Orchestrated a sophisticated and elegant creative photo shoot featuring Jacqueline Fernandez, redefining the brand's aesthetic to be tantalizing and dazzling.",
+        label:
+          "Orchestrated a sophisticated and elegant creative photo shoot featuring Jacqueline Fernandez, redefining the brand's aesthetic to be tantalizing and dazzling.",
         data: [
           {
-            description: "Challenge: Transforming a conventional bedsheet brand into a premium, highly desirable lifestyle product capable of surpassing established competitors."
+            description:
+              "Challenge: Transforming a conventional bedsheet brand into a premium, highly desirable lifestyle product capable of surpassing established competitors.",
           },
           {
-            description: "Result: The glamorous rebranding generated immense market buzz, significantly elevating brand perception and creating a 'sizzling storm' of consumer desire."
-          }
-        ]
-      }
-    }
-  },
-  {
-    slug: "bhonko",
-    logo: bhonko,
-    projectName: "Bhonko",
-    department: PROJECTS_DEPARTMENT.DIGITAL,
-    description: "Bhonko aimed to disrupt the digital space with an innovative platform. We focused on enhancing their overall digital performance and ensuring their voice was heard loud and clear.",
-    details: {
-      heroImage: "/images/projects/hero/bhonkoHero.png",
-      title: "Bhonko",
-      images: [
-        "/images/projects/old-projects/bhonko/bhonko1.jpg",
-        "/images/projects/old-projects/bhonko/bhonko2.jpg",
-        "/images/projects/old-projects/bhonko/bhonko3.jpg",
-        "/images/projects/old-projects/bhonko/bhonko4.jpg",
-        "/images/projects/old-projects/bhonko/bhonko5.jpg",
-        "/images/projects/old-projects/bhonko/bhonko6.jpg"
-      ],
-      description: [
-        "Consumers and Sellers, these two entities are the interface of a much more complex network of any commercial market. Many times condition of conflict arises between them, but the point is where they should shout it out. That's were Bhonko comes. Bhonko is a platform where the consumers can file their complaint and unconditionally seek help and better justice for the cause of their shouting.",
-        "The task in hand was to empower this powerful brand with our creative designing aspect. What we did was something beyond the arc, with our imagination we shot few notches above the expectations of everyone."
-      ],
-      strategies: {
-        label: "Implemented a comprehensive performance enhancement strategy, optimizing all digital touchpoints for maximum visibility and user retention.",
-        data: [
-          {
-            description: "Challenge: Establishing a strong digital footprint for a new brand and driving immediate user engagement and traffic."
+            description:
+              "Result: The glamorous rebranding generated immense market buzz, significantly elevating brand perception and creating a 'sizzling storm' of consumer desire.",
           },
-          {
-            description: "Result: Achieved a 204% increase in overall visits, dramatically improving the brand's market reach and user acquisition rate."
-          }
-        ]
-      }
-    }
+        ],
+      },
+    },
   },
+
   {
     slug: "gcube",
     logo: gcube,
     img: gcubepic,
     projectName: "G-Cube",
     department: PROJECTS_DEPARTMENT.DIGITAL,
-    description: "G-Cube required a strategic overhaul of their digital presence to better reflect their industry-leading e-learning solutions and connect with global enterprises.",
+    description:
+      "G-Cube required a strategic overhaul of their digital presence to better reflect their industry-leading e-learning solutions and connect with global enterprises.",
     details: {
       heroImage: "/images/projects/hero/gcubeHero.png",
       title: "G-Cube",
       images: [
         "/images/projects/old-projects/gcube/g-cube1.jpg",
-        "/images/projects/old-projects/gcube/g-cube2.jpg"
+        "/images/projects/old-projects/gcube/g-cube2.jpg",
       ],
       description: [
         "GCUBE as a firm provides a one-stop solution with their innovative educative products at the organization level. Their model of learning encompasses majorly one thing called SIMPLICITY. The source code for the genesis of their products has been based on cracking this one big egg; COMPLEXITY.",
-        "We were given a task to highlight this facet of GCUBE with added shine of our creative glitter. So, we took out our creative sprays, sparkled it here and there, and what we came out with was something called WOW."
+        "We were given a task to highlight this facet of GCUBE with added shine of our creative glitter. So, we took out our creative sprays, sparkled it here and there, and what we came out with was something called WOW.",
       ],
       strategies: {
-        label: "Executed a targeted digital transformation focusing on B2B lead generation, utilizing content marketing and specialized ad placements.",
+        label:
+          "Executed a targeted digital transformation focusing on B2B lead generation, utilizing content marketing and specialized ad placements.",
         data: [
           {
-            description: "Challenge: Modernizing the brand's digital identity to resonate with high-level corporate decision-makers while clearly articulating complex e-learning services."
+            description:
+              "Challenge: Modernizing the brand's digital identity to resonate with high-level corporate decision-makers while clearly articulating complex e-learning services.",
           },
           {
-            description: "Result: Significantly enhanced global visibility, leading to a measurable increase in high-quality enterprise leads and improved brand authority."
-          }
-        ]
-      }
-    }
+            description:
+              "Result: Significantly enhanced global visibility, leading to a measurable increase in high-quality enterprise leads and improved brand authority.",
+          },
+        ],
+      },
+    },
   },
   // {
   //   slug: "khaiedu",
@@ -368,10 +641,11 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
   // },
   {
     slug: "rspl",
-    logo: rspl,
+    logo: furo,
     projectName: "RSPL - Furo",
     department: PROJECTS_DEPARTMENT.CREATIVE,
-    description: "Furo Sports, a dynamic brand by RSPL Limited, aimed to capture the attention of fashion enthusiasts, sports lovers, and travelers through high-impact digital campaigns.",
+    description:
+      "Furo Sports, a dynamic brand by RSPL Limited, aimed to capture the attention of fashion enthusiasts, sports lovers, and travelers through high-impact digital campaigns.",
     details: {
       heroImage: "/images/projects/hero/furohero.png",
       title: "RSPL - Furo",
@@ -381,39 +655,42 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
         "/images/projects/old-projects/rspl/rspl3.jpg",
         "/images/projects/old-projects/rspl/rspl4.jpg",
         "/images/projects/old-projects/rspl/rspl5.jpg",
-        "/images/projects/old-projects/rspl/rspl6.jpg"
+        "/images/projects/old-projects/rspl/rspl6.jpg",
       ],
       description: [
-        "Main brand communication for its target audience, needed to be around the grip of the shoe. Acknowledging the fact that sport shoe can be connected to the motivating passion athletes carry and there want to create special moments with their every action. We weaved a campaign that connected the word grip to their athleticism. This struck a chord with their target audience and it ran across a wide range of spectators."
+        "Main brand communication for its target audience, needed to be around the grip of the shoe. Acknowledging the fact that sport shoe can be connected to the motivating passion athletes carry and there want to create special moments with their every action. We weaved a campaign that connected the word grip to their athleticism. This struck a chord with their target audience and it ran across a wide range of spectators.",
       ],
       strategies: {
-        label: "Designed a high-energy creative campaign targeting active demographics across platforms like MTV, YouTube, Vimeo, and Star Sports.",
+        label:
+          "Designed a high-energy creative campaign targeting active demographics across platforms like MTV, YouTube, Vimeo, and Star Sports.",
         data: [
           {
-            description: "Challenge: Launching a new sports lifestyle brand and rapidly building brand awareness against established global giants."
+            description:
+              "Challenge: Launching a new sports lifestyle brand and rapidly building brand awareness against established global giants.",
           },
           {
-            description: "Result: Successfully established a strong brand footprint, generating massive impressions and building a loyal community of sports and fashion enthusiasts."
-          }
-        ]
-      }
-    }
-  }
-  ,
+            description:
+              "Result: Successfully established a strong brand footprint, generating massive impressions and building a loyal community of sports and fashion enthusiasts.",
+          },
+        ],
+      },
+    },
+  },
   {
     slug: "mytreks-ai",
     logo: mytreks,
     img: mytrekspic,
     projectName: "Mytreks",
     department: PROJECTS_DEPARTMENT.DEVELOPMENT,
-    description: "MyTreks.ai is an AI-powered career discovery and college-preparation platform that helps middle and high school students build clarity, confidence, and direction for their future. The platform combines personalized AI-powered learning roadmaps with strengths-based assessments, gamified activities, 1:1 coaching, career counseling, professional mentorship, webinars, and real-world internship opportunities. Through its MyTrekShip program, students gain practical experience by working on live projects with companies over a structured three-week period, supported by mentors and guided milestones. MyTreks.ai also enables parents to stay involved in their child’s development while providing companies with an opportunity to mentor students and offer micro-internships. Overall, the platform focuses on helping students discover their strengths, explore career possibilities, develop essential skills, and make more informed decisions about their academic and professional future.",
+    description:
+      "MyTreks.ai is an AI-powered career discovery and college-preparation platform that helps middle and high school students build clarity, confidence, and direction for their future. The platform combines personalized AI-powered learning roadmaps with strengths-based assessments, gamified activities, 1:1 coaching, career counseling, professional mentorship, webinars, and real-world internship opportunities. Through its MyTrekShip program, students gain practical experience by working on live projects with companies over a structured three-week period, supported by mentors and guided milestones. MyTreks.ai also enables parents to stay involved in their child’s development while providing companies with an opportunity to mentor students and offer micro-internships. Overall, the platform focuses on helping students discover their strengths, explore career possibilities, develop essential skills, and make more informed decisions about their academic and professional future.",
     details: {
       heroImage: "/images/projects/hero/treksHero.png",
       title: "Mytreks",
       description: [
-        "MyTreks.ai is an AI-powered career discovery and college-preparation platform that helps middle and high school students build clarity, confidence, and direction for their future. The platform combines personalized AI-powered learning roadmaps with strengths-based assessments, gamified activities, 1:1 coaching, career counseling, professional mentorship, webinars, and real-world internship opportunities. Through its MyTrekShip program, students gain practical experience by working on live projects with companies over a structured three-week period, supported by mentors and guided milestones. MyTreks.ai also enables parents to stay involved in their child’s development while providing companies with an opportunity to mentor students and offer micro-internships. Overall, the platform focuses on helping students discover their strengths, explore career possibilities, develop essential skills, and make more informed decisions about their academic and professional future."
-      ]
-    }
+        "MyTreks.ai is an AI-powered career discovery and college-preparation platform that helps middle and high school students build clarity, confidence, and direction for their future. The platform combines personalized AI-powered learning roadmaps with strengths-based assessments, gamified activities, 1:1 coaching, career counseling, professional mentorship, webinars, and real-world internship opportunities. Through its MyTrekShip program, students gain practical experience by working on live projects with companies over a structured three-week period, supported by mentors and guided milestones. MyTreks.ai also enables parents to stay involved in their child’s development while providing companies with an opportunity to mentor students and offer micro-internships. Overall, the platform focuses on helping students discover their strengths, explore career possibilities, develop essential skills, and make more informed decisions about their academic and professional future.",
+      ],
+    },
   },
   // {
   //   slug: "red-chief",
@@ -435,14 +712,15 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
     img: hauteBabypic,
     projectName: "Haute Baby",
     department: PROJECTS_DEPARTMENT.DEVELOPMENT,
-    description: "Haute Baby is a premium baby clothing brand that offers stylish and comfortable clothes for babies and toddlers. The brand is known for its unique designs, high-quality fabrics, and attention to detail. Haute Baby's website provides a complete e-commerce experience with product browsing, search, filters, offers, cart and checkout, order tracking, and store locator. The brand also offers a loyalty program for its customers.",
+    description:
+      "Haute Baby is a premium baby clothing brand that offers stylish and comfortable clothes for babies and toddlers. The brand is known for its unique designs, high-quality fabrics, and attention to detail. Haute Baby's website provides a complete e-commerce experience with product browsing, search, filters, offers, cart and checkout, order tracking, and store locator. The brand also offers a loyalty program for its customers.",
     details: {
       heroImage: "/images/projects/hero/hauteHero.png",
       title: "Haute Baby",
       description: [
-        "Haute Baby is a premium baby clothing brand that offers stylish and comfortable clothes for babies and toddlers. The brand is known for its unique designs, high-quality fabrics, and attention to detail. Haute Baby's website provides a complete e-commerce experience with product browsing, search, filters, offers, cart and checkout, order tracking, and store locator. The brand also offers a loyalty program for its customers."
-      ]
-    }
+        "Haute Baby is a premium baby clothing brand that offers stylish and comfortable clothes for babies and toddlers. The brand is known for its unique designs, high-quality fabrics, and attention to detail. Haute Baby's website provides a complete e-commerce experience with product browsing, search, filters, offers, cart and checkout, order tracking, and store locator. The brand also offers a loyalty program for its customers.",
+      ],
+    },
   },
   {
     slug: "namaste-india",
@@ -450,14 +728,15 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
     img: namastepic,
     projectName: "Namaste India",
     department: PROJECTS_DEPARTMENT.DEVELOPMENT,
-    description: "Namaste India is an Indian dairy and frozen-dessert brand focused on providing fresh, nutritious, and quality food products to consumers. Operated by NIF Private Limited and supported by the RSPL Group, the brand offers a wide range of dairy products including milk, curd, paneer, ghee, butter, lassi, flavoured milk, and buttermilk. Namaste India has also expanded into ice creams and frozen desserts, offering a diverse portfolio of cones, cups, bars, kulfis, tubs, family packs, and ice-cream cakes in both classic and traditional Indian flavours. The brand emphasizes quality, modern processing technology, and fresh milk to deliver products designed for everyday consumption as well as indulgent occasions.",
+    description:
+      "Namaste India is an Indian dairy and frozen-dessert brand focused on providing fresh, nutritious, and quality food products to consumers. Operated by NIF Private Limited and supported by the RSPL Group, the brand offers a wide range of dairy products including milk, curd, paneer, ghee, butter, lassi, flavoured milk, and buttermilk. Namaste India has also expanded into ice creams and frozen desserts, offering a diverse portfolio of cones, cups, bars, kulfis, tubs, family packs, and ice-cream cakes in both classic and traditional Indian flavours. The brand emphasizes quality, modern processing technology, and fresh milk to deliver products designed for everyday consumption as well as indulgent occasions.",
     details: {
       heroImage: "/images/projects/hero/namasteHero.png",
       title: "Namaste India",
       description: [
-        "Namaste India is an Indian dairy and frozen-dessert brand focused on providing fresh, nutritious, and quality food products to consumers. Operated by NIF Private Limited and supported by the RSPL Group, the brand offers a wide range of dairy products including milk, curd, paneer, ghee, butter, lassi, flavoured milk, and buttermilk. Namaste India has also expanded into ice creams and frozen desserts, offering a diverse portfolio of cones, cups, bars, kulfis, tubs, family packs, and ice-cream cakes in both classic and traditional Indian flavours. The brand emphasizes quality, modern processing technology, and fresh milk to deliver products designed for everyday consumption as well as indulgent occasions."
-      ]
-    }
+        "Namaste India is an Indian dairy and frozen-dessert brand focused on providing fresh, nutritious, and quality food products to consumers. Operated by NIF Private Limited and supported by the RSPL Group, the brand offers a wide range of dairy products including milk, curd, paneer, ghee, butter, lassi, flavoured milk, and buttermilk. Namaste India has also expanded into ice creams and frozen desserts, offering a diverse portfolio of cones, cups, bars, kulfis, tubs, family packs, and ice-cream cakes in both classic and traditional Indian flavours. The brand emphasizes quality, modern processing technology, and fresh milk to deliver products designed for everyday consumption as well as indulgent occasions.",
+      ],
+    },
   },
   {
     slug: "netra-niti",
@@ -465,14 +744,15 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
     img: netrapic,
     projectName: "Netra Niti",
     department: PROJECTS_DEPARTMENT.DEVELOPMENT,
-    description: "Netra Niti is a child-focused eye-care platform dedicated to preventing and managing childhood myopia through early detection, personalized treatment, and continuous vision monitoring. The platform provides comprehensive services including school vision screenings, eye examinations, advanced myopia-control treatments, personalized care plans, and preventive lifestyle guidance. Its 360° vision protection approach combines modern diagnostic techniques, evidence-based treatments such as atropine therapy and Ortho-K, and ongoing monitoring to help protect children’s eyesight in the long term. Netra Niti also focuses on educating parents and children about healthy vision habits, including spending time outdoors, limiting screen exposure, maintaining a safe reading distance, and getting regular eye check-ups. Overall, the platform aims to provide scientific, accessible, and child-centered eye care that supports healthier vision and brighter futures for children.",
+    description:
+      "Netra Niti is a child-focused eye-care platform dedicated to preventing and managing childhood myopia through early detection, personalized treatment, and continuous vision monitoring. The platform provides comprehensive services including school vision screenings, eye examinations, advanced myopia-control treatments, personalized care plans, and preventive lifestyle guidance. Its 360° vision protection approach combines modern diagnostic techniques, evidence-based treatments such as atropine therapy and Ortho-K, and ongoing monitoring to help protect children’s eyesight in the long term. Netra Niti also focuses on educating parents and children about healthy vision habits, including spending time outdoors, limiting screen exposure, maintaining a safe reading distance, and getting regular eye check-ups. Overall, the platform aims to provide scientific, accessible, and child-centered eye care that supports healthier vision and brighter futures for children.",
     details: {
       heroImage: "/images/projects/hero/netraHero.png",
       title: "Netra Niti",
       description: [
-        "Netra Niti is a child-focused eye-care platform dedicated to preventing and managing childhood myopia through early detection, personalized treatment, and continuous vision monitoring. The platform provides comprehensive services including school vision screenings, eye examinations, advanced myopia-control treatments, personalized care plans, and preventive lifestyle guidance. Its 360° vision protection approach combines modern diagnostic techniques, evidence-based treatments such as atropine therapy and Ortho-K, and ongoing monitoring to help protect children’s eyesight in the long term. Netra Niti also focuses on educating parents and children about healthy vision habits, including spending time outdoors, limiting screen exposure, maintaining a safe reading distance, and getting regular eye check-ups. Overall, the platform aims to provide scientific, accessible, and child-centered eye care that supports healthier vision and brighter futures for children."
-      ]
-    }
+        "Netra Niti is a child-focused eye-care platform dedicated to preventing and managing childhood myopia through early detection, personalized treatment, and continuous vision monitoring. The platform provides comprehensive services including school vision screenings, eye examinations, advanced myopia-control treatments, personalized care plans, and preventive lifestyle guidance. Its 360° vision protection approach combines modern diagnostic techniques, evidence-based treatments such as atropine therapy and Ortho-K, and ongoing monitoring to help protect children’s eyesight in the long term. Netra Niti also focuses on educating parents and children about healthy vision habits, including spending time outdoors, limiting screen exposure, maintaining a safe reading distance, and getting regular eye check-ups. Overall, the platform aims to provide scientific, accessible, and child-centered eye care that supports healthier vision and brighter futures for children.",
+      ],
+    },
   },
   {
     slug: "rasdelta",
@@ -480,14 +760,15 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
     img: raspic,
     projectName: "Ras Delta",
     department: PROJECTS_DEPARTMENT.DIGITAL,
-    description: "Rasdelta is an Indian luxury bathroom and wellness solutions company specializing in the design, manufacturing, and supply of premium bathing and relaxation products. The company offers a comprehensive range of products including bathtubs, Jacuzzi and whirlpool systems, multifunction shower enclosures, shower panels, rain showers, steam baths, sauna rooms, and other wellness equipment. Rasdelta combines modern technology, innovative designs, quality materials, and functional features to deliver a luxurious and spa-like bathing experience for customers. With a focus on comfort, aesthetics, and wellness, the company provides solutions suitable for modern residential and commercial spaces, helping transform conventional bathrooms into sophisticated relaxation and rejuvenation environments.",
+    description:
+      "Rasdelta is an Indian luxury bathroom and wellness solutions company specializing in the design, manufacturing, and supply of premium bathing and relaxation products. The company offers a comprehensive range of products including bathtubs, Jacuzzi and whirlpool systems, multifunction shower enclosures, shower panels, rain showers, steam baths, sauna rooms, and other wellness equipment. Rasdelta combines modern technology, innovative designs, quality materials, and functional features to deliver a luxurious and spa-like bathing experience for customers. With a focus on comfort, aesthetics, and wellness, the company provides solutions suitable for modern residential and commercial spaces, helping transform conventional bathrooms into sophisticated relaxation and rejuvenation environments.",
     details: {
       heroImage: "/images/projects/hero/rasdeltahero.png",
       title: "Ras Delta",
       description: [
-        "Rasdelta is an Indian luxury bathroom and wellness solutions company specializing in the design, manufacturing, and supply of premium bathing and relaxation products. The company offers a comprehensive range of products including bathtubs, Jacuzzi and whirlpool systems, multifunction shower enclosures, shower panels, rain showers, steam baths, sauna rooms, and other wellness equipment. Rasdelta combines modern technology, innovative designs, quality materials, and functional features to deliver a luxurious and spa-like bathing experience for customers. With a focus on comfort, aesthetics, and wellness, the company provides solutions suitable for modern residential and commercial spaces, helping transform conventional bathrooms into sophisticated relaxation and rejuvenation environments."
-      ]
-    }
+        "Rasdelta is an Indian luxury bathroom and wellness solutions company specializing in the design, manufacturing, and supply of premium bathing and relaxation products. The company offers a comprehensive range of products including bathtubs, Jacuzzi and whirlpool systems, multifunction shower enclosures, shower panels, rain showers, steam baths, sauna rooms, and other wellness equipment. Rasdelta combines modern technology, innovative designs, quality materials, and functional features to deliver a luxurious and spa-like bathing experience for customers. With a focus on comfort, aesthetics, and wellness, the company provides solutions suitable for modern residential and commercial spaces, helping transform conventional bathrooms into sophisticated relaxation and rejuvenation environments.",
+      ],
+    },
   },
   // {
   //   slug: "shipsmith",
@@ -545,5 +826,4 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
   //     ]
   //   }
   // },
-
 ];

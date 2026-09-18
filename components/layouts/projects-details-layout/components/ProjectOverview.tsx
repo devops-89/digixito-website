@@ -3,9 +3,9 @@ import { Box, Grid, Typography } from "@mui/material";
 import { motion } from "motion/react";
 import Image, { StaticImageData } from "next/image";
 
-import BusinessOutlinedIcon from '@mui/icons-material/BusinessOutlined';
-import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
-import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import BusinessOutlinedIcon from "@mui/icons-material/BusinessOutlined";
+import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 
 const MotionBox = motion(Box);
 
@@ -37,38 +37,46 @@ const ProjectOverview = ({
   images = [],
 }: ProjectOverviewProps) => {
   // Process Video URLs
-  const validVideoUrls = videoUrls.filter((url): url is string => !!url).map(url => {
-    let embedUrl = url;
-    try {
-      if (url.includes("vimeo.com")) {
-        const videoId = url.split("vimeo.com/")[1]?.split("?")[0];
-        if (videoId) embedUrl = `https://player.vimeo.com/video/${videoId}`;
+  const validVideoUrls = videoUrls
+    .filter((url): url is string => !!url)
+    .map((url) => {
+      let embedUrl = url;
+      try {
+        if (url.includes("vimeo.com")) {
+          const videoId = url.split("vimeo.com/")[1]?.split("?")[0];
+          if (videoId) embedUrl = `https://player.vimeo.com/video/${videoId}`;
+        }
+        if (url.includes("youtube.com/watch")) {
+          const videoId = new URL(url).searchParams.get("v");
+          if (videoId) embedUrl = `https://www.youtube.com/embed/${videoId}`;
+        }
+        if (url.includes("youtu.be/")) {
+          const videoId = url.split("youtu.be/")[1]?.split("?")[0];
+          if (videoId) embedUrl = `https://www.youtube.com/embed/${videoId}`;
+        }
+      } catch (e) {
+        // Ignore url parse errors
       }
-      if (url.includes("youtube.com/watch")) {
-        const videoId = new URL(url).searchParams.get("v");
-        if (videoId) embedUrl = `https://www.youtube.com/embed/${videoId}`;
-      }
-      if (url.includes("youtu.be/")) {
-        const videoId = url.split("youtu.be/")[1]?.split("?")[0];
-        if (videoId) embedUrl = `https://www.youtube.com/embed/${videoId}`;
-      }
-    } catch (e) {
-      // Ignore url parse errors
-    }
-    return embedUrl;
-  });
+      return embedUrl;
+    });
 
   const mediaItems = [
-    ...images.map(url => ({ type: "image", url })),
-    ...validVideoUrls.map(url => ({ type: "video", url }))
+    ...images.map((url) => ({ type: "image", url })),
+    ...validVideoUrls.map((url) => ({ type: "video", url })),
   ];
 
   return (
-    <Box sx={{ width: "100%", pb: { xs: 6, md: 10 }, display: "flex", flexDirection: "column", alignItems: "center" }}>
-      
+    <Box
+      sx={{
+        width: "100%",
+        pb: { xs: 6, md: 10 },
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
       {/* Wrapper to guarantee perfect left alignment for all sections */}
       <Box sx={{ width: "100%" }}>
-
         {/* Left-Aligned Introduction */}
         <MotionBox
           initial={{ opacity: 0, y: 30 }}
@@ -123,17 +131,27 @@ const ProjectOverview = ({
 
         {/* 2-Column Visual & Media Gallery */}
         {mediaItems.length > 0 && (
-          <Grid container spacing={4} sx={{ mb: { xs: 10, md: 15 }, width: "100%" }}>
+          <Grid
+            container
+            spacing={4}
+            sx={{ mb: { xs: 10, md: 15 }, width: "100%" }}
+          >
             {mediaItems.slice(0, 2).map((item, idx) => (
-              <Grid size={{ xs: 12, sm: Math.min(mediaItems.length, 2) > 1 ? 6 : 12 }} key={idx}>
+              <Grid
+                size={{
+                  xs: 12,
+                  sm: Math.min(mediaItems.length, 2) > 1 ? 6 : 12,
+                }}
+                key={idx}
+              >
                 <MotionBox
                   initial={{ opacity: 0, scale: 0.95, y: 40 }}
                   whileInView={{ opacity: 1, scale: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
-                  transition={{ 
-                    duration: 1, 
+                  transition={{
+                    duration: 1,
                     ease: [0.16, 1, 0.3, 1], // Very smooth, premium ease-out curve
-                    delay: idx * 0.15 
+                    delay: idx * 0.15,
                   }}
                   sx={{
                     borderRadius: "24px",
@@ -145,7 +163,12 @@ const ProjectOverview = ({
                   }}
                 >
                   {item.type === "image" ? (
-                    <Image src={item.url} alt={`${projectTitle} showcase ${idx + 1}`} fill style={{ objectFit: "cover" }} />
+                    <Image
+                      src={item.url}
+                      alt={`${projectTitle} showcase ${idx + 1}`}
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
                   ) : (
                     <iframe
                       src={item.url}
@@ -168,7 +191,15 @@ const ProjectOverview = ({
         )}
 
         {/* Content Sections (Left-Aligned Stack) */}
-        <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 3, md: 4 }, width: "100%", textAlign: "left" }}>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: { xs: 3, md: 4 },
+            width: "100%",
+            textAlign: "left",
+          }}
+        >
           {[
             { title: "The Challenge", text: challenges },
             { title: "Our Approach", text: approachText },
@@ -217,7 +248,6 @@ const ProjectOverview = ({
               ),
           )}
         </Box>
-
       </Box>
     </Box>
   );
