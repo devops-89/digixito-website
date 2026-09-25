@@ -2,31 +2,31 @@ import { MetadataRoute } from "next";
 import { BLOGS_DATA } from "@/public/locale/blogs-data";
 import { CASE_STUDIES_DATA } from "@/public/locale/case-studies-data";
 import { PROJECT_DATA } from "@/assets/data/project-data";
+import { SEO_DATA } from "@/utils/seo-metadata";
 
 const baseUrl = "https://www.digixito.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = [
-    "",
-    "/about-us",
-    "/contact-us",
+  const seoRoutes = Object.keys(SEO_DATA).map((route) => {
+    const cleanRoute = route === "/" ? "" : route;
+    return {
+      url: `${baseUrl}${cleanRoute}`,
+      lastModified: new Date(),
+      changeFrequency: route === "/" ? ("daily" as const) : ("weekly" as const),
+      priority: route === "/" ? 1 : route.split("/").length > 2 ? 0.64 : 0.8,
+    };
+  });
+
+  const additionalStaticRoutes = [
+    "/careers",
     "/privacy-policy",
     "/terms",
-    "/ai-transformation",
-    "/business-transformation",
-    "/product-engineering",
-    "/ai-marketing-growth",
-    "/design-intelligence",
-    "/careers",
-    "/careers/life-at-digixito",
-    "/blogs",
-    "/case-studies",
     "/projects",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
-    priority: route === "" ? 1 : 0.8,
+    priority: 0.8,
   }));
 
   const blogRoutes = BLOGS_DATA.map((blog) => ({
@@ -50,10 +50,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [
-    ...staticRoutes,
+  const allEntries = [
+    ...seoRoutes,
+    ...additionalStaticRoutes,
     ...blogRoutes,
     ...caseStudyRoutes,
     ...projectRoutes,
   ];
+
+  const uniqueEntries = Array.from(
+    new Map(allEntries.map((item) => [item.url, item])).values()
+  );
+
+  return uniqueEntries;
 }

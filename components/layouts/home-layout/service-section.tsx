@@ -53,7 +53,8 @@ const ServiceSection = () => {
           <Grid size={{ lg: 5, xs: 12, sm: 5 }}>
             <Stack direction={"row"} alignItems={"center"} spacing={2}>
               <Typography
-              variant="h2"
+                component="h2"
+                variant="h2"
                 sx={{
                   fontSize: { lg: 35, xs: 25 },
                   fontFamily: monument.style.fontFamily,
