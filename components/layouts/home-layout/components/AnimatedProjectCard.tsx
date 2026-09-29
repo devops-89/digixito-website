@@ -11,6 +11,7 @@ const AnimatedProjectCard = ({
   projectName,
   department,
   details,
+  img,
   index,
   total,
   scrollYProgress,
@@ -19,7 +20,7 @@ const AnimatedProjectCard = ({
   total?: number;
   scrollYProgress?: MotionValue<number>;
 }) => {
-  const imageSrc = details?.heroImage;
+  const imageSrc = details?.heroImage || img;
 
   // Calculate the center position for this card based on its index
   const centerPosition =

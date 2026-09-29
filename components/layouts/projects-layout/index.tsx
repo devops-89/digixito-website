@@ -15,9 +15,10 @@ const ProjectsLayout = () => {
   };
 
   const activeTab = PROJECTS_TABS_DATA[tabValue].label;
-  const filteredProjects = activeTab === PROJECTS_DEPARTMENT.ALL 
-    ? OLD_PROJECTS_DATA 
-    : OLD_PROJECTS_DATA.filter(p => p.department === activeTab);
+  const filteredProjects =
+    activeTab === PROJECTS_DEPARTMENT.ALL
+      ? OLD_PROJECTS_DATA
+      : OLD_PROJECTS_DATA.filter((p) => p.department === activeTab);
 
   return (
     <Box sx={{ py: 10 }}>
@@ -55,7 +56,16 @@ const ProjectsLayout = () => {
         <Grid container spacing={4} sx={{ mt: 3 }}>
           <AnimatePresence mode="wait">
             {filteredProjects.map((val, i) => (
-              <Grid size={{ xs: 12, md: 4 }} key={val.slug} component={motion.div} layout initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.4 }}>
+              <Grid
+                size={{ xs: 12, md: 4 }}
+                key={val.slug}
+                component={motion.div}
+                layout
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4 }}
+              >
                 <ProjectCard2 {...val} />
               </Grid>
             ))}

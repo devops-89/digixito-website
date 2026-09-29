@@ -6,7 +6,7 @@ import { useProjectDetailsStore } from "@/store/useProjectDetailsStore";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { monument } from "@/utils/fonts";
+import { kessel_bold } from "@/utils/fonts";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -104,6 +104,8 @@ const ProjectHero = () => {
     ));
   };
 
+  const title = projectDetails?.details?.title || projectDetails?.projectName;
+
   return (
     <Box
       ref={containerRef}
@@ -138,13 +140,13 @@ const ProjectHero = () => {
               color: "#1F2326",
               fontWeight: 900,
               fontSize: { xs: "2.5rem", md: "4.5rem", lg: "5.5rem" },
-              fontFamily: monument.style.fontFamily,
+              fontFamily: kessel_bold.style.fontFamily,
               textTransform: "uppercase",
               letterSpacing: "-2px",
               lineHeight: 1,
             }}
           >
-            {renderTitleWithWords(projectDetails?.projectName)}
+            {renderTitleWithWords(title)}
           </Typography>
         </Box>
 
@@ -171,11 +173,11 @@ const ProjectHero = () => {
             <Image
               ref={imageRef}
               src={
-                projectDetails?.creative?.heroImage ||
                 projectDetails?.details?.heroImage ||
+                projectDetails?.creative?.heroImage ||
                 "/images/projects/heroimg.jpg"
               }
-              alt={`${projectDetails?.projectName} Hero Background`}
+              alt={`${title} Hero Background`}
               fill
               style={{
                 objectFit: "cover",

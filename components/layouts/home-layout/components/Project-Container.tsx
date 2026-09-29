@@ -46,7 +46,7 @@ const ProjectContainer = () => {
         </Tabs> */}
 
         <Grid container sx={{ mt: 2 }} spacing={3}>
-          {OLD_PROJECTS_DATA.slice(0, 6).map((val, i) => (
+          {OLD_PROJECTS_DATA.map((val, i) => (
             <Grid size={4} key={i}>
               <ProjectCard2 {...val} />
             </Grid>

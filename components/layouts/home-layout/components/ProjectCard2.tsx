@@ -19,7 +19,16 @@ const ProjectCard2 = ({
   description,
 }: PROJECT_CARD_DATA_PROPS) => {
   return (
-    <Box sx={{ position: "relative", width: "100%", pt: 2, height: "100%", display: "flex", flexDirection: "column" }}>
+    <Box
+      sx={{
+        position: "relative",
+        width: "100%",
+        pt: 2,
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <Box
         sx={{
           background: "linear-gradient(135deg, #222222 0%, #161616 100%)",
@@ -116,7 +125,17 @@ const ProjectCard2 = ({
         </Box>
 
         <Box
-          sx={{ p: 4, pb: 3, pt: 5, position: "relative", zIndex: 1, mt: 5, display: "flex", flexDirection: "column", flexGrow: 1 }}
+          sx={{
+            p: 4,
+            pb: 3,
+            pt: 5,
+            position: "relative",
+            zIndex: 1,
+            mt: 5,
+            display: "flex",
+            flexDirection: "column",
+            flexGrow: 1,
+          }}
         >
           <Stack direction="row" alignItems="center" spacing={2} sx={{ mb: 4 }}>
             <Box
@@ -132,11 +151,17 @@ const ProjectCard2 = ({
                 p: 0.5,
               }}
             >
-              <Image
-                src={logo || img}
-                alt={projectName}
-                style={{ width: "100%", height: "auto", objectFit: "contain" }}
-              />
+              {logo ? (
+                <Image
+                  src={logo}
+                  alt={projectName}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    objectFit: "contain",
+                  }}
+                />
+              ) : null}
             </Box>
             <Stack direction="row" alignItems="center" spacing={0.5}>
               <Typography
@@ -165,7 +190,10 @@ const ProjectCard2 = ({
 
           <Box sx={{ mt: "auto", pt: 3 }}>
             {slug ? (
-              <Link href={`/projects/${slug}`} style={{ textDecoration: "none" }}>
+              <Link
+                href={`/projects/${slug}`}
+                style={{ textDecoration: "none" }}
+              >
                 <Box
                   className="read-more-btn"
                   sx={{

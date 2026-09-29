@@ -7,6 +7,7 @@ import { useProjectDetailsStore } from "@/store/useProjectDetailsStore";
 import { PROJECTS_DEPARTMENT } from "@/utils/enum";
 import CreativeProjectOverview from "./components/CreativeProjectOverview";
 import { Box } from "@mui/material";
+import DevelopmentOverview from "./components/development/Index";
 
 const ProjectDetailsLayout2 = () => {
   const { projectDetails } = useProjectDetailsStore();
@@ -21,9 +22,12 @@ const ProjectDetailsLayout2 = () => {
           <ProjectOverview />
         </Box>
       ) : projectDetails?.department === PROJECTS_DEPARTMENT.CREATIVE ? (
-        <CreativeProjectOverview />
+        <Box>
+          <ProjectHero />
+          <CreativeProjectOverview />
+        </Box>
       ) : (
-        <ProjectOverview />
+        <DevelopmentOverview />
       )}
       <MoreProjects currentSlug={projectDetails?.slug || ""} />
     </div>

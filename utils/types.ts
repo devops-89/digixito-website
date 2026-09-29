@@ -267,8 +267,14 @@ export interface projectDetails {
   videoUrl3?: string;
   images?: (string | StaticImageData)[];
   heroImage?: StaticImageData | string;
-  result: ProjectResult;
-  conclusion: { description: string[] };
+  result?: ProjectResult;
+  conclusion?: { description: string[] };
+  techStack?: string[];
+  features?: {
+    heading?: string;
+    data: LIST[];
+  };
+  liveLink?: string;
 }
 export interface CREATIVE_DETAILS {
   img?: string[];
@@ -282,4 +288,14 @@ export interface PROJECT_CARD_DATA_PROPS {
   logo?: StaticImageData;
   description?: string;
   details?: projectDetails;
+  creative?: {
+    heroImage?: StaticImageData;
+    images?: StaticImageData[] | string[];
+    videoUrls?: string[];
+    details?: {
+      heading?: string;
+      data?: LIST[];
+      description: string[];
+    };
+  };
 }
