@@ -43,15 +43,17 @@ const ProjectCard3 = ({
           zIndex: 1,
         }}
       >
-        <Image
-          src={img}
-          alt={projectName}
-          fill
-          style={{
-            objectFit: "contain",
-            padding: "24px",
-          }}
-        />
+        {img && (
+          <Image
+            src={img}
+            alt={projectName}
+            fill
+            style={{
+              objectFit: "contain",
+              padding: "24px",
+            }}
+          />
+        )}
       </Box>
 
       <Box

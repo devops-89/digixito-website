@@ -32,7 +32,7 @@ const ProjectCard = ({
             position: "relative",
           }}
         >
-          <Image src={img} alt="" />
+          {img && <Image src={img} alt="" />}
           <Box
             sx={{
               display: "flex",
