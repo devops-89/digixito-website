@@ -3,6 +3,7 @@ import React from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import { COLORS } from "@/utils/enum";
 import { kessel_bold } from "@/utils/fonts";
+import CreativeProcessCard from "./components/Creative-Process-Card";
 
 export const CreativeProcess = ({ projectInfo }: any) => {
   return (
@@ -22,45 +23,18 @@ export const CreativeProcess = ({ projectInfo }: any) => {
             >
               Creative Process
             </Typography>
-            <Grid container spacing={4} rowSpacing={6} className="stagger-list">
-              {projectInfo.strategies.details.data.map((step: any, idx: number) => (
-                <Grid size={{ xs: 12, sm: 6, md: 3 }} key={idx}>
-                  <Box
-                    className="stagger-item"
-                    sx={{
-                      p: 4,
-                      bgcolor: "#fff",
-                      borderRadius: "16px",
-                      height: "100%",
-                      border: "1px solid rgba(0,0,0,0.05)",
-                    }}
-                  >
-                    <Typography
-                      sx={{
-                        color: COLORS.PRIMARY,
-                        fontFamily: kessel_bold.style.fontFamily,
-                        fontSize: "2rem",
-                        mb: 2,
-                      }}
-                    >
-                      0{idx + 1}
-                    </Typography>
-                    <Typography
-                      sx={{
-                        fontFamily: kessel_bold.style.fontFamily,
-                        fontSize: "1.2rem",
-                        mb: 2,
-                        textTransform: "uppercase",
-                      }}
-                    >
-                      {step.primary}
-                    </Typography>
-                    <Typography sx={{ color: "#666" }}>
-                      {step.secondary}
-                    </Typography>
-                  </Box>
-                </Grid>
-              ))}
+            <Grid container spacing={4}>
+              {projectInfo.strategies.details.data.map(
+                (step: any, idx: number) => (
+                  <Grid size={{ xs: 12, sm: 6, md: 3 }} key={idx}>
+                    <CreativeProcessCard
+                      idx={idx}
+                      primary={step.primary}
+                      secondary={step.secondary}
+                    />
+                  </Grid>
+                ),
+              )}
             </Grid>
           </Container>
         </Box>

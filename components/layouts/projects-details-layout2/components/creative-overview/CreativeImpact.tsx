@@ -9,7 +9,7 @@ export const CreativeImpact = ({ projectInfo }: any) => {
     <>
       {projectInfo?.result && (
         <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: "#111", color: "#fff" }}>
-          <Container maxWidth="xl">
+          <Container maxWidth="lg">
             <Grid container spacing={8}>
               <Grid size={{ xs: 12, md: 5 }}>
                 <Typography
@@ -25,50 +25,58 @@ export const CreativeImpact = ({ projectInfo }: any) => {
                   The Impact
                 </Typography>
                 <Box className="reveal-up">
-                  {projectInfo.result.description.map((desc: string, i: number) => (
-                    <Typography
-                      key={i}
-                      sx={{
-                        fontSize: "1.1rem",
-                        color: "#aaa",
-                        mb: 2,
-                        lineHeight: 1.8,
-                      }}
-                    >
-                      {desc}
-                    </Typography>
-                  ))}
+                  {projectInfo.result.description.map(
+                    (desc: string, i: number) => (
+                      <Typography
+                        key={i}
+                        sx={{
+                          fontSize: "1.1rem",
+                          color: "#aaa",
+                          mb: 2,
+                          lineHeight: 1.8,
+                        }}
+                      >
+                        {desc}
+                      </Typography>
+                    ),
+                  )}
                 </Box>
               </Grid>
               <Grid size={{ xs: 12, md: 6 }} offset={{ md: 1 }}>
                 {projectInfo.result.details?.data && (
                   <Grid container spacing={4} className="stagger-list">
-                    {projectInfo.result.details.data.map((stat: any, idx: number) => (
-                      <Grid size={{ xs: 6 }} key={idx} className="stagger-item">
-                        <Box
-                          sx={{
-                            borderTop: "2px solid rgba(255,255,255,0.2)",
-                            pt: 3,
-                          }}
+                    {projectInfo.result.details.data.map(
+                      (stat: any, idx: number) => (
+                        <Grid
+                          size={{ xs: 6 }}
+                          key={idx}
+                          className="stagger-item"
                         >
-                          <Typography
+                          <Box
                             sx={{
-                              fontFamily: kessel_bold.style.fontFamily,
-                              fontSize: { xs: "2rem", md: "3rem" },
-                              color: COLORS.PRIMARY,
-                              mb: 1,
+                              borderTop: "2px solid rgba(255,255,255,0.2)",
+                              pt: 3,
                             }}
                           >
-                            {stat.primary}
-                          </Typography>
-                          <Typography
-                            sx={{ fontSize: "1.1rem", color: "#ddd" }}
-                          >
-                            {stat.secondary}
-                          </Typography>
-                        </Box>
-                      </Grid>
-                    ))}
+                            <Typography
+                              sx={{
+                                fontFamily: kessel_bold.style.fontFamily,
+                                fontSize: { xs: "2rem", md: "3rem" },
+                                color: COLORS.PRIMARY,
+                                mb: 1,
+                              }}
+                            >
+                              {stat.primary}
+                            </Typography>
+                            <Typography
+                              sx={{ fontSize: "1.1rem", color: "#ddd" }}
+                            >
+                              {stat.secondary}
+                            </Typography>
+                          </Box>
+                        </Grid>
+                      ),
+                    )}
                   </Grid>
                 )}
               </Grid>

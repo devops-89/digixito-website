@@ -275,9 +275,11 @@ export interface projectDetails {
     data: LIST[];
   };
   liveLink?: string;
+  shootImages?: StaticImageData[];
 }
 export interface CREATIVE_DETAILS {
   img?: string[];
+  shootImages?: StaticImageData[];
 }
 
 export interface PROJECT_CARD_DATA_PROPS {

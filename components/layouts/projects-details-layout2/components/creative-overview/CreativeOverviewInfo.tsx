@@ -76,8 +76,7 @@ export const CreativeOverviewInfo = ({ creativeData, projectInfo }: any) => {
         <Grid size={{ xs: 12, md: 4 }} offset={{ md: 1 }}>
           <Box className="stagger-list" sx={{ pt: { md: 10 } }}>
             {(
-              creativeData?.details?.data ||
-              projectInfo?.result?.details?.data
+              creativeData?.details?.data || projectInfo?.result?.details?.data
             )?.map((item: any, idx: number) => (
               <Box
                 key={idx}

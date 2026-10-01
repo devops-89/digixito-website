@@ -65,6 +65,11 @@ import mytreks8 from "@/projects/old-projects/my-treks/mytreks8.png";
 import hauteHero from "@/projects/Hero/hauteHero.png";
 import namasteHero from "@/projects/old-projects/namaste-india/namaste-hero.png";
 import netrahero from "@/projects/Hero/netraHero.png";
+import bellaShoot1 from "@/projects/old-projects/bella-casa/bella-casa-shoot1.jpeg";
+import bellaShoot2 from "@/projects/old-projects/bella-casa/bella-casa-shoot2.jpeg";
+import bellaShoot3 from "@/projects/old-projects/bella-casa/bella-casa-shoot3.jpeg";
+import bellaShoot4 from "@/projects/old-projects/bella-casa/bella-casa-shoot4.jpeg";
+import bellaShoot5 from "@/projects/old-projects/bella-casa/bella-casa-shoot5.jpeg";
 export const PROJECTS_TABS_DATA = [
   {
     label: PROJECTS_DEPARTMENT.ALL,
@@ -516,12 +521,12 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
                 "Created a distinctive creative direction that reflected the innovation and technological sophistication of the HP PageWide Pro 577dw MFP.",
             },
             {
-              primary: "Feature-Led Storytelling",
+              primary: "Feature Led Storytelling",
               secondary:
                 "Identified the product’s strongest features and converted them into easy-to-understand and visually engaging communication.",
             },
             {
-              primary: "Digital-First Communication",
+              primary: "Digital First Communication",
               secondary:
                 "Built the campaign specifically for digital platforms, ensuring that the messaging could capture attention quickly and communicate the product proposition effectively.",
             },
@@ -536,7 +541,7 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
                 "Used strong creative concepts and product-centric visuals to make the technology more relatable and memorable.",
             },
             {
-              primary: "Audience-Focused Messaging",
+              primary: "Audience Focused Messaging",
               secondary:
                 "Developed communication that addressed the practical needs of businesses and professionals rather than simply listing technical specifications.",
             },
@@ -746,17 +751,24 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
     details: {
       heroImage: bellacasa,
       title: "Bella Casa",
+      shootImages: [
+        bellaShoot1,
+        bellaShoot2,
+        bellaShoot3,
+        bellaShoot4,
+        bellaShoot5,
+      ],
       images: [
         bellacasa1,
         bellacasa2,
-        bellacasa3,
-        bellacasa4,
-        bellacasa5,
-        bellacasa6,
-        bellacasa7,
-        bellacasa8,
-        bellacasa9,
-        bellacasa10,
+        // bellacasa3,
+        // bellacasa4,
+        // bellacasa5,
+        // bellacasa6,
+        // bellacasa7,
+        // bellacasa8,
+        // bellacasa9,
+        // bellacasa10,
       ],
       description: [
         "Bellacasa Fashion and Retail Ltd. approached us during a significant brand remodeling phase, with a clear ambition to elevate its visual identity and create a stronger premium presence in the bedsheet and home-fashion category.",
@@ -1687,25 +1699,31 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
           heading: "Results",
           data: [
             {
-              primary: "Created a comprehensive digital platform for childhood eye care",
+              primary:
+                "Created a comprehensive digital platform for childhood eye care",
             },
             {
-              primary: "Connected early detection with personalized vision care",
+              primary:
+                "Connected early detection with personalized vision care",
             },
             {
               primary: "Presented advanced myopia-control treatment options",
             },
             {
-              primary: "Established continuous vision monitoring as part of the care journey",
+              primary:
+                "Established continuous vision monitoring as part of the care journey",
             },
             {
-              primary: "Provided preventive lifestyle and healthy vision guidance",
+              primary:
+                "Provided preventive lifestyle and healthy vision guidance",
             },
             {
-              primary: "Created an accessible experience for parents and children",
+              primary:
+                "Created an accessible experience for parents and children",
             },
             {
-              primary: "Unified education, prevention, treatment, and monitoring",
+              primary:
+                "Unified education, prevention, treatment, and monitoring",
             },
           ],
         },
@@ -1796,22 +1814,27 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
               primary: "Strengthened Rasdelta's premium digital presence",
             },
             {
-              primary: "Showcased the complete luxury bathroom and wellness portfolio",
+              primary:
+                "Showcased the complete luxury bathroom and wellness portfolio",
             },
             {
-              primary: "Highlighted modern technology and innovative product features",
+              primary:
+                "Highlighted modern technology and innovative product features",
             },
             {
-              primary: "Communicated the brand's focus on comfort, aesthetics, and wellness",
+              primary:
+                "Communicated the brand's focus on comfort, aesthetics, and wellness",
             },
             {
               primary: "Created an engaging product discovery experience",
             },
             {
-              primary: "Presented residential and commercial wellness solutions",
+              primary:
+                "Presented residential and commercial wellness solutions",
             },
             {
-              primary: "Positioned bathroom products as premium lifestyle and wellness experiences",
+              primary:
+                "Positioned bathroom products as premium lifestyle and wellness experiences",
             },
           ],
         },

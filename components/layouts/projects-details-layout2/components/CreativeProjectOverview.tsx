@@ -15,6 +15,7 @@ import { CreativeFeaturedWorks } from "./creative-overview/CreativeFeaturedWorks
 import { CreativeImpact } from "./creative-overview/CreativeImpact";
 import { CreativeCTA } from "./creative-overview/CreativeCTA";
 import { CreativeLightbox } from "./creative-overview/CreativeLightbox";
+import CreativeShoot from "./creative-overview/CreativeShoot";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -100,27 +101,33 @@ const CreativeProjectOverview = () => {
         fontFamily: archivo.style.fontFamily,
       }}
     >
-      <CreativeOverviewInfo creativeData={creativeData} projectInfo={projectInfo} />
-      
-      <CreativeChallengeSolution projectDetails={projectDetails} projectInfo={projectInfo} />
-      
-      <CreativeProcess projectInfo={projectInfo} />
-      
-      <CreativeVideo creativeData={creativeData} />
-      
-      <CreativeFeaturedWorks 
-        creativeData={creativeData} 
-        projectInfo={projectInfo} 
-        setSelectedImage={setSelectedImage} 
+      <CreativeOverviewInfo
+        creativeData={creativeData}
+        projectInfo={projectInfo}
       />
-      
+
+      <CreativeChallengeSolution
+        projectDetails={projectDetails}
+        projectInfo={projectInfo}
+      />
+
+      <CreativeProcess projectInfo={projectInfo} />
+
+      <CreativeShoot data={projectInfo?.shootImages} />
+
+      <CreativeFeaturedWorks
+        creativeData={creativeData}
+        projectInfo={projectInfo}
+        setSelectedImage={setSelectedImage}
+      />
+
       <CreativeImpact projectInfo={projectInfo} />
-      
+
       <CreativeCTA />
-      
-      <CreativeLightbox 
-        selectedImage={selectedImage} 
-        setSelectedImage={setSelectedImage} 
+
+      <CreativeLightbox
+        selectedImage={selectedImage}
+        setSelectedImage={setSelectedImage}
       />
     </Box>
   );
