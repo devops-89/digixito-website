@@ -3,6 +3,7 @@ import React from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import { COLORS } from "@/utils/enum";
 import { kessel_bold } from "@/utils/fonts";
+import { renderKesselText } from "@/utils/formatText";
 
 export const CreativeImpact = ({ projectInfo }: any) => {
   return (
@@ -66,7 +67,7 @@ export const CreativeImpact = ({ projectInfo }: any) => {
                                 mb: 1,
                               }}
                             >
-                              {stat.primary}
+                              {renderKesselText(stat.primary)}
                             </Typography>
                             <Typography
                               sx={{ fontSize: "1.1rem", color: "#ddd" }}

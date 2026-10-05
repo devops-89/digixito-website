@@ -112,8 +112,9 @@ const CreativeProjectOverview = () => {
       />
 
       <CreativeProcess projectInfo={projectInfo} />
-
-      <CreativeShoot data={projectInfo?.shootImages} />
+      {projectInfo?.shootImages && (
+        <CreativeShoot data={projectInfo?.shootImages} />
+      )}
 
       <CreativeFeaturedWorks
         creativeData={creativeData}

@@ -3,6 +3,7 @@ import React from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import { COLORS } from "@/utils/enum";
 import { archivo, kessel_bold } from "@/utils/fonts";
+import { renderKesselText } from "@/utils/formatText";
 
 export const CreativeOverviewInfo = ({ creativeData, projectInfo }: any) => {
   return (
@@ -14,7 +15,7 @@ export const CreativeOverviewInfo = ({ creativeData, projectInfo }: any) => {
             <Typography
               sx={{
                 fontFamily: archivo.style.fontFamily,
-                color: COLORS.PRIMARY,
+                color: COLORS.BLACK,
                 textTransform: "uppercase",
                 letterSpacing: "0.2em",
                 fontSize: "0.85rem",
@@ -47,9 +48,11 @@ export const CreativeOverviewInfo = ({ creativeData, projectInfo }: any) => {
               mb: 6,
             }}
           >
-            {creativeData?.details?.heading ||
-              projectInfo?.title ||
-              "Creating a digital experience that feels as bold as the brand."}
+            {renderKesselText(
+              creativeData?.details?.heading ||
+                projectInfo?.title ||
+                "Creating a digital experience that feels as bold as the brand."
+            )}
           </Typography>
 
           <Box className="reveal-up">
@@ -101,7 +104,7 @@ export const CreativeOverviewInfo = ({ creativeData, projectInfo }: any) => {
                     mb: 1,
                   }}
                 >
-                  {item.primary}
+                  {renderKesselText(item.primary)}
                 </Typography>
                 <Typography
                   sx={{

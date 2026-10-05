@@ -3,6 +3,7 @@ import React from "react";
 import banner from "@/banners/banner.webp";
 import { kessel, kessel_bold, monument, roboto } from "@/utils/fonts";
 import { COLORS } from "@/utils/enum";
+import Link from "next/link";
 const HeroSection3 = () => {
   const words = ["Innovate", "Inspire", "Create"];
 
@@ -12,7 +13,7 @@ const HeroSection3 = () => {
         <Box
           sx={{
             backgroundImage: `url(${banner.src})`,
-            minHeight: "100vh",
+            minHeight: { lg: "100vh", xs: "70vh" },
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -22,25 +23,26 @@ const HeroSection3 = () => {
         >
           <Box
             sx={{
-              minHeight: "100vh",
+              minHeight: { lg: "100vh", xs: "auto" },
               //   backgroundColor: "#00000099",
               borderRadius: "20px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              py: { lg: 0, xs: 9 },
             }}
           >
             <Container>
               <Grid container>
-                <Grid size={8}>
+                <Grid size={{ lg: 8, xs: 12 }}>
                   <Typography
                     sx={{
-                      fontSize: 70,
+                      fontSize: { lg: 70, xs: 30 },
                       fontWeight: 800,
                       fontFamily: kessel_bold.style.fontFamily,
                       color: COLORS.WHITE,
                       letterSpacing: "0.5px",
-                      lineHeight: "85px",
+                      lineHeight: { lg: "85px", xs: 1.3 },
                     }}
                   >
                     Engineering the{" "}
@@ -49,10 +51,10 @@ const HeroSection3 = () => {
                       sx={{
                         fontFamily: kessel_bold.style.fontFamily,
                         color: COLORS.PRIMARY,
-                        fontSize: 70,
+                        fontSize: { lg: 70, xs: 30 },
                         fontWeight: 800,
                         letterSpacing: "0.5px",
-                        lineHeight: "85px",
+                        lineHeight: { lg: "85px", xs: 1.3 },
                       }}
                     >
                       Future
@@ -61,7 +63,7 @@ const HeroSection3 = () => {
                   </Typography>
                   <Typography
                     sx={{
-                      fontSize: 20,
+                      fontSize: { lg: 20, xs: 16 },
                       color: COLORS.WHITE,
                       mt: 2,
                       lineHeight: 1.6,
@@ -76,21 +78,37 @@ const HeroSection3 = () => {
               </Grid>
             </Container>
           </Box>
-          <Box sx={{ position: "absolute", bottom: 50, width: "100%" }}>
+          <Box
+            sx={{
+              position: "absolute",
+              bottom: { lg: 50, xs: 50 },
+              width: "100%",
+            }}
+          >
             <Container>
-              <Grid container sx={{ alignItems: "flex-end" }}>
-                <Grid size={7}>
+              <Grid
+                container
+                sx={{ alignItems: "flex-end" }}
+                spacing={{ lg: 10, xs: 2 }}
+              >
+                <Grid size={{ lg: 7, xs: 12 }}>
                   <Stack
                     direction={"row"}
-                    sx={{ alignItems: "center" }}
-                    spacing={8}
+                    sx={{
+                      alignItems: "center",
+                      justifyContent: {
+                        lg: "space-between",
+                        xs: "space-between",
+                      },
+                    }}
+                    spacing={{ lg: 8, xs: 2 }}
                   >
                     {words.map((val, i) => (
                       <Typography
                         key={i}
                         sx={{
                           color: COLORS.WHITE,
-                          fontSize: 30,
+                          fontSize: { lg: 30, xs: 20 },
                           fontFamily: kessel.style.fontFamily,
                           fontWeight: 600,
                         }}
@@ -100,10 +118,10 @@ const HeroSection3 = () => {
                     ))}
                   </Stack>
                 </Grid>
-                <Grid size={5}>
+                <Grid size={{ lg: 5, xs: 12 }}>
                   <Typography
                     sx={{
-                      fontSize: 30,
+                      fontSize: { lg: 30, xs: 20 },
                       fontWeight: 600,
                       color: COLORS.WHITE,
                       fontFamily: kessel.style.fontFamily,
@@ -130,6 +148,8 @@ const HeroSection3 = () => {
                         },
                         width: 200,
                       }}
+                      LinkComponent={Link}
+                      href="/projects"
                     >
                       View Projects
                     </Button>
@@ -148,6 +168,8 @@ const HeroSection3 = () => {
                         border: "1px solid " + COLORS.PRIMARY,
                         width: 200,
                       }}
+                      LinkComponent={Link}
+                      href="/contact-us"
                     >
                       Reach Out
                     </Button>

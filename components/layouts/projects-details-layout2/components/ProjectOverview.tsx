@@ -2,6 +2,7 @@
 import { useProjectDetailsStore } from "@/store/useProjectDetailsStore";
 import { COLORS } from "@/utils/enum";
 import { archivo, kessel_bold } from "@/utils/fonts";
+import { renderKesselText } from "@/utils/formatText";
 import {
   Box,
   Container,
@@ -140,7 +141,7 @@ const ProjectOverview = () => {
                         },
                       }}
                     >
-                      {val.label}
+                      {renderKesselText(val.label)}
                     </Typography>
                   </Box>
                 </Grid>
@@ -176,7 +177,7 @@ const ProjectOverview = () => {
                           color: "#1F2326",
                         }}
                       >
-                        {val.subData.heading}
+                        {renderKesselText(val.subData.heading)}
                       </Typography>
 
                       {val.subData?.data && val.subData.data.length > 0 && (

@@ -1,5 +1,6 @@
 import { COLORS } from "@/utils/enum";
 import { archivo, kessel_bold } from "@/utils/fonts";
+import { renderKesselText } from "@/utils/formatText";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import { Box, Grid, Typography } from "@mui/material";
 import { motion } from "motion/react";
@@ -142,7 +143,7 @@ const ProjectServices = ({ skills }: ProjectServicesProps) => {
                   letterSpacing: "0.02em",
                 }}
               >
-                {skill.label}
+                {renderKesselText(skill.label)}
               </Typography>
               <Typography
                 sx={{

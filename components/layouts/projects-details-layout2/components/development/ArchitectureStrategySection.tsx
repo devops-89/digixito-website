@@ -3,6 +3,7 @@ import { Box, Container, Typography, Paper, Card, Stack } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import { COLORS } from "@/utils/enum";
 import { archivo, kessel_bold } from "@/utils/fonts";
+import { renderKesselText } from "@/utils/formatText";
 import StrategyCard from "./components/StrategyCard";
 
 interface ArchitectureStrategySectionProps {
@@ -33,7 +34,7 @@ const ArchitectureStrategySection: React.FC<
             mb: 2,
           }}
         >
-          {strategies.details?.heading || "Architecture & Strategy"}
+          {renderKesselText(strategies.details?.heading || "Architecture & Strategy")}
         </Typography>
         {strategies.description && (
           <Typography

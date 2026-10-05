@@ -18,4 +18,11 @@ export const roboto = Roboto({
 
 export const kessel_bold = localFont({
   src: "../assets/fonts/font-bold.otf",
+  declarations: [
+    {
+      prop: "unicode-range",
+      value: "U+0000-0025, U+0028-FFFF",
+    },
+  ],
+  fallback: ["sans-serif"],
 });

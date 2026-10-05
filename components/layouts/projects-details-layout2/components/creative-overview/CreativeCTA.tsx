@@ -2,7 +2,8 @@
 import React from "react";
 import { Box, Container, Typography, Button } from "@mui/material";
 import { COLORS } from "@/utils/enum";
-import { kessel_bold } from "@/utils/fonts";
+import { archivo, kessel_bold } from "@/utils/fonts";
+import { renderKesselText } from "@/utils/formatText";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export const CreativeCTA = () => {
@@ -23,7 +24,7 @@ export const CreativeCTA = () => {
             letterSpacing: "-2px",
           }}
         >
-          Let's create something remarkable.
+          {renderKesselText("Let's create something remarkable.")}
         </Typography>
         <Typography
           className="reveal-up"

@@ -436,15 +436,15 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
     creative: {
       heroImage: jktyreHeroBanner,
       images: [
-        jktyre1,
-        jktyre2,
-        jktyre3,
-        jktyre4,
+        // jktyre1,
+        // jktyre2,
+        // jktyre3,
+        // jktyre4,
         jktyre5,
         jktyre6,
-        jktyre7,
-        jktyre8,
-        jktyre9,
+        // jktyre7,
+        // jktyre8,
+        // jktyre9,
       ],
       videoUrls: [
         "https://youtu.be/F91vnolqrrg?si=kQJ5Jknd_G5l5eI3",

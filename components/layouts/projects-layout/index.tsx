@@ -38,6 +38,9 @@ const ProjectsLayout = () => {
             "& .Mui-selected": { color: COLORS.BLACK + "!important" },
             "& .MuiTabs-indicator": { backgroundColor: "#000" },
           }}
+          scrollButtons="auto"
+          allowScrollButtonsMobile={true}
+          variant="scrollable"
         >
           {PROJECTS_TABS_DATA.map((val, i) => (
             <Tab
@@ -45,7 +48,7 @@ const ProjectsLayout = () => {
               sx={{
                 textTransform: "none",
                 fontFamily: kessel.style.fontFamily,
-                fontSize: 24,
+                fontSize: { lg: 24, xs: 20 },
                 fontWeight: "500",
               }}
               label={val.label}

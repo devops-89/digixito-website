@@ -1,5 +1,6 @@
 import { COLORS } from "@/utils/enum";
 import { archivo, kessel_bold } from "@/utils/fonts";
+import { renderKesselText } from "@/utils/formatText";
 import { Box, Card, Typography } from "@mui/material";
 import React from "react";
 
@@ -33,7 +34,7 @@ const KeyFeaturesCard = ({ primary, secondary }: FEATURE_CARD_PROPS) => {
             mb: 1.5,
           }}
         >
-          {primary}
+          {renderKesselText(primary)}
         </Typography>
         {secondary && (
           <Typography

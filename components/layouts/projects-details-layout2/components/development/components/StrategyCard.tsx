@@ -1,5 +1,6 @@
 import { COLORS } from "@/utils/enum";
 import { archivo, kessel_bold } from "@/utils/fonts";
+import { renderKesselText } from "@/utils/formatText";
 import { Box, Card, Stack, Typography } from "@mui/material";
 import React from "react";
 
@@ -46,13 +47,13 @@ const StrategyCard: React.FC<StrategyCardProps> = ({
               color: "#000000",
             }}
           >
-            {serialNumber}
+            {renderKesselText(serialNumber)}
           </Typography>
         </Box>
         <Typography
           sx={{ fontFamily: kessel_bold.style.fontFamily, fontSize: 16 }}
         >
-          {title}
+          {renderKesselText(title)}
         </Typography>
       </Stack>
       <Typography
