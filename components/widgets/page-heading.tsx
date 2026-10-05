@@ -19,6 +19,7 @@ const PageHeading = ({
         justifyContent={"space-between"}
       >
         <Typography
+          component="h1"
           sx={{
             color: COLORS.BLACK,
             fontSize: { lg: 50, xs: 20, sm: 25 },
@@ -28,15 +29,18 @@ const PageHeading = ({
         >
           {page_name}
         </Typography>
-        <Typography
-          sx={{
-            fontSize: { lg: 25, xs: 18 },
-            fontFamily: monument.style.fontFamily,
-            fontWeight: 400,
-          }}
-        >
-          {page_title}
-        </Typography>
+        {page_title && (
+          <Typography
+            component="h2"
+            sx={{
+              fontSize: { lg: 25, xs: 18 },
+              fontFamily: monument.style.fontFamily,
+              fontWeight: 400,
+            }}
+          >
+            {page_title}
+          </Typography>
+        )}
       </Stack>
       <Divider sx={{ borderColor: "#000" }}>
         <Image src={star} alt="" />

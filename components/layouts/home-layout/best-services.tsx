@@ -12,7 +12,8 @@ const BestService = () => {
       <Grid container spacing={3}>
         <Grid size={{ lg: 6, xs: 12, sm: 6 }}>
           <Typography
-          variant="h2"
+            component="h2"
+            variant="h2"
             sx={{
               fontFamily: monument.style.fontFamily,
               fontSize: { lg: 28, xs: 22 },

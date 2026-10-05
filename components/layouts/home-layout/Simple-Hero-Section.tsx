@@ -85,8 +85,8 @@ const SimpleHeroSection = () => {
               }}
             /> */}
             <Typography
-            component="h3"
-            variant="h3"
+              component="h2"
+              variant="h2"
               sx={{
                 fontSize: { lg: 35, xs: 20 },
                 fontWeight: 500,
