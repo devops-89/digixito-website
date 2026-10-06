@@ -209,4 +209,30 @@ export const SEO_DATA: Record<string, { title: string; description: string; keyw
     description: "Explore blogs on AI & Innovation, Product Engineering and Design Intelligence. Get expert SEO and marketing tips from Digixito",
     keywords: "Digital Marketing Agency blogs , Web Application Development blogs",
   },
+  "/blogs/ai-development-company-usa": {
+    title: "AI Development Company | Transform Business with AI",
+    description: "Choose an AI Development Company in USA for AI transformation, generative AI, automation, machine learning, and digital growth with Digixito.",
+    keywords: "AI Development Company in USA, AI transformation, generative AI, automation, machine learning, digital growth",
+  },
+  "/blogs/future-of-ai-in-enterprise": {
+    title: "The Future of AI in Enterprise Architecture | Digixito",
+    description:
+      "Explore the future of AI in enterprise architecture, including intelligent automation, predictive analytics, generative AI, data integration, and scalable digital transformation with Digixito.",
+    keywords:
+      "AI Enterprise Architecture, intelligent automation, predictive analytics, generative AI, enterprise technology",
+  },
+  "/blogs/headless-commerce-nextjs": {
+    title: "Why Headless Commerce is the Future | Digixito",
+    description:
+      "Discover why headless commerce is the future of e-commerce, offering flexibility, faster digital experiences, seamless integrations, personalization, and scalable growth with Digixito.",
+    keywords:
+      "Headless Commerce, eCommerce Architecture, Next.js eCommerce, API-first commerce, omnichannel commerce",
+  },
+  "/blogs/design-intelligence-ui": {
+    title: "Design Intelligence: Beyond Standard UX | Digixito",
+    description:
+      "Discover how design intelligence goes beyond standard UX to create data-driven, adaptive, and meaningful digital experiences that support business growth with Digixito.",
+    keywords:
+      "Design Intelligence, Beyond Standard UX, Adaptive UX, Data-driven design, UX UI Agency",
+  },
 };
