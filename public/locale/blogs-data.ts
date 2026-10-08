@@ -29,7 +29,7 @@ export const BLOGS_DATA: BlogProps[] = [
     metaTitle: "AI Development Company | Transform Business with AI",
     metaDescription:
       "Choose an AI Development Company in USA for AI transformation, generative AI, automation, machine learning, and digital growth with Digixito.",
-    author: "Digixito AI Team",
+    author: "Atul Singh",
     date: "October 6, 2026",
     category: "AI & Innovation",
     shortDescription:

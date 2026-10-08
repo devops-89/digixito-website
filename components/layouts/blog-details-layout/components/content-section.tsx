@@ -41,7 +41,7 @@ export function renderFormattedText(text: string): React.ReactNode {
         }}
       >
         {label}
-      </Box>
+      </Box>,
     );
     lastIndex = linkRegex.lastIndex;
   }
