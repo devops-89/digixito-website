@@ -191,7 +191,7 @@ export const BLOGS_DATA: BlogProps[] = [
           "Continuous feedback loops from research to learning transform search into a measurable business growth channel.",
       },
     ],
-    coverImage: "/images/blogs/ai-driven-seo-services.png",
+    coverImage: "/images/blogs/ai-driven-seo-services.jpg",
     tags: [
       "AI SEO",
       "Search Intelligence",
