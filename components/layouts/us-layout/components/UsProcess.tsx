@@ -6,8 +6,15 @@ import Image from "next/image";
 import starIcon from "@/icons/gold-star.svg";
 import UsRadarSvg from "./UsRadarSvg";
 import { kessel_bold, kessel } from "@/utils/fonts";
+import { renderKesselText } from "@/utils/formatText";
 
-const steps = [
+interface StepItem {
+  number: string;
+  title: React.ReactNode;
+  description: string;
+}
+
+const steps: StepItem[] = [
   {
     number: "01",
     title: "Strategic Technical Discovery",
@@ -16,13 +23,43 @@ const steps = [
   },
   {
     number: "02",
-    title: "Agile Architecture & Development",
+    title: (
+      <>
+        Agile Architecture{" "}
+        <span
+          style={{
+            fontFamily:
+              'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+            fontWeight: "inherit",
+            display: "inline",
+          }}
+        >
+          &amp;
+        </span>{" "}
+        Development
+      </>
+    ),
     description:
       "Bi-weekly sprints with full code visibility. Dedicated senior engineering pods shipping production-grade features on predictable timelines.",
   },
   {
     number: "03",
-    title: "Continuous Optimization & Scale",
+    title: (
+      <>
+        Continuous Optimization{" "}
+        <span
+          style={{
+            fontFamily:
+              'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+            fontWeight: "inherit",
+            display: "inline",
+          }}
+        >
+          &amp;
+        </span>{" "}
+        Scale
+      </>
+    ),
     description:
       "Deployment is just day one. We continuously measure real-world performance, iterate on telemetry data, and scale infrastructure as your volume surges.",
   },
@@ -161,7 +198,8 @@ const UsProcess = () => {
                         justifyContent: "center",
                         fontWeight: 900,
                         fontSize: { xs: 13, md: 15 },
-                        fontFamily: kessel_bold.style.fontFamily,
+                        fontFamily:
+                          'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                       }}
                     >
                       {step.number}

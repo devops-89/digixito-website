@@ -8,6 +8,7 @@ import UsSilos from "./components/UsSilos";
 import UsSolutions from "./components/UsSolutions";
 import UsProcess from "./components/UsProcess";
 import UsCaseStudies from "./components/UsCaseStudies";
+import UsTestimonials from "./components/UsTestimonials";
 import UsLogos from "./components/UsLogos";
 import UsContactForm from "./components/UsContactForm";
 import UsFloatingActions from "./components/UsFloatingActions";
@@ -42,10 +43,13 @@ const UsLayout = () => {
       {/* 5. Section 4: Disciplined Process & Radar Architecture */}
       <UsProcess />
 
-      {/* 6. Section 5: Real Partners / Case Studies */}
-      <UsCaseStudies />
+      {/* 6. Section 5: Real Partners / Case Studies (Commented out for now) */}
+      {/* <UsCaseStudies /> */}
 
-      {/* 7. Section 6: Client Logos */}
+      {/* 7. Section 6: Client Testimonials & Proof */}
+      <UsTestimonials />
+
+      {/* 8. Section 7: Client Logos */}
       <UsLogos />
 
       {/* 8. Section 7: Yellow Lead Generation & Contact Form */}

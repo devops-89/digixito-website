@@ -181,7 +181,8 @@ const UsSolutions = () => {
                         fontSize: 15,
                         fontWeight: 800,
                         color: "#888888",
-                        fontFamily: kessel_bold.style.fontFamily,
+                        fontFamily:
+                          'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                       }}
                     >
                       {item.number}
@@ -249,7 +250,8 @@ const UsSolutions = () => {
                         textTransform: "uppercase",
                         letterSpacing: "0.06em",
                         color: "#888888",
-                        fontFamily: kessel_bold.style.fontFamily,
+                        fontFamily:
+                          'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                         mb: 0.4,
                       }}
                     >
@@ -260,7 +262,8 @@ const UsSolutions = () => {
                         fontSize: 12.5,
                         fontWeight: 700,
                         color: "#1A1A1A",
-                        fontFamily: kessel_bold.style.fontFamily,
+                        fontFamily:
+                          'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                       }}
                     >
                       {item.focus}

@@ -21,7 +21,7 @@ export const kessel_bold = localFont({
   declarations: [
     {
       prop: "unicode-range",
-      value: "U+0000-0025, U+0028-FFFF",
+      value: "U+0020, U+0030-0039, U+0041-005A, U+0061-007A",
     },
   ],
   fallback: ["sans-serif"],

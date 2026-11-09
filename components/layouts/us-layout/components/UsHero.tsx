@@ -80,7 +80,8 @@ const UsHero = () => {
                     letterSpacing: "0.08em",
                     textTransform: "uppercase",
                     color: "#1A1A1A",
-                    fontFamily: kessel_bold.style.fontFamily,
+                    fontFamily:
+                      'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                   }}
                 >
                   AI-POWERED GROWTH ENGINE
@@ -374,7 +375,8 @@ const UsHero = () => {
                       px: 1,
                       py: 0.3,
                       borderRadius: "6px",
-                      fontFamily: kessel_bold.style.fontFamily,
+                      fontFamily:
+                        'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     }}
                   >
                     98% CSAT
@@ -455,7 +457,8 @@ const UsHero = () => {
                       fontSize: 12,
                       fontWeight: 700,
                       color: "#111111",
-                      fontFamily: kessel_bold.style.fontFamily,
+                      fontFamily:
+                        'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     }}
                   >
                     +50+ Projects Shipped

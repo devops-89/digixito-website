@@ -125,7 +125,8 @@ const UsSilos = () => {
                         textAlign: "center",
                         fontSize: { xs: 13, md: 14 },
                         fontWeight: 700,
-                        fontFamily: kessel_bold.style.fontFamily,
+                        fontFamily:
+                          'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                         boxShadow: "0 4px 16px rgba(0,0,0,0.3)",
                         transition: "all 0.25s ease",
                         "&:hover": {

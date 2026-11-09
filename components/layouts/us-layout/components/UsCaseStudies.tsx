@@ -378,7 +378,8 @@ const UsCaseStudies = () => {
                         fontSize: { xs: 18, md: 22 },
                         fontWeight: 900,
                         color: "#FFEF46",
-                        fontFamily: kessel_bold.style.fontFamily,
+                        fontFamily:
+                          'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                         lineHeight: 1.2,
                       }}
                     >

@@ -184,7 +184,18 @@ ${values.message}
                   mb: 2.5,
                 }}
               >
-                Let&apos;s build
+                Let
+                <span
+                  style={{
+                    fontFamily:
+                      'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                    fontWeight: "inherit",
+                    display: "inline",
+                  }}
+                >
+                  &apos;
+                </span>
+                s build
                 <br />
                 something
                 <br />
@@ -243,7 +254,8 @@ ${values.message}
                         fontSize: { xs: 14, md: 15 },
                         fontWeight: 700,
                         color: "#0F0F0F",
-                        fontFamily: kessel_bold.style.fontFamily,
+                        fontFamily:
+                          'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                       }}
                     >
                       {item}
@@ -277,7 +289,8 @@ ${values.message}
                       fontWeight: 700,
                       color: "#444444",
                       mb: 0.8,
-                      fontFamily: kessel_bold.style.fontFamily,
+                      fontFamily:
+                        'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     }}
                   >
                     Full Name *
@@ -309,7 +322,8 @@ ${values.message}
                       fontWeight: 700,
                       color: "#444444",
                       mb: 0.8,
-                      fontFamily: kessel_bold.style.fontFamily,
+                      fontFamily:
+                        'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     }}
                   >
                     Business Email *
@@ -343,7 +357,8 @@ ${values.message}
                       fontWeight: 700,
                       color: "#444444",
                       mb: 0.8,
-                      fontFamily: kessel_bold.style.fontFamily,
+                      fontFamily:
+                        'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     }}
                   >
                     Phone Number *
@@ -375,7 +390,8 @@ ${values.message}
                       fontWeight: 700,
                       color: "#444444",
                       mb: 0.8,
-                      fontFamily: kessel_bold.style.fontFamily,
+                      fontFamily:
+                        'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     }}
                   >
                     Company Name *
@@ -441,7 +457,8 @@ ${values.message}
                             py: 0.8,
                             fontSize: 12.5,
                             fontWeight: 700,
-                            fontFamily: kessel_bold.style.fontFamily,
+                            fontFamily:
+                              'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                             cursor: "pointer",
                             transition: "all 0.2s ease",
                             userSelect: "none",
@@ -465,7 +482,8 @@ ${values.message}
                       fontWeight: 700,
                       color: "#444444",
                       mb: 0.8,
-                      fontFamily: kessel_bold.style.fontFamily,
+                      fontFamily:
+                        'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     }}
                   >
                     Tell us about your project or challenges *
@@ -499,7 +517,8 @@ ${values.message}
                       fontWeight: 700,
                       color: "#444444",
                       mb: 0.8,
-                      fontFamily: kessel_bold.style.fontFamily,
+                      fontFamily:
+                        'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     }}
                   >
                     Estimated Budget
@@ -530,7 +549,8 @@ ${values.message}
                       fontWeight: 700,
                       color: "#444444",
                       mb: 0.8,
-                      fontFamily: kessel_bold.style.fontFamily,
+                      fontFamily:
+                        'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     }}
                   >
                     Timeline
