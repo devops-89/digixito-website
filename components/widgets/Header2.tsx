@@ -59,6 +59,10 @@ const Header2 = () => {
     setActiveTabLabel(null);
   }, [pathname]);
 
+  if (pathname === "/us" || pathname?.startsWith("/us/")) {
+    return null;
+  }
+
   const activeKey = activeTabLabel ? getLinksKey(activeTabLabel) : null;
   const activeLinks = activeKey ? HEADER_LINKS[activeKey] : [];
   const open = Boolean(anchorEl) && activeLinks.length > 0;

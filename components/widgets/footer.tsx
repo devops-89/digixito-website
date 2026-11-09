@@ -1,3 +1,4 @@
+"use client";
 import { COLORS } from "@/utils/enum";
 import { archivo, monument } from "@/utils/fonts";
 import {
@@ -18,7 +19,14 @@ import { LINK_LIST_DATA, TERMS_PAGE_LINKS } from "@/assets/data/generic-array";
 import LinkList from "./common/link-list";
 import { SvgIconProps } from "@mui/material";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 const Footer = () => {
+  const pathname = usePathname();
+  if (pathname === "/us" || pathname?.startsWith("/us/")) {
+    return null;
+  }
+
   const socialIcons = [
     { Icon: X, url: "https://x.com/digixito" },
     { Icon: YouTube, url: "https://www.youtube.com/@digixito" },

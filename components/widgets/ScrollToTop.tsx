@@ -3,8 +3,10 @@ import React, { useState, useEffect } from "react";
 import { Box, Fab, Zoom } from "@mui/material";
 import { KeyboardArrowUp } from "@mui/icons-material";
 import { COLORS } from "@/utils/enum";
+import { usePathname } from "next/navigation";
 
 const ScrollToTop = () => {
+  const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
@@ -28,6 +30,10 @@ const ScrollToTop = () => {
       window.removeEventListener("scroll", toggleVisibility);
     };
   }, []);
+
+  if (pathname === "/us" || pathname?.startsWith("/us/")) {
+    return null;
+  }
 
   return (
     <Zoom in={isVisible}>
