@@ -26,7 +26,7 @@ import { renderKesselText } from "@/utils/formatText";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-//sdfghjkl
+
 interface Testimonial {
   id: string;
   brandName: string;
