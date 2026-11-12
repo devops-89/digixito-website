@@ -35,12 +35,16 @@ const UsHero = () => {
       component="section"
       sx={{
         position: "relative",
-        pt: { xs: 2, md: 4 },
-        pb: { xs: 8, md: 12 },
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        pt: { xs: 2, lg: 9 },
+        pb: { xs: 8, lg: 4 },
         overflow: "hidden",
+        boxSizing: "border-box",
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ width: "100%" }}>
         <Grid
           container
           spacing={{ xs: 5, lg: 3 }}

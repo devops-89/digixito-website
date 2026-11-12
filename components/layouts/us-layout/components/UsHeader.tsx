@@ -19,8 +19,11 @@ const UsHeader = () => {
       component="header"
       sx={{
         width: "100%",
-        py: { xs: 2.5, md: 3.5 },
-        position: "relative",
+        py: { xs: 2.5, md: 3 },
+        position: { xs: "relative", lg: "absolute" },
+        top: 0,
+        left: 0,
+        right: 0,
         zIndex: 50,
       }}
     >
