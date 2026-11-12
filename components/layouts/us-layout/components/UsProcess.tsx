@@ -10,58 +10,28 @@ import { renderKesselText } from "@/utils/formatText";
 
 interface StepItem {
   number: string;
-  title: React.ReactNode;
+  title: string;
   description: string;
 }
 
 const steps: StepItem[] = [
   {
     number: "01",
-    title: "Strategic Technical Discovery",
+    title: "Strategy & Technical Discovery",
     description:
-      "We audit your existing tech stack, identify architectural bottlenecks, and map out a clear technical roadmap engineered for immediate business value.",
+      "Understand your business challenges, workflows and opportunities for AI implementation.",
   },
   {
     number: "02",
-    title: (
-      <>
-        Agile Architecture{" "}
-        <span
-          style={{
-            fontFamily:
-              'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-            fontWeight: "inherit",
-            display: "inline",
-          }}
-        >
-          &amp;
-        </span>{" "}
-        Development
-      </>
-    ),
+    title: "Agile Prototyping & Engineering",
     description:
-      "Bi-weekly sprints with full code visibility. Dedicated senior engineering pods shipping production-grade features on predictable timelines.",
+      "Plan, design and develop solutions through structured implementation and engineering.",
   },
   {
     number: "03",
-    title: (
-      <>
-        Continuous Optimization{" "}
-        <span
-          style={{
-            fontFamily:
-              'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-            fontWeight: "inherit",
-            display: "inline",
-          }}
-        >
-          &amp;
-        </span>{" "}
-        Scale
-      </>
-    ),
+    title: "Continuous Evolution & Measurable Scale",
     description:
-      "Deployment is just day one. We continuously measure real-world performance, iterate on telemetry data, and scale infrastructure as your volume surges.",
+      "Integrate, optimise and evolve solutions as your business requirements grow.",
   },
 ];
 
@@ -128,7 +98,7 @@ const UsProcess = () => {
                     fontFamily: kessel_bold.style.fontFamily,
                   }}
                 >
-                  HOW WE WORK
+                  {renderKesselText("HOW WE WORK")}
                 </Typography>
               </Box>
 
@@ -142,24 +112,12 @@ const UsProcess = () => {
                   letterSpacing: "-0.03em",
                   color: "#0F0F0F",
                   fontFamily: kessel_bold.style.fontFamily,
-                  mb: 1.5,
-                }}
-              >
-                A disciplined process built around your goals.
-              </Typography>
-
-              {/* Subtitle */}
-              <Typography
-                sx={{
-                  fontSize: { xs: 14.5, md: 16 },
-                  lineHeight: 1.6,
-                  color: "#5A5A5A",
-                  fontFamily: kessel.style.fontFamily,
                   mb: 4,
                 }}
               >
-                We don&apos;t believe in one-size-fits-all. Every engagement follows a
-                battle-tested framework engineered for speed and accountability.
+                From AI Strategy to
+                <br />
+                Intelligent Business Execution.
               </Typography>
 
               {/* 3 Step Cards */}
@@ -216,7 +174,7 @@ const UsProcess = () => {
                           mb: 0.6,
                         }}
                       >
-                        {step.title}
+                        {renderKesselText(step.title)}
                       </Typography>
                       <Typography
                         sx={{
@@ -257,7 +215,7 @@ const UsProcess = () => {
                       fontFamily: kessel_bold.style.fontFamily,
                     }}
                   >
-                    Need a custom solution for your enterprise?
+                    {renderKesselText("Need a custom AI solution for your enterprise?")}
                   </Typography>
                   <Typography
                     sx={{
@@ -267,7 +225,7 @@ const UsProcess = () => {
                       mt: 0.3,
                     }}
                   >
-                    Our architects prepare tailored technical scopes and architecture blueprints.
+                    Our architects prepare tailored technical scopes, feasibility assessments and implementation blueprints.
                   </Typography>
                 </Box>
 
@@ -293,7 +251,7 @@ const UsProcess = () => {
                     transition: "all 0.25s ease",
                   }}
                 >
-                  Talk to an Architect
+                  {renderKesselText("Talk to an AI Architect")}
                 </Button>
               </Box>
             </Box>

@@ -23,7 +23,10 @@ import { usePathname } from "next/navigation";
 
 const Footer = () => {
   const pathname = usePathname();
-  if (pathname === "/us" || pathname?.startsWith("/us/")) {
+  if (
+    pathname === "/automation" ||
+    pathname?.startsWith("/automation/")
+  ) {
     return null;
   }
 

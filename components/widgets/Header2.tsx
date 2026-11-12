@@ -59,7 +59,10 @@ const Header2 = () => {
     setActiveTabLabel(null);
   }, [pathname]);
 
-  if (pathname === "/us" || pathname?.startsWith("/us/")) {
+  if (
+    pathname === "/automation" ||
+    pathname?.startsWith("/automation/")
+  ) {
     return null;
   }
 

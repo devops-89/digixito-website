@@ -31,7 +31,10 @@ const ScrollToTop = () => {
     };
   }, []);
 
-  if (pathname === "/us" || pathname?.startsWith("/us/")) {
+  if (
+    pathname === "/automation" ||
+    pathname?.startsWith("/automation/")
+  ) {
     return null;
   }
 

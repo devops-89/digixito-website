@@ -19,6 +19,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { kessel_bold, kessel } from "@/utils/fonts";
+import { renderKesselText } from "@/utils/formatText";
 
 const serviceOptions = [
   "AI & Automation",
@@ -175,7 +176,7 @@ ${values.message}
               <Typography
                 component="h2"
                 sx={{
-                  fontSize: { xs: 36, sm: 46, md: 54 },
+                  fontSize: { xs: 32, sm: 42, md: 48 },
                   fontWeight: 900,
                   lineHeight: 1.15,
                   letterSpacing: "-0.03em",
@@ -184,24 +185,9 @@ ${values.message}
                   mb: 2.5,
                 }}
               >
-                Let
-                <span
-                  style={{
-                    fontFamily:
-                      'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-                    fontWeight: "inherit",
-                    display: "inline",
-                  }}
-                >
-                  &apos;
-                </span>
-                s build
+                {renderKesselText("Let's Build Smarter")}
                 <br />
-                something
-                <br />
-                extraordinary
-                <br />
-                together.
+                {renderKesselText("Business Solutions Together.")}
               </Typography>
 
               {/* Subtitle */}
@@ -214,13 +200,13 @@ ${values.message}
                   mb: 4.5,
                 }}
               >
-                Tell us about your project, your timeline, and what you&apos;re
-                looking to achieve. Our team will review and get back to you
-                within 24 business hours.
+                Tell us about your business challenges and AI requirements. Our
+                team will help you explore relevant technology opportunities and
+                a practical way forward.
               </Typography>
 
               {/* 3 Value Bullets */}
-              <Stack spacing={2.2}>
+              {/* <Stack spacing={2.2}>
                 {[
                   "Free initial architecture & feasibility assessment",
                   "Direct access to senior engineers and technical leads",
@@ -262,7 +248,7 @@ ${values.message}
                     </Typography>
                   </Box>
                 ))}
-              </Stack>
+              </Stack> */}
             </Box>
           </Grid>
 
@@ -607,8 +593,8 @@ ${values.message}
                     }}
                   >
                     {formik.isSubmitting
-                      ? "Submitting Inquiry..."
-                      : "Send your project inquiry"}
+                      ? "Submitting Request..."
+                      : "Request a Growth Conversation"}
                   </Button>
 
                   {/* Footnote */}

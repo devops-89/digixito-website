@@ -5,47 +5,44 @@ import { NorthEast, East } from "@mui/icons-material";
 import Image from "next/image";
 import starIcon from "@/icons/gold-star.svg";
 import { kessel_bold, kessel } from "@/utils/fonts";
+import { renderKesselText } from "@/utils/formatText";
 
 interface SolutionItem {
   number: string;
   title: string;
   description: string;
-  focus: string;
-  link: string;
+  focus?: string;
+  link?: string;
 }
 
 const solutions: SolutionItem[] = [
   {
     number: "01",
-    title: "AI Transformation",
+    title: "AI Automation",
     description:
-      "Deploy custom LLMs, autonomous agents, and predictive machine learning models that automate complex workflows and unlock operational efficiencies.",
-    focus: "Autonomous Agents • RAG • LLMs",
+      "Automate repetitive tasks and business workflows to reduce manual effort and improve operational efficiency.",
     link: "/ai-transformation",
   },
   {
     number: "02",
-    title: "Product Engineering",
+    title: "AI Chatbots & Conversational AI",
     description:
-      "Full-cycle digital product engineering from architecture design to scalable cloud infrastructure, responsive web applications, and enterprise SaaS.",
-    focus: "Next.js • Microservices • AWS Cloud",
-    link: "/product-engineering",
+      "Develop intelligent conversational experiences to support customer interactions, information retrieval and business communication.",
+    link: "/ai-transformation",
   },
   {
     number: "03",
-    title: "Tactical Marketing",
+    title: "Custom AI & Machine Learning",
     description:
-      "Precision performance marketing, conversion rate optimization, and data-driven customer acquisition strategies that fuel profitable revenue scale.",
-    focus: "Performance Ads • SEO • CRO",
-    link: "/ai-marketing-growth",
+      "Build AI-powered applications and machine learning solutions tailored to specific business challenges.",
+    link: "/ai-transformation",
   },
   {
     number: "04",
-    title: "Design Intelligence",
+    title: "Data Intelligence & Integration",
     description:
-      "User experience, conversational interfaces, and design systems crafted with psychological precision to elevate brand perception and accelerate adoption.",
-    focus: "AI UI/UX • Design Systems • Prototyping",
-    link: "/design-intelligence",
+      "Connect business data and technology systems to support better information access, analysis and decision-making.",
+    link: "/ai-transformation",
   },
 ];
 
@@ -92,7 +89,7 @@ const UsSolutions = () => {
                 fontFamily: kessel_bold.style.fontFamily,
               }}
             >
-              OUR SOLUTIONS
+              {renderKesselText("THE DIGIXITO SOLUTION")}
             </Typography>
           </Box>
 
@@ -109,9 +106,9 @@ const UsSolutions = () => {
                   fontFamily: kessel_bold.style.fontFamily,
                 }}
               >
-                Four core solutions engineered
+                Transform Business Processes
                 <br />
-                for measurable impact.
+                with Intelligent AI Solutions.
               </Typography>
             </Grid>
 
@@ -122,12 +119,12 @@ const UsSolutions = () => {
                   lineHeight: 1.65,
                   color: "#5A5A5A",
                   fontFamily: kessel.style.fontFamily,
-                  maxWidth: 440,
+                  maxWidth: 460,
                   ml: { md: "auto" },
                 }}
               >
-                Whether you need a dedicated pod or targeted project delivery,
-                we embed deeply to drive outcomes, not just outputs.
+                We combine technology, strategy and engineering to develop AI
+                capabilities around your business requirements.
               </Typography>
             </Grid>
           </Grid>
@@ -217,7 +214,7 @@ const UsSolutions = () => {
                       lineHeight: 1.25,
                     }}
                   >
-                    {item.title}
+                    {renderKesselText(item.title)}
                   </Typography>
 
                   {/* Description */}
@@ -227,48 +224,50 @@ const UsSolutions = () => {
                       lineHeight: 1.6,
                       color: "#5A5A5A",
                       fontFamily: kessel.style.fontFamily,
-                      mb: 2.5,
+                      mb: item.focus ? 2.5 : 3.5,
                     }}
                   >
                     {item.description}
                   </Typography>
 
-                  {/* Focus pill */}
-                  <Box
-                    sx={{
-                      backgroundColor: "#FAF8F3",
-                      border: "1px solid #EFECE6",
-                      borderRadius: "10px",
-                      p: 1.5,
-                      mb: 3,
-                    }}
-                  >
-                    <Typography
+                  {/* Focus pill (if present) */}
+                  {item.focus && (
+                    <Box
                       sx={{
-                        fontSize: 11,
-                        fontWeight: 700,
-                        textTransform: "uppercase",
-                        letterSpacing: "0.06em",
-                        color: "#888888",
-                        fontFamily:
-                          'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-                        mb: 0.4,
+                        backgroundColor: "#FAF8F3",
+                        border: "1px solid #EFECE6",
+                        borderRadius: "10px",
+                        p: 1.5,
+                        mb: 3,
                       }}
                     >
-                      Key Focus:
-                    </Typography>
-                    <Typography
-                      sx={{
-                        fontSize: 12.5,
-                        fontWeight: 700,
-                        color: "#1A1A1A",
-                        fontFamily:
-                          'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-                      }}
-                    >
-                      {item.focus}
-                    </Typography>
-                  </Box>
+                      <Typography
+                        sx={{
+                          fontSize: 11,
+                          fontWeight: 700,
+                          textTransform: "uppercase",
+                          letterSpacing: "0.06em",
+                          color: "#888888",
+                          fontFamily:
+                            'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                          mb: 0.4,
+                        }}
+                      >
+                        Key Focus:
+                      </Typography>
+                      <Typography
+                        sx={{
+                          fontSize: 12.5,
+                          fontWeight: 700,
+                          color: "#1A1A1A",
+                          fontFamily:
+                            'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                        }}
+                      >
+                        {item.focus}
+                      </Typography>
+                    </Box>
+                  )}
                 </Box>
 
                 {/* Bottom Row */}

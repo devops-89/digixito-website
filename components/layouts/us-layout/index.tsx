@@ -12,7 +12,7 @@ import UsTestimonials from "./components/UsTestimonials";
 import UsLogos from "./components/UsLogos";
 import UsContactForm from "./components/UsContactForm";
 import UsFloatingActions from "./components/UsFloatingActions";
-//kjhgfd
+
 const UsLayout = () => {
   useEffect(() => {
     Aos.init({ duration: 1000, once: true });

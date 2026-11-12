@@ -17,6 +17,7 @@ import avatar2 from "@/homepage/avatar2.jpg";
 import avatar3 from "@/homepage/avatar3.jpg";
 import starIcon from "@/icons/gold-star.svg";
 import { kessel_bold, kessel, monument } from "@/utils/fonts";
+import { renderKesselText } from "@/utils/formatText";
 
 const UsHero = () => {
   const scrollToContact = () => {
@@ -80,11 +81,10 @@ const UsHero = () => {
                     letterSpacing: "0.08em",
                     textTransform: "uppercase",
                     color: "#1A1A1A",
-                    fontFamily:
-                      'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                    fontFamily: kessel_bold.style.fontFamily,
                   }}
                 >
-                  AI-POWERED GROWTH ENGINE
+                  {renderKesselText("ENTERPRISE TECH & GROWTH PARTNER")}
                 </Typography>
               </Box>
 
@@ -92,7 +92,7 @@ const UsHero = () => {
               <Typography
                 component="h1"
                 sx={{
-                  fontSize: { xs: 36, sm: 46, md: 54, lg: 62 },
+                  fontSize: { xs: 34, sm: 44, md: 52, lg: 58 },
                   fontWeight: 900,
                   lineHeight: { xs: 1.15, md: 1.12 },
                   letterSpacing: "-0.03em",
@@ -100,11 +100,9 @@ const UsHero = () => {
                   fontFamily: kessel_bold.style.fontFamily,
                 }}
               >
-                Intelligent
+                Make Your Business
                 <br />
-                Technology.
-                <br />
-                Transformative
+                Smarter with
                 <br />
                 <Box
                   component="span"
@@ -118,14 +116,16 @@ const UsHero = () => {
                     mt: 0.5,
                   }}
                 >
-                  business scale.
+                  {renderKesselText("AI-Powered")}
                 </Box>
+                <br />
+                Transformation.
               </Typography>
 
               {/* Subtitle */}
               <Typography
                 sx={{
-                  fontSize: { xs: 15, md: 17 },
+                  fontSize: { xs: 15, md: 16.5 },
                   lineHeight: 1.65,
                   color: "#4A4A4A",
                   fontFamily: kessel.style.fontFamily,
@@ -133,9 +133,10 @@ const UsHero = () => {
                   maxWidth: 480,
                 }}
               >
-                Augment your human workforce with custom AI solutions,
-                high-velocity engineering pods, and integrated marketing to
-                drive compounding business outcomes.
+                Build intelligent business systems with custom AI solutions,
+                automation and advanced technology. We help businesses simplify
+                complex processes, improve efficiency and create smarter digital
+                experiences.
               </Typography>
 
               {/* CTA Buttons */}
@@ -167,7 +168,7 @@ const UsHero = () => {
                     transition: "all 0.25s ease",
                   }}
                 >
-                  Schedule Consultation
+                  Talk With Our Team
                 </Button>
 
                 <Button
@@ -193,7 +194,7 @@ const UsHero = () => {
                     transition: "all 0.25s ease",
                   }}
                 >
-                  Explore solutions
+                  Explore Our Solutions
                 </Button>
               </Stack>
             </Box>
@@ -375,11 +376,10 @@ const UsHero = () => {
                       px: 1,
                       py: 0.3,
                       borderRadius: "6px",
-                      fontFamily:
-                        'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                      fontFamily: kessel_bold.style.fontFamily,
                     }}
                   >
-                    98% CSAT
+                    {renderKesselText("4.9/5 Rating")}
                   </Box>
                 </Stack>
 
@@ -404,7 +404,7 @@ const UsHero = () => {
                     mb: 2,
                   }}
                 >
-                  Trusted by fast-growing startups & enterprise platforms.
+                  Trusted by fast-growing startups &amp; enterprise platforms.
                 </Typography>
 
                 {/* Avatars Stack */}
@@ -457,16 +457,15 @@ const UsHero = () => {
                       fontSize: 12,
                       fontWeight: 700,
                       color: "#111111",
-                      fontFamily:
-                        'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                      fontFamily: kessel_bold.style.fontFamily,
                     }}
                   >
-                    +50+ Projects Shipped
+                    {renderKesselText("450+ Verified Reviews")}
                   </Typography>
                 </Stack>
               </Box>
 
-              {/* Card 2: 10x Faster */}
+              {/* Card 2: 3.8x Faster */}
               <Box
                 sx={{
                   backgroundColor: "#FFFFFF",
@@ -508,7 +507,7 @@ const UsHero = () => {
                       lineHeight: 1.2,
                     }}
                   >
-                    10x Faster
+                    {renderKesselText("3.8x Faster")}
                   </Typography>
                   <Typography
                     sx={{
@@ -518,7 +517,7 @@ const UsHero = () => {
                       mt: 0.3,
                     }}
                   >
-                    Deployment & Time-to-Market
+                    Concept to Production Scale
                   </Typography>
                 </Box>
               </Box>

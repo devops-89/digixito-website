@@ -21,6 +21,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import { kessel_bold, kessel } from "@/utils/fonts";
+import { renderKesselText } from "@/utils/formatText";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -153,12 +154,11 @@ const UsTestimonials = () => {
               fontWeight: 800,
               letterSpacing: "0.08em",
               textTransform: "uppercase",
-              fontFamily:
-                'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+              fontFamily: kessel_bold.style.fontFamily,
               color: "#FFFFFF",
             }}
           >
-            CLIENT TESTIMONIALS & PROOF
+            {renderKesselText("OUR WORK")}
           </Typography>
         </Box>
 
@@ -183,7 +183,9 @@ const UsTestimonials = () => {
                 mb: 2,
               }}
             >
-              Real partners. Real platforms. Measurable impact.
+              Technology That Solves
+              <br />
+              Real Business Challenges.
             </Typography>
             <Typography
               sx={{
@@ -194,8 +196,7 @@ const UsTestimonials = () => {
                 maxWidth: 540,
               }}
             >
-              Direct feedback from founders and CTOs who build, launch, and scale
-              with Digixito.
+              Show relevant technology-led projects from the existing portfolio.
             </Typography>
           </Grid>
 
@@ -229,9 +230,7 @@ const UsTestimonials = () => {
                     textTransform: "uppercase",
                     mb: 0.8,
                   }}
-                >
-                  READY TO SCALE YOUR APP OR PRODUCT?
-                </Typography>
+                ></Typography>
                 <Typography
                   component="h3"
                   sx={{
@@ -244,7 +243,9 @@ const UsTestimonials = () => {
                     lineHeight: 1.3,
                   }}
                 >
-                  Partner with a dedicated tech and growth team.
+                  {renderKesselText(
+                    "Prioritise projects with actual AI, automation, data or software engineering relevance. Do not present a general website-development project as an AI case study."
+                  )}
                 </Typography>
                 <Typography
                   sx={{
@@ -254,8 +255,7 @@ const UsTestimonials = () => {
                     fontFamily: kessel.style.fontFamily,
                   }}
                 >
-                  Discuss your product, architecture, and marketing roadmap with
-                  our senior team.
+                  Use existing client testimonials where relevant and approve
                 </Typography>
               </Box>
 
@@ -631,7 +631,7 @@ const UsTestimonials = () => {
                           lineHeight: 1.2,
                         }}
                       >
-                        {slide.author}
+                        {renderKesselText(slide.author)}
                       </Typography>
                       <Typography
                         sx={{

@@ -9,6 +9,11 @@ export const SEO_DATA: Record<string, { title: string; description: string; keyw
     description: "Augment your human workforce with custom AI solutions, high-velocity engineering pods, and integrated marketing to drive compounding business outcomes.",
     keywords: "AI Development Company USA, Enterprise AI Solutions, Custom AI Pods, Product Engineering, Tactical Marketing, Digixito US",
   },
+  "/automation": {
+    title: "Intelligent Technology. Transformative Business Scale | Digixito Automation",
+    description: "Augment your human workforce with custom AI solutions, high-velocity engineering pods, and integrated marketing to drive compounding business outcomes.",
+    keywords: "AI Development Company USA, Enterprise AI Solutions, Custom AI Pods, Product Engineering, Tactical Marketing, Digixito Automation",
+  },
   "/ai-marketing-growth/ai-driven-digital-marketing": {
     title: "AI-Driven Digital Marketing Services for Brand Growth",
     description: "AI-driven digital marketing services with predictive analytics and data-driven campaigns to help global brands scale faster.",

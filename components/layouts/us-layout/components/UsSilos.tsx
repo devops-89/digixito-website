@@ -2,18 +2,36 @@
 import React from "react";
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import { kessel_bold, kessel } from "@/utils/fonts";
+import { renderKesselText } from "@/utils/formatText";
+
+const challenges = [
+  {
+    title: "Repetitive Manual Workflows",
+    description:
+      "Time-consuming tasks reduce operational efficiency and productivity.",
+  },
+  {
+    title: "Disconnected Business Systems",
+    description:
+      "Fragmented data makes it difficult to access information and coordinate operations.",
+  },
+  {
+    title: "Slow Decision-Making",
+    description:
+      "Limited access to actionable insights makes business decisions more difficult.",
+  },
+  {
+    title: "Increasing Operational Complexity",
+    description:
+      "Growing workloads require systems that can adapt and scale.",
+  },
+];
 
 const UsSilos = () => {
-  const pills = [
-    "Custom AI & Machine Learning",
-    "Enterprise Web & Mobile",
-    "Cloud Architecture & DevOps",
-    "Performance-Driven Marketing",
-  ];
-
   return (
     <Box
       component="section"
+      id="challenges"
       sx={{
         backgroundColor: "#0F0F0F",
         color: "#FFFFFF",
@@ -24,7 +42,7 @@ const UsSilos = () => {
       <Container maxWidth="xl">
         <Grid
           container
-          spacing={{ xs: 6, lg: 8 }}
+          spacing={{ xs: 5, lg: 8 }}
           alignItems="center"
           justifyContent="space-between"
         >
@@ -51,7 +69,7 @@ const UsSilos = () => {
                     fontFamily: kessel_bold.style.fontFamily,
                   }}
                 >
-                  THE PROBLEM WITH MODERN SCALE
+                  THE CHALLENGE
                 </Typography>
               </Stack>
 
@@ -59,7 +77,7 @@ const UsSilos = () => {
               <Typography
                 component="h2"
                 sx={{
-                  fontSize: { xs: 32, sm: 42, md: 50 },
+                  fontSize: { xs: 30, sm: 38, md: 44, lg: 48 },
                   fontWeight: 900,
                   lineHeight: { xs: 1.18, md: 1.15 },
                   letterSpacing: "-0.03em",
@@ -67,75 +85,84 @@ const UsSilos = () => {
                   fontFamily: kessel_bold.style.fontFamily,
                 }}
               >
-                When technology
+                Your Business
                 <br />
-                and strategy
+                Has the Data.
                 <br />
-                operate in silos,
+                But Is It Using
                 <br />
-                growth stalls.
+                Intelligence to Its
+                <br />
+                Full Potential?
               </Typography>
             </Box>
           </Grid>
 
-          {/* RIGHT: Subtitle + Paragraph + 4 Pills */}
+          {/* RIGHT: Subtitle + 4 Challenge Cards */}
           <Grid size={{ xs: 12, lg: 7 }}>
-            <Box sx={{ maxWidth: 650, ml: { lg: "auto" } }}>
+            <Box sx={{ maxWidth: 660, ml: { lg: "auto" } }}>
               {/* Lead sentence */}
               <Typography
                 sx={{
-                  fontSize: { xs: 17, md: 20 },
-                  fontWeight: 700,
-                  lineHeight: 1.5,
-                  color: "#F5F5F5",
-                  fontFamily: kessel_bold.style.fontFamily,
-                  mb: 2,
-                }}
-              >
-                Disconnected systems, fragmented data, and slow execution drain
-                resources and leave your engineering teams behind.
-              </Typography>
-
-              {/* Explanatory text */}
-              <Typography
-                sx={{
-                  fontSize: { xs: 14.5, md: 15.5 },
-                  lineHeight: 1.65,
-                  color: "#9E9E9E",
+                  fontSize: { xs: 15, md: 17 },
+                  fontWeight: 600,
+                  lineHeight: 1.6,
+                  color: "#D4D4D4",
                   fontFamily: kessel.style.fontFamily,
-                  mb: 4,
+                  mb: 3.5,
                 }}
               >
-                Traditional agencies build and disappear. Fragmented vendors point
-                fingers. Meanwhile, your competitors move faster with integrated,
-                AI-first systems designed for rapid iteration.
+                As businesses grow, manual workflows, disconnected systems and
+                inefficient processes can limit their ability to scale.
               </Typography>
 
-              {/* 4 Pills Grid */}
+              {/* 4 Challenge Cards Grid */}
               <Grid container spacing={2}>
-                {pills.map((pill, i) => (
+                {challenges.map((item, i) => (
                   <Grid size={{ xs: 12, sm: 6 }} key={i}>
                     <Box
                       sx={{
                         backgroundColor: "#FFFFFF",
                         color: "#0F0F0F",
-                        borderRadius: "40px",
-                        py: 1.6,
-                        px: 2.5,
-                        textAlign: "center",
-                        fontSize: { xs: 13, md: 14 },
-                        fontWeight: 700,
-                        fontFamily:
-                          'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-                        boxShadow: "0 4px 16px rgba(0,0,0,0.3)",
+                        borderRadius: "18px",
+                        p: { xs: 2.5, md: 2.8 },
+                        height: "100%",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "flex-start",
+                        boxShadow: "0 4px 20px rgba(0,0,0,0.25)",
                         transition: "all 0.25s ease",
+                        border: "1px solid transparent",
+                        boxSizing: "border-box",
                         "&:hover": {
-                          backgroundColor: "#FFEF46",
-                          transform: "translateY(-2px)",
+                          transform: "translateY(-3px)",
+                          borderColor: "#FFEF46",
+                          boxShadow: "0 8px 24px rgba(255, 239, 70, 0.15)",
                         },
                       }}
                     >
-                      {pill}
+                      <Typography
+                        sx={{
+                          fontSize: { xs: 15, md: 16 },
+                          fontWeight: 800,
+                          color: "#0F0F0F",
+                          fontFamily: kessel_bold.style.fontFamily,
+                          mb: 0.8,
+                          lineHeight: 1.3,
+                        }}
+                      >
+                        {renderKesselText(item.title)}
+                      </Typography>
+                      <Typography
+                        sx={{
+                          fontSize: 12.5,
+                          lineHeight: 1.55,
+                          color: "#555555",
+                          fontFamily: kessel.style.fontFamily,
+                        }}
+                      >
+                        {item.description}
+                      </Typography>
                     </Box>
                   </Grid>
                 ))}
@@ -149,4 +176,3 @@ const UsSilos = () => {
 };
 
 export default UsSilos;
-
