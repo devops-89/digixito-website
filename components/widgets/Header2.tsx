@@ -61,7 +61,13 @@ const Header2 = () => {
 
   if (
     pathname === "/automation" ||
-    pathname?.startsWith("/automation/")
+    pathname?.startsWith("/automation/") ||
+    pathname === "/digital-marketing" ||
+    pathname?.startsWith("/digital-marketing/") ||
+    pathname === "/branding" ||
+    pathname?.startsWith("/branding/") ||
+    pathname === "/website-development" ||
+    pathname?.startsWith("/website-development/")
   ) {
     return null;
   }

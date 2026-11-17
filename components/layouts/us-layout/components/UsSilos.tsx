@@ -117,9 +117,23 @@ const UsSilos = () => {
               </Typography>
 
               {/* 4 Challenge Cards Grid */}
-              <Grid container spacing={2}>
+              <Grid
+                container
+                spacing={2}
+                sx={{
+                  rowGap: { xs: "18px", md: 2 },
+                  columnGap: { xs: "18px", md: 2 },
+                }}
+              >
                 {challenges.map((item, i) => (
-                  <Grid size={{ xs: 12, sm: 6 }} key={i}>
+                  <Grid
+                    size={{ xs: 12, sm: 6 }}
+                    key={i}
+                    sx={{
+                      display: "flex",
+                      mb: { xs: "18px", md: 0 },
+                    }}
+                  >
                     <Box
                       sx={{
                         backgroundColor: "#FFFFFF",
@@ -127,6 +141,7 @@ const UsSilos = () => {
                         borderRadius: "18px",
                         p: { xs: 2.5, md: 2.8 },
                         height: "100%",
+                        width: "100%",
                         display: "flex",
                         flexDirection: "column",
                         justifyContent: "flex-start",

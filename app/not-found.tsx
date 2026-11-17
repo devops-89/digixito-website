@@ -10,7 +10,6 @@ import { useEffect } from "react";
 
 export default function NotFound() {
   useEffect(() => {
-    // Prevent scrolling when 404 page is active
     const originalOverflowBody = document.body.style.overflow;
     const originalOverflowHtml = document.documentElement.style.overflow;
 
@@ -116,7 +115,7 @@ export default function NotFound() {
             width: "489px",
             maxWidth: "100%",
             fontFamily: kessel.style.fontFamily,
-            opacit:"60%",
+            opacit: "60%",
             fontStyle: "normal",
             fontWeight: 400,
             fontSize: "24px",

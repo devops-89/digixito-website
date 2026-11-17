@@ -15,11 +15,9 @@ import { ArrowBack } from "@mui/icons-material";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 import { archivo, kessel } from "@/utils/fonts";
 import { COLORS } from "@/utils/enum";
 import { BlogProps } from "@/public/locale/blogs-data";
-
 import ContentSection, {
   renderFormattedText,
 } from "@/components/layouts/blog-details-layout/components/content-section";

@@ -1,12 +1,13 @@
 import { SEO_DATA } from "@/utils/seo-metadata";
 import type { Metadata } from "next";
 import HomeLayouts from "@/components/layouts/home-layout";
+import { Box } from "@mui/material";
 
 export default function Home() {
   return (
-    <div>
+    <Box>
       <HomeLayouts />
-    </div>
+    </Box>
   );
 }
 

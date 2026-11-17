@@ -14,6 +14,21 @@ export const SEO_DATA: Record<string, { title: string; description: string; keyw
     description: "Augment your human workforce with custom AI solutions, high-velocity engineering pods, and integrated marketing to drive compounding business outcomes.",
     keywords: "AI Development Company USA, Enterprise AI Solutions, Custom AI Pods, Product Engineering, Tactical Marketing, Digixito Automation",
   },
+  "/digital-marketing": {
+    title: "Turn Digital Marketing into a Measurable Growth Engine | Digixito",
+    description: "Reach the right audience, strengthen your digital presence and create more opportunities for business growth through strategic digital marketing and performance-driven campaigns.",
+    keywords: "Digital Marketing Agency USA, Performance Marketing, SEO Services, PPC Management, Growth Marketing, Digixito",
+  },
+  "/branding": {
+    title: "Build a Brand That Stands Out & Connects | Digixito Branding",
+    description: "Create a stronger brand presence through strategic positioning, distinctive visual identity and consistent digital experiences. We help businesses translate their vision into meaningful brand experiences.",
+    keywords: "Branding Agency USA, Brand Identity Design, Brand Strategy, Creative Design, Digital Branding, Digixito",
+  },
+  "/website-development": {
+    title: "Engineer Digital Experiences That Move Your Business Forward | Digixito",
+    description: "From high-performing websites to custom applications and digital products, we combine design, engineering and technology to create digital solutions built around your business needs.",
+    keywords: "Website Development Company USA, Product Engineering, Custom Web Applications, SaaS Development, Shopify E-commerce, UI/UX Design, Digixito",
+  },
   "/ai-marketing-growth/ai-driven-digital-marketing": {
     title: "AI-Driven Digital Marketing Services for Brand Growth",
     description: "AI-driven digital marketing services with predictive analytics and data-driven campaigns to help global brands scale faster.",

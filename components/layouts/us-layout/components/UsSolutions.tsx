@@ -131,9 +131,23 @@ const UsSolutions = () => {
         </Box>
 
         {/* 4 Cards Grid */}
-        <Grid container spacing={3}>
+        <Grid
+          container
+          spacing={3}
+          sx={{
+            rowGap: { xs: "18px", md: 3 },
+            columnGap: { xs: "18px", md: 3 },
+          }}
+        >
           {solutions.map((item, index) => (
-            <Grid size={{ xs: 12, sm: 6, lg: 3 }} key={index}>
+            <Grid
+              size={{ xs: 12, sm: 6, lg: 3 }}
+              key={index}
+              sx={{
+                display: "flex",
+                mb: { xs: "18px", lg: 0 },
+              }}
+            >
               <Box
                 onClick={scrollToContact}
                 sx={{
@@ -141,6 +155,8 @@ const UsSolutions = () => {
                   borderRadius: "22px",
                   p: { xs: 3, md: 3.5 },
                   height: "100%",
+                  width: "100%",
+                  boxSizing: "border-box",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
