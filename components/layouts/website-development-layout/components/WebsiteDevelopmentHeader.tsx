@@ -20,14 +20,11 @@ const WebsiteDevelopmentHeader = () => {
       sx={{
         width: "100%",
         py: { xs: 2.5, md: 3 },
-        position: { xs: "relative", lg: "absolute" },
-        top: 0,
-        left: 0,
-        right: 0,
+        position: "relative",
         zIndex: 50,
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Box
           sx={{
             display: "flex",

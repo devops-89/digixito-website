@@ -18,6 +18,7 @@ import { East, Lock } from "@mui/icons-material";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 import { kessel_bold, kessel } from "@/utils/fonts";
 import { renderKesselText } from "@/utils/formatText";
 
@@ -56,6 +57,7 @@ const validationSchema = Yup.object().shape({
 });
 
 const BrandingContactForm = () => {
+  const router = useRouter();
   const [selectedServices, setSelectedServices] = useState<string[]>([
     "Branding & Identity Design",
   ]);
@@ -114,6 +116,7 @@ ${values.message}
         });
         resetForm();
         setSelectedServices(["Branding & Identity Design"]);
+        router.push("/thank-you");
       } catch (err) {
         setSnackbar({
           open: true,
@@ -137,7 +140,7 @@ ${values.message}
         position: "relative",
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Grid
           container
           spacing={{ xs: 6, lg: 8 }}

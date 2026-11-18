@@ -35,16 +35,16 @@ const UsHero = () => {
       component="section"
       sx={{
         position: "relative",
-        minHeight: "100vh",
+        minHeight: { xs: "auto", lg: "calc(100vh - 100px)" },
         display: "flex",
         alignItems: "center",
-        pt: { xs: 2, lg: 9 },
-        pb: { xs: 8, lg: 4 },
+        pt: { xs: 2, lg: 3 },
+        pb: { xs: 8, lg: 6 },
         overflow: "hidden",
         boxSizing: "border-box",
       }}
     >
-      <Container maxWidth="xl" sx={{ width: "100%" }}>
+      <Container maxWidth="lg" sx={{ width: "100%" }}>
         <Grid
           container
           spacing={{ xs: 5, lg: 3 }}
@@ -146,8 +146,12 @@ const UsHero = () => {
               {/* CTA Buttons */}
               <Stack
                 direction={{ xs: "column", sm: "row" }}
-                spacing={2}
-                sx={{ mt: 4.5 }}
+                spacing={1.5}
+                sx={{
+                  mt: 4.5,
+                  flexWrap: "wrap",
+                  alignItems: { xs: "stretch", sm: "center" },
+                }}
               >
                 <Button
                   onClick={scrollToContact}
@@ -156,13 +160,14 @@ const UsHero = () => {
                   sx={{
                     backgroundColor: "#FFEF46",
                     color: "#0F0F0F",
-                    fontSize: { xs: 13.5, md: 14.5 },
+                    fontSize: { xs: 13.5, md: 14 },
                     fontWeight: 800,
                     fontFamily: kessel_bold.style.fontFamily,
                     textTransform: "none",
                     borderRadius: "40px",
-                    px: { xs: 3, md: 3.5 },
-                    py: 1.6,
+                    px: { xs: 2.5, md: 2.8 },
+                    py: 1.5,
+                    whiteSpace: "nowrap",
                     boxShadow: "0 6px 20px rgba(255, 239, 70, 0.45)",
                     "&:hover": {
                       backgroundColor: "#F5E535",
@@ -172,7 +177,7 @@ const UsHero = () => {
                     transition: "all 0.25s ease",
                   }}
                 >
-                  Talk With Our Team
+                  {renderKesselText("Talk With Our Team")}
                 </Button>
 
                 <Button
@@ -183,13 +188,14 @@ const UsHero = () => {
                     backgroundColor: "#FFFFFF",
                     borderColor: "#D8D5CD",
                     color: "#0F0F0F",
-                    fontSize: { xs: 13.5, md: 14.5 },
+                    fontSize: { xs: 13.5, md: 14 },
                     fontWeight: 700,
                     fontFamily: kessel_bold.style.fontFamily,
                     textTransform: "none",
                     borderRadius: "40px",
-                    px: { xs: 2.5, md: 3 },
-                    py: 1.6,
+                    px: { xs: 2.2, md: 2.6 },
+                    py: 1.5,
+                    whiteSpace: "nowrap",
                     "&:hover": {
                       backgroundColor: "#F5F3ED",
                       borderColor: "#0F0F0F",
@@ -198,7 +204,7 @@ const UsHero = () => {
                     transition: "all 0.25s ease",
                   }}
                 >
-                  Explore Our Solutions
+                  {renderKesselText("Explore Our Solutions")}
                 </Button>
               </Stack>
             </Box>

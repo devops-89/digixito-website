@@ -50,7 +50,7 @@ const BrandingProcess = () => {
         position: "relative",
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Grid
           container
           spacing={{ xs: 6, lg: 8 }}
@@ -215,7 +215,7 @@ const BrandingProcess = () => {
                     }}
                   >
                     {renderKesselText(
-                      "Need a custom brand strategy for your business?"
+                      "Need a custom brand strategy for your business?",
                     )}
                   </Typography>
                   <Typography
@@ -226,7 +226,8 @@ const BrandingProcess = () => {
                       mt: 0.3,
                     }}
                   >
-                    Our creative directors prepare tailored brand blueprints and visual identity roadmaps.
+                    Our creative directors prepare tailored brand blueprints and
+                    visual identity roadmaps.
                   </Typography>
                 </Box>
 

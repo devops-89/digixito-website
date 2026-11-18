@@ -132,7 +132,7 @@ const DigitalMarketingTestimonials = () => {
         position: "relative",
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         {/* Eyebrow Pill */}
         <Box
           sx={{

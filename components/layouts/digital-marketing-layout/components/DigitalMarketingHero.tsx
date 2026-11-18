@@ -39,16 +39,16 @@ const DigitalMarketingHero = () => {
       component="section"
       sx={{
         position: "relative",
-        minHeight: "100vh",
+        minHeight: { xs: "auto", lg: "calc(100vh - 100px)" },
         display: "flex",
         alignItems: "center",
-        pt: { xs: 2, lg: 9 },
-        pb: { xs: 8, lg: 4 },
+        pt: { xs: 2, lg: 3 },
+        pb: { xs: 8, lg: 6 },
         overflow: "hidden",
         boxSizing: "border-box",
       }}
     >
-      <Container maxWidth="xl" sx={{ width: "100%" }}>
+      <Container maxWidth="lg" sx={{ width: "100%" }}>
         <Grid
           container
           spacing={{ xs: 5, lg: 3 }}
@@ -150,8 +150,12 @@ const DigitalMarketingHero = () => {
               {/* Action Buttons */}
               <Stack
                 direction={{ xs: "column", sm: "row" }}
-                spacing={2}
-                sx={{ alignItems: { xs: "stretch", sm: "center" } }}
+                spacing={1.5}
+                sx={{
+                  mt: 4.5,
+                  flexWrap: "wrap",
+                  alignItems: { xs: "stretch", sm: "center" },
+                }}
               >
                 <Button
                   onClick={scrollToContact}
@@ -160,13 +164,14 @@ const DigitalMarketingHero = () => {
                   sx={{
                     backgroundColor: "#FFEF46",
                     color: "#0F0F0F",
-                    fontSize: 14,
+                    fontSize: { xs: 13.5, md: 14 },
                     fontWeight: 800,
                     fontFamily: kessel_bold.style.fontFamily,
                     textTransform: "none",
                     borderRadius: "30px",
-                    px: 3.5,
-                    py: 1.6,
+                    px: { xs: 2.5, md: 2.8 },
+                    py: 1.5,
+                    whiteSpace: "nowrap",
                     boxShadow: "0 4px 14px rgba(255, 239, 70, 0.45)",
                     "&:hover": {
                       backgroundColor: "#F5E535",
@@ -186,13 +191,14 @@ const DigitalMarketingHero = () => {
                   sx={{
                     borderColor: "rgba(0,0,0,0.15)",
                     color: "#111111",
-                    fontSize: 14,
+                    fontSize: { xs: 13.5, md: 14 },
                     fontWeight: 800,
                     fontFamily: kessel_bold.style.fontFamily,
                     textTransform: "none",
                     borderRadius: "30px",
-                    px: 3,
-                    py: 1.6,
+                    px: { xs: 2.2, md: 2.6 },
+                    py: 1.5,
+                    whiteSpace: "nowrap",
                     backgroundColor: "#FFFFFF",
                     "&:hover": {
                       borderColor: "#000000",

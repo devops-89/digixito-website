@@ -39,7 +39,7 @@ const WebsiteDevelopmentSilos = () => {
         position: "relative",
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Grid
           container
           spacing={{ xs: 5, lg: 8 }}

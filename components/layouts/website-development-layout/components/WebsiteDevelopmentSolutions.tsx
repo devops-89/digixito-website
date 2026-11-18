@@ -56,7 +56,7 @@ const WebsiteDevelopmentSolutions = () => {
         position: "relative",
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         {/* Section Header */}
         <Box sx={{ mb: { xs: 6, md: 8 } }}>
           {/* Eyebrow Pill */}

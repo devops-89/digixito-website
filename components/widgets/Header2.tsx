@@ -67,7 +67,9 @@ const Header2 = () => {
     pathname === "/branding" ||
     pathname?.startsWith("/branding/") ||
     pathname === "/website-development" ||
-    pathname?.startsWith("/website-development/")
+    pathname?.startsWith("/website-development/") ||
+    pathname === "/thank-you" ||
+    pathname?.startsWith("/thank-you/")
   ) {
     return null;
   }

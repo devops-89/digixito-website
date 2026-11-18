@@ -29,6 +29,11 @@ export const SEO_DATA: Record<string, { title: string; description: string; keyw
     description: "From high-performing websites to custom applications and digital products, we combine design, engineering and technology to create digital solutions built around your business needs.",
     keywords: "Website Development Company USA, Product Engineering, Custom Web Applications, SaaS Development, Shopify E-commerce, UI/UX Design, Digixito",
   },
+  "/thank-you": {
+    title: "Thank You | Digixito",
+    description: "Thank you for reaching out to Digixito. We have received your inquiry and our team will get back to you within 24 business hours.",
+    keywords: "Thank You, Digixito, Inquiry Received",
+  },
   "/ai-marketing-growth/ai-driven-digital-marketing": {
     title: "AI-Driven Digital Marketing Services for Brand Growth",
     description: "AI-driven digital marketing services with predictive analytics and data-driven campaigns to help global brands scale faster.",

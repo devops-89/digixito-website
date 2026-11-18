@@ -39,7 +39,7 @@ const BrandingSilos = () => {
         position: "relative",
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Grid
           container
           spacing={{ xs: 5, lg: 8 }}
@@ -115,8 +115,9 @@ const BrandingSilos = () => {
                   mb: 3.5,
                 }}
               >
-                A brand needs more than visual appeal. It needs a clear identity,
-                consistent communication and a distinctive market position.
+                A brand needs more than visual appeal. It needs a clear
+                identity, consistent communication and a distinctive market
+                position.
               </Typography>
 
               {/* 4 Challenge Cards Grid */}

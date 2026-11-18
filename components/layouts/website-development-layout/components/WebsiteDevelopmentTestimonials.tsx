@@ -45,6 +45,28 @@ interface Testimonial {
 
 const testimonialsData: Testimonial[] = [
   {
+    id: "hscore",
+    brandName: "hScore",
+    brandColor: "#38BDF8",
+    brandType: "hscore",
+    logoUrl: "/testimonials/hscore.svg",
+    logoHeight: 26,
+    industry: "FinTech & Wealth Management",
+    quote:
+      "Over the past six months, the Digixito team has been instrumental in helping us develop a stock portfolio management app for the U.S. market. They've supported us across key areas including design, front-end development, branding, and marketing. We've been very pleased with their responsiveness, quality of work, and overall support.",
+    specialNote:
+      "We look forward to building a long-term partnership with Digixito on the strong foundation we've established together.",
+    author: "Hari Kusumakar",
+    role: "Co-Founder",
+    company: "hScore",
+    deliverables: [
+      "Design (UI/UX)",
+      "Front-End Development",
+      "Branding",
+      "U.S. Market Launch",
+    ],
+  },
+  {
     id: "mytreks",
     brandName: "MyTreks",
     brandColor: "#FF6B35",
@@ -88,28 +110,6 @@ const testimonialsData: Testimonial[] = [
       "Sales Optimization",
     ],
   },
-  {
-    id: "hscore",
-    brandName: "hScore",
-    brandColor: "#38BDF8",
-    brandType: "hscore",
-    logoUrl: "/testimonials/hscore.svg",
-    logoHeight: 26,
-    industry: "FinTech & Wealth Management",
-    quote:
-      "Over the past six months, the Digixito team has been instrumental in helping us develop a stock portfolio management app for the U.S. market. They've supported us across key areas including design, front-end development, branding, and marketing. We've been very pleased with their responsiveness, quality of work, and overall support.",
-    specialNote:
-      "We look forward to building a long-term partnership with Digixito on the strong foundation we've established together.",
-    author: "Hari Kusumakar",
-    role: "Co-Founder",
-    company: "hScore",
-    deliverables: [
-      "Design (UI/UX)",
-      "Front-End Development",
-      "Branding",
-      "U.S. Market Launch",
-    ],
-  },
 ];
 
 const WebsiteDevelopmentTestimonials = () => {
@@ -132,7 +132,7 @@ const WebsiteDevelopmentTestimonials = () => {
         position: "relative",
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         {/* Eyebrow Pill */}
         <Box
           sx={{
@@ -245,7 +245,7 @@ const WebsiteDevelopmentTestimonials = () => {
                     fontFamily: kessel.style.fontFamily,
                   }}
                 >
-                  MyTreks (travel tech &amp; digital product), Haute Baby (e-commerce &amp; Shopify), and hScore (fintech web platform) with verified deliverables.
+                  hScore (fintech web platform), MyTreks (travel tech &amp; digital product), and Haute Baby (e-commerce &amp; Shopify) with verified deliverables.
                 </Typography>
               </Box>
 

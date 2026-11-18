@@ -15,7 +15,6 @@ import namasteIndia from "@/projects/old-projects/namaste-india/namaste_india.pn
 import netraniti from "@/projects/old-projects/netra-niti/netra_niti.png";
 import ornet_logo from "@/projects/old-projects/ornet/apollo.png";
 import rasdelta from "@/projects/old-projects/ras-delta/RasDelta.png";
-// import { default as rspl } from "@/projects/old-projects/redchief/red-chief-logo.png";
 import home_shop_logo from "@/projects/old-projects/home-shop18/home-shop-logo.webp";
 import home_shop_banner from "@/projects/old-projects/home-shop18/home_shop_banner.png";
 import maxBupa6 from "@/projects/old-projects/max-bupa/max-bupa-hero.png";

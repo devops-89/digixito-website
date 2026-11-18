@@ -50,7 +50,7 @@ const DigitalMarketingProcess = () => {
         position: "relative",
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Grid
           container
           spacing={{ xs: 6, lg: 8 }}

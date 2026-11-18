@@ -13,6 +13,7 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
 import * as Yup from "yup";
 import { useFormik } from "formik";
@@ -37,6 +38,7 @@ interface SnackbarState {
 }
 
 const ContactMessageForm = () => {
+  const router = useRouter();
   const [snackbarOpen, setSnackbarOpen] = useState<SnackbarState>({
     open: false,
     message: "",
@@ -64,6 +66,7 @@ const ContactMessageForm = () => {
             severity: "success",
           });
           resetForm();
+          router.push("/thank-you");
         })
         .catch((err) => {
           // console.log("err", err);
