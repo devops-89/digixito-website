@@ -27,7 +27,7 @@ const UsLayout = () => {
         overflowX: "hidden",
         position: "relative",
       }}
-    >
+    > 
       {/* 1. Dedicated Header */}
       <UsHeader />
 
