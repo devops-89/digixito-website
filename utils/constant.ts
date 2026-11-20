@@ -64,6 +64,10 @@ import mytreks8 from "@/projects/old-projects/my-treks/mytreks8.png";
 import hauteHero from "@/projects/Hero/hauteHero.png";
 import namasteHero from "@/projects/old-projects/namaste-india/namaste-hero.png";
 import netrahero from "@/projects/Hero/netraHero.png";
+import hpHero from "@/projects/Hero/hphero.png";
+import ornetHero from "@/projects/Hero/ornethero.png";
+import furoHero from "@/projects/Hero/furohero.png";
+import rasdeltaHero from "@/projects/Hero/rasdeltahero.png";
 import bellaShoot1 from "@/projects/old-projects/bella-casa/bella-casa-shoot1.jpeg";
 import bellaShoot2 from "@/projects/old-projects/bella-casa/bella-casa-shoot2.jpeg";
 import bellaShoot3 from "@/projects/old-projects/bella-casa/bella-casa-shoot3.jpeg";
@@ -489,7 +493,7 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
     description:
       "HP needed to decode a design for the digital campaigning of their product HP Page Wide Pro 577dw MFP. We sat with them on the meeting table and astonished them with our creative imprint. With our digital strategy, we manufactured a smart and productive digital campaign.",
     details: {
-      heroImage: "/images/projects/hero/hphero.png",
+      heroImage: hpHero,
       title: "HP",
       images: [
         "/images/projects/old-projects/hp/hp-1.jpg",
@@ -616,7 +620,7 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
     description:
       "ORNET wanted to place its three products namely Terrain Bull, Industrial HD, Power Gripper in an unconditional toughness niche, which are born to perform with an unmatched durability, all across the terrains.",
     details: {
-      heroImage: "/images/projects/hero/ornethero.png",
+      heroImage: ornetHero,
       title: "Ornet",
       images: [
         "/images/projects/old-projects/ornet/ornet1.jpg",
@@ -1021,7 +1025,7 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
     description:
       "Furo Sports, a dynamic brand by RSPL Limited, aimed to capture the attention of fashion enthusiasts, sports lovers, and travelers through high-impact digital campaigns.",
     details: {
-      heroImage: "/images/projects/hero/furohero.png",
+      heroImage: furoHero,
       title: "Furo Sports",
       images: [furo1, furo2, furo3, furo4, furo5, furo6],
       description: [
@@ -1744,7 +1748,7 @@ export const OLD_PROJECTS_DATA: PROJECT_CARD_DATA_PROPS[] = [
     description:
       "Rasdelta is an Indian luxury bathroom and wellness solutions company specializing in the design, manufacturing, and supply of premium bathing and relaxation products. The company offers a comprehensive range of products including bathtubs, Jacuzzi and whirlpool systems, multifunction shower enclosures, shower panels, rain showers, steam baths, sauna rooms, and other wellness equipment. Rasdelta combines modern technology, innovative designs, quality materials, and functional features to deliver a luxurious and spa-like bathing experience for customers. With a focus on comfort, aesthetics, and wellness, the company provides solutions suitable for modern residential and commercial spaces, helping transform conventional bathrooms into sophisticated relaxation and rejuvenation environments.",
     details: {
-      heroImage: "/images/projects/hero/rasdeltahero.png",
+      heroImage: rasdeltaHero,
       title: "Rasdelta",
       description: [
         "Rasdelta is an Indian luxury bathroom and wellness solutions company specializing in premium bathing, relaxation, and wellness products. The digital experience was designed to showcase its comprehensive product portfolio while positioning the brand around luxury, modern technology, sophisticated design, comfort, and wellness.",
